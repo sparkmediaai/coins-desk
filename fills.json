@@ -6,7 +6,7 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-25T21:30:00-07:00",
-    "note": "claude filled 2026-08-25 ~9:30pm PT, 3094.62 tokens / $35.21. CYBERLEEK bleed-cut earlier. First-hour clock on claude. Not financial advice."
+    "note": "claude filled 2026-08-25 ~9:30pm PT, 3094.62 tokens / $35.21. CYBERLEEK bleed-cut earlier. First-hour clock on claude. Martin official-wallet bag is watch-only. Not financial advice."
   },
   "leftover_sol": 0.070,
   "positions": [
@@ -20,8 +20,25 @@
   ],
   "watch": [
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"personal bag off — coord-buy watch only"},
+    {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid — dead after Shkreli exit"},
     {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
-    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"Shkreli launch, fail liq"},
-    {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid"}
+    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"his launch, dumped, do not copy"},
+    {"ticker":"MARTIN","mint":"GHU8yQL74VCmVXMpPrx9mY8UWzdbD6RPf6BHeyXSpump","note":"clone ticker — watch only, never fill"},
+    {"ticker":"Nibbles","mint":"9wKKrJAXHwmHNvrCCYg4UhE2TqfSapnexNzHxCH4pump","note":"official-wallet hold"},
+    {"ticker":"DBLOCK","mint":"4pCghM4Rv1spqthXADXCQVEktXK6WW9oDGCuj3cmpump","note":"still on-curve"},
+    {"ticker":"CrimeLine","mint":"DX64dGGWzGY17MMeusTiNEjV58aywZ6v9xGZ32Erpump","note":"still on-curve"},
+    {"ticker":"$h1t","mint":"GTPup8i7TNjGWyN9LbevyWjJABZAPN9Es9nDRpYupump","note":"official-wallet hold"},
+    {"ticker":"Goate","mint":"6ZcSPVcspqAwuf81AdGyggMw89f8fySYqmFRfG9Xpump","note":"official-wallet hold"},
+    {"ticker":"Skhr","mint":"BU5Ka6V4G3HVW9hMZXr6wE6SkbcqpeG6uKCVVK1epump","note":"still on-curve"},
+    {"ticker":"DOBE","mint":"9nTXuTK1U7gpXBfT43FW9aVYm3Uy8zgzD9hqjn8ipump","note":"still on-curve"},
+    {"ticker":"pumpit","mint":"DuVtn9K1mWfongPPaL5A5uaHZRjDyQsDLTPetta8pump","note":"still on-curve"},
+    {"ticker":"OMEN","mint":"GZyqN8VmXrfoyyYRob5Lu2xGiXTcg1aLaNmptUpKpump","note":"official-wallet hold"},
+    {"ticker":"noob","mint":"DeTMsEsF7uREMrqYDg4SokGhy9JugXTWWVXWJVrppump","note":"still on-curve"},
+    {"ticker":"RBM","mint":"DJzncoVbxf93yWBXntRMzsMrQeTaPni2jdCo75BFpump","note":"still on-curve"},
+    {"ticker":"Charter","mint":"CE2EocQ4XtZgZpM8gn18Bgoyew37u1Hdnj68KLUDpump","note":"still on-curve"},
+    {"ticker":"$DARAPRIM","mint":"9UyCr9efpe6cqKchAabewUrCDV4aHe7a42WQAgxUpump","note":"still on-curve"},
+    {"ticker":"Goop","mint":"9edkS3K77pAxH851J1f4kZN16hZV2b7chNAzEbJwpump","note":"official-wallet hold"},
+    {"ticker":"BSEM","mint":"7RX9W1B89uttHuNmGPM5c4STngPt9VoTEBzgJXvfpump","note":"official-wallet hold"},
+    {"ticker":"BSEM","mint":"DsbC1gmcvruAULb1VQdm1c7iSBAjX4w3wuEpL2hWpump","note":"official-wallet hold"}
   ]
 }
