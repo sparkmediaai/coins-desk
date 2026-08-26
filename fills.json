@@ -6,7 +6,7 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-25T21:30:00-07:00",
-    "note": "claude wiped 2026-08-26 morning. PumpSwap dump, liq ~$1.7k, −99.99%. Not a mint-ghost. Do not rebuy. Sitting Jimothy / three / TOAD plus 0.070 SOL. Not financial advice."
+    "note": "claude wiped 2026-08-26 morning. Sitting Jimothy / three / TOAD plus 0.070 SOL. testicle is watch-only. Not financial advice."
   },
   "leftover_sol": 0.070,
   "positions": [
@@ -19,6 +19,7 @@
     {"ticker":"BULLSHIT","mint":"zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k","note":"benched — recycle only if unique buyers return clean"}
   ],
   "watch": [
+    {"ticker":"testicle","mint":"4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump","note":"David watch — old pump, sell-tilt 1h, not a fill. Ignore RTL/Orca clones."},
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"personal bag off — coord-buy watch only"},
     {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid — dead after Shkreli exit"},
     {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
