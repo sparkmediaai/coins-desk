@@ -6,7 +6,7 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-25T21:30:00-07:00",
-    "note": "claude filled 2026-08-25 ~9:30pm PT, 3094.62 tokens / $35.21. CYBERLEEK bleed-cut earlier. First-hour clock on claude. Martin official-wallet bag is watch-only. Not financial advice."
+    "note": "claude filled 2026-08-25 ~9:30pm PT, 3094.62 tokens / $35.21. CYBERLEEK bleed-cut earlier. First-hour clock on claude. Not financial advice."
   },
   "leftover_sol": 0.070,
   "positions": [
@@ -39,6 +39,12 @@
     {"ticker":"$DARAPRIM","mint":"9UyCr9efpe6cqKchAabewUrCDV4aHe7a42WQAgxUpump","note":"still on-curve"},
     {"ticker":"Goop","mint":"9edkS3K77pAxH851J1f4kZN16hZV2b7chNAzEbJwpump","note":"official-wallet hold"},
     {"ticker":"BSEM","mint":"7RX9W1B89uttHuNmGPM5c4STngPt9VoTEBzgJXvfpump","note":"official-wallet hold"},
-    {"ticker":"BSEM","mint":"DsbC1gmcvruAULb1VQdm1c7iSBAjX4w3wuEpL2hWpump","note":"official-wallet hold"}
+    {"ticker":"BSEM","mint":"DsbC1gmcvruAULb1VQdm1c7iSBAjX4w3wuEpL2hWpump","note":"official-wallet hold"},
+    {"ticker":"wut","mint":"6y65QqRkLniPPfPu9pnDk5ztuBtR1pYVTtJ9e7rnpump","note":"official-wallet hold"},
+    {"ticker":"TRASHY","mint":"3GRkgcDg3zWKa46Fx47C4ZgSs1QdbLLxdq3jktsapump","note":"official-wallet hold"},
+    {"ticker":"TRASHY","mint":"61b4C97GFJqDzPLU7d8kVDmnG1DQS3bQwpXPdZhGpump","note":"official-wallet hold"},
+    {"ticker":"SPIDERMAN","mint":"HRnFbLdyxzq2niDjD5gPD7cUGGb2qWEk3zpaniYipump","note":"official-wallet hold"},
+    {"ticker":"RAPE","mint":"4yQxpsNiTwBkdz8GAogusm5PyYm6ApD12SpZJ123pump","note":"official-wallet hold"},
+    {"ticker":"PHARMABRO","mint":"JBwbg2Guqd7GEV9YGk76DsHFzaWK1wGrWydigcnUpump","note":"official-wallet hold"}
   ]
 }
