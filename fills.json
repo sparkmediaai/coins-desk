@@ -16,13 +16,15 @@
     {"ticker":"TOAD","name":"The Toad Pepe","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","fill_usd":6.63,"fill_price_usd":0.005487,"fill_price_estimated":true,"fill_token_amount":null,"clips":1,"flags":[]}
   ],
   "hunt": [
-    {"ticker":"BULLSHIT","mint":"zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k","note":"recycle only if unique buyers return"},
-    {"ticker":"USWS","mint":"qdBHn5QTp9d9WGAcnJyfMEcyw7aBkxz4EDWyVKGpump","note":"hairline / holder-correlation"}
+    {"ticker":"BULLSHIT","mint":"zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k","note":"benched — recycle only if unique buyers return clean"},
+    {"ticker":"USWS","mint":"qdBHn5QTp9d9WGAcnJyfMEcyw7aBkxz4EDWyVKGpump","note":"hairline / holder-correlation, skip"}
   ],
   "watch": [
-    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"fail liq"},
-    {"ticker":"Meme","mint":"4GoGtwdNXEiWubGseK4sX5bfhuGSf4sDBQq4jgjJpump","note":"curve"},
-    {"ticker":"pig","mint":"8ks84eqGekSEzxBre9mrsnXTiauMzUzujFVgSX2Jpump","note":"curve"},
-    {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid"}
+    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"Shkreli launch, fail liq"},
+    {"ticker":"Meme","mint":"4GoGtwdNXEiWubGseK4sX5bfhuGSf4sDBQq4jgjJpump","note":"still on-curve"},
+    {"ticker":"pig","mint":"8ks84eqGekSEzxBre9mrsnXTiauMzUzujFVgSX2Jpump","note":"still on-curve"},
+    {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid — dead after Shkreli exit"},
+    {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"cut this morning — 9pm PT coord-buy watch only"},
+    {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy, graduated, fails gate"}
   ]
 }

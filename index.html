@@ -62,13 +62,42 @@
         <span class="stat-label">leftover SOL</span>
         <span class="stat-val" id="leftover">—</span>
       </div>
+      <div class="stat">
+        <span class="stat-label">SOL/USD</span>
+        <span class="stat-val" id="sol-px">—</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">filled at</span>
+        <span class="stat-val" id="filled-at">—</span>
+      </div>
     </div>
+  </section>
+
+  <section class="blotter-row" aria-label="Gate and radar">
+    <aside class="gate" id="gate">
+      <h3>Gate</h3>
+      <p>Graduated Solana. Pair ≥4h. Liq. Unique-buyer expansion (buyers &gt; sellers). Mint + freeze revoked. 1h green. Not a clone farm. Hunt prints EMPTY unless a name clears and is running green. Not financial advice.</p>
+    </aside>
+    <aside class="radar" id="radar">
+      <h3>Radar</h3>
+      <p class="radar-note">Two public wallets. Watch only. No copy.</p>
+      <ul class="radar-list">
+        <li>
+          <span class="radar-who">Shkreli official</span>
+          <a class="radar-hash" href="https://solscan.io/account/AkK5BtfBhj3cJi1f9LVXodbBLxRiePqffm5uiQYpDYQr" target="_blank" rel="noopener noreferrer">AkK5BtfBhj3cJi1f9LVXodbBLxRiePqffm5uiQYpDYQr</a>
+        </li>
+        <li>
+          <span class="radar-who">antpalkin / cvxv666 play</span>
+          <a class="radar-hash" href="https://solscan.io/account/36B1FfW4kweo3xZsTqHBrxz9oV3M8brYRWDo9x4VsR7e" target="_blank" rel="noopener noreferrer">36B1FfW4kweo3xZsTqHBrxz9oV3M8brYRWDo9x4VsR7e</a>
+        </li>
+      </ul>
+    </aside>
   </section>
 
   <section class="panel" aria-label="Tape">
     <div class="panel-head">
       <h2>Tape</h2>
-      <p class="panel-note" id="tape-note">live clip = size × price, else fill × live/fill. never 1h mark-up.</p>
+      <p class="panel-note" id="tape-note">live clip = size × price, else fill × live/fill. never 1h mark-up. vs-fill is clip vs fill $. 6h/24h, vol, mcap, pair age under each row.</p>
     </div>
     <div class="tape-head" aria-hidden="true">
       <span>ticker</span>
@@ -78,6 +107,8 @@
       <span>liq</span>
       <span>1h b/s</span>
       <span>clip</span>
+      <span>vs fill</span>
+      <span>fill</span>
       <span>p&amp;l</span>
     </div>
     <div id="tape" class="tape"></div>
