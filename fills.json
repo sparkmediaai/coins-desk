@@ -6,16 +6,16 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-25T21:30:00-07:00",
-    "note": "claude filled 2026-08-25 ~9:30pm PT, 3094.62 tokens / $35.21. CYBERLEEK bleed-cut earlier. First-hour clock on claude. Not financial advice."
+    "note": "claude wiped 2026-08-26 morning. PumpSwap dump, liq ~$1.7k, −99.99%. Not a mint-ghost. Do not rebuy. Sitting Jimothy / three / TOAD plus 0.070 SOL. Not financial advice."
   },
   "leftover_sol": 0.070,
   "positions": [
     {"ticker":"Jimothy","name":"Jimothy The Raccoon","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","fill_usd":50.60,"fill_price_usd":0.01606,"fill_price_estimated":false,"fill_token_amount":3150.713557,"clips":2,"flags":[]},
     {"ticker":"three","name":"three.ws","mint":"FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump","fill_usd":7.03,"fill_price_usd":0.002305,"fill_price_estimated":false,"fill_token_amount":3049.342023,"clips":1,"flags":[]},
-    {"ticker":"TOAD","name":"The Toad Pepe","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","fill_usd":6.63,"fill_price_usd":0.005556,"fill_price_estimated":false,"fill_token_amount":1193.083443,"clips":1,"flags":[]},
-    {"ticker":"claude","name":"Claude Ai","mint":"2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump","fill_usd":35.21,"fill_price_usd":0.01138,"fill_price_estimated":false,"fill_token_amount":3094.62,"clips":1,"flags":[]}
+    {"ticker":"TOAD","name":"The Toad Pepe","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","fill_usd":6.63,"fill_price_usd":0.005556,"fill_price_estimated":false,"fill_token_amount":1193.083443,"clips":1,"flags":[]}
   ],
   "hunt": [
+    {"ticker":"claude","mint":"2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump","note":"wiped 2026-08-26 — PumpSwap dump, do not rebuy"},
     {"ticker":"BULLSHIT","mint":"zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k","note":"benched — recycle only if unique buyers return clean"}
   ],
   "watch": [
@@ -28,23 +28,6 @@
     {"ticker":"DBLOCK","mint":"4pCghM4Rv1spqthXADXCQVEktXK6WW9oDGCuj3cmpump","note":"still on-curve"},
     {"ticker":"CrimeLine","mint":"DX64dGGWzGY17MMeusTiNEjV58aywZ6v9xGZ32Erpump","note":"still on-curve"},
     {"ticker":"$h1t","mint":"GTPup8i7TNjGWyN9LbevyWjJABZAPN9Es9nDRpYupump","note":"official-wallet hold"},
-    {"ticker":"Goate","mint":"6ZcSPVcspqAwuf81AdGyggMw89f8fySYqmFRfG9Xpump","note":"official-wallet hold"},
-    {"ticker":"Skhr","mint":"BU5Ka6V4G3HVW9hMZXr6wE6SkbcqpeG6uKCVVK1epump","note":"still on-curve"},
-    {"ticker":"DOBE","mint":"9nTXuTK1U7gpXBfT43FW9aVYm3Uy8zgzD9hqjn8ipump","note":"still on-curve"},
-    {"ticker":"pumpit","mint":"DuVtn9K1mWfongPPaL5A5uaHZRjDyQsDLTPetta8pump","note":"still on-curve"},
-    {"ticker":"OMEN","mint":"GZyqN8VmXrfoyyYRob5Lu2xGiXTcg1aLaNmptUpKpump","note":"official-wallet hold"},
-    {"ticker":"noob","mint":"DeTMsEsF7uREMrqYDg4SokGhy9JugXTWWVXWJVrppump","note":"still on-curve"},
-    {"ticker":"RBM","mint":"DJzncoVbxf93yWBXntRMzsMrQeTaPni2jdCo75BFpump","note":"still on-curve"},
-    {"ticker":"Charter","mint":"CE2EocQ4XtZgZpM8gn18Bgoyew37u1Hdnj68KLUDpump","note":"still on-curve"},
-    {"ticker":"$DARAPRIM","mint":"9UyCr9efpe6cqKchAabewUrCDV4aHe7a42WQAgxUpump","note":"still on-curve"},
-    {"ticker":"Goop","mint":"9edkS3K77pAxH851J1f4kZN16hZV2b7chNAzEbJwpump","note":"official-wallet hold"},
-    {"ticker":"BSEM","mint":"7RX9W1B89uttHuNmGPM5c4STngPt9VoTEBzgJXvfpump","note":"official-wallet hold"},
-    {"ticker":"BSEM","mint":"DsbC1gmcvruAULb1VQdm1c7iSBAjX4w3wuEpL2hWpump","note":"official-wallet hold"},
-    {"ticker":"wut","mint":"6y65QqRkLniPPfPu9pnDk5ztuBtR1pYVTtJ9e7rnpump","note":"official-wallet hold"},
-    {"ticker":"TRASHY","mint":"3GRkgcDg3zWKa46Fx47C4ZgSs1QdbLLxdq3jktsapump","note":"official-wallet hold"},
-    {"ticker":"TRASHY","mint":"61b4C97GFJqDzPLU7d8kVDmnG1DQS3bQwpXPdZhGpump","note":"official-wallet hold"},
-    {"ticker":"SPIDERMAN","mint":"HRnFbLdyxzq2niDjD5gPD7cUGGb2qWEk3zpaniYipump","note":"official-wallet hold"},
-    {"ticker":"RAPE","mint":"4yQxpsNiTwBkdz8GAogusm5PyYm6ApD12SpZJ123pump","note":"official-wallet hold"},
-    {"ticker":"PHARMABRO","mint":"JBwbg2Guqd7GEV9YGk76DsHFzaWK1wGrWydigcnUpump","note":"official-wallet hold"}
+    {"ticker":"Goate","mint":"6ZcSPVcspqAwuf81AdGyggMw89f8fySYqmFRfG9Xpump","note":"official-wallet hold"}
   ]
 }
