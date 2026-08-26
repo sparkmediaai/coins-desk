@@ -14,6 +14,11 @@ function shortWallet(addr) {
   return addr.slice(0, 4) + "…" + addr.slice(-4);
 }
 
+function shortMint(addr) {
+  if (!addr || addr.length < 8) return addr || "—";
+  return addr.slice(0, 4) + "…" + addr.slice(-4);
+}
+
 function num(v) {
   if (v == null || v === "") return null;
   const n = Number(v);
@@ -76,6 +81,37 @@ function fmtLiq(n) {
   return fmtUsd(n, 0);
 }
 
+function fmtVol(n) {
+  return fmtLiq(n);
+}
+
+function fmtAge(ts) {
+  const t = num(ts);
+  if (t == null) return "—";
+  const ms = t < 1e12 ? t * 1000 : t;
+  const ageMs = Date.now() - ms;
+  if (!Number.isFinite(ageMs) || ageMs < 0) return "—";
+  const hours = ageMs / 3600000;
+  if (hours < 24) return (hours < 10 ? hours.toFixed(1) : hours.toFixed(0)) + "h";
+  const days = hours / 24;
+  return (days < 10 ? days.toFixed(1) : days.toFixed(0)) + "d";
+}
+
+function fmtFilledAt(iso) {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "—";
+  const s = new Intl.DateTimeFormat("en-US", {
+    timeZone: TZ,
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  }).format(d);
+  return s.replace(" AM", "am").replace(" PM", "pm") + " PT";
+}
+
 function fmtPct(n) {
   if (n == null) return { text: "—", cls: "flat" };
   const cls = n > 0 ? "up" : n < 0 ? "dn" : "flat";
@@ -92,6 +128,14 @@ function signedUsd(n) {
 
 function dexHref(mint) {
   return "https://dexscreener.com/solana/" + encodeURIComponent(mint);
+}
+
+function solscanToken(mint) {
+  return "https://solscan.io/token/" + encodeURIComponent(mint);
+}
+
+function solscanAccount(addr) {
+  return "https://solscan.io/account/" + encodeURIComponent(addr);
 }
 
 function el(tag, cls, text) {
@@ -118,6 +162,22 @@ function tickerCell(row) {
   t.appendChild(a);
   id.appendChild(t);
   if (row.name) id.appendChild(el("div", "row-name", row.name));
+  if (row.mint) {
+    const mintLine = el("div", "row-mint");
+    mintLine.appendChild(document.createTextNode(shortMint(row.mint) + " "));
+    const dex = el("a", null, "dex");
+    dex.href = dexHref(row.mint);
+    dex.target = "_blank";
+    dex.rel = "noopener noreferrer";
+    mintLine.appendChild(dex);
+    mintLine.appendChild(document.createTextNode(" "));
+    const sol = el("a", null, "solscan");
+    sol.href = solscanToken(row.mint);
+    sol.target = "_blank";
+    sol.rel = "noopener noreferrer";
+    mintLine.appendChild(sol);
+    id.appendChild(mintLine);
+  }
   return id;
 }
 
@@ -138,18 +198,41 @@ function badgesFor(pos) {
 
 function pairFields(pair) {
   if (!pair) {
-    return { price: null, h1: null, m5: null, liq: null, buys: null, sells: null, dexId: null };
+    return {
+      price: null,
+      h1: null,
+      h6: null,
+      h24: null,
+      m5: null,
+      liq: null,
+      buys: null,
+      sells: null,
+      dexId: null,
+      volH1: null,
+      volH24: null,
+      marketCap: null,
+      fdv: null,
+      pairCreatedAt: null,
+    };
   }
   const ch = pair.priceChange || {};
   const tx = (pair.txns && pair.txns.h1) || {};
+  const vol = pair.volume || {};
   return {
     price: num(pair.priceUsd),
     h1: num(ch.h1),
+    h6: num(ch.h6),
+    h24: num(ch.h24),
     m5: num(ch.m5),
     liq: pair.liquidity ? num(pair.liquidity.usd) : null,
     buys: num(tx.buys),
     sells: num(tx.sells),
     dexId: pair.dexId || null,
+    volH1: num(vol.h1),
+    volH24: num(vol.h24),
+    marketCap: num(pair.marketCap),
+    fdv: num(pair.fdv),
+    pairCreatedAt: num(pair.pairCreatedAt),
   };
 }
 
@@ -160,6 +243,20 @@ function quoteOf(quotes, mint) {
 function bs(f) {
   if (f.buys == null && f.sells == null) return "—";
   return (f.buys ?? "—") + "/" + (f.sells ?? "—");
+}
+
+function rowMore(f) {
+  const strip = el("div", "row-more");
+  const h6 = fmtPct(f.h6);
+  const h24 = fmtPct(f.h24);
+  strip.appendChild(metric("6h", h6.text, h6.cls));
+  strip.appendChild(metric("24h", h24.text, h24.cls));
+  strip.appendChild(metric("vol 1h", fmtVol(f.volH1)));
+  strip.appendChild(metric("vol 24h", fmtVol(f.volH24)));
+  strip.appendChild(metric("mcap", fmtLiq(f.marketCap)));
+  strip.appendChild(metric("pair age", fmtAge(f.pairCreatedAt)));
+  strip.appendChild(metric("dex", f.dexId || "—"));
+  return strip;
 }
 
 function setStatus(kind, label) {
@@ -231,8 +328,11 @@ function renderTape(positions, quotes) {
     const clip = liveClip(pos, f.price);
     const fillUsd = num(pos.fill_usd);
     const pnl = clip != null && fillUsd != null ? clip - fillUsd : null;
+    const vsFillPct =
+      clip != null && fillUsd != null && fillUsd !== 0 ? ((clip - fillUsd) / fillUsd) * 100 : null;
     const h1 = fmtPct(f.h1);
     const m5 = fmtPct(f.m5);
+    const vs = fmtPct(vsFillPct);
     const pnlFmt = signedUsd(pnl);
 
     const row = el("div", "row");
@@ -248,8 +348,11 @@ function renderTape(positions, quotes) {
     metrics.appendChild(metric("liq", fmtLiq(f.liq)));
     metrics.appendChild(metric("1h b/s", bs(f)));
     metrics.appendChild(metric("clip", fmtUsd(clip)));
+    metrics.appendChild(metric("vs fill", vs.text, vs.cls));
+    metrics.appendChild(metric("fill", fmtUsd(fillUsd)));
     metrics.appendChild(metric("p&l", pnlFmt.text, pnlFmt.cls));
     row.appendChild(metrics);
+    row.appendChild(rowMore(f));
     root.appendChild(row);
   }
 }
@@ -275,6 +378,7 @@ function renderHunt(rows, quotes) {
     metrics.appendChild(metric("1h b/s", bs(f)));
     row.appendChild(metrics);
     if (item.note) row.appendChild(el("div", "row-note", item.note));
+    row.appendChild(rowMore(f));
     root.appendChild(row);
   }
 }
@@ -306,6 +410,7 @@ function renderWatch(rows, quotes) {
     metrics.appendChild(metric("liq", fmtLiq(f.liq)));
     row.appendChild(metrics);
     if (item.note) row.appendChild(el("div", "row-note", item.note));
+    row.appendChild(rowMore(f));
     root.appendChild(row);
   }
 }
@@ -391,6 +496,16 @@ function renderBook(fillsData, quotes, solUsd) {
   if (leftEl) {
     leftEl.textContent =
       leftover.toFixed(4) + " SOL" + (leftoverUsd != null ? " · " + fmtUsd(leftoverUsd) : "");
+  }
+
+  const solPx = $("sol-px");
+  if (solPx) {
+    solPx.textContent = solUsd == null ? "—" : "$" + solUsd.toFixed(2);
+  }
+
+  const filledAt = $("filled-at");
+  if (filledAt) {
+    filledAt.textContent = fmtFilledAt(fillsData.desk && fillsData.desk.filled_at);
   }
 }
 
