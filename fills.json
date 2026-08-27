@@ -5,30 +5,22 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-25T21:30:00-07:00",
-    "note": "claude wiped 2026-08-26 morning. Sitting Jimothy / three / TOAD plus 0.070 SOL. testicle is watch-only. Not financial advice."
+    "filled_at": "2026-08-26T17:00:00-07:00",
+    "note": "Override 2026-08-26 ~5:00pm PT. Sold Jimothy / three / TOAD. Filled QENIS 30968.94 tokens / $64.35. 35% cap waived. Clock 8:00pm PT. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.070,
+  "leftover_sol": 0.030,
   "positions": [
-    {"ticker":"Jimothy","name":"Jimothy The Raccoon","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","fill_usd":50.60,"fill_price_usd":0.01606,"fill_price_estimated":false,"fill_token_amount":3150.713557,"clips":2,"flags":[]},
-    {"ticker":"three","name":"three.ws","mint":"FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump","fill_usd":7.03,"fill_price_usd":0.002305,"fill_price_estimated":false,"fill_token_amount":3049.342023,"clips":1,"flags":[]},
-    {"ticker":"TOAD","name":"The Toad Pepe","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","fill_usd":6.63,"fill_price_usd":0.005556,"fill_price_estimated":false,"fill_token_amount":1193.083443,"clips":1,"flags":[]}
+    {"ticker":"QENIS","name":"Qenis","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","fill_usd":64.35,"fill_price_usd":0.002078,"fill_price_estimated":false,"fill_token_amount":30968.94,"clips":1,"flags":["OVERRIDE"]}
   ],
   "hunt": [
-    {"ticker":"claude","mint":"2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump","note":"wiped 2026-08-26 — PumpSwap dump, do not rebuy"},
-    {"ticker":"BULLSHIT","mint":"zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k","note":"benched — recycle only if unique buyers return clean"}
+    {"ticker":"Jimothy","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","note":"sold 2026-08-26 into QENIS override"},
+    {"ticker":"three","mint":"FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump","note":"sold 2026-08-26 into QENIS override"},
+    {"ticker":"TOAD","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","note":"sold 2026-08-26 into QENIS override"},
+    {"ticker":"claude","mint":"2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump","note":"wiped 2026-08-26 — do not rebuy"}
   ],
   "watch": [
-    {"ticker":"testicle","mint":"4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump","note":"David watch — old pump, sell-tilt 1h, not a fill. Ignore RTL/Orca clones."},
-    {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"personal bag off — coord-buy watch only"},
-    {"ticker":"DOLLY","mint":"EVpszSRyQok4M6Fo5wTdC58WBJpx65y5VZGmmjm4pump","note":"avoid — dead after Shkreli exit"},
+    {"ticker":"testicle","mint":"4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump","note":"David watch — ignore RTL/Orca clones"},
     {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
-    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"his launch, dumped, do not copy"},
-    {"ticker":"MARTIN","mint":"GHU8yQL74VCmVXMpPrx9mY8UWzdbD6RPf6BHeyXSpump","note":"clone ticker — watch only, never fill"},
-    {"ticker":"Nibbles","mint":"9wKKrJAXHwmHNvrCCYg4UhE2TqfSapnexNzHxCH4pump","note":"official-wallet hold"},
-    {"ticker":"DBLOCK","mint":"4pCghM4Rv1spqthXADXCQVEktXK6WW9oDGCuj3cmpump","note":"still on-curve"},
-    {"ticker":"CrimeLine","mint":"DX64dGGWzGY17MMeusTiNEjV58aywZ6v9xGZ32Erpump","note":"still on-curve"},
-    {"ticker":"$h1t","mint":"GTPup8i7TNjGWyN9LbevyWjJABZAPN9Es9nDRpYupump","note":"official-wallet hold"},
-    {"ticker":"Goate","mint":"6ZcSPVcspqAwuf81AdGyggMw89f8fySYqmFRfG9Xpump","note":"official-wallet hold"}
+    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"his launch, dumped, do not copy"}
   ]
 }
