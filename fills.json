@@ -6,7 +6,7 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-26T19:38:00-07:00",
-    "note": "QENIS sold 2026-08-26 ~7:38pm PT, ~$79.90 clip (+24% vs $64.35 fill). Sitting 0.818 SOL. 35% cap back on. Hunt paused unless asked. Personal bag off. Not financial advice."
+    "note": "Sitting 0.818 SOL. QENIS sold. SmartNigga is David watch, still on-curve. 35% cap on. Personal bag off. Not financial advice."
   },
   "leftover_sol": 0.818,
   "positions": [],
@@ -19,6 +19,7 @@
     {"ticker":"CYBERLEEK","mint":"ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg","note":"bleed-cut 2026-08-25 — bounce, do not rebuy"}
   ],
   "watch": [
+    {"ticker":"SmartNigga","name":"Niggatus Smartalus","mint":"Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump","note":"David watch — still on-curve ~$3k, ignore same-ticker clones"},
     {"ticker":"SALP","name":"Leopold","mint":"9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump","note":"official Shkreli launch 2026-08-27 — same as CITRINI, do not copy"},
     {"ticker":"ASTRO","name":"Astro Markets","mint":"2f2vJQzG1TXCDJ45r8ALGYXvBkQSsow1X4XPUL21pump","note":"watch not fill — liq under $150k, insider grind"},
     {"ticker":"QENIS","name":"Qenis","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold — ghost only, no refill"},
