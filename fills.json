@@ -5,11 +5,23 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-26T19:38:00-07:00",
-    "note": "Sitting 0.818 SOL. QENIS sold. SmartNigga is David watch, still on-curve. 35% cap on. Personal bag off. Not financial advice."
+    "filled_at": "2026-08-29T10:03:00-07:00",
+    "note": "GASSPAS filled 2026-08-29 ~10:03am PT, 19512.78 tokens / $30.18 / 0.288 SOL. Leftover 0.530 SOL. 35% cap. $100k liq floor. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.818,
-  "positions": [],
+  "leftover_sol": 0.530,
+  "positions": [
+    {
+      "ticker": "GASSPAS",
+      "name": "GASSPAS",
+      "mint": "GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump",
+      "fill_usd": 30.18,
+      "fill_price_usd": 0.0015467,
+      "fill_token_amount": 19512.78,
+      "fill_sol": 0.288,
+      "fill_price_estimated": false,
+      "tx": "4T9n5q7ziQCShdw16ZsZJfE6hBaZXbHWo4UXJkgZ5k6AB86pU6M8gcsfcKjE7YJXzVCnoa9R3yrXAEhmrRYbL3bH"
+    }
+  ],
   "hunt": [
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold 2026-08-26 ~7:38pm PT ~$79.90 — ghost only, no refill"},
     {"ticker":"Jimothy","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","note":"sold 2026-08-26 into QENIS override"},
@@ -21,7 +33,7 @@
   "watch": [
     {"ticker":"SmartNigga","name":"Niggatus Smartalus","mint":"Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump","note":"David watch — still on-curve ~$3k, ignore same-ticker clones"},
     {"ticker":"SALP","name":"Leopold","mint":"9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump","note":"official Shkreli launch 2026-08-27 — same as CITRINI, do not copy"},
-    {"ticker":"ASTRO","name":"Astro Markets","mint":"2f2vJQzG1TXCDJ45r8ALGYXvBkQSsow1X4XPUL21pump","note":"watch not fill — liq under $150k, insider grind"},
+    {"ticker":"ASTRO","name":"Astro Markets","mint":"2f2vJQzG1TXCDJ45r8ALGYXvBkQSsow1X4XPUL21pump","note":"watch not fill — insider grind"},
     {"ticker":"QENIS","name":"Qenis","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold — ghost only, no refill"},
     {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
     {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"his launch, dumped, do not copy"},
