@@ -5,24 +5,13 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-29T10:03:00-07:00",
-    "note": "GASSPAS filled 2026-08-29 ~10:03am PT, 19512.78 tokens / $30.18 / 0.288 SOL. Leftover 0.530 SOL. 35% cap. $100k liq floor. Personal bag off. Not financial advice."
+    "filled_at": "2026-08-29T20:07:00-07:00",
+    "note": "Flattened 2026-08-29 ~8:07pm PT. Sold GASSPAS 19512.78 tokens for 0.325 SOL (~$34.21, +13.4% vs $30.18 fill). Wallet 0.855 SOL (~$90 vs $100.24 start). Cash is a position. Hunt resumes 6:19 AM PT Sunday. No GASSPAS rebuy. 35% cap. $100k liq floor. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.530,
-  "positions": [
-    {
-      "ticker": "GASSPAS",
-      "name": "GASSPAS",
-      "mint": "GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump",
-      "fill_usd": 30.18,
-      "fill_price_usd": 0.0015467,
-      "fill_token_amount": 19512.78,
-      "fill_sol": 0.288,
-      "fill_price_estimated": false,
-      "tx": "4T9n5q7ziQCShdw16ZsZJfE6hBaZXbHWo4UXJkgZ5k6AB86pU6M8gcsfcKjE7YJXzVCnoa9R3yrXAEhmrRYbL3bH"
-    }
-  ],
+  "leftover_sol": 0.855,
+  "positions": [],
   "hunt": [
+    {"ticker":"GASSPAS","mint":"GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump","note":"sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) tx 5Xk6367MHffWVb3A4zstqzsvZ31zLMnoQD5rcZwtpm2vvWSWPfsFpgCRcPPfkKZDbtHG6pjsdNzQfh2nKJrSBWJX — no refill"},
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold 2026-08-26 ~7:38pm PT ~$79.90 — ghost only, no refill"},
     {"ticker":"Jimothy","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","note":"sold 2026-08-26 into QENIS override"},
     {"ticker":"three","mint":"FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump","note":"sold 2026-08-26 into QENIS override"},
