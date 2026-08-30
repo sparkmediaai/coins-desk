@@ -439,3 +439,6 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .tick-stripe { animation: none; }
 }
+
+.badge.cut { color: var(--chip-red); border-color: var(--chip-dim); }
+.row.cut { opacity: 0.78; }

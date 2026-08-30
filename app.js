@@ -186,7 +186,8 @@ function badgesFor(pos) {
   if (pos.fill_price_estimated) wrap.appendChild(el("span", "badge est", "EST"));
   for (const flag of pos.flags || []) {
     const name = String(flag).toUpperCase();
-    wrap.appendChild(el("span", "badge" + (name === "WHIP" ? " whip" : ""), name));
+    const extra = name === "WHIP" ? " whip" : name === "CUT" ? " cut" : "";
+    wrap.appendChild(el("span", "badge" + extra, name));
   }
   if (pos.clips) {
     wrap.appendChild(
@@ -316,14 +317,16 @@ async function fetchToken(mint) {
   return mainPair(data.pairs);
 }
 
-function renderTape(positions, quotes) {
+function renderTape(positions, closed, quotes) {
   const root = $("tape");
   root.replaceChildren();
-  if (!positions || !positions.length) {
+  const open = positions || [];
+  const done = closed || [];
+  if (!open.length && !done.length) {
     root.appendChild(el("div", "row muted", "No positions."));
     return;
   }
-  for (const pos of positions) {
+  for (const pos of open) {
     const f = pairFields(quoteOf(quotes, pos.mint));
     const clip = liveClip(pos, f.price);
     const fillUsd = num(pos.fill_usd);
@@ -352,6 +355,40 @@ function renderTape(positions, quotes) {
     metrics.appendChild(metric("fill", fmtUsd(fillUsd)));
     metrics.appendChild(metric("p&l", pnlFmt.text, pnlFmt.cls));
     row.appendChild(metrics);
+    row.appendChild(rowMore(f));
+    root.appendChild(row);
+  }
+  for (const pos of done) {
+    const f = pairFields(quoteOf(quotes, pos.mint));
+    const fillUsd = num(pos.fill_usd);
+    const soldUsd = num(pos.sold_usd);
+    const pnl = soldUsd != null && fillUsd != null ? soldUsd - fillUsd : null;
+    const vsFillPct =
+      soldUsd != null && fillUsd != null && fillUsd !== 0 ? ((soldUsd - fillUsd) / fillUsd) * 100 : null;
+    const h1 = fmtPct(f.h1);
+    const m5 = fmtPct(f.m5);
+    const vs = fmtPct(vsFillPct);
+    const pnlFmt = signedUsd(pnl);
+    const flags = Object.assign({}, pos, { flags: Array.from(new Set([...(pos.flags || []), "CUT"])) });
+
+    const row = el("div", "row cut");
+    const id = tickerCell(flags);
+    const badges = badgesFor(flags);
+    if (badges) id.appendChild(badges);
+    row.appendChild(id);
+
+    const metrics = el("div", "row-metrics");
+    metrics.appendChild(metric("price", f.price == null ? "—" : "$" + fmtPx(f.price)));
+    metrics.appendChild(metric("1h", h1.text, h1.cls));
+    metrics.appendChild(metric("5m", m5.text, m5.cls));
+    metrics.appendChild(metric("liq", fmtLiq(f.liq)));
+    metrics.appendChild(metric("1h b/s", bs(f)));
+    metrics.appendChild(metric("clip", fmtUsd(soldUsd)));
+    metrics.appendChild(metric("vs fill", vs.text, vs.cls));
+    metrics.appendChild(metric("fill", fmtUsd(fillUsd)));
+    metrics.appendChild(metric("p&l", pnlFmt.text, pnlFmt.cls));
+    row.appendChild(metrics);
+    if (pos.note) row.appendChild(el("div", "row-note", pos.note));
     row.appendChild(rowMore(f));
     root.appendChild(row);
   }
@@ -513,7 +550,7 @@ function renderAll(fillsData, quotes, solUsd) {
   const w = $("wallet");
   if (w) w.textContent = shortWallet(fillsData.desk && fillsData.desk.wallet);
   renderTicks(fillsData.positions, fillsData.hunt, fillsData.watch, quotes, solUsd);
-  renderTape(fillsData.positions, quotes);
+  renderTape(fillsData.positions, fillsData.closed, quotes);
   renderHunt(fillsData.hunt, quotes);
   renderWatch(fillsData.watch, quotes);
   renderBook(fillsData, quotes, solUsd);
@@ -530,7 +567,7 @@ async function refresh() {
   }
 
   const mints = new Set([WSOL]);
-  for (const list of [fills.positions, fills.hunt, fills.watch]) {
+  for (const list of [fills.positions, fills.closed, fills.hunt, fills.watch]) {
     for (const row of list || []) {
       if (row.mint) mints.add(row.mint);
     }
