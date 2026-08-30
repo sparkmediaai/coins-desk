@@ -5,10 +5,10 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-30T15:19:47-07:00",
-    "note": "Override 2026-08-30. HeeHaw 0.207 SOL (~$21.50), moonkey 0.208 SOL (~$21.58), TREE 0.210 SOL (~$21.80). REDACTED still pending. Leftover 0.229 SOL. Cuts fire anytime. No GASSPAS refill. Personal bag off. Not financial advice."
+    "filled_at": "2026-08-30T15:20:50-07:00",
+    "note": "Override 2026-08-30 all four filled. HeeHaw 0.207 SOL (~$21.50), moonkey 0.208 SOL (~$21.58), TREE 0.210 SOL (~$21.80), REDACTED 0.208 SOL (~$21.57). Leftover 0.021 SOL. Cuts fire anytime. 10-min marks. No GASSPAS refill. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.229,
+  "leftover_sol": 0.021,
   "positions": [
     {
       "ticker": "HeeHaw",
@@ -48,6 +48,19 @@
       "tx": "2R714ULBAnFtWYsQ1KSiGAsz3pYCujARvUE4z2T7qZAA9HL621dJRoGjXAkYSKXHeCX8A9SZbzWBPNKyQe1jKcug",
       "clips": 1,
       "flags": ["OVERRIDE"]
+    },
+    {
+      "ticker": "REDACTED",
+      "name": "REDACTED",
+      "mint": "Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7",
+      "fill_token_amount": 6242.237962678,
+      "fill_sol": 0.208,
+      "fill_usd": 21.57,
+      "fill_price_usd": 0.0034555,
+      "filled_at": "2026-08-30T15:20:50-07:00",
+      "tx": "5JtydCUsnZ2KnYPpHK7qUCzBbSFZEYVLGWL7VtSJnykxGHDLTY5xmDsBzZY1TNKWr7PMh1VggzYYWJfPdfRBoLmK",
+      "clips": 1,
+      "flags": ["OVERRIDE"]
     }
   ],
   "hunt": [
@@ -60,7 +73,6 @@
     {"ticker":"CYBERLEEK","mint":"ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg","note":"bleed-cut 2026-08-25 — bounce, do not rebuy"}
   ],
   "watch": [
-    {"ticker":"REDACTED","mint":"Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7","note":"override fill pending"},
     {"ticker":"SmartNigga","name":"Niggatus Smartalus","mint":"Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump","note":"David watch — still on-curve, ignore same-ticker clones"},
     {"ticker":"SALP","name":"Leopold","mint":"9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump","note":"official Shkreli launch — do not copy"},
     {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
