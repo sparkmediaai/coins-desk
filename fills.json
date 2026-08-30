@@ -6,23 +6,10 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-30T15:20:50-07:00",
-    "note": "Override 2026-08-30 all four filled. HeeHaw 0.207 SOL (~$21.50), moonkey 0.208 SOL (~$21.58), TREE 0.210 SOL (~$21.80), REDACTED 0.208 SOL (~$21.57). Leftover 0.021 SOL. Cuts fire anytime. 10-min marks. No GASSPAS refill. Personal bag off. Not financial advice."
+    "note": "Override 2026-08-30. HeeHaw first-hour cut 3:51 PM PT 0.164 SOL (~$17.02, −21% vs $21.50 fill). Holding moonkey, TREE, REDACTED. Leftover 0.185 SOL. No HeeHaw rebuy. No new clip after 4 PM. Cuts fire anytime. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.021,
+  "leftover_sol": 0.185,
   "positions": [
-    {
-      "ticker": "HeeHaw",
-      "name": "HeeHaw",
-      "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
-      "fill_token_amount": 50663.175016,
-      "fill_sol": 0.2074,
-      "fill_usd": 21.5,
-      "fill_price_usd": 0.00042444,
-      "filled_at": "2026-08-30T15:15:53-07:00",
-      "tx": "2TGYxwDk4JjrHndoXnE1BqBaz1FJvAXAA4UycwHcyuPT1xFEnAjMZ1a8tieZb2ZzhphsKwvkdHjuApMfEi5zgnbW",
-      "clips": 1,
-      "flags": ["OVERRIDE"]
-    },
     {
       "ticker": "moonkey",
       "name": "moonkey",
@@ -64,6 +51,7 @@
     }
   ],
   "hunt": [
+    {"ticker":"HeeHaw","mint":"EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump","note":"first-hour cut 2026-08-30 ~3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"},
     {"ticker":"GASSPAS","mint":"GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump","note":"sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) — no refill"},
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold 2026-08-26 ~7:38pm PT ~$79.90 — ghost only, no refill"},
     {"ticker":"Jimothy","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","note":"sold 2026-08-26 into QENIS override"},
