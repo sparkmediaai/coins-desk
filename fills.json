@@ -50,6 +50,26 @@
       "flags": ["OVERRIDE"]
     }
   ],
+  "closed": [
+    {
+      "ticker": "HeeHaw",
+      "name": "HeeHaw",
+      "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
+      "fill_token_amount": 50663.175016,
+      "fill_sol": 0.2074,
+      "fill_usd": 21.5,
+      "fill_price_usd": 0.00042444,
+      "filled_at": "2026-08-30T15:15:53-07:00",
+      "tx": "2TGYxwDk4JjrHndoXnE1BqBaz1FJvAXAA4UycwHcyuPT1xFEnAjMZ1a8tieZb2ZzhphsKwvkdHjuApMfEi5zgnbW",
+      "sold_sol": 0.164,
+      "sold_usd": 17.02,
+      "sold_at": "2026-08-30T15:51:00-07:00",
+      "sold_tx": "51qg3EejtB9dNeVXb23pLkLvD9V1zfvqnK4XMDjk4KCcAwrvkwBDPs6V1W77W3xyK9E4GZZ2dgbCwigoHrLgrRsZ",
+      "clips": 1,
+      "flags": ["OVERRIDE", "CUT"],
+      "note": "first-hour cut 3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"
+    }
+  ],
   "hunt": [
     {"ticker":"HeeHaw","mint":"EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump","note":"first-hour cut 2026-08-30 ~3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"},
     {"ticker":"GASSPAS","mint":"GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump","note":"sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) — no refill"},
