@@ -5,11 +5,26 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-30T19:15:26-07:00",
-    "note": "8:09 PM PT flatten to SOL. QENIS sold 0.646 SOL (~$65.55, −12.2% vs $74.69 fill). Wallet 0.685 SOL (~$69.54 vs $100.24 start). No open clips. Hunt off until David says. Personal bag off. Not financial advice."
+    "filled_at": "2026-08-31T08:52:34-07:00",
+    "note": "8:52 AM PT MADE fill 19913.92 tokens / 0.24 SOL / $24.73. Leftover 0.441 SOL. First-hour 9:22–9:52 PT. 5-min marks on. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.685,
-  "positions": [],
+  "leftover_sol": 0.441,
+  "positions": [
+    {
+      "ticker": "MADE",
+      "name": "SelfMade by SP3ND",
+      "mint": "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1",
+      "fill_token_amount": 19913.92,
+      "fill_sol": 0.24,
+      "fill_usd": 24.73,
+      "fill_price_usd": 0.00124184,
+      "filled_at": "2026-08-31T08:52:34-07:00",
+      "tx": "5R7A1ysJNT4M1jem5EdikkonE6Xxh6Ata2NDs8LnBX4wSohhMUCdERjfD33mxzYsKE2zE4m35YxkyMANBukKEbhZ",
+      "clips": 1,
+      "flags": [],
+      "note": "gate-clear fill 8:52am PT 0.24 SOL (~$24.73, 35% clip). First-hour 9:22–9:52 PT."
+    }
+  ],
   "closed": [
     {
       "ticker": "QENIS",
@@ -103,6 +118,7 @@
     }
   ],
   "hunt": [
+    {"ticker":"MADE","mint":"EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1","note":"OPEN 2026-08-31 8:52am PT 0.24 SOL / $24.73 / 19913.92 tokens — first-hour 9:22–9:52 PT"},
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"},
     {"ticker":"TREE","mint":"8xH8ikqGXNTSYmmUVakCE2tVwU7aYJwz2JZkqAjW88sG","note":"flattened 2026-08-30 ~7:15pm PT 0.215 SOL into QENIS override"},
     {"ticker":"moonkey","mint":"BRZ5aeJCDuruA42V1CntqKvofa2G7DS3yyxx1pZEpump","note":"trail cut 2026-08-30 ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill) — no refill"},
