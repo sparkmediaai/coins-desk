@@ -94,24 +94,48 @@
     </aside>
   </section>
 
-  <section class="panel" aria-label="Tape">
+  <section class="panel" aria-label="Holding">
     <div class="panel-head">
-      <h2>Tape</h2>
-      <p class="panel-note" id="tape-note">live clip = size × price, else fill × live/fill. never 1h mark-up. vs-fill is clip vs fill $. 6h/24h, vol, mcap, pair age under each row.</p>
+      <h2>Holding</h2>
+      <p class="panel-note" id="tape-note">open clips only. in the book. clip = size × live price.</p>
     </div>
-    <div class="tape-head" aria-hidden="true">
-      <span>ticker</span>
-      <span>price</span>
-      <span>1h</span>
-      <span>5m</span>
-      <span>liq</span>
-      <span>1h b/s</span>
-      <span>clip</span>
-      <span>vs fill</span>
-      <span>fill</span>
-      <span>p&amp;l</span>
+    <div class="tape-grid">
+      <div class="tape-head" aria-hidden="true">
+        <span>ticker</span>
+        <span>price</span>
+        <span>1h</span>
+        <span>5m</span>
+        <span>liq</span>
+        <span>1h b/s</span>
+        <span>clip</span>
+        <span>vs fill</span>
+        <span>fill</span>
+        <span>p&amp;l</span>
+      </div>
+      <div id="tape" class="tape"></div>
     </div>
-    <div id="tape" class="tape"></div>
+  </section>
+
+  <section class="panel panel-closed" aria-label="Not holding">
+    <div class="panel-head">
+      <h2>Not holding</h2>
+      <p class="panel-note">cuts and flattens. not in the book.</p>
+    </div>
+    <div class="tape-grid">
+      <div class="tape-head" aria-hidden="true">
+        <span>ticker</span>
+        <span>price</span>
+        <span>1h</span>
+        <span>5m</span>
+        <span>liq</span>
+        <span>1h b/s</span>
+        <span>sold</span>
+        <span>vs fill</span>
+        <span>fill</span>
+        <span>p&amp;l</span>
+      </div>
+      <div id="closed" class="tape"></div>
+    </div>
   </section>
 
   <section class="panel" aria-label="Hunt bench">
