@@ -6,9 +6,9 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-30T15:20:50-07:00",
-    "note": "4:54 PM PT mark. Holding moonkey (trail armed, peaked +51%), TREE (flatten 8pm if still red), REDACTED. HeeHaw first-hour cut 3:51 PM PT 0.164 SOL (~$17.02, −21%) on Tape as CUT. Leftover 0.185 SOL. No HeeHaw rebuy. No new clip after 4 PM. Cuts fire anytime. Personal bag off. Not financial advice."
+    "note": "6:04 PM PT. REDACTED session-loser cut 0.169 SOL (~$17.24, −20% vs $21.57 fill). Holding moonkey (trail armed) and TREE. HeeHaw already CUT. Leftover 0.354 SOL. No REDACTED or HeeHaw rebuy. No new clip after 4 PM. Cuts fire anytime. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.185,
+  "leftover_sol": 0.354,
   "positions": [
     {
       "ticker": "moonkey",
@@ -35,7 +35,9 @@
       "tx": "2R714ULBAnFtWYsQ1KSiGAsz3pYCujARvUE4z2T7qZAA9HL621dJRoGjXAkYSKXHeCX8A9SZbzWBPNKyQe1jKcug",
       "clips": 1,
       "flags": ["OVERRIDE"]
-    },
+    }
+  ],
+  "closed": [
     {
       "ticker": "REDACTED",
       "name": "REDACTED",
@@ -46,11 +48,14 @@
       "fill_price_usd": 0.0034555,
       "filled_at": "2026-08-30T15:20:50-07:00",
       "tx": "5JtydCUsnZ2KnYPpHK7qUCzBbSFZEYVLGWL7VtSJnykxGHDLTY5xmDsBzZY1TNKWr7PMh1VggzYYWJfPdfRBoLmK",
+      "sold_sol": 0.169,
+      "sold_usd": 17.24,
+      "sold_at": "2026-08-30T18:04:00-07:00",
+      "sold_tx": "3PYyKFKhiPnKjFRpu9gWEohZomeD6K7Dk8AdgVW3tzw91jQA8mQMJ3MbqdvC7f86eiuafVQRWqfUviuHHd8YvUCf",
       "clips": 1,
-      "flags": ["OVERRIDE"]
-    }
-  ],
-  "closed": [
+      "flags": ["OVERRIDE", "CUT"],
+      "note": "session-loser cut ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) — no refill"
+    },
     {
       "ticker": "HeeHaw",
       "name": "HeeHaw",
@@ -71,6 +76,7 @@
     }
   ],
   "hunt": [
+    {"ticker":"REDACTED","mint":"Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7","note":"session-loser cut 2026-08-30 ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) — no refill"},
     {"ticker":"HeeHaw","mint":"EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump","note":"first-hour cut 2026-08-30 ~3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"},
     {"ticker":"GASSPAS","mint":"GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump","note":"sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) — no refill"},
     {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"sold 2026-08-26 ~7:38pm PT ~$79.90 — ghost only, no refill"},
