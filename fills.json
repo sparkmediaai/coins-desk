@@ -6,10 +6,11 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-08-30T19:15:26-07:00",
-    "note": "7:15 PM PT override. TREE flattened 0.215 SOL. QENIS refill 0.731 SOL (~$74.69 / 131212 tokens). Not Coinbase (MEXC Meme+ Aug 23). Leftover 0.039 SOL. First-hour ~7:45. Cuts fire anytime. No HeeHaw/REDACTED/moonkey rebuy. Personal bag off. Not financial advice."
+    "note": "8:09 PM PT flatten to SOL. QENIS sold 0.646 SOL (~$65.55, −12.2% vs $74.69 fill). Wallet 0.685 SOL (~$69.54 vs $100.24 start). No open clips. Hunt off until David says. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.039,
-  "positions": [
+  "leftover_sol": 0.685,
+  "positions": [],
+  "closed": [
     {
       "ticker": "QENIS",
       "name": "Qenis",
@@ -20,11 +21,14 @@
       "fill_price_usd": 0.00056923,
       "filled_at": "2026-08-30T19:15:26-07:00",
       "tx": "nZudEj532GXQeBLf1k9Y7ctZrhcrjFuwjTtxEuGLUg64swX3q1VoVFNKAtq76Lj5m5dBCKexJdaSAfPPutwANiT",
+      "sold_sol": 0.646,
+      "sold_usd": 65.55,
+      "sold_at": "2026-08-30T20:09:47-07:00",
+      "sold_tx": "3TSa2Ddf9jSdS7es2Fk4iQNfyY66v4Na3suoqDGMkxB1jUvFffPT6YYAyfQN4pfyNeFSb9q7go9qLo3SM3MiWBee",
       "clips": 1,
-      "flags": ["OVERRIDE"]
-    }
-  ],
-  "closed": [
+      "flags": ["OVERRIDE", "FLAT"],
+      "note": "flattened to SOL 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"
+    },
     {
       "ticker": "TREE",
       "name": "TREE",
@@ -99,6 +103,7 @@
     }
   ],
   "hunt": [
+    {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"},
     {"ticker":"TREE","mint":"8xH8ikqGXNTSYmmUVakCE2tVwU7aYJwz2JZkqAjW88sG","note":"flattened 2026-08-30 ~7:15pm PT 0.215 SOL into QENIS override"},
     {"ticker":"moonkey","mint":"BRZ5aeJCDuruA42V1CntqKvofa2G7DS3yyxx1pZEpump","note":"trail cut 2026-08-30 ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill) — no refill"},
     {"ticker":"REDACTED","mint":"Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7","note":"session-loser cut 2026-08-30 ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) — no refill"},
