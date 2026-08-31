@@ -5,11 +5,12 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
-    "filled_at": "2026-08-31T08:52:34-07:00",
-    "note": "8:52 AM PT MADE fill 19913.92 tokens / 0.24 SOL / $24.73. Leftover 0.441 SOL. First-hour 9:22–9:52 PT. 5-min marks on. Personal bag off. Not financial advice."
+    "filled_at": "2026-08-31T12:27:54-07:00",
+    "note": "12:27 PM PT MADE session-loser cut 19913.92 tokens / 0.200 SOL / $20.77 (-16.0% vs $24.73 fill). Leftover 0.641 SOL. Sitting SOL. 5-min off. No open clips. Personal bag off. Not financial advice."
   },
-  "leftover_sol": 0.441,
-  "positions": [
+  "leftover_sol": 0.641,
+  "positions": [],
+  "closed": [
     {
       "ticker": "MADE",
       "name": "SelfMade by SP3ND",
@@ -20,12 +21,14 @@
       "fill_price_usd": 0.00124184,
       "filled_at": "2026-08-31T08:52:34-07:00",
       "tx": "5R7A1ysJNT4M1jem5EdikkonE6Xxh6Ata2NDs8LnBX4wSohhMUCdERjfD33mxzYsKE2zE4m35YxkyMANBukKEbhZ",
+      "sold_sol": 0.2,
+      "sold_usd": 20.77,
+      "sold_at": "2026-08-31T12:27:54-07:00",
+      "sold_tx": "2UXPAbTbgqjGo9Bn5cA9eQP57RHCzScGyGSB4MWpj7J8cBZ6bmdGXWDiAX7zGxvXGp6WaKfFCjKx8kJZFy1XcmoR",
       "clips": 1,
-      "flags": [],
-      "note": "gate-clear fill 8:52am PT 0.24 SOL (~$24.73, 35% clip). First-hour 9:22–9:52 PT."
-    }
-  ],
-  "closed": [
+      "flags": ["CUT"],
+      "note": "session-loser cut 12:27pm PT 0.200 SOL (~$20.77, -16.0% vs $24.73 fill, 1h 105b/186s) \u2014 no refill"
+    },
     {
       "ticker": "QENIS",
       "name": "Qenis",
@@ -42,7 +45,7 @@
       "sold_tx": "3TSa2Ddf9jSdS7es2Fk4iQNfyY66v4Na3suoqDGMkxB1jUvFffPT6YYAyfQN4pfyNeFSb9q7go9qLo3SM3MiWBee",
       "clips": 1,
       "flags": ["OVERRIDE", "FLAT"],
-      "note": "flattened to SOL 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"
+      "note": "flattened to SOL 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) \u2014 sitting SOL"
     },
     {
       "ticker": "TREE",
@@ -78,7 +81,7 @@
       "sold_tx": "2NSGPApD5Td3CeLRMKLkd1WvwqJFgWQkRCFo5dpTcydYRZAZdpFRTrxyVbAdXYEznTJ4JUpL6zqsCrxpviqw3hm3",
       "clips": 1,
       "flags": ["OVERRIDE", "CUT"],
-      "note": "trail cut ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill; peaked ~+51%, faded through +5%) — no refill"
+      "note": "trail cut ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill; peaked ~+51%, faded through +5%) \u2014 no refill"
     },
     {
       "ticker": "REDACTED",
@@ -96,7 +99,7 @@
       "sold_tx": "3PYyKFKhiPnKjFRpu9gWEohZomeD6K7Dk8AdgVW3tzw91jQA8mQMJ3MbqdvC7f86eiuafVQRWqfUviuHHd8YvUCf",
       "clips": 1,
       "flags": ["OVERRIDE", "CUT"],
-      "note": "session-loser cut ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) — no refill"
+      "note": "session-loser cut ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) \u2014 no refill"
     },
     {
       "ticker": "HeeHaw",
@@ -114,27 +117,27 @@
       "sold_tx": "51qg3EejtB9dNeVXb23pLkLvD9V1zfvqnK4XMDjk4KCcAwrvkwBDPs6V1W77W3xyK9E4GZZ2dgbCwigoHrLgrRsZ",
       "clips": 1,
       "flags": ["OVERRIDE", "CUT"],
-      "note": "first-hour cut 3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"
+      "note": "first-hour cut 3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) \u2014 no refill"
     }
   ],
   "hunt": [
-    {"ticker":"MADE","mint":"EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1","note":"OPEN 2026-08-31 8:52am PT 0.24 SOL / $24.73 / 19913.92 tokens — first-hour 9:22–9:52 PT"},
-    {"ticker":"QENIS","mint":"EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump","note":"flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"},
-    {"ticker":"TREE","mint":"8xH8ikqGXNTSYmmUVakCE2tVwU7aYJwz2JZkqAjW88sG","note":"flattened 2026-08-30 ~7:15pm PT 0.215 SOL into QENIS override"},
-    {"ticker":"moonkey","mint":"BRZ5aeJCDuruA42V1CntqKvofa2G7DS3yyxx1pZEpump","note":"trail cut 2026-08-30 ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill) — no refill"},
-    {"ticker":"REDACTED","mint":"Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7","note":"session-loser cut 2026-08-30 ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) — no refill"},
-    {"ticker":"HeeHaw","mint":"EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump","note":"first-hour cut 2026-08-30 ~3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) — no refill"},
-    {"ticker":"GASSPAS","mint":"GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump","note":"sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) — no refill"},
-    {"ticker":"Jimothy","mint":"Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump","note":"sold 2026-08-26 into QENIS override"},
-    {"ticker":"three","mint":"FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump","note":"sold 2026-08-26 into QENIS override"},
-    {"ticker":"TOAD","mint":"A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump","note":"sold 2026-08-26 into QENIS override"},
-    {"ticker":"claude","mint":"2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump","note":"wiped 2026-08-26 — do not rebuy"},
-    {"ticker":"CYBERLEEK","mint":"ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg","note":"bleed-cut 2026-08-25 — bounce, do not rebuy"}
+    {"ticker": "MADE", "mint": "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1", "note": "session-loser cut 2026-08-31 12:27pm PT 0.200 SOL (~$20.77, -16.0% vs $24.73 fill) \u2014 no refill"},
+    {"ticker": "QENIS", "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "note": "flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) \u2014 sitting SOL"},
+    {"ticker": "TREE", "mint": "8xH8ikqGXNTSYmmUVakCE2tVwU7aYJwz2JZkqAjW88sG", "note": "flattened 2026-08-30 ~7:15pm PT 0.215 SOL into QENIS override"},
+    {"ticker": "moonkey", "mint": "BRZ5aeJCDuruA42V1CntqKvofa2G7DS3yyxx1pZEpump", "note": "trail cut 2026-08-30 ~6:47pm PT 0.202 SOL (~$20.51, -4.9% vs $21.58 fill) \u2014 no refill"},
+    {"ticker": "REDACTED", "mint": "Ga5ErptAQ5oHwB7G195UEq9FeJ5UNDoV9SCRCpebFeG7", "note": "session-loser cut 2026-08-30 ~6:04pm PT 0.169 SOL (~$17.24, -20% vs $21.57 fill) \u2014 no refill"},
+    {"ticker": "HeeHaw", "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump", "note": "first-hour cut 2026-08-30 ~3:51pm PT 0.164 SOL (~$17.02, -21% vs $21.50 fill) \u2014 no refill"},
+    {"ticker": "GASSPAS", "mint": "GCr352ouzNZkNQd3KZqs6jFuQb8LiYnWsEJSUpSfpump", "note": "sold 2026-08-29 ~8:07pm PT 0.325 SOL (~$34.21, +13.4% vs $30.18 fill) \u2014 no refill"},
+    {"ticker": "Jimothy", "mint": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "note": "sold 2026-08-26 into QENIS override"},
+    {"ticker": "three", "mint": "FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump", "note": "sold 2026-08-26 into QENIS override"},
+    {"ticker": "TOAD", "mint": "A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump", "note": "sold 2026-08-26 into QENIS override"},
+    {"ticker": "claude", "mint": "2Y3AfgP9vGZj4JiDVZix5TpLcAEs49FU8JU5DDNDpump", "note": "wiped 2026-08-26 \u2014 do not rebuy"},
+    {"ticker": "CYBERLEEK", "mint": "ApZuxdpzMrbEYTGEzeY9afh5pj9d6qPRJCTgQYiipbKg", "note": "bleed-cut 2026-08-25 \u2014 bounce, do not rebuy"}
   ],
   "watch": [
-    {"ticker":"SmartNigga","name":"Niggatus Smartalus","mint":"Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump","note":"David watch — still on-curve, ignore same-ticker clones"},
-    {"ticker":"SALP","name":"Leopold","mint":"9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump","note":"official Shkreli launch — do not copy"},
-    {"ticker":"sus","name":"dog wif helmet","mint":"5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump","note":"Shkreli size-buy — do not chase"},
-    {"ticker":"CITRINI","mint":"4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump","note":"his launch, dumped, do not copy"}
+    {"ticker": "SmartNigga", "name": "Niggatus Smartalus", "mint": "Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump", "note": "David watch \u2014 still on-curve, ignore same-ticker clones"},
+    {"ticker": "SALP", "name": "Leopold", "mint": "9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump", "note": "official Shkreli launch \u2014 do not copy"},
+    {"ticker": "sus", "name": "dog wif helmet", "mint": "5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump", "note": "Shkreli size-buy \u2014 do not chase"},
+    {"ticker": "CITRINI", "mint": "4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump", "note": "his launch, dumped, do not copy"}
   ]
 }
