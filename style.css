@@ -406,22 +406,47 @@ h1 {
     text-transform: uppercase;
     border-bottom: 1px solid var(--line);
   }
-  .tape-head { grid-template-columns: 1.4fr 1fr 0.7fr 0.7fr 0.8fr 0.9fr 1fr 0.8fr 0.8fr 1fr; }
-  .bench-head { grid-template-columns: 1.2fr 1fr 0.7fr 0.7fr 0.8fr 0.9fr 1.6fr; }
-  .watch-head { grid-template-columns: 1.1fr 0.9fr 1fr 0.7fr 0.7fr 0.8fr 1.6fr; }
+  .tape-head,
+  .tape .row {
+    grid-template-columns:
+      minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 0.7fr) minmax(0, 0.7fr)
+      minmax(0, 0.8fr) minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 0.8fr)
+      minmax(0, 0.8fr) minmax(0, 1fr);
+  }
+  .bench-head,
+  .bench .row {
+    grid-template-columns:
+      minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 0.7fr) minmax(0, 0.7fr)
+      minmax(0, 0.8fr) minmax(0, 0.9fr) minmax(0, 1.6fr);
+  }
+  .watch-head,
+  .watch .row {
+    grid-template-columns:
+      minmax(0, 1.1fr) minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 0.7fr)
+      minmax(0, 0.7fr) minmax(0, 0.8fr) minmax(0, 1.6fr);
+  }
   .row {
     align-items: center;
     padding: 10px 0;
     gap: 8px;
   }
-  .tape .row { grid-template-columns: 1.4fr 1fr 0.7fr 0.7fr 0.8fr 0.9fr 1fr 0.8fr 0.8fr 1fr; }
-  .bench .row { grid-template-columns: 1.2fr 1fr 0.7fr 0.7fr 0.8fr 0.9fr 1.6fr; }
-  .watch .row { grid-template-columns: 1.1fr 0.9fr 1fr 0.7fr 0.7fr 0.8fr 1.6fr; }
+  .tape-head > *,
+  .bench-head > *,
+  .watch-head > *,
+  .row-id,
+  .row .m {
+    min-width: 0;
+  }
   .row-metrics { display: contents; }
   .m { display: block; text-align: right; }
   .m-k { display: none; }
-  .m-v { font-size: 13px; }
-  .row-note { grid-column: auto; margin-top: 0; text-align: left; }
+  .m-v {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .row-note { grid-column: 1 / -1; margin-top: 0; text-align: left; }
   .row-more {
     grid-column: 1 / -1;
     margin-top: 2px;
