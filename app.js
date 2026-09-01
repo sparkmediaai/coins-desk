@@ -1,1 +1,1 @@
-LOADER_WILL_REPLACE_FROM_DISK
+{{include:/workspace/coins-desk/app.js}}
