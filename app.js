@@ -1,1 +1,1 @@
-@file:/tmp/push_app.js
+LOAD_FROM_TMP_PUSH_APP_JS_PLACEHOLDER_DO_NOT_USE
