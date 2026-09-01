@@ -6,9 +6,9 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 100.24,
     "filled_at": "2026-09-01T08:52:00-07:00",
-    "note": "9/1 ~10:10 AM PT cut QENIS (-10 floor) and BULLSHIT (session loser). Open CHADLER + petcat. Leftover ~0.357 SOL."
+    "note": "9/1 ~10:20 AM PT KIRK leftover fill 0.16 SOL. RIPPY pending. Open CHADLER petcat KIRK. No rebuy QENIS/BULLSHIT/inuzard."
   },
-  "leftover_sol": 0.356709056,
+  "leftover_sol": 0.192629976,
   "positions": [
     {
       "ticker": "CHADLER",
@@ -41,6 +41,22 @@
         "PICK_FOUR"
       ],
       "note": "equal 0.22 SOL clip 8:52 AM PT"
+    },
+    {
+      "ticker": "KIRK",
+      "name": "KIRK",
+      "mint": "mCZDyoWCsNGgDXRTnCHqMA9Z7kcpkvzgwmDBGGepump",
+      "fill_token_amount": 1496.592931,
+      "fill_sol": 0.16,
+      "fill_usd": 16.17,
+      "fill_price_usd": 0.010804541211614211,
+      "filled_at": "2026-09-01T10:20:00-07:00",
+      "tx": "2RntQWr1Q7XVFKtyCEuzCnkFcWP7iQDwASaKjpyUXHxrVHZ5SZqeYHTADMFJd4VxhMqf7fr7PbehtHuw79xeR9GK",
+      "clips": 1,
+      "flags": [
+        "LEFTOVER"
+      ],
+      "note": "leftover 0.16 SOL 10:20 AM PT"
     }
   ],
   "closed": [
