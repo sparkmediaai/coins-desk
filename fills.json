@@ -1,1 +1,1 @@
-LOAD_FROM_/tmp/push_all_good.json
+LOAD_FROM_FILE:/workspace/fills.json
