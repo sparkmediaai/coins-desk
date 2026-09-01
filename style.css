@@ -291,6 +291,7 @@ h1 {
 }
 .panel-note { margin: 0; color: var(--smoke); font-size: 11px; }
 
+
 .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);background:rgba(7,8,10,.55)}
 table.blotter{width:100%;min-width:920px;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums}
 table.blotter thead th{position:sticky;top:0;z-index:1;padding:10px;text-align:left;color:var(--mute-2);font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--line-2);background:#0e1116;white-space:nowrap}
