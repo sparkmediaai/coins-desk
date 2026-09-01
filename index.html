@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#07110c">
+  <meta name="theme-color" content="#0b0d10">
   <meta name="description" content="McCormick Desk — $100 SOL. Personal live tape. Not financial advice.">
   <title>McCormick Desk — $100 SOL</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -99,20 +99,24 @@
       <h2>Holding</h2>
       <p class="panel-note" id="tape-note">open clips only. in the book. clip = size × live price.</p>
     </div>
-    <div class="tape-grid">
-      <div class="tape-head" aria-hidden="true">
-        <span>ticker</span>
-        <span>price</span>
-        <span>1h</span>
-        <span>5m</span>
-        <span>liq</span>
-        <span>1h b/s</span>
-        <span>clip</span>
-        <span>vs fill</span>
-        <span>fill</span>
-        <span>p&amp;l</span>
-      </div>
-      <div id="tape" class="tape"></div>
+    <div class="table-scroll">
+      <table class="blotter">
+        <thead>
+          <tr>
+            <th scope="col">ticker</th>
+            <th scope="col" class="num">price</th>
+            <th scope="col" class="num">1h</th>
+            <th scope="col" class="num">5m</th>
+            <th scope="col" class="num">liq</th>
+            <th scope="col" class="num">1h b/s</th>
+            <th scope="col" class="num">clip</th>
+            <th scope="col" class="num">vs fill</th>
+            <th scope="col" class="num">fill</th>
+            <th scope="col" class="num">p&amp;l</th>
+          </tr>
+        </thead>
+        <tbody id="tape"></tbody>
+      </table>
     </div>
   </section>
 
@@ -121,20 +125,24 @@
       <h2>Not holding</h2>
       <p class="panel-note">cuts and flattens. not in the book.</p>
     </div>
-    <div class="tape-grid">
-      <div class="tape-head" aria-hidden="true">
-        <span>ticker</span>
-        <span>price</span>
-        <span>1h</span>
-        <span>5m</span>
-        <span>liq</span>
-        <span>1h b/s</span>
-        <span>sold</span>
-        <span>vs fill</span>
-        <span>fill</span>
-        <span>p&amp;l</span>
-      </div>
-      <div id="closed" class="tape"></div>
+    <div class="table-scroll">
+      <table class="blotter">
+        <thead>
+          <tr>
+            <th scope="col">ticker</th>
+            <th scope="col" class="num">price</th>
+            <th scope="col" class="num">1h</th>
+            <th scope="col" class="num">5m</th>
+            <th scope="col" class="num">liq</th>
+            <th scope="col" class="num">1h b/s</th>
+            <th scope="col" class="num">sold</th>
+            <th scope="col" class="num">vs fill</th>
+            <th scope="col" class="num">fill</th>
+            <th scope="col" class="num">p&amp;l</th>
+          </tr>
+        </thead>
+        <tbody id="closed"></tbody>
+      </table>
     </div>
   </section>
 
