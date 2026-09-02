@@ -1,0 +1,14 @@
+{
+  "name": "coins-desk-watcher",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Alert-only Cloudflare Worker for McCormick Desk open positions",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
