@@ -1,0 +1,70 @@
+name: fix-liveclip
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-liveclip.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Restore and patch app.js
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://raw.githubusercontent.com/sparkmediaai/coins-desk/fab279bbaa99a30c3a49161fee43f35d79edc50c/app.js" -o app.js
+          python3 <<'PY'
+          from pathlib import Path
+          p = Path('app.js')
+          t = p.read_text()
+          old = """function liveClip(pos, livePrice) {
+  if (livePrice == null || livePrice <= 0) return null;
+  const amt = num(pos.fill_token_amount);
+  if (amt != null) return amt * livePrice;
+  const fillUsd = num(pos.fill_usd);
+  const fillPx = num(pos.fill_price_usd);
+  if (fillUsd == null || fillPx == null || fillPx <= 0) return null;
+  return fillUsd * (livePrice / fillPx);
+}"""
+          new = """function liveClip(pos, livePrice) {
+  if (livePrice == null || livePrice <= 0) return null;
+  // Accept CT/override fills that use `tokens` (curve names) as well as fill_token_amount.
+  const amt =
+    num(pos.fill_token_amount) ?? num(pos.tokens) ?? num(pos.token_amount);
+  if (amt != null) return amt * livePrice;
+  const fillUsd = num(pos.fill_usd);
+  let fillPx = num(pos.fill_price_usd);
+  // Derive fill px when only fill_usd + tokens exist (null liq / curve fills).
+  if (fillPx == null || fillPx <= 0) {
+    const toks = num(pos.fill_token_amount) ?? num(pos.tokens) ?? num(pos.token_amount);
+    if (fillUsd != null && toks != null && toks > 0) fillPx = fillUsd / toks;
+  }
+  if (fillUsd == null || fillPx == null || fillPx <= 0) return null;
+  return fillUsd * (livePrice / fillPx);
+}"""
+          if 'num(pos.tokens)' in t:
+              print('already patched')
+          elif old not in t:
+              raise SystemExit('old liveClip not found')
+          else:
+              p.write_text(t.replace(old, new, 1))
+              print('patched ok')
+          assert 'num(pos.tokens)' in p.read_text()
+          PY
+      - name: Commit and push
+        run: |
+          set -euo pipefail
+          git config user.name "sparkmediaai"
+          git config user.email "sparkmediaai@gmail.com"
+          git add app.js
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "desk: liveClip accepts tokens field for curve fills"
+          git push origin HEAD:main
