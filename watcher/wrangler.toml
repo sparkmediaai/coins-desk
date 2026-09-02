@@ -9,16 +9,18 @@ crons = ["* * * * *"]
 
 [[kv_namespaces]]
 binding = "DESK_STATE"
+# Create with: npx wrangler kv namespace create DESK_STATE
+# then paste id here
 id = "560836cf68f3419183d0d93e41e4a184"
 preview_id = "135a2522e0ee423bae8a686707bcdbcd"
 
 [vars]
-FILLS_URL = "https://sparkmediaai.github.io/coins-desk/fills.json"
+FILLS_URL = "https://raw.githubusercontent.com/sparkmediaai/coins-desk/8fcd79f879882590feb78309f00e4847e9894b5a/fills.json"
 LIQ_DROP_PCT = "0.25"
 TRAIL_ARM_PCT = "0.20"
 TRAIL_EXIT_PCT = "0.05"
 FAST_DUMP_PCT = "0.15"
-HARD_MINUS_PCT = "0.10"
-TRAIL_ENABLED = "0"
+HARD_MINUS_PCT = "0.15"
+TRAIL_ENABLED = "1"
 SAVE_POINTS = "0"
 DEDUPE_SECONDS = "180"
