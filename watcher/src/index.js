@@ -1,1 +1,1 @@
-PLACEHOLDER_WILL_REPLACE
+@file:/workspace/coins-desk/watcher/src/index.js
