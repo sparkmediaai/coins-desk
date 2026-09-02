@@ -1,1 +1,185 @@
-PLACEHOLDER
+{
+  "desk": {
+    "operator": "David McCormick",
+    "city": "Las Vegas",
+    "tz": "America/Los_Angeles",
+    "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
+    "start_usd": 100.24,
+    "filled_at": "2026-09-01T13:37:00-07:00",
+    "note": "HeeHaw HARD_MINUS10 cut ~11:34 AM PT (-16.14% realized / Dex ~-10.0% vs $8.92). Still open: fone, WSOLP, TOAD, HOOD. Leftover ~0.0874 SOL. REPLACE_ON_CUT hunting.",
+    "updated_at": "2026-09-02T11:34:00-07:00"
+  },
+  "leftover_sol": 0.087367974,
+  "positions": [
+    {
+      "ticker": "fone",
+      "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
+      "tokens": 585.881381,
+      "fill_sol": 0.111407342,
+      "fill_usd": 11.01,
+      "fill_tx": "4X4VpXFA7151iV8sejW39cPPuE1QaYf7tbE2A3rHGE8F8A6UVgUQmY2GWzRfNV6jCa8m6vS6E8uLTgSKPkGdfb5",
+      "filled_at": "2026-09-02T17:14:46Z",
+      "trail": "OFF",
+      "exit_rules": ["HARD_MINUS10"],
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10"]
+    },
+    {
+      "ticker": "WSOLP",
+      "mint": "GvUCjmWSXA5hrTh9smmNA1AU55YCtP9mDLQcrKA1pump",
+      "tokens": 3058.725275,
+      "fill_sol": 0.095,
+      "fill_usd": 9.4,
+      "fill_tx": "5zNuoSouzPEnNUuqyvbBbbSRD9NWRjaDkAkGk6N42DisUMk4oTF6y6wcayyr9vhd7vywMeAkmbjwKs2u8TQEQjFo",
+      "filled_at": "2026-09-02T10:37:00-07:00",
+      "trail": "OFF",
+      "exit_rules": ["HARD_MINUS10"],
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10"]
+    },
+    {
+      "ticker": "TOAD",
+      "mint": "A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump",
+      "tokens": 2040.783009,
+      "fill_sol": 0.095,
+      "fill_usd": 9.41,
+      "fill_tx": "4j6ZzswcKhz7AkW635SG34ArZMQG2aTfpBf76DPmdJgTfqbcSCmJBU8ix2BeNezsGYhqNAmXK7AwJCdWJzJUg6KR",
+      "filled_at": "2026-09-02T11:08:00-07:00",
+      "trail": "OFF",
+      "exit_rules": ["HARD_MINUS10"],
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10"]
+    },
+    {
+      "ticker": "HOOD",
+      "mint": "2ttnQsCiK2Np7dH4QCgfRoWrVbLBG14EGS5wfb9T6PDP",
+      "tokens": 718300.305819,
+      "fill_sol": 0.095,
+      "fill_usd": 9.41,
+      "fill_tx": "2W9co93kw6LqKAFs68BrbrsJU7neBBy35CYZcvgCTuqBR9fmVtQEa7mrdzQQibj77NHbw5AgoAH9TxgHppMKbHMP",
+      "filled_at": "2026-09-02T11:08:00-07:00",
+      "trail": "OFF",
+      "exit_rules": ["HARD_MINUS10"],
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10"]
+    }
+  ],
+  "closed": [
+    {
+      "ticker": "HeeHaw",
+      "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
+      "fill_usd": 8.92,
+      "fill_sol": 0.09,
+      "sold_sol": 0.075262946,
+      "sold_usd": 7.48,
+      "vs_fill_pct": -16.14,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "64Zd4Q9Wck2xFg8De426RuTsApNMGmishV814zuurTUnHqzs1KKPpfp43TNAKjcY6ed6sHqfygCNrxczzKSVVdFB",
+      "sold_at": "2026-09-02T11:34:00-07:00",
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10", "CUT", "WATCHER"]
+    },
+    {
+      "ticker": "DICKBUTT",
+      "mint": "CgypxZcmmZMVQMERA6D59hkh8maPEnj31pYRKM9cpump",
+      "fill_usd": 11.86,
+      "fill_sol": 0.12,
+      "sold_sol": 0.090715825,
+      "sold_usd": 9.33,
+      "vs_fill_pct": -21.33,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "2V4cR6YpgrQDCBy922TM7tkdXJhXu4rRowtyFF6KHEBLrJkrnoNqBBd6fiCznR4upyY3qMwu65ULgDcPwfLWFZmv",
+      "sold_at": "2026-09-02T10:59:38-07:00",
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10", "CUT", "WATCHER"]
+    },
+    {
+      "ticker": "Ape1",
+      "mint": "9En6cypnSdGc6cLPxAP2u1cP6FbU9WfC8jEUCLqopump",
+      "fill_usd": 11.86,
+      "fill_sol": 0.12,
+      "sold_sol": 0.108179784,
+      "sold_usd": 10.68,
+      "vs_fill_pct": -9.95,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "ScajsHsniYdWbZMSxApTk9TQXEN4sNoJh5FxPpuw1dNP5fBYDj2WVhiAMwFjVaZX5X2Vi4FURPXhL21HCmRfjLe",
+      "sold_at": "2026-09-02T10:43:26-07:00",
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10", "CUT", "WATCHER"]
+    },
+    {
+      "ticker": "FONELESS",
+      "mint": "DGxNfqdqQLxCdrNZrbcA9AutX2cobj7Nx4dpJmDVpump",
+      "fill_usd": 11.86,
+      "fill_sol": 0.12,
+      "sold_sol": 0.096416859,
+      "sold_usd": 9.52,
+      "vs_fill_pct": -19.73,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "3wWiMgZhATK35SK1UQonbc13fwGZhsv7A7QCn5Dn7aNZAT84v9dEjQL4YQbMafKDckhXeHv1BEuaP8hWzdcwUdXq",
+      "sold_at": "2026-09-02T10:32:00-07:00",
+      "flags": ["CUT", "HARD_MINUS10"]
+    },
+    {
+      "ticker": "Pumpcat",
+      "mint": "ANM35KbUcfKdEVBXzSjZBoT6ceSwYRs3fuc79fp7kRqP",
+      "fill_usd": 8.92,
+      "fill_sol": 0.09,
+      "sold_sol": 0.072563545,
+      "sold_usd": 7.16,
+      "vs_fill_pct": -19.73,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "2Gv8jeXRUeu1wfzsa4S1A18i7GLF8MbrB9GSwfxz9wAsFUmJrj9nByAohZnpKeurMuaE5619MUL92TzFk6UMcZKY",
+      "sold_at": "2026-09-02T10:07:10-07:00",
+      "flags": ["REPLACE_ON_CUT", "HARD_MINUS10", "CUT", "WATCHER"]
+    },
+    {
+      "ticker": "SOLCAT",
+      "mint": "HmJDgky11u77hpBss6D8sjNpYPD5B6fWgSVDj58jpump",
+      "fill_usd": 8.92,
+      "fill_sol": 0.09,
+      "sold_sol": 0.066033683,
+      "sold_usd": 6.56,
+      "vs_fill_pct": -26.46,
+      "close_reason": "HARD_MINUS10",
+      "sold_tx": "4Z2MZUmo377Ko2QQAcjXCyJ5n78kwEScNhbWnP1k5c7oWi5sGs6aP6AARrLRtsNJDjb2qJSuEF9o7zTbKSa7kiZ6",
+      "sold_at": "2026-09-02T09:38:01.199692-07:00",
+      "flags": ["MECHANISM_TEST", "GATE_OFF", "HARD_MINUS10", "WATCHER"]
+    },
+    {
+      "ticker": "MADE",
+      "mint": "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1",
+      "fill_usd": 9.91,
+      "fill_sol": 0.1,
+      "sold_sol": 0.091773,
+      "sold_usd": 9.15,
+      "vs_fill_pct": -8.2,
+      "close_reason": "rotate to rippers (was HOLD on -15)",
+      "sold_tx": "3FE3DSBzLMWiRR4bRbpgtmDuXb7ADjbZ5pRH2FEX6WGDwL41wwqUkBA4UdtToYSit8VNWmAjwsjaobXG3njq6mQ",
+      "sold_at": "2026-09-02T08:56:00-07:00",
+      "flags": ["GATE_CLEAR", "HUNT_FILL", "ROTATE", "CUT"]
+    },
+    {
+      "ticker": "OTC",
+      "mint": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump",
+      "fill_usd": 9.91,
+      "fill_sol": 0.1,
+      "sold_sol": 0.074528,
+      "sold_usd": 7.43,
+      "vs_fill_pct": -25.5,
+      "close_reason": "HARD_MINUS15 then rotate to rippers",
+      "sold_tx": "559jZ59SAXS34YczYynFcYDxmiHJ22XFTcaXpBnyXiSUvu8nBkH4yJPS94sCJLgCEdtmYpen8JBkQpq46NhvgAxb",
+      "sold_at": "2026-09-02T08:54:00-07:00",
+      "flags": ["GATE_CLEAR", "HUNT_FILL", "ROTATE", "CUT"]
+    }
+  ],
+  "hunt": [
+    {"ticker": "HeeHaw", "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump", "note": "HARD_MINUS10 cut 2026-09-02 ~11:34 AM PT \u2014 do not rebuy unless David says"},
+    {"ticker": "DICKBUTT", "mint": "CgypxZcmmZMVQMERA6D59hkh8maPEnj31pYRKM9cpump", "note": "HARD_MINUS10 cut \u2014 do not rebuy unless David says"},
+    {"ticker": "Ape1", "mint": "9En6cypnSdGc6cLPxAP2u1cP6FbU9WfC8jEUCLqopump", "note": "HARD_MINUS10 cut \u2014 do not rebuy unless David says"},
+    {"ticker": "Pumpcat", "mint": "ANM35KbUcfKdEVBXzSjZBoT6ceSwYRs3fuc79fp7kRqP", "note": "HARD_MINUS10 cut \u2014 do not rebuy unless David says"},
+    {"ticker": "FONELESS", "mint": "DGxNfqdqQLxCdrNZrbcA9AutX2cobj7Nx4dpJmDVpump", "note": "HARD_MINUS10 cut \u2014 do not rebuy"},
+    {"ticker": "SOLCAT", "mint": "HmJDgky11u77hpBss6D8sjNpYPD5B6fWgSVDj58jpump", "note": "HARD_MINUS10 cut \u2014 do not rebuy"},
+    {"ticker": "SHORTKING", "mint": "3wvHU2pCmCC4aS7nvuJr2cczg8KKuWhkwMQjLRpfpump", "note": "HARD_MINUS10 cut \u2014 do not rebuy unless David says"},
+    {"ticker": "OTC", "mint": "MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump", "note": "HARD_MINUS15 cut + rotate \u2014 do not rebuy"}
+  ],
+  "watch": [
+    {"ticker": "SmartNigga", "name": "Niggatus Smartalus", "mint": "Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump", "note": "David watch \u2014 still on-curve, ignore same-ticker clones"},
+    {"ticker": "SALP", "name": "Leopold", "mint": "9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump", "note": "official Shkreli launch \u2014 do not copy"},
+    {"ticker": "sus", "name": "dog wif helmet", "mint": "5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump", "note": "Shkreli size-buy \u2014 do not chase"},
+    {"ticker": "CITRINI", "mint": "4HxV2vqATQEjn1hYw3eR43x9b3w1Z5ZoNoV5byTbpump", "note": "his launch, dumped, do not copy"}
+  ]
+}
