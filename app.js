@@ -1,1 +1,1 @@
-@file:/workspace/coins-desk/app.js
+@/workspace/coins-desk/app.js
