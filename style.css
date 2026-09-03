@@ -4,7 +4,9 @@
 .row-pair a{color:var(--brass-dim)}
 .badge.trail{color:var(--brass);border-color:var(--brass-dim)}
 .spark-wrap{margin-top:6px;line-height:0}
-.spark-wrap svg.spark{display:block;width:96px;height:28px;overflow:visible}
+.spark-wrap svg.spark{display:block;width:120px;height:36px;overflow:visible}
 .spark-wrap svg.spark polyline{stroke:var(--brass,#c9a227);fill:none}
+.spark-dex{display:block;width:120px;height:36px;overflow:hidden;border:1px solid var(--brass-hair,#2a2e36);border-radius:2px;background:#0e1116}
+.spark-dex-frame{display:block;width:120px;height:36px;border:0;background:#0e1116}
 .spark-fallback{display:inline-block;margin-top:2px;font-size:10px;color:var(--brass-dim);line-height:1.2;letter-spacing:.04em}
 .spark-fallback:hover{color:var(--ivory)}
