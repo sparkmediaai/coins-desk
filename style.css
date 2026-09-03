@@ -1,5 +1,10 @@
-/* pack1: full desk CSS via jsDelivr (text/css) + Holding trail/pair badges */
+/* spark1: full desk CSS via jsDelivr (text/css) + Holding trail/pair + 24h spark */
 @import url("https://cdn.jsdelivr.net/gh/sparkmediaai/coins-desk@47b75a94a138af0c4a684514942a1d8b8932074c/style.css");
 .row-pair{font-size:10px;color:var(--smoke);margin-top:2px;font-family:var(--mono),monospace}
 .row-pair a{color:var(--brass-dim)}
 .badge.trail{color:var(--brass);border-color:var(--brass-dim)}
+.spark-wrap{margin-top:6px;line-height:0}
+.spark-wrap svg.spark{display:block;width:96px;height:28px;overflow:visible}
+.spark-wrap svg.spark polyline{stroke:var(--brass,#c9a227);fill:none}
+.spark-fallback{display:inline-block;margin-top:2px;font-size:10px;color:var(--brass-dim);line-height:1.2;letter-spacing:.04em}
+.spark-fallback:hover{color:var(--ivory)}
