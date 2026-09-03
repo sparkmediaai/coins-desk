@@ -1,1 +1,5 @@
-FILE:/workspace/coins-desk/style.css
+/* pack1: restore from last good blob + Holding trail/pair badges */
+@import url("https://raw.githubusercontent.com/sparkmediaai/coins-desk/f85900efb6baea754e99995cb25d006abc9fb137/style.css");
+.row-pair{font-size:10px;color:var(--smoke);margin-top:2px;font-family:var(--mono),monospace}
+.row-pair a{color:var(--brass-dim)}
+.badge.trail{color:var(--brass);border-color:var(--brass-dim)}
