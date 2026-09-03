@@ -17,15 +17,15 @@
     return typeof dexHref === "function" ? dexHref(mint) : "#";
   }
 
-  /* 24h sparkline — Gecko OHLCV SVG; Dex iframe fallback; soft-fail if no pair */
+  /* 24h sparkline — prefer Gecko OHLCV SVG; Dex link fallback; hide if no pair */
   const GECKO_OHLCV =
     "https://api.geckoterminal.com/api/v2/networks/solana/pools/";
   const SPARK_TTL_MS = 5 * 60 * 1000;
   const sparkCache = new Map();
 
   function sparkSvgFromCloses(closes, w, h) {
-    const width = w || 120;
-    const height = h || 36;
+    const width = w || 96;
+    const height = h || 28;
     const pad = 1;
     const vals = closes.filter((n) => Number.isFinite(n));
     if (vals.length < 2) return null;
@@ -100,18 +100,12 @@
   }
 
   function dexSparkFallback(pairAddress) {
-    const wrap = el("div", "spark-dex");
-    const iframe = document.createElement("iframe");
-    iframe.className = "spark-dex-frame";
-    iframe.title = "24h chart";
-    iframe.loading = "lazy";
-    iframe.referrerPolicy = "no-referrer";
-    iframe.src =
-      "https://dexscreener.com/solana/" +
-      encodeURIComponent(pairAddress) +
-      "?embed=1&theme=dark&trades=0&info=0&chartLeftToolbar=0";
-    wrap.appendChild(iframe);
-    return wrap;
+    const a = el("a", "spark-fallback", "24h chart");
+    a.href = dexHrefPair(pairAddress);
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.title = "DexScreener 24h chart";
+    return a;
   }
 
   function mountSparkLocal(host, pairAddress) {
