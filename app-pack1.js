@@ -17,7 +17,7 @@
     return typeof dexHref === "function" ? dexHref(mint) : "#";
   }
 
-  /* 24h sparkline — prefer Gecko OHLCV SVG; Dex iframe fallback; hide if no pair */
+  /* 24h sparkline — Gecko OHLCV SVG; Dex iframe fallback; soft-fail if no pair */
   const GECKO_OHLCV =
     "https://api.geckoterminal.com/api/v2/networks/solana/pools/";
   const SPARK_TTL_MS = 5 * 60 * 1000;
