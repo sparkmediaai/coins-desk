@@ -6,10 +6,10 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "9/2 ~8:51 PM PT desk start reset $100.24 \u2192 $36.00. Open CATE/USELESS/WIF. Leftover ~0.039.",
-    "updated_at": "2026-09-03T02:58:00.900570+00:00",
+    "note": "9/2 ~11:54 PM PT USELESS RIP_PLUS20 / trail armed. CATE trail already armed. Open CATE/USELESS/WIF. Start $36.",
+    "updated_at": "2026-09-03T06:56:12.517432+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
-    "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
+    "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24
   },
   "leftover_sol": 0.038671999,
@@ -27,13 +27,16 @@
       "flags": [
         "REPLACE_ON_CUT",
         "HARD_MINUS10",
-        "CLEANER"
+        "CLEANER",
+        "RIP_PLUS20",
+        "TRAIL_ARMED"
       ],
-      "trail": "OFF",
+      "trail": "+20→+5",
       "exit_rules": [
         "HARD_MINUS10"
       ],
-      "note": "Deep-liq cleaner second clip after CTO cut"
+      "note": "Deep-liq cleaner second clip after CTO cut | RIP_PLUS20 ~9:09 PM PT trail +20→+5 armed",
+      "trail_armed_at": "2026-09-02T21:09:59.425015-07:00"
     },
     {
       "ticker": "USELESS",
@@ -49,13 +52,16 @@
         "REPLACE_ON_CUT",
         "HARD_MINUS10",
         "CLEANER",
-        "DAVID_STAY_IN"
+        "DAVID_STAY_IN",
+        "RIP_PLUS20",
+        "TRAIL_ARMED"
       ],
-      "trail": "OFF",
+      "trail": "+20→+5",
       "exit_rules": [
         "HARD_MINUS10"
       ],
-      "note": "David stay in game; deep-liq cleaner replace after STONK HARD_MINUS10"
+      "note": "David stay in game; deep-liq cleaner replace after STONK HARD_MINUS10 | RIP_PLUS20 ~11:54 PM PT trail +20→+5 armed",
+      "trail_armed_at": "2026-09-02T23:55:16.216761-07:00"
     },
     {
       "ticker": "WIF",
@@ -174,7 +180,7 @@
       "exit_rules": [
         "HARD_MINUS10"
       ],
-      "note": "HARD_MINUS10 cut. Live Dex ~\u221226% vs $9; Jupiter exit 0.0554 SOL / -38.6% after fees.",
+      "note": "HARD_MINUS10 cut. Live Dex ~−26% vs $9; Jupiter exit 0.0554 SOL / -38.6% after fees.",
       "fill_tx": "2PuYk7N7yo2JA9ptLve7Ydt6p9YkKJ5xdNT2reeStyfptt2kmP8QiPHCSJiCZrA1aAMTwM5owz62zjNMpPVTHnK1",
       "sold_sol": 0.055374819,
       "sold_usd": 5.53,
@@ -291,52 +297,52 @@
     {
       "ticker": "STONK",
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "Token",
       "mint": "Hos282xmdMJHwMjhni91fNqdjDsgWjgSckxuGc1Bpump",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "CTO",
       "mint": "8K5X85PAJHAAVSvYaAzgVPPAPsqqHmvx16ZyBiscYF8L",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "DICKBUTT",
       "mint": "CgypxZcmmZMVQMERA6D59hkh8maPEnj31pYRKM9cpump",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "Ape1",
       "mint": "9En6cypnSdGc6cLPxAP2u1cP6FbU9WfC8jEUCLqopump",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "Pumpcat",
       "mint": "ANM35KbUcfKdEVBXzSjZBoT6ceSwYRs3fuc79fp7kRqP",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "SHORTKING",
       "mint": "3wvHU2pCmCC4aS7nvuJr2cczg8KKuWhkwMQjLRpfpump",
-      "note": "HARD_MINUS10 cut 2026-09-02 ~7:18 AM PT \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut 2026-09-02 ~7:18 AM PT — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "note": "flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) \u2014 sitting SOL"
+      "note": "flattened to SOL 2026-08-30 8:09pm PT 0.646 SOL (~$65.55, -12.2% vs $74.69 fill) — sitting SOL"
     },
     {
       "ticker": "HeeHaw",
       "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
-      "note": "HARD_MINUS10 cut 2026-09-02 ~11:34 AM PT \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut 2026-09-02 ~11:34 AM PT — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     },
     {
       "ticker": "Buddy",
       "mint": "7MYegHoqDGhWdvrnxeuiAEndgG6qcs1N3W5v6SXspump",
-      "note": "HARD_MINUS10 cut \u2014 rebuy OK if tape live + entry-tax clean (not a permanent ban)"
+      "note": "HARD_MINUS10 cut — rebuy OK if tape live + entry-tax clean (not a permanent ban)"
     }
   ],
   "watch": [
@@ -344,19 +350,19 @@
       "ticker": "SmartNigga",
       "name": "Niggatus Smartalus",
       "mint": "Dy7XusxShYaHfcAu7Wze7LekmCx4ZjFsVPZ5wpWEpump",
-      "note": "David watch \u2014 still on-curve, ignore same-ticker clones"
+      "note": "David watch — still on-curve, ignore same-ticker clones"
     },
     {
       "ticker": "SALP",
       "name": "Leopold",
       "mint": "9GJs4A4CsgoxSBkoxKx3VMwHCjiyhuTPUJzAx7qwpump",
-      "note": "official Shkreli launch \u2014 do not copy"
+      "note": "official Shkreli launch — do not copy"
     },
     {
       "ticker": "sus",
       "name": "dog wif helmet",
       "mint": "5ncPV6YVUXxuK9NVphwC7UkLd1gQZuGhdfEaDNxUpump",
-      "note": "Shkreli size-buy \u2014 do not chase"
+      "note": "Shkreli size-buy — do not chase"
     },
     {
       "ticker": "CITRINI",
