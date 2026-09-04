@@ -1,0 +1,214 @@
+5Ok || h1Ok;
+    // Cool only well under both floors (half threshold) — stops flicker
+    // reclaim spam when m5/h1 hover near the trip lines.
+    const cool =
+      (!Number.isFinite(m5) || m5 < m5Min * 0.5) &&
+      (!Number.isFinite(h1) || h1 < h1Min * 0.5);
+
+    const mint = pair.baseToken.address;
+    const armKey = `rip_arm:${mintLc}:RIP_BENCH`;
+    const armTtl = 60 * 60 * 12; // 12h belt; cool-clear still owns reclaim
+
+    if (cool) {
+      await env.DESK_STATE.delete(armKey);
+      // also drop short alert key so migrate can't resurrect a ghost
+      await env.DESK_STATE.delete(`alert:${mint}:RIP_BENCH`);
+      continue;
+    }
+
+    if (!qualifies) {
+      // Warm band (between cool and trip): keep any existing arm, no new alert
+      continue;
+    }
+
+    let armed = await env.DESK_STATE.get(armKey);
+    if (!armed) {
+      // Migrate short-TTL alert key → sticky arm (kills mid-spam echoes)
+      const alertExisting = await env.DESK_STATE.get(
+        `alert:${mint}:RIP_BENCH`
+      );
+      if (alertExisting) {
+        await env.DESK_STATE.put(armKey, alertExisting, {
+          expirationTtl: armTtl,
+        });
+        armed = alertExisting;
+      }
+    }
+    if (armed) {
+      console.log(`rip_bench sticky skip ${mintLc}`);
+      continue;
+    }
+
+    const ticker =
+      pair.baseToken?.symbol ||
+      pair.baseToken?.name ||
+      mintLc.slice(0, 8);
+    const priceUsd = num(pair.priceUsd, NaN);
+    hits.push({
+      mint,
+      mintLc,
+      armKey,
+      ticker,
+      priceUsd,
+      liq,
+      buys1h: Number.isFinite(buys1h) ? buys1h : null,
+      sells1h: Number.isFinite(sells1h) ? sells1h : null,
+      m5: Number.isFinite(m5) ? m5 : null,
+      h1: Number.isFinite(h1) ? h1 : null,
+      dexUrl:
+        pair.url ||
+        `https://dexscreener.com/solana/${pair.pairAddress || pair.baseToken.address}`,
+    });
+  }
+
+  hits.sort((a, b) => {
+    const am = a.m5 == null ? -Infinity : a.m5;
+    const bm = b.m5 == null ? -Infinity : b.m5;
+    if (bm !== am) return bm - am;
+    const ah = a.h1 == null ? -Infinity : a.h1;
+    const bh = b.h1 == null ? -Infinity : b.h1;
+    return bh - ah;
+  });
+
+  let sent = 0;
+  for (const hit of hits.slice(0, maxAlerts)) {
+    const m5s = hit.m5 == null ? "?" : hit.m5.toFixed(1);
+    const h1s = hit.h1 == null ? "?" : hit.h1.toFixed(1);
+    const bs =
+      hit.buys1h == null && hit.sells1h == null
+        ? "?"
+        : `${hit.buys1h ?? "—"}/${hit.sells1h ?? "—"}`;
+    const hygiene = await mintHygiene(hit.mint, env);
+    const hyNote = hygieneNote(hygiene);
+    const ok = await maybeSendAlert(env, {
+      rule: "RIP_BENCH",
+      ticker: hit.ticker,
+      mint: hit.mint,
+      fill_usd: null,
+      mark_usd: null,
+      vs_fill_pct: null,
+      liq_usd: round4(hit.liq),
+      liq_prev_usd: null,
+      liq_change_pct: null,
+      price_prev_usd: null,
+      price_usd: Number.isFinite(hit.priceUsd) ? round4(hit.priceUsd) : null,
+      m5: hit.m5 != null ? round4(hit.m5) : null,
+      h1: hit.h1 != null ? round4(hit.h1) : null,
+      buys_1h: hit.buys1h,
+      sells_1h: hit.sells1h,
+      hygiene,
+      note: `bench rip m5=${m5s}% h1=${h1s}% liq=$${Math.round(hit.liq)} b/s=${bs}${hyNote}`,
+      fills_url: fillsUrl,
+      dex_url: hit.dexUrl,
+      dedupeSec,
+      stickyArm: true,
+    });
+    if (ok) {
+      sent += 1;
+      await env.DESK_STATE.put(hit.armKey, new Date().toISOString(), {
+        expirationTtl: 60 * 60 * 12,
+      });
+    }
+  }
+  return sent;
+}
+
+async function collectCuratedBenchMints(fillsUrl, openMints, maxSize = 25) {
+  // Prefer explicit fills.rip_bench; else union of hunt + closed mints.
+  // Cap size (hot names first in fills.rip_bench order).
+  const cap = Math.max(1, Math.floor(maxSize || 25));
+  try {
+    const res = await fetch(fillsUrl, {
+      headers: { Accept: "application/json", "User-Agent": SOURCE },
+    });
+    if (!res.ok) throw new Error(`fills HTTP ${res.status}`);
+    const data = await res.json();
+    const out = [];
+    const seen = new Set();
+    const pushMint = (mint) => {
+      if (!mint || typeof mint !== "string") return;
+      const lc = mint.toLowerCase();
+      if (seen.has(lc) || openMints.has(lc)) return;
+      seen.add(lc);
+      out.push(mint);
+    };
+    const curated = Array.isArray(data?.rip_bench) ? data.rip_bench : [];
+    if (curated.length) {
+      for (const row of curated) {
+        pushMint(row?.mint || row);
+        if (out.length >= cap) break;
+      }
+      return out;
+    }
+    for (const row of [...(data?.hunt || []), ...(data?.closed || [])]) {
+      pushMint(row?.mint);
+      if (out.length >= cap) break;
+    }
+    return out;
+  } catch (e) {
+    console.error(`rip_bench curated load: ${e.message || e}`);
+    return [];
+  }
+}
+
+async function loadCuratedMintSet(fillsUrl) {
+  const set = new Set();
+  try {
+    const res = await fetch(fillsUrl, {
+      headers: { Accept: "application/json", "User-Agent": SOURCE },
+    });
+    if (!res.ok) return set;
+    const data = await res.json();
+    for (const row of data?.rip_bench || []) {
+      const m = (row?.mint || row || "").toLowerCase();
+      if (m) set.add(m);
+    }
+  } catch (e) {
+    console.error(`curated set load: ${e.message || e}`);
+  }
+  return set;
+}
+
+
+/**
+ * WATCH_NEW — Dex boosts/profiles discovery. LOOK ONLY — never auto-clip.
+ */
+async function evaluateWatchDiscovery(env, fillsUrl, openMints, th) {
+  const minLiq = num(env.WATCH_MIN_LIQ, 80000);
+  const minAgeH = num(env.WATCH_MIN_AGE_H, 0.25);
+  const maxAgeH = num(env.WATCH_MAX_AGE_H, 72);
+  const maxBuys1h = num(env.WATCH_MAX_BUYS_1H, 2500);
+  const maxAlerts = Math.max(1, Math.floor(num(env.WATCH_MAX_ALERTS, 2)));
+  const dedupeSec = Math.max(th.dedupeSec, 6 * 3600);
+  const now = Date.now();
+  const minCreated = now - maxAgeH * 3600 * 1000; // not older than maxAge
+  const maxCreated = now - minAgeH * 3600 * 1000; // not younger than minAge
+
+  const curated = await loadCuratedMintSet(fillsUrl);
+  const candidates = await collectSolanaCandidateMints();
+  const filtered = candidates.filter((m) => {
+    const lc = m.toLowerCase();
+    return !openMints.has(lc) && !curated.has(lc);
+  });
+  if (!filtered.length) {
+    console.log("watch_new: no candidates");
+    return 0;
+  }
+
+  const hits = [];
+  // Cap RPC/Dex fan-out
+  for (const mint of filtered.slice(0, 40)) {
+    try {
+      const pair = await bestSolanaPair(mint);
+      if (!pair) continue;
+      const quote = (pair.quoteToken?.address || "").toLowerCase();
+      if (!QUOTE_OK.has(quote)) continue;
+      const liq = num(pair.liquidity?.usd, 0);
+      if (!pair.pairAddress || liq < minLiq) continue;
+      const created = num(pair.pairCreatedAt, 0);
+      if (!created || created < minCreated || created > maxCreated) continue;
+      const buys1h = num(pair.txns?.h1?.buys, NaN);
+      const sells1h = num(pair.txns?.h1?.sells, NaN);
+      if (Number.isFinite(buys1h) && buys1h > maxBuys1h) continue;
+      const m5 = num(pair.priceChange?.m5, NaN);
+      const h1 = num(pair.priceChange?.h1, NaN)
