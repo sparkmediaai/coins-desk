@@ -1,0 +1,43 @@
+name: assemble-app-once
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/assemble-app-once.yml"
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inflate app.js + index.html from zlib b64 chunks
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64, zlib, hashlib, pathlib
+          parts = []
+          parts.append(pathlib.Path("_assemble_app/app00.b64").read_text().strip())
+          parts.append(pathlib.Path("_assemble_app/app01.b64").read_text().strip())
+          parts.append(pathlib.Path("_assemble_app/app02.b64").read_text().strip())
+          app = zlib.decompress(base64.b64decode("".join(parts)))
+          idx = zlib.decompress(base64.b64decode(pathlib.Path("_assemble_app/index.b64").read_text().strip()))
+          assert len(app) == 18467, len(app)
+          assert hashlib.sha256(app).hexdigest() == "5464e4276e570cfa7319d56a9127b4e96d626e1630c982874e1d4c3969999afc"
+          assert b"fills.rip_bench" in app
+          assert len(idx) == 7808, len(idx)
+          assert hashlib.sha256(idx).hexdigest() == "ac04564a366c0f6a0896b108104eb8605a3c6363fb4594eeaf98697ddb1028bf"
+          assert b"ripbench3" in idx
+          pathlib.Path("app.js").write_bytes(app)
+          pathlib.Path("index.html").write_bytes(idx)
+          print("assembled ok", len(app), len(idx))
+          PY
+          rm -rf _assemble_app
+          git config user.name "sparkmediaai"
+          git config user.email "sparkmediaai@gmail.com"
+          git add app.js index.html
+          git add -u _assemble_app || true
+          git restore --staged fills.json 2>/dev/null || true
+          git status
+          git commit -m "Pages: include rip_bench mints in Dex fetch + ripbench3 cache-bust"
+          git push
