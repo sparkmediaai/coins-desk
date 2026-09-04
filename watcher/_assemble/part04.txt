@@ -1,0 +1,208 @@
+;
+      // Need some tape — at least one positive window
+      const hot =
+        (Number.isFinite(m5) && m5 >= 5) || (Number.isFinite(h1) && h1 >= 15);
+      if (!hot) continue;
+      const mintLc = mint.toLowerCase();
+      const armKey = `rip_arm:${mintLc}:WATCH_NEW`;
+      if (await env.DESK_STATE.get(armKey)) continue;
+      if (await env.DESK_STATE.get(`alert:${mint}:WATCH_NEW`)) continue;
+      hits.push({
+        mint,
+        mintLc,
+        armKey,
+        ticker:
+          pair.baseToken?.symbol ||
+          pair.baseToken?.name ||
+          mintLc.slice(0, 8),
+        priceUsd: num(pair.priceUsd, NaN),
+        liq,
+        buys1h: Number.isFinite(buys1h) ? buys1h : null,
+        sells1h: Number.isFinite(sells1h) ? sells1h : null,
+        m5: Number.isFinite(m5) ? m5 : null,
+        h1: Number.isFinite(h1) ? h1 : null,
+        dexUrl:
+          pair.url ||
+          `https://dexscreener.com/solana/${pair.pairAddress || mint}`,
+      });
+    } catch (e) {
+      console.error(`watch_new ${mint}: ${e.message || e}`);
+    }
+  }
+
+  hits.sort((a, b) => (b.m5 ?? -1e9) - (a.m5 ?? -1e9));
+  let sent = 0;
+  for (const hit of hits.slice(0, maxAlerts)) {
+    const hygiene = await mintHygiene(hit.mint, env);
+    const hyNote = hygieneNote(hygiene);
+    const m5s = hit.m5 == null ? "?" : hit.m5.toFixed(1);
+    const h1s = hit.h1 == null ? "?" : hit.h1.toFixed(1);
+    const bs =
+      hit.buys1h == null && hit.sells1h == null
+        ? "?"
+        : `${hit.buys1h ?? "—"}/${hit.sells1h ?? "—"}`;
+    const ok = await maybeSendAlert(env, {
+      rule: "WATCH_NEW",
+      ticker: hit.ticker,
+      mint: hit.mint,
+      fill_usd: null,
+      mark_usd: null,
+      vs_fill_pct: null,
+      liq_usd: round4(hit.liq),
+      liq_prev_usd: null,
+      liq_change_pct: null,
+      price_prev_usd: null,
+      price_usd: Number.isFinite(hit.priceUsd) ? round4(hit.priceUsd) : null,
+      m5: hit.m5 != null ? round4(hit.m5) : null,
+      h1: hit.h1 != null ? round4(hit.h1) : null,
+      buys_1h: hit.buys1h,
+      sells_1h: hit.sells1h,
+      hygiene,
+      note: `WATCH only — do not auto-clip · m5=${m5s}% h1=${h1s}% liq=$${Math.round(hit.liq)} b/s=${bs}${hyNote}`,
+      fills_url: fillsUrl,
+      dex_url: hit.dexUrl,
+      dedupeSec,
+      stickyArm: true,
+    });
+    if (ok) {
+      sent += 1;
+      await env.DESK_STATE.put(hit.armKey, new Date().toISOString(), {
+        expirationTtl: 60 * 60 * 6,
+      });
+    }
+  }
+  return sent;
+}
+
+function hygieneNote(h) {
+  if (!h) return "";
+  if (h.error) return ` · hygiene=rpc_fail`;
+  const parts = [];
+  if (h.flags && h.flags.length) parts.push(h.flags.join(","));
+  else {
+    if (h.mintAuthority) parts.push("MINT_AUTH_LIVE");
+    if (h.freezeAuthority) parts.push("FREEZE_AUTH_LIVE");
+    if (h.program === "spl-token-2022") parts.push("TOKEN_2022");
+    if (h.transferFeePct != null) parts.push(`TRANSFER_FEE_${h.transferFeePct}%`);
+  }
+  return parts.length ? ` · ${parts.join(",")}` : " · mint+freeze clean";
+}
+
+async function mintHygiene(mint, env) {
+  const key = `hygiene:${(mint || "").toLowerCase()}`;
+  try {
+    const cached = await env.DESK_STATE.get(key);
+    if (cached) {
+      try {
+        return JSON.parse(cached);
+      } catch (_) {}
+    }
+  } catch (_) {}
+
+  const rpc = env.SOLANA_RPC_URL || "https://api.mainnet-beta.solana.com";
+  const out = {
+    program: "unknown",
+    mintAuthority: null,
+    freezeAuthority: null,
+    transferFeePct: null,
+    flags: [],
+  };
+  try {
+    const res = await fetch(rpc, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "User-Agent": SOURCE },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "getAccountInfo",
+        params: [mint, { encoding: "jsonParsed" }],
+      }),
+    });
+    if (!res.ok) throw new Error(`rpc HTTP ${res.status}`);
+    const data = await res.json();
+    const value = data?.result?.value;
+    if (!value) {
+      out.error = "no_account";
+      return out;
+    }
+    const owner = value.owner || "";
+    if (owner === "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb") {
+      out.program = "spl-token-2022";
+      out.flags.push("TOKEN_2022");
+    } else if (owner === "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA") {
+      out.program = "spl-token";
+    }
+    const info = value.data?.parsed?.info || {};
+    out.mintAuthority = info.mintAuthority != null;
+    out.freezeAuthority = info.freezeAuthority != null;
+    if (out.mintAuthority) out.flags.push("MINT_AUTH_LIVE");
+    if (out.freezeAuthority) out.flags.push("FREEZE_AUTH_LIVE");
+    const exts = Array.isArray(info.extensions) ? info.extensions : [];
+    for (const ext of exts) {
+      if ((ext.extension || "") === "transferFeeConfig") {
+        const bps = num(
+          ext.state?.newerTransferFee?.transferFeeBasisPoints ??
+            ext.state?.olderTransferFee?.transferFeeBasisPoints,
+          NaN
+        );
+        if (Number.isFinite(bps)) {
+          out.transferFeePct = Math.round((bps / 100) * 100) / 100;
+          out.flags.push(`TRANSFER_FEE_${out.transferFeePct}%`);
+        }
+      }
+    }
+    try {
+      await env.DESK_STATE.put(key, JSON.stringify(out), {
+        expirationTtl: 60 * 60 * 6,
+      });
+    } catch (_) {}
+    return out;
+  } catch (e) {
+    console.error(`mintHygiene ${mint}: ${e.message || e}`);
+    return { error: "rpc_fail", flags: [], program: "unknown" };
+  }
+}
+
+async function collectSolanaCandidateMints() {
+  const out = new Set();
+  const urls = [DEX_BOOSTS_URL, DEX_PROFILES_URL];
+  for (const url of urls) {
+    try {
+      const res = await fetch(url, {
+        headers: { Accept: "application/json", "User-Agent": SOURCE },
+      });
+      if (!res.ok) {
+        console.error(`rip candidates ${url} HTTP ${res.status}`);
+        continue;
+      }
+      const data = await res.json();
+      const list = Array.isArray(data) ? data : [];
+      for (const item of list) {
+        if ((item.chainId || "").toLowerCase() !== "solana") continue;
+        const addr = item.tokenAddress;
+        if (addr && typeof addr === "string") out.add(addr);
+      }
+    } catch (e) {
+      console.error(`rip candidates ${url}: ${e.message || e}`);
+    }
+  }
+  return [...out];
+}
+
+async function ghostScrubClosed(env, openMints) {
+  // Drop DESK_STATE keys for mints no longer in fills.positions.
+  // CRITICAL: never scrub RIP_BENCH arms/alerts — those mints are never in
+  // openMints, so scrubbing them every poll nukes sticky dedupe.
+  const prefixes = ["mark:", "trail_armed:", "save_floor:", "buyer_peak:", "alert:", "rip_arm:"];
+  for (const prefix of prefixes) {
+    let cursor;
+    do {
+      const page = await env.DESK_STATE.list({ prefix, cursor, limit: 1000 });
+      for (const key of page.keys || []) {
+        const name = key.name;
+        let mintLc = null;
+        let rule = null;
+        if (prefix === "alert:" || prefix === "rip_arm:") {
+          // alert|rip_arm:{mint}:{rule}
+          const rest = name.slice(prefix.length);
+          const colon = r
