@@ -40,3 +40,10 @@ Do **not** use Cursor cloud for: live tape, Dex hunts, fill narration.
 ## Change log
 
 - 2026-09-04: David locked token-lean stack (Worker primary, slim hunt, one sync owner).
+
+## Hunt upgrades (2026-09-04)
+
+- **Worker WATCH_NEW**: Dex boosts/profiles → webhook look-only. Never auto-clip. CT decides.
+- **Worker RIP_BENCH**: still curated only; max ~25 names; buy-tilt + liq-peak gates; mint/freeze/Token-2022 fee flags on alerts.
+- **Hygiene**: mint authority / freeze / transfer fee checked via Solana RPC (cached 6h). Dirty flags in the alert note.
+- Research lean hunt stays silence-default backup — does not replace Worker discovery.
