@@ -47,3 +47,4 @@ Do **not** use Cursor cloud for: live tape, Dex hunts, fill narration.
 - **Worker RIP_BENCH**: still curated only; max ~25 names; buy-tilt + liq-peak gates; mint/freeze/Token-2022 fee flags on alerts.
 - **Hygiene**: mint authority / freeze / transfer fee checked via Solana RPC (cached 6h). Dirty flags in the alert note.
 - Research lean hunt stays silence-default backup — does not replace Worker discovery.
+
