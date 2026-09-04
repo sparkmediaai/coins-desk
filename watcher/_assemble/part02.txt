@@ -1,0 +1,197 @@
+laiming
+  // above threshold; stay silent while still above; clear arm when under so
+  // a later reclaim can re-alert (stops 180s TTL echo spam).
+  if (th.ripEnabled && vsFillPct != null) {
+    const flagBag = new Set((pos.flags || []).map(String));
+    const ripRules = [
+      {
+        rule: "RIP_PLUS20",
+        thr: th.ripPlus20,
+        note: `mark +${(vsFillPct * 100).toFixed(1)}% vs fill (>= +${(th.ripPlus20 * 100).toFixed(0)}%)`,
+        pretreat:
+          flagBag.has("RIP_PLUS20") ||
+          flagBag.has("TRAIL_ARMED") ||
+          String(pos.trail || "").includes("+20"),
+      },
+    ];
+    if (th.ripPlus50Enabled) {
+      ripRules.push({
+        rule: "RIP_PLUS50",
+        thr: th.ripPlus50,
+        note: `mark +${(vsFillPct * 100).toFixed(1)}% vs fill (>= +50%)`,
+        pretreat: flagBag.has("RIP_PLUS50"),
+      });
+    }
+    for (const rr of ripRules) {
+      const armKey = `rip_arm:${mint}:${rr.rule}`;
+      if (vsFillPct >= rr.thr) {
+        const armed = await env.DESK_STATE.get(armKey);
+        if (armed || rr.pretreat) {
+          // Already armed (KV or fills blotter) — keep sticky, no echo
+          if (!armed) {
+            await env.DESK_STATE.put(armKey, new Date().toISOString());
+          }
+        } else {
+          trips.push({
+            rule: rr.rule,
+            note: rr.note,
+            liq_change_pct: null,
+            armKey,
+          });
+        }
+      } else {
+        // Dropped under threshold — clear so a reclaim can fire once
+        await env.DESK_STATE.delete(armKey);
+      }
+    }
+  }
+
+  // Persist latest mark after evaluating (so first poll arms baseline)
+  await env.DESK_STATE.put(
+    markKey,
+    JSON.stringify({
+      ts: new Date().toISOString(),
+      mark_usd: markUsd,
+      price_usd: Number.isFinite(priceUsd) ? priceUsd : null,
+      liq_usd: liqUsd,
+      pair: pair.pairAddress || null,
+    })
+  );
+
+  let sent = 0;
+  for (const trip of trips) {
+    const ok = await maybeSendAlert(env, {
+      rule: trip.rule,
+      ticker,
+      mint,
+      fill_usd: Number.isFinite(fillUsd) ? round4(fillUsd) : null,
+      mark_usd: Number.isFinite(markUsd) ? round4(markUsd) : null,
+      vs_fill_pct: vsFillPct != null ? round4(vsFillPct * 100) : null,
+      liq_usd: round4(liqUsd),
+      liq_prev_usd: liqPrev != null ? round4(liqPrev) : null,
+      liq_change_pct:
+        trip.liq_change_pct != null
+          ? trip.liq_change_pct
+          : liqPrev != null && liqPrev > 0
+            ? round4(((liqUsd - liqPrev) / liqPrev) * 100)
+            : null,
+      price_prev_usd: pricePrev != null ? round4(pricePrev) : null,
+      note: trip.note,
+      fills_url: fillsUrl,
+      dex_url: dexUrl,
+      dedupeSec: th.dedupeSec,
+      // RIP sticky arm: skip short TTL so reclaim logic owns re-alerts
+      stickyArm: Boolean(trip.armKey),
+      return_to_rip_bench: Boolean(trip.return_to_rip_bench),
+    });
+    if (ok) {
+      sent += 1;
+      if (trip.armKey) {
+        await env.DESK_STATE.put(trip.armKey, new Date().toISOString());
+      }
+    }
+  }
+  return sent;
+}
+
+/**
+ * RIP_BENCH — scan Solana candidates off the open book via DexScreener
+ * public endpoints (boosts + latest profiles → token pairs).
+ * Dex priceChange.m5/h1 are percent numbers (8.5 === 8.5%).
+ */
+async function evaluateRipBench(env, fillsUrl, openMints, th) {
+  const m5Min = num(env.RIP_BENCH_M5_PCT, 8); // Dex % units
+  const h1Min = num(env.RIP_BENCH_H1_PCT, 25);
+  const minLiq = num(env.RIP_BENCH_MIN_LIQ, 150000);
+  const minAgeH = num(env.RIP_BENCH_MIN_AGE_H, 12);
+  const maxBuys1h = num(env.RIP_BENCH_MAX_BUYS_1H, 2000);
+  const maxAlerts = Math.max(1, Math.floor(num(env.RIP_BENCH_MAX_ALERTS, 3)));
+  const dedupeSec = th.dedupeSec;
+  const now = Date.now();
+  const minCreated = now - minAgeH * 3600 * 1000;
+
+  const maxSize = Math.max(1, Math.floor(num(env.RIP_BENCH_MAX_SIZE, 25)));
+  const buyTilt = num(env.RIP_BENCH_BUY_TILT, 1.15);
+  const liqDropGate = num(env.RIP_BENCH_LIQ_DROP_PCT, 0.35);
+  // Curated bench only (fills.rip_bench / hunt / closed) — not a Dex spray
+  const candidateMints = await collectCuratedBenchMints(fillsUrl, openMints, maxSize);
+  if (!candidateMints.length) {
+    console.log("rip_bench: no curated candidates");
+    return 0;
+  }
+
+  // Batch tokens endpoint (Dex accepts comma-separated, keep batches modest)
+  const pairsByMint = new Map();
+  const batchSize = 25;
+  for (let i = 0; i < candidateMints.length; i += batchSize) {
+    const batch = candidateMints.slice(i, i + batchSize);
+    try {
+      const res = await fetch(
+        `${DEX_TOKEN_URL}${batch.map(encodeURIComponent).join(",")}`,
+        { headers: { Accept: "application/json", "User-Agent": SOURCE } }
+      );
+      if (!res.ok) {
+        console.error(`rip bench tokens HTTP ${res.status}`);
+        continue;
+      }
+      const data = await res.json();
+      const pairs = Array.isArray(data?.pairs) ? data.pairs : [];
+      for (const p of pairs) {
+        if ((p.chainId || "").toLowerCase() !== "solana") continue;
+        const base = (p.baseToken?.address || "").toLowerCase();
+        if (!base) continue;
+        const prev = pairsByMint.get(base);
+        if (!prev || num(p.liquidity?.usd, 0) > num(prev.liquidity?.usd, 0)) {
+          pairsByMint.set(base, p);
+        }
+      }
+    } catch (e) {
+      console.error(`rip bench batch fetch: ${e.message || e}`);
+    }
+  }
+
+  const hits = [];
+  for (const [mintLc, pair] of pairsByMint) {
+    if (openMints.has(mintLc)) continue;
+    const quote = (pair.quoteToken?.address || "").toLowerCase();
+    if (!QUOTE_OK.has(quote)) continue;
+    const base = (pair.baseToken?.address || "").toLowerCase();
+    if (base !== mintLc) continue;
+
+    const liq = num(pair.liquidity?.usd, 0);
+    if (liq < minLiq) continue;
+
+    const created = num(pair.pairCreatedAt, 0);
+    if (!created || created > minCreated) continue; // need age >= minAgeH
+
+    const buys1h = num(pair.txns?.h1?.buys, NaN);
+    const sells1h = num(pair.txns?.h1?.sells, NaN);
+    if (Number.isFinite(buys1h) && buys1h > maxBuys1h) continue;
+    // Buy-tilt: skip sell-heavy fake rips (if sells known)
+    if (
+      Number.isFinite(buys1h) &&
+      Number.isFinite(sells1h) &&
+      sells1h > 0 &&
+      buyTilt > 0 &&
+      buys1h < sells1h * buyTilt
+    ) {
+      continue;
+    }
+
+    // Liq not collapsing vs recent peak (fake rip into exit liquidity)
+    const peakKey = `rip_liq_peak:${mintLc}`;
+    const peakPrev = num(await env.DESK_STATE.get(peakKey), 0);
+    if (liq > peakPrev) {
+      await env.DESK_STATE.put(peakKey, String(liq), { expirationTtl: 60 * 60 * 24 });
+    }
+    const peak = Math.max(peakPrev, liq);
+    if (peak > 0 && liqDropGate > 0 && liq < peak * (1 - liqDropGate)) {
+      continue;
+    }
+
+    // Dex returns percent units (8.5 = +8.5%)
+    const m5 = num(pair.priceChange?.m5, NaN);
+    const h1 = num(pair.priceChange?.h1, NaN);
+    const m5Ok = Number.isFinite(m5) && m5 >= m5Min;
+    const h1Ok = Number.isFinite(h1) && h1 >= h1Min;
+    const qualifies = m
