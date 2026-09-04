@@ -1,0 +1,150 @@
+est.indexOf(":");
+          mintLc = (colon >= 0 ? rest.slice(0, colon) : rest).toLowerCase();
+          rule = colon >= 0 ? rest.slice(colon + 1) : null;
+          if (rule === "RIP_BENCH" || rule === "WATCH_NEW") continue; // sticky owned by cool-clear + TTL
+        } else {
+          mintLc = name.slice(prefix.length).toLowerCase();
+        }
+        if (!mintLc || openMints.has(mintLc)) continue;
+        await env.DESK_STATE.delete(name);
+      }
+      cursor = page.list_complete ? undefined : page.cursor;
+    } while (cursor);
+  }
+}
+
+async function bestSolanaPair(mint) {
+  const res = await fetch(`${DEX_TOKEN_URL}${encodeURIComponent(mint)}`, {
+    headers: { Accept: "application/json", "User-Agent": SOURCE },
+  });
+  if (!res.ok) throw new Error(`dexscreener HTTP ${res.status}`);
+  const data = await res.json();
+  const pairs = Array.isArray(data?.pairs) ? data.pairs : [];
+  const want = (mint || "").toLowerCase();
+  // Prefer pairs where our mint is the BASE token (avoid inverted quote pairs).
+  const sol = pairs.filter((p) => {
+    if ((p.chainId || "").toLowerCase() !== "solana") return false;
+    if (!want) return true;
+    const base = (p.baseToken?.address || "").toLowerCase();
+    return base === want;
+  });
+  if (!sol.length) return null;
+  sol.sort(
+    (a, b) => num(b.liquidity?.usd, 0) - num(a.liquidity?.usd, 0)
+  );
+  return sol[0];
+}
+
+function pickMarkUsd(pair, fillPrice, fillUsd, tokenAmount) {
+  const priceUsd = num(pair.priceUsd, NaN);
+  const tokens = num(tokenAmount, NaN);
+  // Clip mark = tokens × px (never bare token price — that falsely trips HARD_MINUS)
+  if (Number.isFinite(priceUsd) && Number.isFinite(tokens) && tokens > 0) {
+    return priceUsd * tokens;
+  }
+  if (
+    Number.isFinite(priceUsd) &&
+    Number.isFinite(fillPrice) &&
+    fillPrice > 0 &&
+    Number.isFinite(fillUsd) &&
+    fillUsd > 0
+  ) {
+    return fillUsd * (priceUsd / fillPrice);
+  }
+  // Last resort: if we only know fillUsd, hold prior clip notionals — do NOT
+  // return raw priceUsd (unit mismatch vs fill_usd).
+  if (Number.isFinite(fillUsd) && fillUsd > 0) return fillUsd;
+  return NaN;
+}
+
+async function maybeSendAlert(env, payload) {
+  const dedupeKey = `alert:${payload.mint}:${payload.rule}`;
+  const existing = await env.DESK_STATE.get(dedupeKey);
+  if (existing) {
+    console.log(`dedupe skip ${dedupeKey}`);
+    return false;
+  }
+
+  const body = {
+    schema: SCHEMA,
+    ts: new Date().toISOString(),
+    source: SOURCE,
+    rule: payload.rule,
+    ticker: payload.ticker,
+    mint: payload.mint,
+    fill_usd: payload.fill_usd,
+    mark_usd: payload.mark_usd,
+    vs_fill_pct: payload.vs_fill_pct,
+    liq_usd: payload.liq_usd,
+    liq_prev_usd: payload.liq_prev_usd,
+    liq_change_pct: payload.liq_change_pct,
+    price_prev_usd: payload.price_prev_usd,
+    note: payload.note,
+    fills_url: payload.fills_url,
+    dex_url: payload.dex_url,
+  };
+  // RIP / WATCH extras
+  if (payload.price_usd != null) body.price_usd = payload.price_usd;
+  if (payload.m5 != null) body.m5 = payload.m5;
+  if (payload.h1 != null) body.h1 = payload.h1;
+  if (payload.buys_1h != null) body.buys_1h = payload.buys_1h;
+  if (payload.sells_1h != null) body.sells_1h = payload.sells_1h;
+  if (payload.hygiene != null) body.hygiene = payload.hygiene;
+  if (payload.return_to_rip_bench) body.return_to_rip_bench = true;
+
+  const webhookUrl = env.WEBHOOK_URL;
+  if (!webhookUrl) {
+    console.log("dry-run alert (WEBHOOK_URL missing):", JSON.stringify(body));
+    // Do not count as sent; do not set dedupe so a later configured webhook can fire
+    return false;
+  }
+
+  const headers = {
+    "Content-Type": "application/json",
+    "User-Agent": SOURCE,
+  };
+  if (env.WEBHOOK_SECRET) {
+    headers["Authorization"] = `Bearer ${env.WEBHOOK_SECRET}`;
+    headers["X-Desk-Secret"] = env.WEBHOOK_SECRET;
+  }
+
+  const res = await fetch(webhookUrl, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    console.error(`webhook HTTP ${res.status}: ${text.slice(0, 200)}`);
+    return false;
+  }
+
+  if (payload.stickyArm) {
+    // Sticky until evaluatePosition clears rip_arm on drop-under; long TTL as belt
+    await env.DESK_STATE.put(dedupeKey, body.ts, { expirationTtl: 60 * 60 * 24 * 30 });
+  } else {
+    await env.DESK_STATE.put(dedupeKey, body.ts, {
+      expirationTtl: payload.dedupeSec,
+    });
+  }
+  return true;
+}
+
+function json(obj, status = 200) {
+  return new Response(JSON.stringify(obj), {
+    status,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
+function num(v, fallback) {
+  const n = typeof v === "number" ? v : parseFloat(v);
+  return Number.isFinite(n) ? n : fallback;
+}
+
+function round4(n) {
+  return Math.round(n * 10000) / 10000;
+}
