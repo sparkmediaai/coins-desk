@@ -1,0 +1,32 @@
+name: fills-guard
+on:
+  push:
+    branches: [main]
+    paths: ["fills.json"]
+  pull_request:
+    paths: ["fills.json"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate fills.json
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, sys
+          p = Path("fills.json")
+          raw = p.read_text(encoding="utf-8", errors="replace")
+          if re.search(r"PLA"+"CEHOLDER|LOAD_FROM:", raw, re.I):
+              print("FAIL: stub marker in fills.json")
+              sys.exit(1)
+          try:
+              data = json.loads(raw)
+          except Exception as e:
+              print("FAIL: not JSON", e)
+              sys.exit(1)
+          if not isinstance(data, dict) or not isinstance(data.get("desk"), dict):
+              print("FAIL: missing desk object")
+              sys.exit(1)
+          print("ok fills.json", "positions", len(data.get("positions") or []))
+          PY
