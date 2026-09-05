@@ -1,1 +1,1 @@
-@/workspace/coins-desk/watcher/src/index.js
+file:///workspace/coins-desk/watcher/src/index.js
