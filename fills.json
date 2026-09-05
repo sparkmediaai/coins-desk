@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "9/4 ~3:15 PT SAVE_POINT cut fone (0.1078 SOL / $10.96, -4.84% vs fill). OPEN QENIS 0.304 SOL / ~$30.98. leftover ~0.127 SOL. fone \u2192 RIP_BENCH (not banned). RIP auto-clip RESUMED (\u22641 open).",
-    "updated_at": "2026-09-04T22:16:07.210088+00:00",
+    "note": "9/4 ~8:26 PM PT HARD_MINUS10 cut QENIS (0.2625 SOL / $26.77, -13.75% vs fill). All-SOL leftover ~0.390 SOL. QENIS \u2192 RIP_BENCH (not banned). After 7pm: alert-only (no new RIP clip). RIP auto-clip armed for tomorrow \u22647pm.",
+    "updated_at": "2026-09-05T03:27:31.179345+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -23,39 +23,30 @@
       "SAVE_POINT_LADDER"
     ],
     "rip_auto_clip_paused": false,
-    "rip_auto_clip_pause_reason": ""
+    "rip_auto_clip_pause_reason": "after_7pm_alert_only_until_tomorrow"
   },
-  "leftover_sol": 0.127179747,
-  "positions": [
+  "leftover_sol": 0.389710462,
+  "positions": [],
+  "closed": [
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "tokens": 40229.598871,
-      "ata": "6MMvRLSsva94Wn5zrVhy5trR42526893ZNSC73n53gUb",
       "fill_sol": 0.304389947,
       "fill_usd": 30.98,
-      "fill_token_amount": 40229.598871,
-      "fill_price_usd": 0.0007700797638907683,
-      "tx": "3xDbknAKZ8hAc4uByE282vdc7A1z98t8CopsEsKoZgaU1NYDMN2PK5niMvhCuRbzkWfnx3f6NS18sTdVjkT42XLg",
-      "filled_at": "2026-09-04T15:09:00-07:00",
+      "sold_sol": 0.262530715,
+      "sold_usd": 26.77,
+      "vs_fill_pct": -13.75,
+      "close_reason": "HARD_MINUS10",
+      "tx": "329ABaZtPdPEuESFf1UrdDTz3dmDH6TcNLUFTfssrTi3CmgF74kLVQBmCnoNnH4JR3hHtsK9JYJ6Ba4YNvj92ucZ",
+      "closed_at": "2026-09-04T20:27:31-07:00",
       "flags": [
-        "DAVID_OVERRIDE",
-        "RIP_PLUS20",
-        "DAVID_75PCT",
-        "WATCHER",
+        "RETURN_TO_RIP_BENCH",
         "HARD_MINUS10",
-        "SAVE_POINT",
-        "REPLACE_ON_CUT"
+        "NOT_A_BAN",
+        "OVERNIGHT_FLATTEN_WINDOW"
       ],
-      "trail": "OFF",
-      "exit_rules": [
-        "HARD_MINUS10"
-      ],
-      "note": "David 75% bag 9/4 ~3:09 PT. HARD_MINUS10. Entry-tax ~2%.",
-      "pairAddress": "HttDe6BsDc3y58owhqayQmERsNmWnRzFvDEwJYmxGAx3"
-    }
-  ],
-  "closed": [
+      "note": "HARD_MINUS10 watcher cut 2026-09-04 ~8:27 PM PT (-13.75% vs $30.98 fill / 0.3044 SOL). Sold 0.262531 SOL / $26.77. Returned to RIP_BENCH (not a ban)."
+    },
     {
       "ticker": "fone",
       "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
@@ -100,6 +91,11 @@
   ],
   "hunt": [
     {
+      "ticker": "QENIS",
+      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
+      "note": "HARD_MINUS10 \u2014 rebuy OK"
+    },
+    {
       "ticker": "fone",
       "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
       "note": "SAVE_POINT \u2014 rebuy OK"
@@ -117,6 +113,10 @@
     }
   ],
   "rip_bench": [
+    {
+      "ticker": "QENIS",
+      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump"
+    },
     {
       "ticker": "fone",
       "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump"
