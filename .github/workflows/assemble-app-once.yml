@@ -1,0 +1,30 @@
+name: assemble-app-once
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble app.js from zlib b64
+        run: |
+          python3 <<'PY'
+          import base64, zlib, pathlib
+          parts = sorted(pathlib.Path('_assemble_app').glob('app*.b64'))
+          b64 = ''.join(p.read_text().strip() for p in parts)
+          raw = zlib.decompress(base64.b64decode(b64))
+          pathlib.Path('app.js').write_bytes(raw)
+          text = raw.decode()
+          assert 'd=s!=null?(r?o:0)+s:r?o:null' in text
+          assert 'PLACEHOLDER' not in text
+          print('wrote', len(raw), 'bytes')
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name sparkmediaai
+          git config user.email sparkmediaai@gmail.com
+          git add app.js
+          git commit -m 'pages: BOOK shows leftover USD when all-SOL (no open clips)' || exit 0
+          git push
