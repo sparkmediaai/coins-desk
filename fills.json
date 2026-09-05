@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "9/4 ~8:26 PM PT HARD_MINUS10 cut QENIS (0.2625 SOL / $26.77, -13.75% vs fill). All-SOL leftover ~0.390 SOL. QENIS \u2192 RIP_BENCH (not banned). After 7pm: alert-only (no new RIP clip). RIP auto-clip armed for tomorrow \u22647pm.",
-    "updated_at": "2026-09-05T03:27:31.179345+00:00",
+    "note": "9/4 ~9:09 PM PT David deposit sold ALL QENIS\u2192SOL (70,205.329043 QENIS \u2192 0.434020084 SOL / $44.16). All-SOL leftover ~0.823731 SOL. QENIS stays on RIP_BENCH (not banned). After 7pm: alert-only.",
+    "updated_at": "2026-09-05T04:11:43.482850+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -25,9 +25,29 @@
     "rip_auto_clip_paused": false,
     "rip_auto_clip_pause_reason": "after_7pm_alert_only_until_tomorrow"
   },
-  "leftover_sol": 0.389710462,
+  "leftover_sol": 0.823730547,
   "positions": [],
   "closed": [
+    {
+      "ticker": "QENIS",
+      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
+      "fill_sol": null,
+      "fill_usd": null,
+      "sold_sol": 0.434020084,
+      "sold_usd": 44.16,
+      "tokens": 70205.329043,
+      "vs_fill_pct": null,
+      "close_reason": "DAVID_DEPOSIT_TO_SOL",
+      "tx": "3THVGZ6b2BZxNSHcVZwhKWC1SKXbmQCwtjHgRL8kaTWzqSoLp1Ritm9KoKY6vp5WwpUMXm5yKPDFvyydvf39fBku",
+      "closed_at": "2026-09-04T21:11:43-07:00",
+      "flags": [
+        "DAVID_DEPOSIT",
+        "KEEP_CASH_SOL",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN"
+      ],
+      "note": "David deposited QENIS; sold all to SOL ~9:09 PM PT. 70205.329043 QENIS \u2192 0.434020084 SOL. Keep cash. QENIS on RIP_BENCH (not banned)."
+    },
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
@@ -93,7 +113,7 @@
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "note": "HARD_MINUS10 \u2014 rebuy OK"
+      "note": "DAVID_DEPOSIT_TO_SOL \u2014 remain RIP_BENCH, rebuy OK (not banned)"
     },
     {
       "ticker": "fone",
@@ -115,7 +135,11 @@
   "rip_bench": [
     {
       "ticker": "QENIS",
-      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump"
+      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
+      "status": "RIP_BENCH",
+      "banned": false,
+      "note": "David deposit sold to SOL ~9:09 PM PT; remain on rip_bench (not banned)",
+      "updated_at": "2026-09-04T21:11:43-07:00"
     },
     {
       "ticker": "fone",
