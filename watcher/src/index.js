@@ -1,1 +1,1 @@
-{{file:/workspace/coins-desk/watcher/src/index.js}}
+PLACEHOLDER_REPLACE_WITH_EXACT
