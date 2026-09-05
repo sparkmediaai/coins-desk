@@ -1,1 +1,1 @@
-PLACEHOLDER_REPLACE_WITH_EXACT
+/workspace/agent-tools/CU_INDEX_UNSTUB.json
