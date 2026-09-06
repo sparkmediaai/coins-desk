@@ -30,7 +30,7 @@ Goal: react fast on real exits/rips; keep agent tokens for decisions, not pollin
 
 - No overnight agent wakes (after ~8:19 PM PT). Worker may still watch.
 - No “still holding QENIS at +X%” posts.
-- RIP_BENCH Worker alerts capped (`RIP_BENCH_MAX_ALERTS`); CT clips only when sleeve rules allow (25% leftover, ≥0.02 SOL reserve, entry-tax clean, skip swarm/KIRK; paused while ≥2 opens unless David stacks).
+- RIP_BENCH Worker alerts capped (`RIP_BENCH_MAX_ALERTS`) = **LOOK only / no auto-clip**. CT may take RIP_QUALIFIED first clip **≤12% of book** (probe max), ≥0.02 reserve, entry-tax clean, skip swarm/KIRK; prior HARD → WATCH + fresh full gate; never average down.
 
 ## Cursor offload
 
@@ -69,3 +69,20 @@ Do **not** use Cursor cloud for: live tape, Dex hunts, fill narration.
 ## fills.json push rule (locked 2026-09-05)
 
 **NEVER** commit stub `fills.json` (stub markers (`PLA`+`CEHOLDER*`, `LOAD_FROM:/tmp/...`)). Always push the **full valid JSON** in one commit. Stub tips break Pages (ERROR pill) until restored. CI `fills-guard` rejects stubs on `main`.
+
+## RIP look-vs-trade (locked 2026-09-05)
+
+Worker RIP_BENCH alerts = **RIP_WATCH (look only)** at ~+10% m5 + buy-tilt/liq gates. **Do not auto-clip on alert.** CT/Research only clip when **RIP_QUALIFIED** (~15–20% short accel + participation + hard safety). Skip blow-offs (Worker m5≥~45 no ping). Price without tape = no RIP.
+
+## Trail ladder test (locked 2026-09-05 04:39 PM PT)
+- First SAVE_POINT rung: **+20→+15** (was +20→+10). Higher rungs unchanged (+50→+25 / +100→+50 / +200→+100).
+- HARD_MINUS10 unchanged. Soft RIP_WATCH look-only; QUALIFIED needs hygiene clear.
+
+## RIP post-mortem patch (locked 2026-09-05 11:39 PM PT)
+- RIP_WATCH (~10%) = LOOK, $0. No capital.
+- RIP_QUALIFIED (~15–20% + tape + hygiene + **fill-time stamp**) = eligible for **≤12% book** probe — **not** 25% leftover.
+- Adds only after Promotion into strength (≤35% name). Never average down.
+- Prior HARD / failed probe = no auto-RIP; WATCH + fresh full gate.
+- Failed probe 30–60m early cut; HARD is backstop. HARD overshoots logged.
+- Worker RIP_BENCH language: LOOK only, no auto-clip implication.
+- Overnight entry clock: unchanged until separately revised.
