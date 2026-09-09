@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "9/9 ~12:39 PM PT CRIMECAT HARD_MINUS10 cut (-49.72% vs $4.31). All-SOL leftover ~0.673 SOL. Returned to RIP_BENCH (not a ban). RIP auto-clip still LOOK-only / paused. Trial dial still today-only.",
-    "updated_at": "2026-09-09T19:39:58.989591+00:00",
+    "note": "9/9 ~1:27 PM PT DESK BREAK: swept ~0.6721941 SOL to Bt4rUu6b5SCjequx1vQZSNcFqs6TCt2WnCg6aDpGr4f1 (tx 2AQfLtkDvLfHwWpfRnoE4v47uxit63aa7YicmeRRZSGkWGjusxofyEPnDqurdMuqCvMZbGyN8RK2yMzzCdGrFXCv). Play dust ~0.00089588 SOL. Hunt/probe paused ~1 week until David resumes. Prior: CRIMECAT HARD_MINUS10 (\u221249.72%) \u2192 RIP_BENCH.",
+    "updated_at": "2026-09-09T13:28:57.541035-07:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -28,11 +28,20 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "CRIMECAT HARD_MINUS10 \u2192 RIP_BENCH",
+    "last_event": "DESK_BREAK_SWEEP \u2192 external",
     "multi_rip_stack": true,
-    "rip_qualified_probe_pct_book": 0.12
+    "rip_qualified_probe_pct_book": 0.12,
+    "desk_paused": true,
+    "desk_pause_reason": "David break 2026-09-09; leftover swept off play wallet; no hunt/probe until resume",
+    "last_sweep": {
+      "to": "Bt4rUu6b5SCjequx1vQZSNcFqs6TCt2WnCg6aDpGr4f1",
+      "sent_sol": 0.6721941,
+      "dust_sol": 0.00089588,
+      "tx": "2AQfLtkDvLfHwWpfRnoE4v47uxit63aa7YicmeRRZSGkWGjusxofyEPnDqurdMuqCvMZbGyN8RK2yMzzCdGrFXCv",
+      "at": "2026-09-09T13:28:57.541035-07:00"
+    }
   },
-  "leftover_sol": 0.67309498,
+  "leftover_sol": 0.00089588,
   "positions": [],
   "closed": [
     {
