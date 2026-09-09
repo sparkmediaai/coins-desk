@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN QENIS · HARD -15% buffer (David) · SAVE +20→+15 · leftover 0.012 SOL",
-    "updated_at": "2026-09-09T01:51:15.734678+00:00",
+    "note": "OPEN none · leftover ~0.701 SOL after QENIS 11pm time-stop (−3.0% vs fill). HARD −15 buffer was armed; no rip by deadline.",
+    "updated_at": "2026-09-09T06:05:39.596208+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -28,50 +28,35 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-    "last_event": "QENIS HARD buffer -15% vs fill (David 6:50 PM PT)",
+    "last_event": "QENIS → SOL David 11pm time-stop (−3.0%)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12
   },
-  "leftover_sol": 0.012,
-  "positions": [
+  "leftover_sol": 0.701,
+  "positions": [],
+  "closed": [
     {
       "ticker": "QENIS",
-      "name": "Qenis",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "pairAddress": "HttDe6BsDc3y58owhqayQmERsNmWnRzFvDEwJYmxGAx3",
-      "tokens": 128662.078461,
-      "fill_token_amount": 128662.078461,
-      "ata": "6MMvRLSsva94Wn5zrVhy5trR42526893ZNSC73n53gUb",
       "fill_sol": 0.722230718,
       "fill_usd": 73.88,
       "fill_price_usd": 0.000574,
-      "tx": "3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
-      "fill_tx": "3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
-      "filled_at": "2026-09-08T18:25:42-07:00",
+      "tokens": 128662.078461,
+      "sold_sol": 0.689,
+      "sold_usd": 71.68,
+      "vs_fill_pct": -3.0,
+      "close_reason": "DAVID_11PM_TIME_STOP",
+      "tx": "4YFrERRadU8jortn5aTbSxnF7YQ5mGPfWXzUMgH9kzxHEjVGY87TQQghPjGacy1UxCJoAqKmiTcZLzzzDhmeLBXE",
+      "closed_at": "2026-09-08T23:05:00-07:00",
       "flags": [
-        "DAVID_OVERRIDE_ALL_IN",
-        "HARD_MINUS15",
-        "SAVE_POINT_20_TO_15",
-        "TRAIL_ARMED",
-        "OVERRIDE_7PM_CLOCK",
-        "WATCHER",
-        "DAVID_HARD_BUFFER"
+        "DAVID_11PM_TIME_STOP",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN",
+        "HARD_MINUS15_WAS_ARMED",
+        "NO_RIP_BY_11PM"
       ],
-      "trail": "ARMED",
-      "trail_ladder": "+20→+15",
-      "exit_rules": [
-        "HARD_MINUS15",
-        "SAVE_POINT"
-      ],
-      "note": "David override 2026-09-08 ~6:25 PM PT all-in @ ~$0.000574. HARD widened to -15% vs fill (floor ~$0.0004879) per David ~6:50 PM PT — do not cut at -10. SAVE +20→+15 still armed. Leftover fee dust 0.012 SOL. tx 3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
-      "override": "QENIS_ALLIN_DAVID_OVERRIDE",
-      "status": "OPEN",
-      "clips": 1,
-      "hard": "HARD_MINUS15",
-      "hard_floor_usd": 0.0004879
-    }
-  ],
-  "closed": [
+      "note": "David 11pm PT time-stop 2026-09-08: no ≥+10% rip vs fill. Sold ~128,662 QENIS → 0.689 SOL / ~$71.68 (−3.0% vs $73.88 fill). Returned to RIP_BENCH (not a ban)."
+    },
     {
       "ticker": "STONK",
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -283,7 +268,7 @@
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "note": "DAVID_DEPOSIT_TO_SOL — remain RIP_BENCH, rebuy OK (not banned)"
+      "note": "11pm time-stop → SOL — RIP_BENCH, rebuy OK (not banned)"
     },
     {
       "ticker": "fone",
@@ -350,10 +335,12 @@
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "status": "OPEN_OVERRIDE",
+      "status": "RIP_BENCH",
       "banned": false,
-      "note": "OPEN David override ALL-IN 2026-09-08 ~6:25 PM PT (~0.722 SOL @ ~$0.000574). HARD+SAVE armed. Prior deposit/HARD history still raise-bar when flat again.",
-      "updated_at": "2026-09-08T18:25:42-07:00"
+      "note": "11pm time-stop sell 2026-09-08: −3.0% vs fill, returned to RIP_BENCH (not banned).",
+      "updated_at": "2026-09-08T23:05:00-07:00",
+      "last_cut_tx": "4YFrERRadU8jortn5aTbSxnF7YQ5mGPfWXzUMgH9kzxHEjVGY87TQQghPjGacy1UxCJoAqKmiTcZLzzzDhmeLBXE",
+      "last_cut_reason": "DAVID_11PM_TIME_STOP"
     },
     {
       "ticker": "CATE",
