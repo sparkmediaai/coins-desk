@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN none · leftover ~0.701 SOL after QENIS 11pm time-stop (−3.0% vs fill). HARD −15 buffer was armed; no rip by deadline.",
-    "updated_at": "2026-09-09T06:05:39.596208+00:00",
+    "note": "OPEN CRIMECAT trial ≤6% · leftover ~0.652 SOL · HARD −10 + SAVE +20→+15 · no add",
+    "updated_at": "2026-09-09T18:19:35.434154+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -28,12 +28,46 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-    "last_event": "QENIS → SOL David 11pm time-stop (−3.0%)",
+    "last_event": "CRIMECAT TRIAL_PROBE fill (David dial)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12
   },
-  "leftover_sol": 0.701,
-  "positions": [],
+  "leftover_sol": 0.651978987,
+  "positions": [
+    {
+      "ticker": "CRIMECAT",
+      "name": "Crime Cat",
+      "mint": "4oWhtcmBBsMG1bLZCLKusmq4t9fxdVVfbyJLevsYg5Ct",
+      "pairAddress": "H7mAE28D4gTwMaUU51ZUeNoTaNyY4cnFz9LCffA1pPg9",
+      "tokens": 3931.648612,
+      "fill_token_amount": 3931.648612,
+      "fill_sol": 0.042,
+      "fill_usd": 4.31,
+      "fill_price_usd": 0.001096,
+      "tx": "45mFLDBvkeBMHvKYqCGdnj2pN8GBUmG3vdaXaj6DBxrVEopusokUQ6ZTq7tug9hzkJoofHZchWMSWAwiWhwQJc4N",
+      "fill_tx": "45mFLDBvkeBMHvKYqCGdnj2pN8GBUmG3vdaXaj6DBxrVEopusokUQ6ZTq7tug9hzkJoofHZchWMSWAwiWhwQJc4N",
+      "filled_at": "2026-09-09T11:18:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20→+15",
+      "hard": "HARD_MINUS10",
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "TRIAL_PROBE",
+        "DAVID_TRIAL_DIAL",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "NO_ADD",
+        "WATCHER"
+      ],
+      "note": "David trial dial 2026-09-09 ~11:18 AM PT. ≤6% book (~0.042 SOL) @ ~$0.001096. HARD −10 + SAVE +20→+15. Extended h6 noted at entry. No add."
+    }
+  ],
   "closed": [
     {
       "ticker": "QENIS",
@@ -288,6 +322,14 @@
     }
   ],
   "rip_bench": [
+    {
+      "ticker": "CRIMECAT",
+      "mint": "4oWhtcmBBsMG1bLZCLKusmq4t9fxdVVfbyJLevsYg5Ct",
+      "status": "OPEN_TRIAL",
+      "banned": false,
+      "note": "OPEN trial probe 2026-09-09",
+      "updated_at": "2026-09-09T11:18:00-07:00"
+    },
     {
       "ticker": "STONK",
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
