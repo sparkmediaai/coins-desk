@@ -6,10 +6,10 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "LOCKED 9/5\u20136: RIP_WATCH=$0; RIP_QUALIFIED first clip \u226412% book (not 25% leftover); prior HARD\u2192WATCH+fresh gate; fill-time stamp required. OPEN none \u00b7 leftover ~0.734 SOL.",
-    "updated_at": "2026-09-06T06:41:23.908846+00:00",
+    "note": "OPEN QENIS ALL-IN · leftover ~0.012 SOL. David override 2026-09-08 ~6:25 PM PT (+10% vs baseline $0.000503). HARD_MINUS10 + SAVE +20→+15 / TRAIL_ARMED. OVERRIDE_7PM_CLOCK. LOCKED rip rules unchanged: RIP_WATCH=$0; RIP_QUALIFIED first clip ≤12% book; rip_auto_clip_paused.",
+    "updated_at": "2026-09-09T01:28:47.351134+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
-    "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
+    "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
     "rip_bench_min_reserve_sol": 0.02,
     "rip_bench_rules": [
@@ -27,13 +27,47 @@
       "NEVER_AVERAGE_DOWN"
     ],
     "rip_auto_clip_paused": true,
-    "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "RIP post-mortem patch locked (probe \u226412% book)",
+    "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
+    "last_event": "QENIS ALL-IN David override fill (~0.722 SOL / ~$73.88)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12
   },
-  "leftover_sol": 0.734225718,
-  "positions": [],
+  "leftover_sol": 0.012,
+  "positions": [
+    {
+      "ticker": "QENIS",
+      "name": "Qenis",
+      "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
+      "pairAddress": "HttDe6BsDc3y58owhqayQmERsNmWnRzFvDEwJYmxGAx3",
+      "tokens": 128662.078461,
+      "fill_token_amount": 128662.078461,
+      "ata": "6MMvRLSsva94Wn5zrVhy5trR42526893ZNSC73n53gUb",
+      "fill_sol": 0.722230718,
+      "fill_usd": 73.88,
+      "fill_price_usd": 0.000574,
+      "tx": "3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
+      "fill_tx": "3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
+      "filled_at": "2026-09-08T18:25:42-07:00",
+      "flags": [
+        "DAVID_OVERRIDE_ALL_IN",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "OVERRIDE_7PM_CLOCK",
+        "WATCHER"
+      ],
+      "trail": "ARMED",
+      "trail_ladder": "+20→+15",
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "note": "David override 2026-09-08 ~6:25 PM PT. All-in leftover after +10% vs baseline $0.000503. tx 3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW. HARD_MINUS10 + SAVE +20→+15. Thin fee reserve 0.012 SOL.",
+      "override": "QENIS_ALLIN_DAVID_OVERRIDE",
+      "status": "OPEN",
+      "clips": 1
+    }
+  ],
   "closed": [
     {
       "ticker": "STONK",
@@ -164,7 +198,7 @@
         "RETURN_TO_RIP_BENCH",
         "NOT_A_BAN"
       ],
-      "note": "David deposited QENIS; sold all to SOL ~9:09 PM PT. 70205.329043 QENIS \u2192 0.434020084 SOL. Keep cash. QENIS on RIP_BENCH (not banned)."
+      "note": "David deposited QENIS; sold all to SOL ~9:09 PM PT. 70205.329043 QENIS → 0.434020084 SOL. Keep cash. QENIS on RIP_BENCH (not banned)."
     },
     {
       "ticker": "QENIS",
@@ -231,32 +265,32 @@
     {
       "ticker": "STONK",
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-      "note": "SAVE_POINT \u2014 rebuy OK (not banned)"
+      "note": "SAVE_POINT — rebuy OK (not banned)"
     },
     {
       "ticker": "CTO",
       "mint": "8K5X85PAJHAAVSvYaAzgVPPAPsqqHmvx16ZyBiscYF8L",
-      "note": "SAVE_POINT \u2014 rebuy OK (not banned)"
+      "note": "SAVE_POINT — rebuy OK (not banned)"
     },
     {
       "ticker": "HeeHaw",
       "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
-      "note": "SAVE_POINT \u2014 rebuy OK (not banned)"
+      "note": "SAVE_POINT — rebuy OK (not banned)"
     },
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "note": "DAVID_DEPOSIT_TO_SOL \u2014 remain RIP_BENCH, rebuy OK (not banned)"
+      "note": "DAVID_DEPOSIT_TO_SOL — remain RIP_BENCH, rebuy OK (not banned)"
     },
     {
       "ticker": "fone",
       "mint": "CTPoyCwkjMvoJwU4xvZZqoD8tiYk6yDchySiN5gGpump",
-      "note": "HARD_MINUS10 \u2014 rebuy OK (not banned)"
+      "note": "HARD_MINUS10 — rebuy OK (not banned)"
     },
     {
       "ticker": "ZCAT",
       "mint": "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR",
-      "note": "HARD_MINUS10 \u2014 rebuy OK"
+      "note": "HARD_MINUS10 — rebuy OK"
     }
   ],
   "watch": [
@@ -271,7 +305,7 @@
       "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
       "status": "RIP_BENCH",
       "banned": false,
-      "note": "SAVE_POINT cut 2026-09-05T10:57:54-07:00: trail +20\u2192+10 floor hit (exit -4.02% vs $8.61 fill). Not a ban; rebuy-eligible.",
+      "note": "SAVE_POINT cut 2026-09-05T10:57:54-07:00: trail +20→+10 floor hit (exit -4.02% vs $8.61 fill). Not a ban; rebuy-eligible.",
       "updated_at": "2026-09-05T10:57:54-07:00",
       "last_cut_tx": "5b4LMPPkM1LeTPCC4aCHjvUAfvC4FBfCe1WYHTtxYzozitEquGCxEVWVXnq3ebXGEuRAcvD9fTrBqqhJCK8QfsQD",
       "last_cut_reason": "SAVE_POINT"
@@ -281,7 +315,7 @@
       "mint": "EEpng77ZPn9FbgbT4xsRjwuxNCcMBYq3HTwEscyTpump",
       "status": "RIP_BENCH",
       "banned": false,
-      "note": "SAVE_POINT cut 2026-09-05T10:02:51-07:00: trail +20\u2192+10 floor hit (exit -1.58% vs $11.08 fill). Not a ban; rebuy-eligible.",
+      "note": "SAVE_POINT cut 2026-09-05T10:02:51-07:00: trail +20→+10 floor hit (exit -1.58% vs $11.08 fill). Not a ban; rebuy-eligible.",
       "updated_at": "2026-09-05T10:02:51-07:00",
       "last_cut_tx": "48DfUxgnwGSyHsHKy3gw63nFFe7EeVLh6wqfywDAZQkqSQRoCLCa3HwMf7oBihybJxXoVCcXBCNsdQSNgd3uT6Kv",
       "last_cut_reason": "SAVE_POINT"
@@ -291,7 +325,7 @@
       "mint": "8K5X85PAJHAAVSvYaAzgVPPAPsqqHmvx16ZyBiscYF8L",
       "status": "RIP_BENCH",
       "banned": false,
-      "note": "SAVE_POINT cut 2026-09-05T09:08:10-07:00: trail +20\u2192+10 floor hit (exit +1.82% vs $15.3 fill). Not a ban; rebuy-eligible.",
+      "note": "SAVE_POINT cut 2026-09-05T09:08:10-07:00: trail +20→+10 floor hit (exit +1.82% vs $15.3 fill). Not a ban; rebuy-eligible.",
       "updated_at": "2026-09-05T09:08:10-07:00",
       "last_cut_tx": "4UvwSpf9gYWhDSShhTZvC3KhbVQMFA9QPRfkun4Djmd5ovwob8AzV2DJuB7cmyZ92stV8YsCBrhu25V5fKLHzRLF",
       "last_cut_reason": "SAVE_POINT"
@@ -313,10 +347,10 @@
     {
       "ticker": "QENIS",
       "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
-      "status": "RIP_BENCH",
+      "status": "OPEN_OVERRIDE",
       "banned": false,
-      "note": "David deposit sold to SOL ~9:09 PM PT; remain on rip_bench (not banned)",
-      "updated_at": "2026-09-04T21:11:43-07:00"
+      "note": "OPEN David override ALL-IN 2026-09-08 ~6:25 PM PT (~0.722 SOL @ ~$0.000574). HARD+SAVE armed. Prior deposit/HARD history still raise-bar when flat again.",
+      "updated_at": "2026-09-08T18:25:42-07:00"
     },
     {
       "ticker": "CATE",
