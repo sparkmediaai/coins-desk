@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN QENIS ALL-IN · leftover ~0.012 SOL. David override 2026-09-08 ~6:25 PM PT (+10% vs baseline $0.000503). HARD_MINUS10 + SAVE +20→+15 / TRAIL_ARMED. OVERRIDE_7PM_CLOCK. LOCKED rip rules unchanged: RIP_WATCH=$0; RIP_QUALIFIED first clip ≤12% book; rip_auto_clip_paused.",
-    "updated_at": "2026-09-09T01:28:47.351134+00:00",
+    "note": "OPEN QENIS · HARD -15% buffer (David) · SAVE +20→+15 · leftover 0.012 SOL",
+    "updated_at": "2026-09-09T01:51:15.734678+00:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-    "last_event": "QENIS ALL-IN David override fill (~0.722 SOL / ~$73.88)",
+    "last_event": "QENIS HARD buffer -15% vs fill (David 6:50 PM PT)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12
   },
@@ -50,22 +50,25 @@
       "filled_at": "2026-09-08T18:25:42-07:00",
       "flags": [
         "DAVID_OVERRIDE_ALL_IN",
-        "HARD_MINUS10",
+        "HARD_MINUS15",
         "SAVE_POINT_20_TO_15",
         "TRAIL_ARMED",
         "OVERRIDE_7PM_CLOCK",
-        "WATCHER"
+        "WATCHER",
+        "DAVID_HARD_BUFFER"
       ],
       "trail": "ARMED",
       "trail_ladder": "+20→+15",
       "exit_rules": [
-        "HARD_MINUS10",
+        "HARD_MINUS15",
         "SAVE_POINT"
       ],
-      "note": "David override 2026-09-08 ~6:25 PM PT. All-in leftover after +10% vs baseline $0.000503. tx 3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW. HARD_MINUS10 + SAVE +20→+15. Thin fee reserve 0.012 SOL.",
+      "note": "David override 2026-09-08 ~6:25 PM PT all-in @ ~$0.000574. HARD widened to -15% vs fill (floor ~$0.0004879) per David ~6:50 PM PT — do not cut at -10. SAVE +20→+15 still armed. Leftover fee dust 0.012 SOL. tx 3GcvL5knTnA9LWPFBWEiEmPQam4T9DCp3yLBhCvnUnJYV19ypesf6WY3D3Ti466Pn4rTsTfyonSxupR2ovo7xFmW",
       "override": "QENIS_ALLIN_DAVID_OVERRIDE",
       "status": "OPEN",
-      "clips": 1
+      "clips": 1,
+      "hard": "HARD_MINUS15",
+      "hard_floor_usd": 0.0004879
     }
   ],
   "closed": [
