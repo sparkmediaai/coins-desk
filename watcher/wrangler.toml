@@ -15,7 +15,7 @@ id = "560836cf68f3419183d0d93e41e4a184"
 preview_id = "135a2522e0ee423bae8a686707bcdbcd"
 
 [vars]
-FILLS_URL = "https://raw.githubusercontent.com/sparkmediaai/coins-desk/3c7c9212537ea59f80fe51ee4f46293675434e8b/paper_fills.json"
+FILLS_URL = "https://raw.githubusercontent.com/sparkmediaai/coins-desk/aac9e21f282c673a9c2781dd86a6ab21ebed9eef/paper_fills.json"
 LIQ_DROP_PCT = "0.30"
 BUYER_STALL_ENABLED = "1"
 BUYER_STALL_RATIO = "0.2"
