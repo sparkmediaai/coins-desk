@@ -1,0 +1,25 @@
+{
+  "mode": "PAPER",
+  "desk": {
+    "operator": "David McCormick",
+    "tz": "America/Los_Angeles",
+    "wallet": "PAPER_1000",
+    "start_usd": 1000.0,
+    "cash_usd": 1000.0,
+    "filled_at": "2026-09-14T06:22:06-07:00",
+    "note": "PAPER $1000 desk 2026-09-14. No real SOL. No sidelines — score vs $1k. First clip ≤12% book; HARD −10 + SAVE +20→+15. Hygiene: fresh, clean mint/freeze, no swarm/KIRK, no dump-bounce.",
+    "updated_at": "2026-09-14T13:22:06.433870+00:00",
+    "desk_paused": false,
+    "paper": true,
+    "rip_auto_clip_paused": true,
+    "rip_qualified_probe_pct_book": 0.12,
+    "last_event": "PAPER_BOOK_INIT_$1000"
+  },
+  "cash_usd": 1000.0,
+  "leftover_sol": null,
+  "positions": [],
+  "closed": [],
+  "hunt": [],
+  "watch": [],
+  "rip_bench": []
+}
