@@ -5,19 +5,20 @@
     "tz": "America/Los_Angeles",
     "wallet": "PAPER_1000",
     "start_usd": 1000.0,
-    "cash_usd": 880.0,
+    "cash_usd": 1019.42,
     "filled_at": "2026-09-14T06:22:06-07:00",
-    "note": "PAPER $1000 · OPEN bikecate $120 @ ~$0.000640 · cash $880.00. HARD −10 · SAVE +20→+15 · NO_ADD. Hygiene Research stamp + Jup quote (Dex 429).",
-    "updated_at": "2026-09-14T13:51:14.235049+00:00",
+    "note": "PAPER day flat 2026-09-14. bikecate +$19.42 (+16.2%). Cash $1019.42 vs $1000 start (+1.9%). OPEN none.",
+    "updated_at": "2026-09-14T23:07:33.860226+00:00",
     "desk_paused": false,
     "paper": true,
     "rip_auto_clip_paused": true,
     "rip_qualified_probe_pct_book": 0.12,
-    "last_event": "PAPER_FILL_BIKECATE"
+    "last_event": "PAPER_FLAT_BIKECATE"
   },
-  "cash_usd": 880.0,
+  "cash_usd": 1019.42,
   "leftover_sol": null,
-  "positions": [
+  "positions": [],
+  "closed": [
     {
       "ticker": "bikecate",
       "name": "bikecate",
@@ -29,21 +30,49 @@
       "fill_price_usd": 0.00063973,
       "fill_price_estimated": true,
       "fill_sol": null,
-      "tx": "PAPER",
+      "tx": "PAPER_FLAT",
       "fill_tx": "PAPER",
       "filled_at": "2026-09-14T06:51:14-07:00",
-      "status": "OPEN",
       "clips": 1,
       "trail": "ARMED",
-      "trail_ladder": "+20→+15",
+      "trail_ladder": "+20\u2192+15",
       "hard": "HARD_MINUS10",
-      "exit_rules": ["HARD_MINUS10", "SAVE_POINT"],
-      "flags": ["PAPER", "QUALIFIED", "HARD_MINUS10", "SAVE_POINT_20_TO_15", "TRAIL_ARMED", "NO_ADD", "PRICE_VIA_JUP_QUOTE"],
-      "note": "Research QUALIFIED 2026-09-14. ~9.3h · liq ~$78k · m5/h1 soft+. Paper ≤12% ($120). Dex 429 — price from Jup quote. NO_ADD until trail."
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "PAPER",
+        "QUALIFIED",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "NO_ADD",
+        "PRICE_VIA_JUP_QUOTE",
+        "PAPER_FLAT",
+        "DAVID_ASSUME_CASH_OUT",
+        "RETURN_TO_RIP_BENCH"
+      ],
+      "note": "David assume cash-out 2026-09-14 ~4:06 PM PT. Exit mark ~$0.000743 (+16.2% vs fill). Sold ~$139.42 / P&L $+19.42. Peak earlier ~+65%.",
+      "status": "CLOSED",
+      "sold_usd": 139.42,
+      "sold_price_usd": 0.00074328,
+      "vs_fill_pct": 16.19,
+      "closed_at": "2026-09-14T16:07:33-07:00",
+      "close_reason": "DAVID_ASSUME_FLAT"
     }
   ],
-  "closed": [],
   "hunt": [],
   "watch": [],
-  "rip_bench": []
+  "rip_bench": [
+    {
+      "ticker": "bikecate",
+      "mint": "3nkVw4JwdDLGM23Wzqpy2ptAPV5YgMnokEBgijDBpump",
+      "status": "RIP_BENCH",
+      "banned": false,
+      "note": "Paper flat 2026-09-14T16:07:33-07:00: +16.2% vs fill. Not a ban.",
+      "updated_at": "2026-09-14T16:07:33-07:00",
+      "last_cut_reason": "DAVID_ASSUME_FLAT"
+    }
+  ]
 }
