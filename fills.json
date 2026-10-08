@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN JUMPER ALL-IN \u00b7 leftover ~0.0225 SOL. David override 2026-10-08 ~12:25 PM PT (size past 12% cap, liq ~$20k under $50k gate). HARD_MINUS10 \u2248 $0.0000498 + SAVE +20\u2192+15 / TRAIL_ARMED. Desk resumed from 9/9 break; play wallet refunded by David.",
-    "updated_at": "2026-10-08T12:30:00-07:00",
+    "note": "JUMPER closed SAVE_POINT 1:40 PM PT (-1.16% SOL vs fill; +15 lock gapped by a single large sell). All SOL: leftover 0.858884 SOL. No open clips.",
+    "updated_at": "2026-10-08T13:55:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "JUMPER ALL-IN David override fill (0.846 SOL / ~$92.26)",
+    "last_event": "JUMPER SAVE_POINT cut \u2192 RIP_BENCH (leftover ~0.8589 SOL, -1.16% vs fill)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -42,8 +42,9 @@
     "desk_resumed_at": "2026-10-08T12:25:00-07:00",
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over."
   },
-  "leftover_sol": 0.02250656,
-  "positions": [
+  "leftover_sol": 0.858884077,
+  "positions": [],
+  "closed": [
     {
       "ticker": "JUMPER",
       "name": "jumper",
@@ -54,10 +55,10 @@
       "fill_sol": 0.846157694,
       "fill_usd": 92.26,
       "fill_price_usd": 5.53e-05,
-      "tx": "37VDFdTPikY3w6FSEXUb9bN6gsKsUCmikc1nxjL8eqkJs3xBxWGtQ9ABjQ6T8z5gpKnEN4vh9uqVUYxRjqtpEz1q",
+      "tx": "5PprMYuSenebRhDbnzpbYoanYHM4NMCn4gQwXijYBUs6cdLGhk2HwRvDbAi11kqoiKDpVEXc8Qi51x78Gy7p8Z6U",
       "fill_tx": "37VDFdTPikY3w6FSEXUb9bN6gsKsUCmikc1nxjL8eqkJs3xBxWGtQ9ABjQ6T8z5gpKnEN4vh9uqVUYxRjqtpEz1q",
       "filled_at": "2026-10-08T12:25:00-07:00",
-      "status": "OPEN",
+      "status": "CLOSED",
       "clips": 1,
       "trail": "ARMED",
       "trail_ladder": "+20\u2192+15",
@@ -81,14 +82,27 @@
         "SAVE_POINT_20_TO_15",
         "TRAIL_ARMED",
         "NO_ADD",
-        "WATCHER"
+        "WATCHER",
+        "SAVE_LOCK_GAPPED",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN"
       ],
       "override": "JUMPER_ALLIN_DAVID_OVERRIDE",
       "liq_usd_at_fill": 20105,
-      "note": "David override 2026-10-08 ~12:25 PM PT: max out (past 12% probe cap; liq ~$20k under $50k gate). 1,668,415 JUMPER for 0.846 SOL (~$92.26) @ ~$0.0000553. HARD \u221210 \u2248 $0.0000498 + SAVE +20\u2192+15 (then +50/+100/+200 locks). Fee reserve 0.0225 SOL. Meteora pool. On-chain block time 12:26:35 PM PT."
-    }
-  ],
-  "closed": [
+      "note": "SAVE_POINT cut (+15 lock) 2026-10-08T13:40:30-07:00: peak ~+25.07% vs fill (native), then one ~$1.37k / 23.4M JUMPER sell at 1:39:35 PM PT gapped price ~\u221224% through the +15 lock. Watcher fired at \u22125.75% (2 polls); filled 1:40:30 PM PT at ~$5.4959e-05 (0.0000005019 SOL/token, quote impact 0.68%, no extra slippage). Sold 0.837383 SOL gross / 0.836378 SOL net of 0.001005 SOL fee (~$91.59); -1.16% vs 0.846158 SOL fill. Returned to RIP_BENCH (not a ban).",
+      "sold_sol": 0.836377517,
+      "sold_sol_gross": 0.837382517,
+      "exit_fee_sol": 0.001005,
+      "sold_usd": 91.59,
+      "sold_price_usd": 5.4959e-05,
+      "sold_price_sol": 5.019029e-07,
+      "sol_usd_at_exit": 109.502,
+      "peak_pct": 25.07,
+      "save_lock_price_usd": 6.36e-05,
+      "vs_fill_pct": -1.16,
+      "closed_at": "2026-10-08T13:40:30-07:00",
+      "close_reason": "SAVE_POINT"
+    },
     {
       "ticker": "CRIMECAT",
       "name": "Crime Cat",
@@ -345,6 +359,11 @@
   ],
   "hunt": [
     {
+      "ticker": "JUMPER",
+      "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
+      "note": "SAVE_POINT \u2014 rebuy OK (not banned)"
+    },
+    {
       "ticker": "CRIMECAT",
       "mint": "4oWhtcmBBsMG1bLZCLKusmq4t9fxdVVfbyJLevsYg5Ct",
       "note": "HARD_MINUS10 \u2014 rebuy OK under raise-bar (not banned)"
@@ -387,6 +406,16 @@
     }
   ],
   "rip_bench": [
+    {
+      "ticker": "JUMPER",
+      "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
+      "status": "RIP_BENCH",
+      "banned": false,
+      "note": "SAVE_POINT cut 2026-10-08T13:40:30-07:00: peak ~+25%, +15 lock gapped by one large sell; exit -1.16% vs fill (SOL). Not a ban; rebuy-eligible.",
+      "updated_at": "2026-10-08T13:40:30-07:00",
+      "last_cut_tx": "5PprMYuSenebRhDbnzpbYoanYHM4NMCn4gQwXijYBUs6cdLGhk2HwRvDbAi11kqoiKDpVEXc8Qi51x78Gy7p8Z6U",
+      "last_cut_reason": "SAVE_POINT"
+    },
     {
       "ticker": "CRIMECAT",
       "mint": "4oWhtcmBBsMG1bLZCLKusmq4t9fxdVVfbyJLevsYg5Ct",
