@@ -1,5 +1,5 @@
 {
-  "mode": "PAPER",
+  "mode": "PAPER_ARCHIVED",
   "desk": {
     "operator": "David McCormick",
     "tz": "America/Los_Angeles",
@@ -10,10 +10,12 @@
     "note": "PAPER day flat 2026-09-14. bikecate +$19.42 (+16.2%). Cash $1019.42 vs $1000 start (+1.9%). OPEN none.",
     "updated_at": "2026-09-14T23:07:33.860226+00:00",
     "desk_paused": false,
-    "paper": true,
+    "paper": false,
     "rip_auto_clip_paused": true,
     "rip_qualified_probe_pct_book": 0.12,
-    "last_event": "PAPER_FLAT_BIKECATE"
+    "last_event": "PAPER_FLAT_BIKECATE",
+    "archived_at": "2026-10-08T12:30:00-07:00",
+    "archive_note": "Archived 2026-10-08 on real JUMPER fill: Pages falls back to real fills.json (app.js only prefers paper_fills when mode=PAPER). Set mode back to PAPER to resume paper desk."
   },
   "cash_usd": 1019.42,
   "leftover_sol": null,

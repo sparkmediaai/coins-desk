@@ -4,13 +4,13 @@
     "city": "Las Vegas",
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
-    "start_usd": 36.0,
+    "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "9/9 ~1:27 PM PT DESK BREAK: swept ~0.6721941 SOL to Bt4rUu6b5SCjequx1vQZSNcFqs6TCt2WnCg6aDpGr4f1 (tx 2AQfLtkDvLfHwWpfRnoE4v47uxit63aa7YicmeRRZSGkWGjusxofyEPnDqurdMuqCvMZbGyN8RK2yMzzCdGrFXCv). Play dust ~0.00089588 SOL. Hunt/probe paused ~1 week until David resumes. Prior: CRIMECAT HARD_MINUS10 (\u221249.72%) \u2192 RIP_BENCH.",
-    "updated_at": "2026-09-09T13:28:57.541035-07:00",
-    "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
-    "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
-    "prior_start_usd": 100.24,
+    "note": "OPEN JUMPER ALL-IN \u00b7 leftover ~0.0225 SOL. David override 2026-10-08 ~12:25 PM PT (size past 12% cap, liq ~$20k under $50k gate). HARD_MINUS10 \u2248 $0.0000498 + SAVE +20\u2192+15 / TRAIL_ARMED. Desk resumed from 9/9 break; play wallet refunded by David.",
+    "updated_at": "2026-10-08T12:30:00-07:00",
+    "start_reset_at": "2026-10-08T12:25:00-07:00",
+    "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
+    "prior_start_usd": 36.0,
     "rip_bench_min_reserve_sol": 0.02,
     "rip_bench_rules": [
       "CURATED_LOOK_ONLY_MAX_25",
@@ -28,21 +28,66 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "DESK_BREAK_SWEEP \u2192 external",
+    "last_event": "JUMPER ALL-IN David override fill (0.846 SOL / ~$92.26)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
-    "desk_paused": true,
-    "desk_pause_reason": "David break 2026-09-09; leftover swept off play wallet; no hunt/probe until resume",
+    "desk_paused": false,
     "last_sweep": {
       "to": "Bt4rUu6b5SCjequx1vQZSNcFqs6TCt2WnCg6aDpGr4f1",
       "sent_sol": 0.6721941,
       "dust_sol": 0.00089588,
       "tx": "2AQfLtkDvLfHwWpfRnoE4v47uxit63aa7YicmeRRZSGkWGjusxofyEPnDqurdMuqCvMZbGyN8RK2yMzzCdGrFXCv",
       "at": "2026-09-09T13:28:57.541035-07:00"
-    }
+    },
+    "desk_resumed_at": "2026-10-08T12:25:00-07:00",
+    "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over."
   },
-  "leftover_sol": 0.00089588,
-  "positions": [],
+  "leftover_sol": 0.02250656,
+  "positions": [
+    {
+      "ticker": "JUMPER",
+      "name": "jumper",
+      "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
+      "pairAddress": "q15tXnaoDGRKph9LYMuFzDeyveGseTgoa1TKgoS8TfT",
+      "tokens": 1668415.256985,
+      "fill_token_amount": 1668415.256985,
+      "fill_sol": 0.846157694,
+      "fill_usd": 92.26,
+      "fill_price_usd": 5.53e-05,
+      "tx": "37VDFdTPikY3w6FSEXUb9bN6gsKsUCmikc1nxjL8eqkJs3xBxWGtQ9ABjQ6T8z5gpKnEN4vh9uqVUYxRjqtpEz1q",
+      "fill_tx": "37VDFdTPikY3w6FSEXUb9bN6gsKsUCmikc1nxjL8eqkJs3xBxWGtQ9ABjQ6T8z5gpKnEN4vh9uqVUYxRjqtpEz1q",
+      "filled_at": "2026-10-08T12:25:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 4.98e-05,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "DAVID_OVERRIDE_ALL_IN",
+        "SIZE_OVER_12PCT_CAP",
+        "LIQ_UNDER_50K_GATE",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "NO_ADD",
+        "WATCHER"
+      ],
+      "override": "JUMPER_ALLIN_DAVID_OVERRIDE",
+      "liq_usd_at_fill": 20105,
+      "note": "David override 2026-10-08 ~12:25 PM PT: max out (past 12% probe cap; liq ~$20k under $50k gate). 1,668,415 JUMPER for 0.846 SOL (~$92.26) @ ~$0.0000553. HARD \u221210 \u2248 $0.0000498 + SAVE +20\u2192+15 (then +50/+100/+200 locks). Fee reserve 0.0225 SOL. Meteora pool. On-chain block time 12:26:35 PM PT."
+    }
+  ],
   "closed": [
     {
       "ticker": "CRIMECAT",
