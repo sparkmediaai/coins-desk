@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN SLOPCORE OVERNIGHT ALL-IN \u00b7 leftover ~0.024 SOL. David override 2026-10-10 ~9:16 PM PT, NOT QUALIFIED (re-entry after 10/9 HARD). HARD_MINUS10 + SAVE +20\u2192+15 via CT overnight guard (Worker not redeployed).",
-    "updated_at": "2026-10-10T21:20:00-07:00",
+    "note": "OPEN SLOPCORE OVERNIGHT ALL-IN \u00b7 leftover ~0.024 SOL. SAVE_+15 LOCKED 12:10 AM PT 10/11 after peak +20.55% (last ~+18.7%). Guard ARMED via CT (Worker not redeployed).",
+    "updated_at": "2026-10-11T00:12:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "SLOPCORE OVERNIGHT ALL-IN David override fill (0.697 SOL / ~$76.14), not QUALIFIED",
+    "last_event": "SLOPCORE SAVE_+15 locked (peak +20.55%, last ~+18.7%) \u2014 still OPEN, full bag",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -85,11 +85,22 @@
         "SAVE_POINT_20_TO_15",
         "TRAIL_ARMED",
         "NO_ADD",
-        "WATCHER"
+        "WATCHER",
+        "RIP_PLUS20",
+        "SAVE_LOCKED_PLUS15"
       ],
       "override": "SLOPCORE_OVERNIGHT_ALLIN_DAVID_OVERRIDE",
       "liq_usd_at_fill": 85937,
-      "note": "David overnight all-in override 2026-10-10 ~9:16 PM PT (Research did NOT stamp QUALIFIED; prior HARD cut 10/9 \u221215.68%). 124,234.366172 SLOPCORE for 0.696891 SOL (~$76.14) @ ~$6.1287e-04 effective (5.6095e-6 SOL/token incl. pool fees; spot ~$0.000601). HARD \u221210 \u2248 $5.5158e-04 + SAVE +20\u2192+15 (lock \u2248 $7.0480e-04) via CT overnight guard. PumpSwap, liq ~$86k. Fee reserve ~0.024 SOL."
+      "note": "David overnight all-in override 2026-10-10 ~9:16 PM PT (Research did NOT stamp QUALIFIED; prior HARD cut 10/9 \u221215.68%). 124,234.366172 SLOPCORE for 0.696891 SOL (~$76.14) @ ~$6.1287e-04 effective (5.6095e-6 SOL/token incl. pool fees; spot ~$0.000601). HARD \u221210 \u2248 $5.5158e-04 + SAVE +20\u2192+15 (lock \u2248 $7.0480e-04) via CT overnight guard. PumpSwap, liq ~$86k. Fee reserve ~0.024 SOL. | 10/11 ~12:10 AM PT: peak +20.55% vs fill \u2192 SAVE +20\u2192+15 LOCKED (floor +15% \u2248 $0.0007048 / 6.4509e-6 SOL). Last ~+18.7% (~$0.000731), liq ~$95k. Still holding full bag.",
+      "save_point": "SAVE_+15",
+      "save_floor_pct": 15,
+      "save_floor_sol": 6.45091e-06,
+      "peak_pct": 20.55,
+      "trail_locked_at": "2026-10-11T00:10:00-07:00",
+      "last_mark_pct": 18.71,
+      "last_mark_usd": 0.0007306,
+      "last_mark_at": "2026-10-11T00:10:21-07:00",
+      "liq_usd_last": 95269
     }
   ],
   "closed": [
