@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "SLOPCORE closed HARD_MINUS10 10:06 PM PT (-15.68% / -0.1305 SOL vs fill; first cut send dropped, retry filled). All SOL: leftover 0.723891 SOL. No open clips.",
-    "updated_at": "2026-10-09T22:10:00-07:00",
+    "note": "OPEN SLOPCORE OVERNIGHT ALL-IN \u00b7 leftover ~0.024 SOL. David override 2026-10-10 ~9:16 PM PT, NOT QUALIFIED (re-entry after 10/9 HARD). HARD_MINUS10 + SAVE +20\u2192+15 via CT overnight guard (Worker not redeployed).",
+    "updated_at": "2026-10-10T21:20:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "SLOPCORE HARD_MINUS10 cut (retry after dropped send) \u2192 RIP_BENCH (leftover ~0.7239 SOL, -15.68% vs fill)",
+    "last_event": "SLOPCORE OVERNIGHT ALL-IN David override fill (0.697 SOL / ~$76.14), not QUALIFIED",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -42,8 +42,56 @@
     "desk_resumed_at": "2026-10-08T12:25:00-07:00",
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over."
   },
-  "leftover_sol": 0.723891047,
-  "positions": [],
+  "leftover_sol": 0.023995001,
+  "positions": [
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 124234.366172,
+      "fill_token_amount": 124234.366172,
+      "fill_sol": 0.696891047,
+      "fill_usd": 76.14,
+      "fill_price_usd": 0.00061287,
+      "fill_price_sol": 5.609487e-06,
+      "tx": "7yJNA61xyh4oUeDyMFxrBScugrnEjqz1wVng2T1XogmSjYutRdhg4vXhZV6LQM1Y1z42hqsD2T5ozFqnhN8tpVH",
+      "fill_tx": "7yJNA61xyh4oUeDyMFxrBScugrnEjqz1wVng2T1XogmSjYutRdhg4vXhZV6LQM1Y1z42hqsD2T5ozFqnhN8tpVH",
+      "filled_at": "2026-10-10T21:16:25-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 0.00055158,
+      "save_lock_price_usd": 0.0007048,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "DAVID_OVERRIDE_ALL_IN",
+        "NOT_QUALIFIED",
+        "OVERNIGHT",
+        "PRIOR_HARD_REBUY",
+        "SIZE_OVER_12PCT_CAP",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "NO_ADD",
+        "WATCHER"
+      ],
+      "override": "SLOPCORE_OVERNIGHT_ALLIN_DAVID_OVERRIDE",
+      "liq_usd_at_fill": 85937,
+      "note": "David overnight all-in override 2026-10-10 ~9:16 PM PT (Research did NOT stamp QUALIFIED; prior HARD cut 10/9 \u221215.68%). 124,234.366172 SLOPCORE for 0.696891 SOL (~$76.14) @ ~$6.1287e-04 effective (5.6095e-6 SOL/token incl. pool fees; spot ~$0.000601). HARD \u221210 \u2248 $5.5158e-04 + SAVE +20\u2192+15 (lock \u2248 $7.0480e-04) via CT overnight guard. PumpSwap, liq ~$86k. Fee reserve ~0.024 SOL."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
@@ -423,11 +471,6 @@
   ],
   "hunt": [
     {
-      "ticker": "SLOPCORE",
-      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
-      "note": "HARD_MINUS10 \u2014 rebuy OK under raise-bar (not banned)"
-    },
-    {
       "ticker": "JUMPER",
       "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
       "note": "SAVE_POINT \u2014 rebuy OK (not banned)"
@@ -475,16 +518,6 @@
     }
   ],
   "rip_bench": [
-    {
-      "ticker": "SLOPCORE",
-      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
-      "status": "RIP_BENCH",
-      "banned": false,
-      "note": "HARD_MINUS10 cut 2026-10-09T22:06:37-07:00: exit -15.68% vs fill after dropped first send. Not a ban; rebuy-eligible under raise-bar (prior HARD \u2192 fresh full gate).",
-      "updated_at": "2026-10-09T22:06:37-07:00",
-      "last_cut_tx": "12A7D25Z7hTTk6xFsr9waHfxRMvNQ7HRFpuCmnhkBExhFywAW21fkMnMAPh9dNdrmvHoqkmSB9gk6sHpVx8Jry6k",
-      "last_cut_reason": "HARD_MINUS10"
-    },
     {
       "ticker": "JUMPER",
       "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
