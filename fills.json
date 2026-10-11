@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "OPEN SLOPCORE OVERNIGHT ALL-IN \u00b7 leftover ~0.024 SOL. SAVE_+15 LOCKED 12:10 AM PT 10/11 after peak +20.55% (last ~+18.7%). Guard ARMED via CT (Worker not redeployed).",
-    "updated_at": "2026-10-11T00:12:00-07:00",
+    "note": "FLAT \u00b7 no open positions \u00b7 leftover ~0.818 SOL. SLOPCORE overnight closed 10/11 ~8:39 AM PT via SAVE_+15 trail (peak +30.94%, exit +14.0% / ~+$10.80). Guard stopped; overnight routine deleted.",
+    "updated_at": "2026-10-11T08:56:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "SLOPCORE SAVE_+15 locked (peak +20.55%, last ~+18.7%) \u2014 still OPEN, full bag",
+    "last_event": "SLOPCORE CLOSED via SAVE_+15 trail ~8:39 AM PT 10/11 (peak +30.94%) \u2014 exit 0.7943 SOL vs 0.6969 fill, +0.0974 SOL (+13.98% / ~+$10.80)",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -40,27 +40,29 @@
       "at": "2026-09-09T13:28:57.541035-07:00"
     },
     "desk_resumed_at": "2026-10-08T12:25:00-07:00",
-    "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over."
+    "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
+    "leftover_sol": 0.818
   },
-  "leftover_sol": 0.023995001,
-  "positions": [
+  "leftover_sol": 0.818,
+  "positions": [],
+  "closed": [
     {
       "ticker": "SLOPCORE",
       "name": "SLOPCORE",
       "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
       "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
-      "tokens": 124234.366172,
+      "tokens": 0,
       "fill_token_amount": 124234.366172,
       "fill_sol": 0.696891047,
       "fill_usd": 76.14,
       "fill_price_usd": 0.00061287,
       "fill_price_sol": 5.609487e-06,
-      "tx": "7yJNA61xyh4oUeDyMFxrBScugrnEjqz1wVng2T1XogmSjYutRdhg4vXhZV6LQM1Y1z42hqsD2T5ozFqnhN8tpVH",
+      "tx": "2Hw3BKt2TzJSUmVxfU4DsY4vrGxKaX1W9rjfF55mBt7uJdWWhVki3C5YNoRk6Z5bp4uJLFcxjipqJreiS5MoZT3H",
       "fill_tx": "7yJNA61xyh4oUeDyMFxrBScugrnEjqz1wVng2T1XogmSjYutRdhg4vXhZV6LQM1Y1z42hqsD2T5ozFqnhN8tpVH",
       "filled_at": "2026-10-10T21:16:25-07:00",
-      "status": "OPEN",
+      "status": "CLOSED",
       "clips": 1,
-      "trail": "ARMED",
+      "trail": "FIRED",
       "trail_ladder": "+20\u2192+15",
       "hard": "HARD_MINUS10",
       "hard_stop_usd": 0.00055158,
@@ -87,23 +89,33 @@
         "NO_ADD",
         "WATCHER",
         "RIP_PLUS20",
-        "SAVE_LOCKED_PLUS15"
+        "SAVE_LOCKED_PLUS15",
+        "TRAIL_FIRED",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN"
       ],
       "override": "SLOPCORE_OVERNIGHT_ALLIN_DAVID_OVERRIDE",
       "liq_usd_at_fill": 85937,
-      "note": "David overnight all-in override 2026-10-10 ~9:16 PM PT (Research did NOT stamp QUALIFIED; prior HARD cut 10/9 \u221215.68%). 124,234.366172 SLOPCORE for 0.696891 SOL (~$76.14) @ ~$6.1287e-04 effective (5.6095e-6 SOL/token incl. pool fees; spot ~$0.000601). HARD \u221210 \u2248 $5.5158e-04 + SAVE +20\u2192+15 (lock \u2248 $7.0480e-04) via CT overnight guard. PumpSwap, liq ~$86k. Fee reserve ~0.024 SOL. | 10/11 ~12:10 AM PT: peak +20.55% vs fill \u2192 SAVE +20\u2192+15 LOCKED (floor +15% \u2248 $0.0007048 / 6.4509e-6 SOL). Last ~+18.7% (~$0.000731), liq ~$95k. Still holding full bag.",
+      "note": "David overnight all-in override 2026-10-10 ~9:16 PM PT (Research did NOT stamp QUALIFIED; prior HARD cut 10/9 \u221215.68%). 124,234.366172 SLOPCORE for 0.696891 SOL (~$76.14) @ ~$6.1287e-04 effective (5.6095e-6 SOL/token incl. pool fees; spot ~$0.000601). HARD \u221210 \u2248 $5.5158e-04 + SAVE +20\u2192+15 (lock \u2248 $7.0480e-04) via CT overnight guard. PumpSwap, liq ~$86k. Fee reserve ~0.024 SOL. | 10/11 ~12:10 AM PT: peak +20.55% vs fill \u2192 SAVE +20\u2192+15 LOCKED (floor +15% \u2248 $0.0007048 / 6.4509e-6 SOL). Last ~+18.7% (~$0.000731), liq ~$95k. Still holding full bag. | CLOSED 10/11 ~8:39 AM PT: SAVE_+15 trail fired after peak +30.94% vs fill. Sold full bag for 0.7943 SOL vs 0.696891 SOL fill \u2192 +0.0974 SOL (+13.98% / ~+$10.80). Tokens 0. Guard stopped. Exit tx 2Hw3BKt2Tz\u2026. Returned to RIP_BENCH (not a ban).",
       "save_point": "SAVE_+15",
       "save_floor_pct": 15,
       "save_floor_sol": 6.45091e-06,
-      "peak_pct": 20.55,
+      "peak_pct": 30.94,
       "trail_locked_at": "2026-10-11T00:10:00-07:00",
       "last_mark_pct": 18.71,
       "last_mark_usd": 0.0007306,
       "last_mark_at": "2026-10-11T00:10:21-07:00",
-      "liq_usd_last": 95269
-    }
-  ],
-  "closed": [
+      "liq_usd_last": 95269,
+      "sold_sol": 0.7943,
+      "sold_usd": 86.94,
+      "sold_usd_note": "approx: fill_usd + ~$10.80 PnL per CT (SOL/USD at exit not stamped)",
+      "pnl_sol": 0.097408953,
+      "pnl_usd": 10.8,
+      "vs_fill_pct": 13.98,
+      "exit_tx": "2Hw3BKt2TzJSUmVxfU4DsY4vrGxKaX1W9rjfF55mBt7uJdWWhVki3C5YNoRk6Z5bp4uJLFcxjipqJreiS5MoZT3H",
+      "closed_at": "2026-10-11T08:39:00-07:00",
+      "close_reason": "SAVE_POINT"
+    },
     {
       "ticker": "SLOPCORE",
       "name": "SLOPCORE",
@@ -529,6 +541,16 @@
     }
   ],
   "rip_bench": [
+    {
+      "ticker": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "status": "RIP_BENCH",
+      "banned": false,
+      "note": "SAVE_POINT exit (+15 trail) 2026-10-11T08:39:00-07:00: peak +30.94%, exit +13.98% vs fill (SOL), ~+$10.80. Not a ban; rebuy-eligible.",
+      "updated_at": "2026-10-11T08:39:00-07:00",
+      "last_cut_tx": "2Hw3BKt2TzJSUmVxfU4DsY4vrGxKaX1W9rjfF55mBt7uJdWWhVki3C5YNoRk6Z5bp4uJLFcxjipqJreiS5MoZT3H",
+      "last_cut_reason": "SAVE_POINT"
+    },
     {
       "ticker": "JUMPER",
       "mint": "HbtGZge2NcfrrmBGx2Pqf9qgrNvMa63hQHVqcWSPuNub",
