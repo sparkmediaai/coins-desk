@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "FLAT \u00b7 no open positions \u00b7 leftover ~0.818 SOL. SLOPCORE overnight closed 10/11 ~8:39 AM PT via SAVE_+15 trail (peak +30.94%, exit +14.0% / ~+$10.80). Guard stopped; overnight routine deleted.",
-    "updated_at": "2026-10-11T08:56:00-07:00",
+    "note": "FLAT after accidental SLOPCORE round-trip ~8:02 AM PT 10/12 (David all-in; guard used stale overnight fill price, sold ~40s later, ~-0.022 SOL). No open; leftover ~0.796 SOL; waiting David re-enter.",
+    "updated_at": "2026-10-12T08:05:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "SLOPCORE CLOSED via SAVE_+15 trail ~8:39 AM PT 10/11 (peak +30.94%) \u2014 exit 0.7943 SOL vs 0.6969 fill, +0.0974 SOL (+13.98% / ~+$10.80)",
+    "last_event": "FLAT after accidental SLOPCORE round-trip ~8:02 AM PT 10/12 (David all-in; guard used stale overnight fill price, sold ~40s later, ~-0.022 SOL). No open; leftover ~0.796 SOL; waiting David re-enter.",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -41,9 +41,9 @@
     },
     "desk_resumed_at": "2026-10-08T12:25:00-07:00",
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
-    "leftover_sol": 0.818
+    "leftover_sol": 0.796
   },
-  "leftover_sol": 0.818,
+  "leftover_sol": 0.796,
   "positions": [],
   "closed": [
     {
@@ -490,6 +490,29 @@
       "sold_usd": 44.23,
       "vs_fill_pct": 21.88,
       "close_reason": "SAVE_POINT"
+    },
+    {
+      "ticker": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "tokens": 157263,
+      "fill_price_sol": 5.076e-06,
+      "fill_sol": 0.798,
+      "sold_sol": 0.776,
+      "vs_fill_pct": -2.76,
+      "pnl_sol": -0.022,
+      "wallet_pnl_sol_vs_prior_flat": -0.022,
+      "opened_at": "2026-10-12T08:01:52-07:00",
+      "closed_at": "2026-10-12T08:02:34-07:00",
+      "close_reason": "GUARD_STALE_PRICE / ACCIDENTAL_ROUND_TRIP",
+      "flags": [
+        "DAVID_OVERRIDE_ALL_IN",
+        "GUARD_STALE_FILL_PRICE",
+        "ACCIDENTAL_ROUND_TRIP",
+        "NOT_A_BAN",
+        "RETURN_TO_RIP_BENCH"
+      ],
+      "buy_tx": "jxbdxxZvykAzWmBrpZzQfg8CYhBEXWidQxF9pkoHA7HPphanJVo2YtL3EFk8vSKa1SWhQeoY7UuB3NhCecJQVu9",
+      "sell_tx": "2EeTfwLXQWMnicuR6VNL2vXYawXFGbNjskG6sc7kLQEd2euHLt8MBFj8vJWSqEHpueQ2XDvvJkR1dgiXKwnqChqp"
     }
   ],
   "hunt": [
