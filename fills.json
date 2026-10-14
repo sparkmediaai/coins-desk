@@ -6,8 +6,8 @@
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 95.19,
     "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "FLAT after accidental SLOPCORE round-trip ~8:02 AM PT 10/12 (David all-in; guard used stale overnight fill price, sold ~40s later, ~-0.022 SOL). No open; leftover ~0.796 SOL; waiting David re-enter.",
-    "updated_at": "2026-10-12T08:05:00-07:00",
+    "note": "OPEN SLOPCORE David limit buy @0.000345 (all-in) \u00b7 leftover ~0.018 SOL. Filled 10/13 4:58 PM PT; guard ARMED HARD -10 + SAVE +20->+15 ladder.",
+    "updated_at": "2026-10-13T17:10:00-07:00",
     "start_reset_at": "2026-10-08T12:25:00-07:00",
     "start_reset_note": "Desk resume 2026-10-08: David refunded play wallet (~0.8732 SOL incl. dust \u2248 $95.19 at fill). Start reset to funded book; prior start $36.00 (9/2 clean slate, swept out 9/9).",
     "prior_start_usd": 36.0,
@@ -28,7 +28,7 @@
     ],
     "rip_auto_clip_paused": true,
     "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size \u226412% book.",
-    "last_event": "FLAT after accidental SLOPCORE round-trip ~8:02 AM PT 10/12 (David all-in; guard used stale overnight fill price, sold ~40s later, ~-0.022 SOL). No open; leftover ~0.796 SOL; waiting David re-enter.",
+    "last_event": "OPEN SLOPCORE David limit buy @0.000345 (all-in) \u00b7 leftover ~0.018 SOL. Filled 10/13 4:58 PM PT; guard ARMED HARD -10 + SAVE +20->+15 ladder.",
     "multi_rip_stack": true,
     "rip_qualified_probe_pct_book": 0.12,
     "desk_paused": false,
@@ -41,10 +41,55 @@
     },
     "desk_resumed_at": "2026-10-08T12:25:00-07:00",
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
-    "leftover_sol": 0.796
+    "leftover_sol": 0.017995
   },
-  "leftover_sol": 0.796,
-  "positions": [],
+  "leftover_sol": 0.017995,
+  "positions": [
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 240474.969235,
+      "fill_token_amount": 240474.969235,
+      "fill_sol": 0.775957,
+      "fill_usd": 82.72,
+      "fill_price_usd": 0.000344,
+      "fill_price_sol": 3.22677e-06,
+      "tx": "39hmA7rdtWeLEpwrSutVDiX79FY1MbCpaEvs1bkaubibAV8TSZW9gJxZvLKArEepW6a3UzEbVZCzZqJmGj73WypS",
+      "fill_tx": "39hmA7rdtWeLEpwrSutVDiX79FY1MbCpaEvs1bkaubibAV8TSZW9gJxZvLKArEepW6a3UzEbVZCzZqJmGj73WypS",
+      "filled_at": "2026-10-13T16:58:19-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 0.0003096,
+      "save_lock_price_usd": 0.0003956,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "DAVID_LIMIT_BUY",
+        "DAVID_OVERRIDE_ALL_IN",
+        "NOT_QUALIFIED",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "NO_ADD"
+      ],
+      "entry_type": "DAVID_LIMIT_BUY_0.000345",
+      "override": "SLOPCORE_LIMIT_ALLIN_DAVID_OVERRIDE",
+      "note": "David limit buy at $0.000345 (all-in, 0.02 SOL fee reserve) filled 2026-10-13 4:58 PM PT. 240,474.969235 SLOPCORE for 0.775957 SOL @ 3.22677e-6 SOL/token (~$0.000344). Verified on-chain. HARD \u221210 \u2248 $3.096e-04 + SAVE +20\u2192+15 (lock \u2248 $3.956e-04) armed via CT."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
