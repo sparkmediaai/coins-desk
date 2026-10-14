@@ -43,8 +43,47 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.694711,
-  "positions": [],
+  "leftover_sol": 0.0165,
+  "positions": [
+    {
+      "ticker": "CLAUDIA",
+      "name": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pairAddress": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "tokens": 14147.42,
+      "fill_token_amount": 14147.42,
+      "fill_sol": 0.6747,
+      "fill_usd": 68.0,
+      "fill_price_usd": 0.004817,
+      "fill_tx": "265Bvh9mnkUbzPGvsCEaKtmnuXvUFNkPcfUU2y7moCyBWfFLDTt8xAdLEVrPyDReGsbDqvoXcC3fin6yaDTr7DGn",
+      "filled_at": "2026-10-14T09:31:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 0.0043353,
+      "save_lock_price_usd": 0.0055395,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "CT_AUTO_BUY",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_COMBINED_AUTO_BUY",
+      "note": "CT combined auto-buy filled ~9:31 AM PT 10/14 (Meteora). 14,147.42 CLAUDIA for 0.6747 SOL @ ~$0.004817 (~$68). Per CT report."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
