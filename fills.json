@@ -43,8 +43,49 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.5688,
-  "positions": [],
+  "leftover_sol": 0.275,
+  "positions": [
+    {
+      "ticker": "DOPE",
+      "name": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "tokens": 5774.25,
+      "fill_token_amount": 5774.25,
+      "fill_sol": 0.284,
+      "fill_price_usd": 0.005194,
+      "fill_usd": 29.99,
+      "fill_tx": "3xCpHgmADGiMzy5Daxh2WNyPJ7zwv6Asa8cNhXp6hV5r3p8hoFryCPF2XE5qGmchL2DkekHheneUtBvC9SATEomG",
+      "filled_at": "2026-10-15T16:42:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10_2MIN",
+      "hard_stop_usd": 0.0046746,
+      "crash_stop_usd": 0.0044149,
+      "save_lock_price_usd": 0.0059731,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10_2MIN",
+        "CRASH_MINUS15",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "DAVID_50PCT_OVERRIDE",
+        "RE_ENTRY",
+        "PULLBACK_ENTRY",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_REENTRY_PULLBACK",
+      "note": "David-approved 50% re-entry. CT filled 4:42 PM PT 10/15 on a pullback: 5,774.25 DOPE for 0.284 SOL @ ~$0.005194. New guard: \u221210% held 2 min or \u221215% instant, append-only log."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
