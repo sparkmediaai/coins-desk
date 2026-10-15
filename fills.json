@@ -651,12 +651,12 @@
         "HARD_MINUS10",
         "SAVE_POINT_20_TO_15",
         "TRAIL_ARMED",
-        "SELL_SOURCE_UNCONFIRMED",
         "RETURN_TO_RIP_BENCH",
-        "NOT_A_BAN"
+        "NOT_A_BAN",
+        "HARD_FIRED"
       ],
       "entry_type": "CT_FILL",
-      "note": "Early-wallet LOOK (Bva5\u2026nyeP bought ~11:53 PM PT 10/14). CT filled 7:27 AM PT 10/15: 13,201.86 DOPE for 0.5844 SOL @ ~$0.004554. Verified on-chain. Sold all 7:47 AM PT; wallet 0.5688 SOL after, ~\u22128% round trip incl. fees per CT. Guard did not log the sell; source being confirmed.",
+      "note": "Early-wallet LOOK (Bva5\u2026nyeP bought ~11:53 PM PT 10/14). CT filled 7:27 AM PT 10/15: 13,201.86 DOPE for 0.5844 SOL @ ~$0.004554. Verified on-chain. Sold all 7:47 AM PT; wallet 0.5688 SOL after, ~\u22128% round trip incl. fees per CT. HARD \u221210 fired by CT guard (2 consecutive \u2264\u221210% reads on a 5m dip; 0.005 SOL fast-sell fee). Guard status file overwrote the trigger; CT moving to append-only log.",
       "tx": "5ngFjXN2gMj5JPGV3uL1yy86gkeHz1ryie3vSNDNoE6X7afLeDQEuiiCPzNkMMrrXiMXaaYD1VCixZTY526XmNXo",
       "closed_at": "2026-10-15T07:47:18-07:00",
       "pnl_pct": -8.0
