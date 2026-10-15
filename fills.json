@@ -43,8 +43,47 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.6174,
-  "positions": [],
+  "leftover_sol": 0.02,
+  "positions": [
+    {
+      "ticker": "DOPE",
+      "name": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "tokens": 13201.86,
+      "fill_token_amount": 13201.86,
+      "fill_sol": 0.5844,
+      "fill_price_usd": 0.004554,
+      "fill_usd": 60.12,
+      "fill_tx": "5DmBkk6AhYjqaoQaxoX1oxDxgweX3wF8fBQp1W7diimmQ4XCfxDy2ipfCP56SoWcxNraZMUxKYez3NZawpRmAUwH",
+      "filled_at": "2026-10-15T07:27:37-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 0.0040986,
+      "save_lock_price_usd": 0.0052371,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "EARLY_WALLET_SIGNAL",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_FILL",
+      "note": "Early-wallet LOOK (Bva5\u2026nyeP bought ~11:53 PM PT 10/14). CT filled 7:27 AM PT 10/15: 13,201.86 DOPE for 0.5844 SOL @ ~$0.004554. Verified on-chain."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
