@@ -43,47 +43,8 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.02,
-  "positions": [
-    {
-      "ticker": "DOPE",
-      "name": "DOPE",
-      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
-      "tokens": 13201.86,
-      "fill_token_amount": 13201.86,
-      "fill_sol": 0.5844,
-      "fill_price_usd": 0.004554,
-      "fill_usd": 60.12,
-      "fill_tx": "5DmBkk6AhYjqaoQaxoX1oxDxgweX3wF8fBQp1W7diimmQ4XCfxDy2ipfCP56SoWcxNraZMUxKYez3NZawpRmAUwH",
-      "filled_at": "2026-10-15T07:27:37-07:00",
-      "status": "OPEN",
-      "clips": 1,
-      "trail": "ARMED",
-      "trail_ladder": "+20\u2192+15",
-      "hard": "HARD_MINUS10",
-      "hard_stop_usd": 0.0040986,
-      "save_lock_price_usd": 0.0052371,
-      "save_ladder": [
-        "+20\u2192+15",
-        "+50\u2192+25",
-        "+100\u2192+50",
-        "+200\u2192+100"
-      ],
-      "exit_rules": [
-        "HARD_MINUS10",
-        "SAVE_POINT"
-      ],
-      "flags": [
-        "EARLY_WALLET_SIGNAL",
-        "HARD_MINUS10",
-        "SAVE_POINT_20_TO_15",
-        "TRAIL_ARMED"
-      ],
-      "entry_type": "CT_FILL",
-      "note": "Early-wallet LOOK (Bva5\u2026nyeP bought ~11:53 PM PT 10/14). CT filled 7:27 AM PT 10/15: 13,201.86 DOPE for 0.5844 SOL @ ~$0.004554. Verified on-chain."
-    }
-  ],
+  "leftover_sol": 0.5688,
+  "positions": [],
   "closed": [
     {
       "ticker": "SLOPCORE",
@@ -655,6 +616,50 @@
       "exit_sol": 0.601,
       "pnl_sol": -0.074,
       "pnl_pct": -11.0
+    },
+    {
+      "ticker": "DOPE",
+      "name": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "tokens": 0,
+      "fill_token_amount": 13201.86,
+      "fill_sol": 0.5844,
+      "fill_price_usd": 0.004554,
+      "fill_usd": 60.12,
+      "fill_tx": "5DmBkk6AhYjqaoQaxoX1oxDxgweX3wF8fBQp1W7diimmQ4XCfxDy2ipfCP56SoWcxNraZMUxKYez3NZawpRmAUwH",
+      "filled_at": "2026-10-15T07:27:37-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "trail": "NOT_REACHED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10",
+      "hard_stop_usd": 0.0040986,
+      "save_lock_price_usd": 0.0052371,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "EARLY_WALLET_SIGNAL",
+        "HARD_MINUS10",
+        "SAVE_POINT_20_TO_15",
+        "TRAIL_ARMED",
+        "SELL_SOURCE_UNCONFIRMED",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN"
+      ],
+      "entry_type": "CT_FILL",
+      "note": "Early-wallet LOOK (Bva5\u2026nyeP bought ~11:53 PM PT 10/14). CT filled 7:27 AM PT 10/15: 13,201.86 DOPE for 0.5844 SOL @ ~$0.004554. Verified on-chain. Sold all 7:47 AM PT; wallet 0.5688 SOL after, ~\u22128% round trip incl. fees per CT. Guard did not log the sell; source being confirmed.",
+      "tx": "5ngFjXN2gMj5JPGV3uL1yy86gkeHz1ryie3vSNDNoE6X7afLeDQEuiiCPzNkMMrrXiMXaaYD1VCixZTY526XmNXo",
+      "closed_at": "2026-10-15T07:47:18-07:00",
+      "pnl_pct": -8.0
     }
   ],
   "hunt": [
