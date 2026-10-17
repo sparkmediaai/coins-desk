@@ -43,49 +43,8 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.022995,
-  "positions": [
-    {
-      "ticker": "DOPE",
-      "name": "DOPE",
-      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
-      "tokens": 14660.764,
-      "fill_token_amount": 14660.764,
-      "fill_sol": 0.509904,
-      "fill_price_usd": 0.003538,
-      "fill_usd": 51.87,
-      "fill_tx": "67iTiLmHhFx31FEtsD2gw1aQHQ4P5ofpoS5nz6hFwSGNhyzPgTDY7uhJwJ84sqQyVoYVQcSKLAR8iSJxhKDmRf6G",
-      "filled_at": "2026-10-16T16:34:00-07:00",
-      "status": "OPEN",
-      "clips": 1,
-      "trail": "ARMED",
-      "trail_ladder": "+20\u2192+15",
-      "hard": "HARD_MINUS10_2MIN",
-      "hard_stop_usd": 0.0031842,
-      "crash_stop_usd": 0.0030073,
-      "save_lock_price_usd": 0.0040687,
-      "save_ladder": [
-        "+20\u2192+15",
-        "+50\u2192+25",
-        "+100\u2192+50",
-        "+200\u2192+100"
-      ],
-      "exit_rules": [
-        "HARD_MINUS10_2MIN",
-        "CRASH_MINUS15",
-        "SAVE_POINT"
-      ],
-      "flags": [
-        "DAVID_ALL_IN",
-        "PULLBACK_ENTRY",
-        "GUARD_V2_JUPITER_CONFIRM",
-        "TRAIL_ARMED"
-      ],
-      "entry_type": "CT_ALL_IN",
-      "note": "David all-in (CT 1:1 approval). Filled 4:34 PM PT 10/16: 14,660.764 DOPE for 0.509904 SOL (0.519909 w/fees) @ ~$0.003538. Guard v2: ticks >50% discarded, Jupiter quote must confirm before sell; -10% held 2 min, -15% instant."
-    }
-  ],
+  "leftover_sol": 0.435758341,
+  "positions": [],
   "closed": [
     {
       "ticker": "SLOPCORE",
@@ -749,6 +708,53 @@
       "closed_at": "2026-10-15T17:58:00-07:00",
       "exit_sol": 0.268,
       "pnl_pct": -6.0
+    },
+    {
+      "ticker": "DOPE",
+      "name": "DOPE",
+      "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "pairAddress": "FpRcdzEgiHLpo4LPTWDkhq86fCuwoejFXnmoH9cSZZ6Q",
+      "tokens": 0,
+      "fill_token_amount": 14660.764,
+      "fill_sol": 0.509904,
+      "fill_price_usd": 0.003538,
+      "fill_usd": 51.87,
+      "fill_tx": "67iTiLmHhFx31FEtsD2gw1aQHQ4P5ofpoS5nz6hFwSGNhyzPgTDY7uhJwJ84sqQyVoYVQcSKLAR8iSJxhKDmRf6G",
+      "filled_at": "2026-10-16T16:34:00-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "trail": "NOT_REACHED",
+      "trail_ladder": "+20\u2192+15",
+      "hard": "HARD_MINUS10_2MIN",
+      "hard_stop_usd": 0.0031842,
+      "crash_stop_usd": 0.0030073,
+      "save_lock_price_usd": 0.0040687,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS10_2MIN",
+        "CRASH_MINUS15",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "DAVID_ALL_IN",
+        "PULLBACK_ENTRY",
+        "GUARD_V2_JUPITER_CONFIRM",
+        "TRAIL_ARMED",
+        "STOP_SOLD",
+        "RETURN_TO_RIP_BENCH",
+        "NOT_A_BAN"
+      ],
+      "entry_type": "CT_ALL_IN",
+      "note": "David all-in (CT 1:1 approval). Filled 4:34 PM PT 10/16: 14,660.764 DOPE for 0.509904 SOL (0.519909 w/fees) @ ~$0.003538. Guard v2: ticks >50% discarded, Jupiter quote must confirm before sell; -10% held 2 min, -15% instant. Sold 6:12 PM PT 10/16 (found on-chain by Research): wallet 0.0230->0.4358 SOL, ~0.4128 back vs 0.5099 in (~-19% incl slippage/fees past stop). Exact guard trigger pending CT log.",
+      "tx": "2SiK9J69fK3JZXAKSGecqaAQGW9CZ589bLW6P2mhZfDrQy7d7ewrzfr3AaRbcHnUEHyNDJ73JqNdMRJbijVx2MvS",
+      "closed_at": "2026-10-16T18:12:08-07:00",
+      "exit_sol": 0.4128,
+      "pnl_pct": -19.0
     }
   ],
   "hunt": [
