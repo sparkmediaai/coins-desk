@@ -745,16 +745,16 @@
         "PULLBACK_ENTRY",
         "GUARD_V2_JUPITER_CONFIRM",
         "TRAIL_ARMED",
-        "STOP_SOLD",
         "RETURN_TO_RIP_BENCH",
-        "NOT_A_BAN"
+        "NOT_A_BAN",
+        "HARD_CONFIRMED_JUPITER"
       ],
       "entry_type": "CT_ALL_IN",
-      "note": "David all-in (CT 1:1 approval). Filled 4:34 PM PT 10/16: 14,660.764 DOPE for 0.509904 SOL (0.519909 w/fees) @ ~$0.003538. Guard v2: ticks >50% discarded, Jupiter quote must confirm before sell; -10% held 2 min, -15% instant. Sold 6:12 PM PT 10/16 (found on-chain by Research): wallet 0.0230->0.4358 SOL, ~0.4128 back vs 0.5099 in (~-19% incl slippage/fees past stop). Exact guard trigger pending CT log.",
+      "note": "David all-in (CT 1:1 approval). Filled 4:34 PM PT 10/16: 14,660.764 DOPE for 0.509904 SOL (0.519909 w/fees) @ ~$0.003538. Guard v2: ticks >50% discarded, Jupiter quote must confirm before sell; -10% held 2 min, -15% instant. Sold 6:12 PM PT 10/16 (found on-chain by Research): wallet 0.0230->0.4358 SOL, ~0.4128 back vs 0.5099 in (~-19% incl slippage/fees past stop). CT confirmed: Jupiter quote showed -18.1% before sell (real drop, not bad tick).",
       "tx": "2SiK9J69fK3JZXAKSGecqaAQGW9CZ589bLW6P2mhZfDrQy7d7ewrzfr3AaRbcHnUEHyNDJ73JqNdMRJbijVx2MvS",
       "closed_at": "2026-10-16T18:12:08-07:00",
-      "exit_sol": 0.4128,
-      "pnl_pct": -19.0
+      "exit_sol": 0.4178,
+      "pnl_pct": -18.0
     }
   ],
   "hunt": [
