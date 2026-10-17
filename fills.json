@@ -46,26 +46,26 @@
   "leftover_sol": 0.022995,
   "positions": [
     {
-      "ticker": "SLOPCORE",
-      "name": "SLOPCORE",
-      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
-      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
-      "tokens": 106736.447,
-      "fill_token_amount": 106736.447,
-      "fill_sol": 0.4322,
-      "fill_price_sol": 4.049e-06,
-      "fill_price_usd": 0.0004172,
-      "fill_usd": 44.53,
-      "fill_tx": "2z2jPYqj1z8jckSruxcg5Yqr9mmXJpkqzMBH9zuoG2fV7wHtQ9zXoGfVfxVeJZh3oKuopeJTRVVMCjPDDurjSSiP",
-      "filled_at": "2026-10-17T15:49:00-07:00",
+      "ticker": "CLAUDIA",
+      "name": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pairAddress": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "tokens": 5439.846,
+      "fill_token_amount": 5439.846,
+      "fill_sol": 0.3858,
+      "fill_price_sol": 7.093e-05,
+      "fill_price_usd": 0.0073058,
+      "fill_usd": 39.74,
+      "fill_tx": "g5L5Euq9V7eUaEdUZkKVEKRz5zupND4rs2d1WruPQ2SZ8KBTxFw6EYicKbMuTTqhKutEBJit6U1J5sqFGPdfPnC",
+      "filled_at": "2026-10-17T16:36:00-07:00",
       "status": "OPEN",
       "clips": 1,
       "trail": "ARMED",
       "hard": "HARD_MINUS20_2CONFIRM",
       "crash_stop": "MINUS30_INSTANT",
-      "hard_stop_usd": 0.0003338,
-      "crash_stop_usd": 0.000292,
-      "save_lock_price_usd": 0.0004798,
+      "hard_stop_usd": 0.0058446,
+      "crash_stop_usd": 0.0051141,
+      "save_lock_price_usd": 0.0084017,
       "save_ladder": [
         "+20\u2192+15",
         "+50\u2192+25",
@@ -82,11 +82,10 @@
         "AUTO_BUY_ROTATION",
         "DAVID_SHORTLIST",
         "GUARD_V3",
-        "THIN_TAPE",
         "TRAIL_ARMED"
       ],
-      "entry_type": "CT_ROTATION",
-      "note": "Rotation in 3:49 PM PT 10/17 from CLAUDIA (+10%). 106,736.447 SLOPCORE for 0.4322 SOL @ 4.049e-6 SOL/token (~$0.000417). PumpSwap ~$73k liq; thin tape (~$832 h1 vol, 2.4% impact) per CT. Guard v3 armed."
+      "entry_type": "CT_ROTATION_BACK",
+      "note": "Rotation back in 4:36 PM PT 10/17 from SLOPCORE (-8.4%). 5,439.846 CLAUDIA for 0.3858 SOL @ 7.093e-5 SOL/token. PumpSwap ~$357k liq, buyers led, no mint/freeze per CT. Guard v3 PID 167217."
     }
   ],
   "closed": [
@@ -848,6 +847,54 @@
       "closed_at": "2026-10-17T15:49:00-07:00",
       "exit_sol": 0.4422,
       "pnl_pct": 10.0
+    },
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 0,
+      "fill_token_amount": 106736.447,
+      "fill_sol": 0.4322,
+      "fill_price_sol": 4.049e-06,
+      "fill_price_usd": 0.0004172,
+      "fill_usd": 44.53,
+      "fill_tx": "2z2jPYqj1z8jckSruxcg5Yqr9mmXJpkqzMBH9zuoG2fV7wHtQ9zXoGfVfxVeJZh3oKuopeJTRVVMCjPDDurjSSiP",
+      "filled_at": "2026-10-17T15:49:00-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "trail": "ARMED",
+      "hard": "HARD_MINUS20_2CONFIRM",
+      "crash_stop": "MINUS30_INSTANT",
+      "hard_stop_usd": 0.0003338,
+      "crash_stop_usd": 0.000292,
+      "save_lock_price_usd": 0.0004798,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "AUTO_BUY_ROTATION",
+        "DAVID_SHORTLIST",
+        "GUARD_V3",
+        "THIN_TAPE",
+        "TRAIL_ARMED",
+        "ROTATION_OUT"
+      ],
+      "entry_type": "CT_ROTATION",
+      "note": "Rotation in 3:49 PM PT 10/17 from CLAUDIA (+10%). 106,736.447 SLOPCORE for 0.4322 SOL @ 4.049e-6 SOL/token (~$0.000417). PumpSwap ~$73k liq; thin tape (~$832 h1 vol, 2.4% impact) per CT. Guard v3 armed. Rotated out 4:36 PM PT 10/17 for ~0.3958 SOL net (~-8.4%); rotated back into CLAUDIA.",
+      "tx": "5KbYpjkjJ72Kh85inbajPjwivSoXBNaxy8nMiUF2RCxMJKc1RRkfoRphGay26TZcXk6wwk38fDn2utLQ58K4tRC6",
+      "closed_at": "2026-10-17T16:36:00-07:00",
+      "exit_sol": 0.3958,
+      "pnl_pct": -8.4
     }
   ],
   "hunt": [
