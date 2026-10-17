@@ -43,8 +43,52 @@
     "desk_resume_note": "David funded play wallet + JUMPER override fill; 9/9 desk break over.",
     "leftover_sol": 0.694711
   },
-  "leftover_sol": 0.435758341,
-  "positions": [],
+  "leftover_sol": 0.022995,
+  "positions": [
+    {
+      "ticker": "CLAUDIA",
+      "name": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pairAddress": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "tokens": 6525.649,
+      "fill_token_amount": 6525.649,
+      "fill_sol": 0.402758,
+      "fill_price_sol": 6.172e-05,
+      "fill_price_usd": 0.0065,
+      "fill_usd": 42.42,
+      "fill_tx": "3iLUj1N9RkEsbEA5goHQwpVFokV7AvCUy8Ueh277gFojLiHe6EHAArSrED6Hzp6D7gCjQFCF2P7XVhnGi4xZSYhD",
+      "filled_at": "2026-10-17T14:35:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "hard": "HARD_MINUS20_2CONFIRM",
+      "crash_stop": "MINUS30_INSTANT",
+      "hard_stop_usd": 0.0052,
+      "crash_stop_usd": 0.00455,
+      "save_lock_price_usd": 0.007475,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "AUTO_BUY",
+        "DAVID_SHORTLIST",
+        "PULLBACK_ENTRY",
+        "GUARD_V3",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_AUTO_BUY_SHORTLIST",
+      "note": "Auto-buy fired 2:35 PM PT 10/17 (David shortlist). 6,525.649 CLAUDIA for 0.402758 SOL @ 6.172e-5 SOL/token (~$0.0065). PumpSwap $339k buys led; Meteora $430k sell-tilted (caveat per CT). Guard v3: -20% x2 confirms, -30% instant, slow-bleed, SAVE ladder."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
