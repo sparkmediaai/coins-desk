@@ -37,26 +37,26 @@
   "leftover_sol": 0.022995,
   "positions": [
     {
-      "ticker": "SLOPCORE",
-      "name": "SLOPCORE",
-      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
-      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
-      "tokens": 91297.89,
-      "fill_token_amount": 91297.89,
-      "fill_sol": 0.457,
-      "fill_price_sol": 5.0056e-06,
-      "fill_price_usd": 0.0005156,
-      "fill_usd": 47.07,
-      "fill_tx": "3ESivx36khDXmiwguBzAehh9rJT6ASoS43znG31scvmHMfQ72TwAKrGinhimvo1QvNHRoTgiLFUwReywuXTAwkdD",
-      "filled_at": "2026-10-17T21:40:00-07:00",
+      "ticker": "CLAUDIA",
+      "name": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pairAddress": "DfHEafDf9vk6tJzo7UEUQK6hMWnikzFvvW55WsxDyJuU",
+      "tokens": 4884.86,
+      "fill_token_amount": 4884.86,
+      "fill_sol": 0.3675,
+      "fill_price_sol": 7.5237e-05,
+      "fill_price_usd": 0.0077494,
+      "fill_usd": 37.85,
+      "fill_tx": "5npi9rHHdAngAMzrAxpEqvqtpvNFiH8n59zPt4Q1i73kCGBErMM9mJkeWxY2niozU3sCzVJTKeGtx4ri41UXScNq",
+      "filled_at": "2026-10-18T07:46:00-07:00",
       "status": "OPEN",
       "clips": 1,
       "trail": "ARMED",
       "hard": "HARD_MINUS20_2CONFIRM",
       "crash_stop": "MINUS30_INSTANT",
-      "hard_stop_usd": 0.0004125,
-      "crash_stop_usd": 0.0003609,
-      "save_lock_price_usd": 0.0005929,
+      "hard_stop_usd": 0.0061995,
+      "crash_stop_usd": 0.0054246,
+      "save_lock_price_usd": 0.0089118,
       "save_ladder": [
         "+20\u2192+15",
         "+50\u2192+25",
@@ -75,8 +75,8 @@
         "GUARD_V3",
         "TRAIL_ARMED"
       ],
-      "entry_type": "CT_ROTATION",
-      "note": "Rotation in 9:40 PM PT 10/17 from CLAUDIA (+21%). 91,297.89 SLOPCORE for 0.457 SOL @ 5.0056e-6 SOL/token. PumpSwap ~$81.8k liq, 2.1% impact per CT. Guard v3 PID 215269."
+      "entry_type": "CT_ROTATION_BACK",
+      "note": "Rotation back in 7:46 AM PT 10/18 from SLOPCORE (-17%). 4,884.86 CLAUDIA for 0.3675 SOL @ 7.5237e-5 SOL/token. PumpSwap ~$369k liq, 0.8% impact per CT. Guard v3 PID 250660."
     }
   ],
   "closed": [
@@ -916,6 +916,53 @@
       "exit_sol": 0.467,
       "pnl_pct": 21.0,
       "note": " Rotated out 9:40 PM PT 10/17 for ~0.467 SOL net (~+21%); rotated into SLOPCORE."
+    },
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 0,
+      "fill_token_amount": 91297.89,
+      "fill_sol": 0.457,
+      "fill_price_sol": 5.0056e-06,
+      "fill_price_usd": 0.0005156,
+      "fill_usd": 47.07,
+      "fill_tx": "3ESivx36khDXmiwguBzAehh9rJT6ASoS43znG31scvmHMfQ72TwAKrGinhimvo1QvNHRoTgiLFUwReywuXTAwkdD",
+      "filled_at": "2026-10-17T21:40:00-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "trail": "ARMED",
+      "hard": "HARD_MINUS20_2CONFIRM",
+      "crash_stop": "MINUS30_INSTANT",
+      "hard_stop_usd": 0.0004125,
+      "crash_stop_usd": 0.0003609,
+      "save_lock_price_usd": 0.0005929,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "AUTO_BUY_ROTATION",
+        "DAVID_SHORTLIST",
+        "GUARD_V3",
+        "TRAIL_ARMED",
+        "ROTATION_OUT"
+      ],
+      "entry_type": "CT_ROTATION",
+      "note": "Rotation in 9:40 PM PT 10/17 from CLAUDIA (+21%). 91,297.89 SLOPCORE for 0.457 SOL @ 5.0056e-6 SOL/token. PumpSwap ~$81.8k liq, 2.1% impact per CT. Guard v3 PID 215269. Rotated out 7:46 AM PT 10/18 for ~0.3775 SOL net (~-17%); rotated into CLAUDIA.",
+      "tx": "Gy7znXHM3B3fHWuzx29MUDNgRAHaesBpSvawnHK4wxyDoSg2RTZ3uWRfUqYkpnt7sDRTbqVf9kDmwPQvsnMJHb9",
+      "closed_at": "2026-10-18T07:46:00-07:00",
+      "exit_sol": 0.3775,
+      "pnl_pct": -17.0
     }
   ],
   "hunt": [],
