@@ -37,28 +37,46 @@
   "leftover_sol": 0.022995,
   "positions": [
     {
-      "ticker": "CLAUDIA",
-      "symbol": "CLAUDIA",
-      "name": "CLAUDIA",
-      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-      "pair": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
-      "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 91297.89,
+      "fill_token_amount": 91297.89,
+      "fill_sol": 0.457,
+      "fill_price_sol": 5.0056e-06,
+      "fill_price_usd": 0.0005156,
+      "fill_usd": 47.07,
+      "fill_tx": "3ESivx36khDXmiwguBzAehh9rJT6ASoS43znG31scvmHMfQ72TwAKrGinhimvo1QvNHRoTgiLFUwReywuXTAwkdD",
+      "filled_at": "2026-10-17T21:40:00-07:00",
       "status": "OPEN",
-      "filled_at": "2026-10-17T16:35:40-07:00",
-      "tx": "g5L5Euq9V7eUaEdUZkKVEKRz5zupND4rs2d1WruPQ2SZ8KBTxFw6EYicKbMuTTqhKutEBJit6U1J5sqFGPdfPnC",
-      "fill_tx": "g5L5Euq9V7eUaEdUZkKVEKRz5zupND4rs2d1WruPQ2SZ8KBTxFw6EYicKbMuTTqhKutEBJit6U1J5sqFGPdfPnC",
-      "sol_in": 0.385844332,
-      "fill_sol": 0.385844332,
-      "tokens": 5439.845765,
-      "fill_price_sol": 7.092927790021635e-05,
-      "guard": "coin_guard.py v3 ARMED pid 167217",
+      "clips": 1,
+      "trail": "ARMED",
+      "hard": "HARD_MINUS20_2CONFIRM",
+      "crash_stop": "MINUS30_INSTANT",
+      "hard_stop_usd": 0.0004125,
+      "crash_stop_usd": 0.0003609,
+      "save_lock_price_usd": 0.0005929,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ],
       "flags": [
-        "STANDING_AUTO_BUY",
-        "100PCT_BOOK",
-        "RESERVE_0.02",
-        "GUARD_V3_QUOTE_CONFIRMED",
-        "NO_ADD"
-      ]
+        "AUTO_BUY_ROTATION",
+        "DAVID_SHORTLIST",
+        "GUARD_V3",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_ROTATION",
+      "note": "Rotation in 9:40 PM PT 10/17 from CLAUDIA (+21%). 91,297.89 SLOPCORE for 0.457 SOL @ 5.0056e-6 SOL/token. PumpSwap ~$81.8k liq, 2.1% impact per CT. Guard v3 PID 215269."
     }
   ],
   "closed": [
@@ -868,6 +886,36 @@
       "closed_at": "2026-10-17T16:36:00-07:00",
       "exit_sol": 0.3958,
       "pnl_pct": -8.4
+    },
+    {
+      "ticker": "CLAUDIA",
+      "symbol": "CLAUDIA",
+      "name": "CLAUDIA",
+      "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+      "pair": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+      "status": "CLOSED",
+      "filled_at": "2026-10-17T16:35:40-07:00",
+      "tx": "3B1k4CQNzfCVyDLSJ9CdvyrGR6nTM2Vcb2wD3R6wkFN2FwpnpYUKS3KJpkpfDPTa7JKuUDioc4oHmgaKmYE4jRgp",
+      "fill_tx": "g5L5Euq9V7eUaEdUZkKVEKRz5zupND4rs2d1WruPQ2SZ8KBTxFw6EYicKbMuTTqhKutEBJit6U1J5sqFGPdfPnC",
+      "sol_in": 0.385844332,
+      "fill_sol": 0.385844332,
+      "tokens": 0,
+      "fill_price_sol": 7.092927790021635e-05,
+      "guard": "coin_guard.py v3 ARMED pid 167217",
+      "flags": [
+        "STANDING_AUTO_BUY",
+        "100PCT_BOOK",
+        "RESERVE_0.02",
+        "GUARD_V3_QUOTE_CONFIRMED",
+        "NO_ADD",
+        "ROTATION_OUT",
+        "PROFIT"
+      ],
+      "closed_at": "2026-10-17T21:40:00-07:00",
+      "exit_sol": 0.467,
+      "pnl_pct": 21.0,
+      "note": " Rotated out 9:40 PM PT 10/17 for ~0.467 SOL net (~+21%); rotated into SLOPCORE."
     }
   ],
   "hunt": [],
