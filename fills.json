@@ -34,8 +34,52 @@
     "desk_paused": false,
     "paper_mode_active": false
   },
-  "leftover_sol": 0.3023,
-  "positions": [],
+  "leftover_sol": 0.022995,
+  "positions": [
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 112043.64,
+      "fill_token_amount": 112043.64,
+      "fill_sol": 0.2693,
+      "fill_price_sol": 2.4034e-06,
+      "fill_price_usd": 0.00025267,
+      "fill_usd": 28.31,
+      "fill_tx": "5n3fR1BWbEXKdMCKgFpXSXK7vM41Ndxyo7jq8bEYVy5XBHW93DRVYHZpuiVmfTYEs9KZ2dsVa6AjFU6VNq467Djx",
+      "filled_at": "2026-10-19T15:32:00-07:00",
+      "status": "OPEN",
+      "clips": 1,
+      "trail": "ARMED",
+      "hard": "HARD_MINUS20_2CONFIRM",
+      "crash_stop": "MINUS30_INSTANT",
+      "hard_stop_usd": 0.00020214,
+      "crash_stop_usd": 0.00017687,
+      "save_lock_price_usd": 0.00029057,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ],
+      "flags": [
+        "AUTO_BUY",
+        "DAVID_SHORTLIST",
+        "GUARD_V3",
+        "THIN_TAPE",
+        "TRAIL_ARMED"
+      ],
+      "entry_type": "CT_AUTO_BUY_SHORTLIST",
+      "note": "Auto-buy 3:32 PM PT 10/19 from flat book. 112,043.64 SLOPCORE for 0.2693 SOL @ 2.4034e-6 SOL/token. Thin tape (~$1.6k h1 vol, ~$57.6k liq) per CT. Guard v3 PID 615191."
+    }
+  ],
   "closed": [
     {
       "ticker": "SLOPCORE",
