@@ -5,9 +5,9 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
-    "filled_at": "2026-10-21T10:37:30-07:00",
-    "note": "10/21 10:37 AM PT: LONG DACITY 2,253.69 tokens (0.2985 SOL) via hunt after KIMCHI guard SAVE sell 10:25 AM PT (+7.0%). Reserve 0.0199 SOL.",
-    "updated_at": "2026-10-21T12:30:00-07:00",
+    "filled_at": "2026-10-21T12:52:03-07:00",
+    "note": "10/21 12:52 PM PT: LONG KIMCHI re-entry 828.33 tokens (0.2736 SOL) after DACITY exit (-3.9%). Reserve 0.0230 SOL.",
+    "updated_at": "2026-10-21T12:58:00-07:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -34,32 +34,29 @@
     "desk_paused": false,
     "paper_mode_active": false
   },
-  "leftover_sol": 0.0199216,
+  "leftover_sol": 0.023,
   "positions": [
     {
-      "ticker": "DACITY",
-      "name": "Dacity Coin",
-      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
-      "pairAddress": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
-      "tokens": 2253.694361,
-      "fill_token_amount": 2253.694361,
-      "fill_sol": 0.298455436,
-      "fill_price_sol": 0.00013242941951878987,
-      "fill_price_usd": 0.014261324187978479,
-      "fill_usd": 32.14,
-      "fill_tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
-      "tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
-      "filled_at": "2026-10-21T10:37:30-07:00",
+      "ticker": "KIMCHI",
+      "name": "Kimchi",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "pairAddress": "6DNxwecbtdNNstpB5tdnxZsfGe3HmsNgEUZhdue4b1PH",
+      "tokens": 828.333537,
+      "fill_token_amount": 828.333537,
+      "fill_sol": 0.2736,
+      "fill_price_sol": 0.0003303017296521703,
+      "fill_price_usd": 0.03576176826944048,
+      "fill_usd": 29.62,
+      "fill_tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
+      "tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
+      "filled_at": "2026-10-21T12:52:03-07:00",
       "status": "OPEN",
       "clips": 1,
-      "hard": "HARD_MINUS15",
-      "entry_type": "HUNT",
-      "guard_pid": 120258,
+      "entry_type": "RE_ENTRY",
       "flags": [
-        "HUNT",
-        "GUARD_V4"
+        "RE_ENTRY"
       ],
-      "note": "Hunt (D) buy 10/21 10:37 AM PT after Kimchi SAVE exit. 2,253.69 tokens for 0.2985 SOL. Guard v4, -15% stop. Pair is TTWO-quoted."
+      "note": "Kimchi re-entry 10/21 12:52 PM PT (chain blockTime) after Dacity exit. 828.33 tokens for 0.2736 SOL."
     }
   ],
   "closed": [
@@ -1075,10 +1072,10 @@
         "HUNT",
         "ROTATION_OUT"
       ],
-      "note": "Hunt buy 10/20 4:54 PM PT. Rotated out 8:36 PM PT for Kimchi (+3.4%).",
+      "note": "Hunt buy 10/20 4:54 PM PT. Rotated out 8:36 PM PT for Kimchi (+3.4%). Net exit = entry + live-desk pnl_sol_approx 0.009917.",
       "tx": "34WimHBaQ1cbJy1X57sQtyntx7zHjxkHBtSmQAbqMNjLGsvZHuKPQkYQ4Yow2AbtApgnRADAocZhG3Gawx2pinJf",
       "closed_at": "2026-10-20T20:36:20-07:00",
-      "exit_sol": 0.301112644,
+      "exit_sol": 0.301112,
       "pnl_pct": 3.41,
       "save_ladder": [
         "+20\u2192+15",
@@ -1130,6 +1127,36 @@
         "SLOW_BLEED",
         "SAVE_POINT"
       ]
+    },
+    {
+      "ticker": "DACITY",
+      "name": "Dacity Coin",
+      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+      "pairAddress": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
+      "tokens": 0,
+      "fill_token_amount": 2253.694361,
+      "fill_sol": 0.298455436,
+      "fill_price_sol": 0.00013242941951878987,
+      "fill_price_usd": 0.014261324187978479,
+      "fill_usd": 32.14,
+      "fill_tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
+      "tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
+      "filled_at": "2026-10-21T10:37:30-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "hard": "HARD_MINUS15",
+      "entry_type": "HUNT",
+      "guard_pid": 120258,
+      "flags": [
+        "HUNT",
+        "GUARD_V4"
+      ],
+      "note": "Hunt (D) buy 10/21 10:37 AM PT after Kimchi SAVE exit. 2,253.69 tokens for 0.2985 SOL. Guard v4, -15% stop. Pair is TTWO-quoted. Sold 10/21 12:52 PM PT for 0.2867 SOL net (~-3.9%); rotated into Kimchi re-entry.",
+      "closed_at": "2026-10-21T12:52:00-07:00",
+      "exit_sol": 0.2867,
+      "sold_usd": 31.04,
+      "pnl_pct": -3.94,
+      "exit_tx": "31eT46NFjg5F3nsX84kL8UcDQTuDAyR5yb8YGXeBhJbiswA5Z1gae9TKUckMQ5SaVVFzBCU4uRHF7GKPJUZeSfvv"
     }
   ],
   "hunt": [],
