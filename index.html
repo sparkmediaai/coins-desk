@@ -10,17 +10,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css?v=lb1">
+  <link rel="stylesheet" href="./style.css?v=lb2">
 
 </head>
 <body>
+  <div class="tick-wrap" hidden aria-hidden="true"><div class="tick-stripe" id="tick-stripe"></div></div>
   <div class="bg-grid" aria-hidden="true"></div><div class="bg-glow" aria-hidden="true"></div>
-
-  <div class="tick-wrap" aria-hidden="true">
-    <div class="tick-stripe" id="tick-stripe">
-      <span class="tick-item muted">WAITING FILLS…</span>
-    </div>
-  </div>
 
   <header class="mast">
     <div class="mast-left">
@@ -74,6 +69,7 @@
     </div>
   </section>
 
+  <details class="more-info"><summary>Desk rules &amp; radar</summary>
   <section class="blotter-row" aria-label="Gate and radar">
     <aside class="gate" id="gate">
       <h3>Gate</h3>
@@ -94,6 +90,7 @@
       </ul>
     </aside>
   </section>
+  </details>
 
   <section class="panel" aria-label="Holding">
     <div class="panel-head">
@@ -123,33 +120,22 @@
 
 
 
-  <section class="panel panel-closed" aria-label="Not holding">
+  <section class="panel panel-closed" aria-label="Closed trades">
     <div class="panel-head">
-      <h2>Not holding</h2>
-      <p class="panel-note">cuts and flattens. not in the book.</p>
+      <h2>Closed trades</h2>
+      <p class="panel-note" id="closed-summary">—</p>
     </div>
     <div class="table-scroll">
-      <table class="blotter">
-        <thead>
-          <tr>
-            <th scope="col">ticker</th>
-            <th scope="col" class="num">price</th>
-            <th scope="col" class="num">1h</th>
-            <th scope="col" class="num">5m</th>
-            <th scope="col" class="num">liq</th>
-            <th scope="col" class="num">1h b/s</th>
-            <th scope="col" class="num">sold</th>
-            <th scope="col" class="num">vs fill</th>
-            <th scope="col" class="num">fill</th>
-            <th scope="col" class="num">p&amp;l</th>
-          </tr>
-        </thead>
+      <table class="blotter closed-t">
+        <thead><tr><th scope="col">ticker</th><th scope="col">closed</th><th scope="col" class="num">in</th><th scope="col" class="num">out</th><th scope="col" class="num">p&amp;l</th></tr></thead>
         <tbody id="closed"></tbody>
+        <tbody id="closed-more" hidden></tbody>
       </table>
     </div>
+    <button type="button" class="toggle" id="closed-toggle" aria-expanded="false" aria-controls="closed-more" hidden>Show all closed</button>
   </section>
 
-  <section class="panel" aria-label="Hunt bench">
+  <section class="panel" id="hunt-panel" aria-label="Hunt bench">
     <div class="panel-head">
       <h2>Hunt bench</h2>
       <p class="panel-note">quotes only. no book, no p&amp;l.</p>
@@ -166,7 +152,7 @@
     <div id="hunt" class="bench"></div>
   </section>
 
-  <section class="panel" aria-label="Watch">
+  <section class="panel" id="watch-panel" aria-label="Watch">
     <div class="panel-head">
       <h2>Watch</h2>
       <p class="panel-note">on-curve if pumpfun; else graduated.</p>
@@ -188,9 +174,10 @@
     <p class="foot-meta">fills <a href="./fills.json">./fills.json</a> <span class="dot">·</span> refresh 30s <span class="dot">·</span> <a href="https://github.com/sparkmediaai/coins-desk">repo</a></p>
   </footer>
 
-  <script src="./app.js?v=lb1"></script>
-  <script src="./app-book-sol.js?v=lb1"></script>
-  <script src="./app-pack1.js?v=lb1"></script>
-  <script src="./app-motion.js?v=lb1"></script>
+  <script src="./app.js?v=lb2"></script>
+  <script src="./app-book-sol.js?v=lb2"></script>
+  <script src="./app-pack1.js?v=lb2"></script>
+  <script src="./app-lean.js?v=lb2"></script>
+  <script src="./app-motion.js?v=lb2"></script>
 </body>
 </html>
