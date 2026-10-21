@@ -5,9 +5,9 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
-    "filled_at": "2026-09-01T13:37:00-07:00",
-    "note": "2026-10-15 ~4:42 PM PT DOPE re-entry 0.284 SOL (~$29.99) @ ~$0.005194 / 4.918e-05 SOL, 5774.245076 tokens. Gates: deepest Meteora FpRc liq~$511k, h1 buys/sells 1162/338, m5 31/16, h1 -5.6% m5 +0.8%. Guard pid 17014. Leftover 0.2748 SOL.",
-    "updated_at": "2026-10-16T23:34:16.653830+00:00",
+    "filled_at": "2026-10-21T10:37:30-07:00",
+    "note": "10/21 10:37 AM PT: LONG DACITY 2,253.69 tokens (0.2985 SOL) via hunt after KIMCHI guard SAVE sell 10:25 AM PT (+7.0%). Reserve 0.0199 SOL.",
+    "updated_at": "2026-10-21T12:30:00-07:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -34,50 +34,32 @@
     "desk_paused": false,
     "paper_mode_active": false
   },
-  "leftover_sol": 0.022995,
+  "leftover_sol": 0.0199216,
   "positions": [
     {
-      "ticker": "SLOPCORE",
-      "name": "SLOPCORE",
-      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
-      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
-      "tokens": 112043.64,
-      "fill_token_amount": 112043.64,
-      "fill_sol": 0.2693,
-      "fill_price_sol": 2.4034e-06,
-      "fill_price_usd": 0.00025267,
-      "fill_usd": 28.31,
-      "fill_tx": "5n3fR1BWbEXKdMCKgFpXSXK7vM41Ndxyo7jq8bEYVy5XBHW93DRVYHZpuiVmfTYEs9KZ2dsVa6AjFU6VNq467Djx",
-      "filled_at": "2026-10-19T15:32:00-07:00",
+      "ticker": "DACITY",
+      "name": "Dacity Coin",
+      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+      "pairAddress": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
+      "tokens": 2253.694361,
+      "fill_token_amount": 2253.694361,
+      "fill_sol": 0.298455436,
+      "fill_price_sol": 0.00013242941951878987,
+      "fill_price_usd": 0.014261324187978479,
+      "fill_usd": 32.14,
+      "fill_tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
+      "tx": "319X2JN4G7BSm2sACKPxqcrjLu6LEXriHyProEf8qAVGaJWbxeMzRu6JqT8qXL3TF3jhqquk7oFwDq1GcZudGLN3",
+      "filled_at": "2026-10-21T10:37:30-07:00",
       "status": "OPEN",
       "clips": 1,
-      "trail": "ARMED",
-      "hard": "HARD_MINUS20_2CONFIRM",
-      "crash_stop": "MINUS30_INSTANT",
-      "hard_stop_usd": 0.00020214,
-      "crash_stop_usd": 0.00017687,
-      "save_lock_price_usd": 0.00029057,
-      "save_ladder": [
-        "+20\u2192+15",
-        "+50\u2192+25",
-        "+100\u2192+50",
-        "+200\u2192+100"
-      ],
-      "exit_rules": [
-        "HARD_MINUS20_2CONFIRM",
-        "CRASH_MINUS30",
-        "SLOW_BLEED",
-        "SAVE_POINT"
-      ],
+      "hard": "HARD_MINUS15",
+      "entry_type": "HUNT",
+      "guard_pid": 120258,
       "flags": [
-        "AUTO_BUY",
-        "DAVID_SHORTLIST",
-        "GUARD_V3",
-        "THIN_TAPE",
-        "TRAIL_ARMED"
+        "HUNT",
+        "GUARD_V4"
       ],
-      "entry_type": "CT_AUTO_BUY_SHORTLIST",
-      "note": "Auto-buy 3:32 PM PT 10/19 from flat book. 112,043.64 SLOPCORE for 0.2693 SOL @ 2.4034e-6 SOL/token. Thin tape (~$1.6k h1 vol, ~$57.6k liq) per CT. Guard v3 PID 615191."
+      "note": "Hunt (D) buy 10/21 10:37 AM PT after Kimchi SAVE exit. 2,253.69 tokens for 0.2985 SOL. Guard v4, -15% stop. Pair is TTWO-quoted."
     }
   ],
   "closed": [
@@ -333,7 +315,8 @@
         "HARD_MINUS15_WAS_ARMED",
         "NO_RIP_BY_11PM"
       ],
-      "note": "David 11pm PT time-stop 2026-09-08: no \u2265+10% rip vs fill. Sold ~128,662 QENIS \u2192 0.689 SOL / ~$71.68 (\u22123.0% vs $73.88 fill). Returned to RIP_BENCH (not a ban)."
+      "note": "David 11pm PT time-stop 2026-09-08: no \u2265+10% rip vs fill. Sold ~128,662 QENIS \u2192 0.689 SOL / ~$71.68 (\u22123.0% vs $73.88 fill). Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED"
     },
     {
       "ticker": "STONK",
@@ -352,7 +335,9 @@
         "RIP_PLUS20"
       ],
       "note": "SAVE_POINT trail floor +10% breached after RIP_PLUS20 (alert ~+8.7% vs fill, exit -4.02% vs fill after fees). Sold 0.080414 SOL / $8.37. Returned to RIP_BENCH (not a ban).",
-      "close_reason": "SAVE_POINT"
+      "close_reason": "SAVE_POINT",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "HeeHaw",
@@ -371,7 +356,9 @@
         "NOT_A_BAN",
         "RIP_PLUS20"
       ],
-      "note": "SAVE_POINT trail floor +10% breached after RIP_PLUS20 (alert ~+7.3% vs fill, exit -1.58% vs fill after fees). Sold 0.105995 SOL / $10.95. Returned to RIP_BENCH (not a ban)."
+      "note": "SAVE_POINT trail floor +10% breached after RIP_PLUS20 (alert ~+7.3% vs fill, exit -1.58% vs fill after fees). Sold 0.105995 SOL / $10.95. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "fone",
@@ -389,7 +376,9 @@
         "HARD_MINUS10",
         "NOT_A_BAN"
       ],
-      "note": "HARD_MINUS10 watcher cut 2026-09-05T09:22:11-07:00 (-19.0% vs $20.4 fill / 0.1986 SOL). Sold 0.160853 SOL / $16.55. Returned to RIP_BENCH (not a ban)."
+      "note": "HARD_MINUS10 watcher cut 2026-09-05T09:22:11-07:00 (-19.0% vs $20.4 fill / 0.1986 SOL). Sold 0.160853 SOL / $16.55. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "CTO",
@@ -408,7 +397,9 @@
         "NOT_A_BAN",
         "RIP_PLUS20"
       ],
-      "note": "SAVE_POINT trail floor +10% breached after RIP_PLUS20 (peak ~+22.9%, exit +1.82% vs fill). Sold 0.151646 SOL / $15.61. Returned to RIP_BENCH (not a ban)."
+      "note": "SAVE_POINT trail floor +10% breached after RIP_PLUS20 (peak ~+22.9%, exit +1.82% vs fill). Sold 0.151646 SOL / $15.61. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "CTO",
@@ -426,7 +417,9 @@
         "HARD_MINUS10",
         "NOT_A_BAN"
       ],
-      "note": "HARD_MINUS10 watcher cut 2026-09-05T06:54:10-07:00 (-10.71% vs $20.68 fill / 0.2010 SOL). Sold 0.179447 SOL / $18.47. Returned to RIP_BENCH (not a ban)."
+      "note": "HARD_MINUS10 watcher cut 2026-09-05T06:54:10-07:00 (-10.71% vs $20.68 fill / 0.2010 SOL). Sold 0.179447 SOL / $18.47. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "HeeHaw",
@@ -444,7 +437,9 @@
         "HARD_MINUS10",
         "NOT_A_BAN"
       ],
-      "note": "HARD_MINUS10 watcher cut 2026-09-05T06:19:27-07:00 (-7.46% vs $21.19 fill / 0.2059 SOL). Sold 0.190059 SOL / $19.61. Returned to RIP_BENCH (not a ban)."
+      "note": "HARD_MINUS10 watcher cut 2026-09-05T06:19:27-07:00 (-7.46% vs $21.19 fill / 0.2059 SOL). Sold 0.190059 SOL / $19.61. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "QENIS",
@@ -464,7 +459,8 @@
         "RETURN_TO_RIP_BENCH",
         "NOT_A_BAN"
       ],
-      "note": "David deposited QENIS; sold all to SOL ~9:09 PM PT. 70205.329043 QENIS \u2192 0.434020084 SOL. Keep cash. QENIS on RIP_BENCH (not banned)."
+      "note": "David deposited QENIS; sold all to SOL ~9:09 PM PT. 70205.329043 QENIS \u2192 0.434020084 SOL. Keep cash. QENIS on RIP_BENCH (not banned).",
+      "status": "CLOSED"
     },
     {
       "ticker": "QENIS",
@@ -483,7 +479,9 @@
         "NOT_A_BAN",
         "OVERNIGHT_FLATTEN_WINDOW"
       ],
-      "note": "HARD_MINUS10 watcher cut 2026-09-04 ~8:27 PM PT (-13.75% vs $30.98 fill / 0.3044 SOL). Sold 0.262531 SOL / $26.77. Returned to RIP_BENCH (not a ban)."
+      "note": "HARD_MINUS10 watcher cut 2026-09-04 ~8:27 PM PT (-13.75% vs $30.98 fill / 0.3044 SOL). Sold 0.262531 SOL / $26.77. Returned to RIP_BENCH (not a ban).",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "fone",
@@ -501,7 +499,9 @@
         "SAVE_LADDER",
         "NOT_A_BAN"
       ],
-      "note": "SAVE_POINT trail floor +10% breached (~-4.84% vs fill after exit). Returned to RIP_BENCH."
+      "note": "SAVE_POINT trail floor +10% breached (~-4.84% vs fill after exit). Returned to RIP_BENCH.",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "ZCAT",
@@ -514,7 +514,9 @@
       "close_reason": "HARD_MINUS10",
       "flags": [
         "RETURN_TO_RIP_BENCH"
-      ]
+      ],
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "QENIS",
@@ -524,7 +526,9 @@
       "sold_sol": 0.434541734,
       "sold_usd": 44.23,
       "vs_fill_pct": 21.88,
-      "close_reason": "SAVE_POINT"
+      "close_reason": "SAVE_POINT",
+      "status": "CLOSED",
+      "tokens": 0
     },
     {
       "ticker": "SLOPCORE",
@@ -547,7 +551,8 @@
         "RETURN_TO_RIP_BENCH"
       ],
       "buy_tx": "jxbdxxZvykAzWmBrpZzQfg8CYhBEXWidQxF9pkoHA7HPphanJVo2YtL3EFk8vSKa1SWhQeoY7UuB3NhCecJQVu9",
-      "sell_tx": "2EeTfwLXQWMnicuR6VNL2vXYawXFGbNjskG6sc7kLQEd2euHLt8MBFj8vJWSqEHpueQ2XDvvJkR1dgiXKwnqChqp"
+      "sell_tx": "2EeTfwLXQWMnicuR6VNL2vXYawXFGbNjskG6sc7kLQEd2euHLt8MBFj8vJWSqEHpueQ2XDvvJkR1dgiXKwnqChqp",
+      "status": "CLOSED"
     },
     {
       "ticker": "SLOPCORE",
@@ -1013,6 +1018,118 @@
       "closed_at": "2026-10-19T07:17:00-07:00",
       "exit_sol": 0.2843,
       "pnl_pct": -22.6
+    },
+    {
+      "ticker": "SLOPCORE",
+      "name": "SLOPCORE",
+      "mint": "EkFRff9a2jKztJHML1LG9FRmEkPJDR6XAYp3uCPdpump",
+      "pairAddress": "3UMUTZeeVSLywQjeZ6sjngu3jc6oQSxpy2ApNH3xL8sf",
+      "tokens": 0,
+      "fill_token_amount": 112043.640549,
+      "fill_sol": 0.269282708,
+      "fill_price_sol": 2.403373423788695e-06,
+      "fill_usd": 29.0,
+      "sold_usd": 32.44,
+      "fill_tx": "5n3fR1BWbEXKdMCKgFpXSXK7vM41Ndxyo7jq8bEYVy5XBHW93DRVYHZpuiVmfTYEs9KZ2dsVa6AjFU6VNq467Djx",
+      "filled_at": "2026-10-19T15:32:15-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "flags": [
+        "GUARD_V3",
+        "SAVE_POINT"
+      ],
+      "note": "Standing auto-buy 10/19 3:32 PM PT. Guard SAVE_+15 floor sold 10/20 9:50 AM PT for 0.3012 SOL net (+11.85%).",
+      "tx": "5QtojQyWzEPSL6RSxG89VxGyHVNNbaDSL4XwBxCx2JWbwjhyCtq3YUb4G7cJi9LKdtK5NvhhmeiTGZEywUgYDdA4",
+      "closed_at": "2026-10-20T09:50:17-07:00",
+      "exit_sol": 0.301200488,
+      "pnl_pct": 11.85,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ]
+    },
+    {
+      "ticker": "GATO",
+      "name": "GATO",
+      "mint": "HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump",
+      "pairAddress": null,
+      "tokens": 0,
+      "fill_token_amount": 17119.352827,
+      "fill_sol": 0.291195488,
+      "fill_price_sol": 1.7009725247366678e-05,
+      "fill_usd": 31.36,
+      "sold_usd": 32.43,
+      "fill_tx": "4NbPVUeZwFquT6LtJp2HvsVuRoHdhhcyppYvqW7y68vCJuKSJNnijzrWaw4wdiwPGXZW4Y5aDAGXMvpL5GFqmAV9",
+      "filled_at": "2026-10-20T16:54:30-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "flags": [
+        "HUNT",
+        "ROTATION_OUT"
+      ],
+      "note": "Hunt buy 10/20 4:54 PM PT. Rotated out 8:36 PM PT for Kimchi (+3.4%).",
+      "tx": "34WimHBaQ1cbJy1X57sQtyntx7zHjxkHBtSmQAbqMNjLGsvZHuKPQkYQ4Yow2AbtApgnRADAocZhG3Gawx2pinJf",
+      "closed_at": "2026-10-20T20:36:20-07:00",
+      "exit_sol": 0.301112644,
+      "pnl_pct": 3.41,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ]
+    },
+    {
+      "ticker": "KIMCHI",
+      "name": "KIMCHI",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "pairAddress": "6DNxwecbtdNNstpB5tdnxZsfGe3HmsNgEUZhdue4b1PH",
+      "tokens": 0,
+      "fill_token_amount": 886.855304,
+      "fill_sol": 0.289593804,
+      "fill_price_sol": 0.00032654008234921713,
+      "fill_usd": 31.19,
+      "sold_usd": 33.38,
+      "fill_tx": "2SVW9StmPPji8gRgXgU4SGe6qUvxvHFm3QZT4uHKHZs8H4tXVuD7G5RTT2JmFfN2QMv718LYteUrj7ivps8L7fvs",
+      "filled_at": "2026-10-20T20:37:10-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "flags": [
+        "EARLY_WALLET",
+        "GUARD_V4",
+        "SAVE_POINT"
+      ],
+      "note": "Early-wallet buy 10/20 8:37 PM PT. Guard v4 SAVE_+15 floor (peak +28.35%) sold 10/21 10:25 AM PT, net +0.0204 SOL (+7.0%).",
+      "tx": "5PydegMm7etiaamDzmKoHf7iqQbUuvXuyWqgu9Mg43T4sHYJ81vXCyLtBiYwtVCHix2Z7KHHAzZBU7S1w2FSjkNQ",
+      "closed_at": "2026-10-21T10:25:35-07:00",
+      "exit_sol": 0.309974276,
+      "pnl_pct": 7.04,
+      "save_ladder": [
+        "+20\u2192+15",
+        "+50\u2192+25",
+        "+100\u2192+50",
+        "+200\u2192+100"
+      ],
+      "exit_rules": [
+        "HARD_MINUS20_2CONFIRM",
+        "CRASH_MINUS30",
+        "SLOW_BLEED",
+        "SAVE_POINT"
+      ]
     }
   ],
   "hunt": [],
