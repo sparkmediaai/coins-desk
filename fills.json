@@ -5,9 +5,9 @@
     "tz": "America/Los_Angeles",
     "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
     "start_usd": 36.0,
-    "filled_at": "2026-10-21T12:52:03-07:00",
-    "note": "10/21 12:52 PM PT: LONG KIMCHI re-entry 828.33 tokens (0.2736 SOL) after DACITY exit (-3.9%). Reserve 0.0230 SOL.",
-    "updated_at": "2026-10-21T12:58:00-07:00",
+    "filled_at": "2026-10-21T14:09:13-07:00",
+    "note": "10/21 2:09 PM PT: LONG DACITY re-entry 1,865.69 tokens (0.2160 SOL) after KIMCHI HARD_MINUS15 stop (-17.4%). Reserve 0.0230 SOL.",
+    "updated_at": "2026-10-21T14:15:00-07:00",
     "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
     "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 \u2248 then-current book. Learning chapter closed; PnL vs new start from here.",
     "prior_start_usd": 100.24,
@@ -37,26 +37,28 @@
   "leftover_sol": 0.023,
   "positions": [
     {
-      "ticker": "KIMCHI",
-      "name": "Kimchi",
-      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
-      "pairAddress": "6DNxwecbtdNNstpB5tdnxZsfGe3HmsNgEUZhdue4b1PH",
-      "tokens": 828.333537,
-      "fill_token_amount": 828.333537,
-      "fill_sol": 0.2736,
-      "fill_price_sol": 0.0003303017296521703,
-      "fill_price_usd": 0.03576176826944048,
-      "fill_usd": 29.62,
-      "fill_tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
-      "tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
-      "filled_at": "2026-10-21T12:52:03-07:00",
+      "ticker": "DACITY",
+      "name": "Dacity Coin",
+      "mint": "nxPqZ4F7ux8Vph5NFu25rEP6Kx9Gr1U6Fmj36Rjpump",
+      "pairAddress": "G2UuRbmVDzDFP4qyoBJrSKBXSi7d6V4bPP9tHPs36y4b",
+      "tokens": 1865.694671,
+      "fill_token_amount": 1865.694671,
+      "fill_sol": 0.215987783,
+      "fill_price_sol": 0.00011576802268735214,
+      "fill_price_usd": 0.012494842688645917,
+      "fill_usd": 23.31,
+      "fill_tx": "5pBPyTZoPAR5ohtoaKxXxtfLauwWr3TXBp6fEmgwsxAwWNWY79fUSRPVVAc1dSKRTCc8caiYezLzE2PQKbt2uvcP",
+      "tx": "5pBPyTZoPAR5ohtoaKxXxtfLauwWr3TXBp6fEmgwsxAwWNWY79fUSRPVVAc1dSKRTCc8caiYezLzE2PQKbt2uvcP",
+      "filled_at": "2026-10-21T14:09:13-07:00",
       "status": "OPEN",
       "clips": 1,
       "entry_type": "RE_ENTRY",
+      "guard_pid": 346606,
       "flags": [
-        "RE_ENTRY"
+        "RE_ENTRY",
+        "GUARD_V4"
       ],
-      "note": "Kimchi re-entry 10/21 12:52 PM PT (chain blockTime) after Dacity exit. 828.33 tokens for 0.2736 SOL."
+      "note": "Dacity re-entry (C) 10/21 2:09 PM PT after Kimchi stop. 1,865.69 tokens for 0.2160 SOL. Guard v4 pid 346606."
     }
   ],
   "closed": [
@@ -1157,6 +1159,35 @@
       "sold_usd": 31.04,
       "pnl_pct": -3.94,
       "exit_tx": "31eT46NFjg5F3nsX84kL8UcDQTuDAyR5yb8YGXeBhJbiswA5Z1gae9TKUckMQ5SaVVFzBCU4uRHF7GKPJUZeSfvv"
+    },
+    {
+      "ticker": "KIMCHI",
+      "name": "Kimchi",
+      "mint": "CSocnzcRpgSCr1naKcNTieWZUxb6rABe45j844m7pump",
+      "pairAddress": "6DNxwecbtdNNstpB5tdnxZsfGe3HmsNgEUZhdue4b1PH",
+      "tokens": 0,
+      "fill_token_amount": 828.333537,
+      "fill_sol": 0.2736,
+      "fill_price_sol": 0.0003303017296521703,
+      "fill_price_usd": 0.03576176826944048,
+      "fill_usd": 29.62,
+      "fill_tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
+      "tx": "2PwMTFkKX1sp8sRkATiVypFzUfVHeAagKqhGcJtqUFtPtdDu3VEkdvV1XWBaMYTFRFbxP3SpzYXmKWYTWdr32rMz",
+      "filled_at": "2026-10-21T12:52:03-07:00",
+      "status": "CLOSED",
+      "clips": 1,
+      "entry_type": "RE_ENTRY",
+      "flags": [
+        "RE_ENTRY",
+        "HARD_MINUS15"
+      ],
+      "note": "Kimchi re-entry 10/21 12:52 PM PT (chain blockTime) after Dacity exit. 828.33 tokens for 0.2736 SOL. Guard v4 HARD_MINUS15 (quote-confirmed 2/2) sold 10/21 1:59 PM PT for 0.2260 SOL net, -0.0476 SOL (-17.4%).",
+      "closed_at": "2026-10-21T13:59:34-07:00",
+      "exit_sol": 0.225993,
+      "sold_usd": 24.39,
+      "pnl_pct": -17.4,
+      "hard": "HARD_MINUS15",
+      "exit_tx": "2mCbn7hkeHtWnk7oZSrUC8jV1sHwd6MHejSnJrXbW5x4FEqRNFVExiJRimGd45fWPtzj65Tr3CWbeYarrUJ8EJQN"
     }
   ],
   "hunt": [],
