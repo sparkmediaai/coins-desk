@@ -35,9 +35,10 @@
   "paper_mode_active": false,
   "synced_txs": [
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT"
-  ]
+  ],
+  "balance_checked_at": "2026-10-23T09:24:20-07:00"
  },
- "leftover_sol": 0.260146,
+ "leftover_sol": 1.051484,
  "positions": [],
  "closed": [
   {
@@ -1647,6 +1648,17 @@
    "solscan": "https://solscan.io/tx/5DmBkk6AhYjqaoQaxoX1oxDxgweX3wF8fBQp1W7diimmQ4XCfxDy2ipfCP56SoWcxNraZMUxKYez3NZawpRmAUwH",
    "closed_at": "2026-10-15T07:47:51-07:00",
    "close_note": "Morning HARD cut; tokens already 0 (dope_status_1015_cut). Stale OPEN cleared on re-entry fill."
+  }
+ ],
+ "transfers": [
+  {
+   "type": "DEPOSIT",
+   "sol": 0.789829312,
+   "tx": "4CyDPBtEXjnK1FTs2CZHK5VADXWWamSUtC9QZqnfJAdzMonyoPnmsGosia9GgoNZGJcSn6zbrYRJe6sAsfLVX6j8",
+   "counterparty": "DPqsobysNf5iA9w7zrQM8HLzCKZEDMkZsWbiidsAt1xo",
+   "at": "2026-10-22T16:30:58-07:00",
+   "sol_post": 1.051483738,
+   "source": "AUTO_SYNC"
   }
  ]
 }
