@@ -5,9 +5,9 @@
   "tz": "America/Los_Angeles",
   "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
   "start_usd": 36.0,
-  "filled_at": "2026-10-27T08:12:57-07:00",
+  "filled_at": "2026-10-27T11:19:23-07:00",
   "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
-  "updated_at": "2026-10-27T11:14:16-07:00",
+  "updated_at": "2026-10-27T11:19:50-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_GUARD_SELL_DOAS",
+  "last_event": "AUTO_SYNC_BUY_FILLED_DOAS",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -38,12 +38,36 @@
    "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
    "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
    "25cFJQRFJaSK8dNNK9R2dscxyMPab8cUQqcBNTafirRzcS2BXWmWWd3LYcELUf6qLkdSJ5L1JMzJGkxtGbWqdTCU",
-   "3MxZa3STfu4j5CexZWKydJ1jGwaFqytwjgvVghfVUFSSFwUXZ4j1RVzw2mBtFqrta9S2bta39wnmB5eVVzrhWgtQ"
+   "3MxZa3STfu4j5CexZWKydJ1jGwaFqytwjgvVghfVUFSSFwUXZ4j1RVzw2mBtFqrta9S2bta39wnmB5eVVzrhWgtQ",
+   "3BzScmkPUTDFzq7v5SvPznwVythywLavX9bujS8NothiAB4NB2f55u8AChvhMfoLkCTMNyqmfS6ZLNtjHWk6sA3P"
   ],
   "balance_checked_at": "2026-10-27T11:14:20-07:00"
  },
- "leftover_sol": 1.05702,
- "positions": [],
+ "leftover_sol": 0.790246,
+ "positions": [
+  {
+   "ticker": "DOAS",
+   "name": "DOAS",
+   "mint": "2qPoPQQCHGtDbgdSxXfrzW1iRS3cGbKmMWSMapZ4pump",
+   "pairAddress": "9MGjpsziLD1tJ43xMS98bg3pvyoUX9acLKoBDsn8V8GP",
+   "tokens": 809.708433,
+   "fill_token_amount": 809.708433,
+   "fill_sol": 0.266773766,
+   "fill_price_sol": 0.0003294689237848163,
+   "fill_tx": "3BzScmkPUTDFzq7v5SvPznwVythywLavX9bujS8NothiAB4NB2f55u8AChvhMfoLkCTMNyqmfS6ZLNtjHWk6sA3P",
+   "tx": "3BzScmkPUTDFzq7v5SvPznwVythywLavX9bujS8NothiAB4NB2f55u8AChvhMfoLkCTMNyqmfS6ZLNtjHWk6sA3P",
+   "filled_at": "2026-10-27T11:19:23-07:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 26.88,
+   "fill_price_usd": 0.03319728876055809,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-10-27T11:19:23-07:00: 809.71 DOAS for 0.2668 SOL (wallet delta incl. fees/rent). Tx 3BzScmkPUT…"
+  }
+ ],
  "closed": [
   {
    "ticker": "DOAS",
