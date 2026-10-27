@@ -7,7 +7,7 @@
   "start_usd": 36.0,
   "filled_at": "2026-10-27T08:12:57-07:00",
   "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
-  "updated_at": "2026-10-27T08:14:01-07:00",
+  "updated_at": "2026-10-27T11:14:16-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "CLEANUP_DOAS_OPEN",
+  "last_event": "AUTO_SYNC_GUARD_SELL_DOAS",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -37,37 +37,47 @@
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT",
    "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
    "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
-   "25cFJQRFJaSK8dNNK9R2dscxyMPab8cUQqcBNTafirRzcS2BXWmWWd3LYcELUf6qLkdSJ5L1JMzJGkxtGbWqdTCU"
+   "25cFJQRFJaSK8dNNK9R2dscxyMPab8cUQqcBNTafirRzcS2BXWmWWd3LYcELUf6qLkdSJ5L1JMzJGkxtGbWqdTCU",
+   "3MxZa3STfu4j5CexZWKydJ1jGwaFqytwjgvVghfVUFSSFwUXZ4j1RVzw2mBtFqrta9S2bta39wnmB5eVVzrhWgtQ"
   ],
-  "balance_checked_at": "2026-10-27T11:13:12-07:00"
+  "balance_checked_at": "2026-10-27T11:14:20-07:00"
  },
- "leftover_sol": 1.055511,
- "positions": [
+ "leftover_sol": 1.05702,
+ "positions": [],
+ "closed": [
   {
    "ticker": "DOAS",
    "name": "DOAS",
    "mint": "2qPoPQQCHGtDbgdSxXfrzW1iRS3cGbKmMWSMapZ4pump",
    "pairAddress": "9MGjpsziLD1tJ43xMS98bg3pvyoUX9acLKoBDsn8V8GP",
-   "tokens": 862.876363,
+   "tokens": 0,
    "fill_token_amount": 862.876363,
    "fill_sol": 0.263700442,
    "fill_price_sol": 0.0003056062876530551,
    "fill_tx": "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
    "tx": "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
    "filled_at": "2026-10-27T08:12:57-07:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 TIME_STOP_3H"
    ],
-   "note": "10/27 8:13 AM PT CONSOLIDATION entry (David auto-buy OK). 862.88 DOAS for 0.2602 SOL swap (0.2637 incl. fees/rent). v6 exits armed.",
+   "note": "10/27 8:13 AM PT CONSOLIDATION entry (David auto-buy OK). 862.88 DOAS for 0.2602 SOL swap (0.2637 incl. fees/rent). v6 exits armed. | CLOSED 2026-10-27T11:13:04-07:00 (v6 TIME_STOP_3H, auto-sync on-chain): sold 862.88 DOAS for 0.278485 SOL net vs 0.263700 SOL basis -> +0.014784 SOL (+5.61%). Exit tx 3MxZa3STfu…",
    "fill_usd": 26.56,
    "fill_price_usd": 0.030777609229539177,
    "fill_usd_note": "SOL basis x SOL/USD ~9:20 AM PT 10/27",
-   "spend_sol": 0.260182
-  }
- ],
- "closed": [
+   "spend_sol": 0.260182,
+   "sold_sol": 0.27848492,
+   "exit_fee_sol": 0.001005,
+   "pnl_sol": 0.014784478,
+   "vs_fill_pct": 5.61,
+   "exit_tx": "3MxZa3STfu4j5CexZWKydJ1jGwaFqytwjgvVghfVUFSSFwUXZ4j1RVzw2mBtFqrta9S2bta39wnmB5eVVzrhWgtQ",
+   "closed_at": "2026-10-27T11:13:04-07:00",
+   "close_reason": "v6 TIME_STOP_3H",
+   "sold_usd": 28.05,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "QENIS",
    "name": "QENIS (erroneous fill)",
