@@ -179,3 +179,16 @@ table.blotter tbody tr.muted-row td{color:var(--muted);text-align:center;padding
 .toggle:hover{background:var(--panel2)}.toggle:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
 .bg-grid{opacity:.6}
 @media (max-width:640px){.closed-t tr>:nth-child(3),.closed-t tr>:nth-child(4){display:none}.panel-closed .why{display:none}}
+/* cleanup 10/27: stat grid, holding alignment, mobile columns */
+@media (min-width:861px){.book-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.stat-val{overflow-wrap:anywhere}
+#last-update{white-space:nowrap}
+#tape td{vertical-align:middle}
+#tape .spark-wrap{margin-top:6px;max-width:120px}
+#tape .spark{height:28px}
+.blotter th.num,.blotter td.num{white-space:nowrap}
+@media (max-width:640px){
+  #tape tr>:nth-child(4),#tape tr>:nth-child(5),#tape tr>:nth-child(6),
+  .panel:has(#tape) thead th:nth-child(4),.panel:has(#tape) thead th:nth-child(5),.panel:has(#tape) thead th:nth-child(6){display:none}
+  .mast h1{font-size:30px}
+}

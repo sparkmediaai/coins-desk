@@ -6,7 +6,7 @@
   "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
   "start_usd": 36.0,
   "filled_at": "2026-10-27T08:12:57-07:00",
-  "note": "10/21 4:10 PM PT: LONG DACITY re-entry 1,172.30 tokens (0.1423 SOL) after EL GATO HARD_MINUS15 stop (-24.7%). Reserve 0.0230 SOL.",
+  "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
   "updated_at": "2026-10-27T08:14:01-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_BUY_FILLED_2qPoPQ",
+  "last_event": "CLEANUP_DOAS_OPEN",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -36,36 +36,18 @@
   "synced_txs": [
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT",
    "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
-   "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD"
+   "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
+   "25cFJQRFJaSK8dNNK9R2dscxyMPab8cUQqcBNTafirRzcS2BXWmWWd3LYcELUf6qLkdSJ5L1JMzJGkxtGbWqdTCU"
   ],
   "balance_checked_at": "2026-10-27T08:12:59-07:00"
  },
  "leftover_sol": 0.777026,
  "positions": [
   {
-   "ticker": "2qPoPQ",
-   "name": "2qPoPQ",
+   "ticker": "DOAS",
+   "name": "DOAS",
    "mint": "2qPoPQQCHGtDbgdSxXfrzW1iRS3cGbKmMWSMapZ4pump",
-   "pairAddress": null,
-   "tokens": 0,
-   "fill_token_amount": 0,
-   "fill_sol": 0.266389774,
-   "fill_price_sol": null,
-   "fill_tx": "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
-   "tx": "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
-   "filled_at": "2026-10-27T08:11:42-07:00",
-   "status": "OPEN",
-   "clips": 1,
-   "flags": [
-    "AUTO_SYNC"
-   ],
-   "note": "Auto-sync BUY 2026-10-27T08:11:42-07:00: 0.00 2qPoPQ for 0.2664 SOL (wallet delta incl. fees/rent). Tx 2NriLLahK3…"
-  },
-  {
-   "ticker": "2qPoPQ",
-   "name": "2qPoPQ",
-   "mint": "2qPoPQQCHGtDbgdSxXfrzW1iRS3cGbKmMWSMapZ4pump",
-   "pairAddress": null,
+   "pairAddress": "9MGjpsziLD1tJ43xMS98bg3pvyoUX9acLKoBDsn8V8GP",
    "tokens": 862.876363,
    "fill_token_amount": 862.876363,
    "fill_sol": 0.263700442,
@@ -78,10 +60,34 @@
    "flags": [
     "AUTO_SYNC"
    ],
-   "note": "Auto-sync BUY 2026-10-27T08:12:57-07:00: 862.88 2qPoPQ for 0.2637 SOL (wallet delta incl. fees/rent). Tx 2wLLtE32xh…"
+   "note": "10/27 8:13 AM PT CONSOLIDATION entry (David auto-buy OK). 862.88 DOAS for 0.2602 SOL swap (0.2637 incl. fees/rent). v6 exits armed.",
+   "fill_usd": 26.56,
+   "fill_price_usd": 0.030777609229539177,
+   "fill_usd_note": "SOL basis x SOL/USD ~9:20 AM PT 10/27",
+   "spend_sol": 0.260182
   }
  ],
  "closed": [
+  {
+   "ticker": "QENIS",
+   "name": "QENIS (erroneous fill)",
+   "mint": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump",
+   "status": "CLOSED",
+   "close_reason": "ERRONEOUS_FILL_UNWOUND",
+   "flags": [
+    "BUY_ERRONEOUS"
+   ],
+   "filled_at": "2026-10-27T08:11:42-07:00",
+   "closed_at": "2026-10-27T08:13:20-07:00",
+   "fill_sol": 0.262871,
+   "sold_sol": 0.252114,
+   "pnl_sol": -0.010757,
+   "fill_usd": 26.47,
+   "sold_usd": 25.39,
+   "tx": "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
+   "exit_tx": "25cFJQRFJaSK8dNNK9R2dscxyMPab8cUQqcBNTafirRzcS2BXWmWWd3LYcELUf6qLkdSJ5L1JMzJGkxtGbWqdTCU",
+   "note": "buy_token.py had QENIS hardcoded; bought QENIS instead of DOAS, sold immediately. Net -0.0108 SOL. Script fixed."
+  },
   {
    "ticker": "DACITY",
    "name": "Dacity Coin",
