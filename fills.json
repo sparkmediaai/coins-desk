@@ -5,9 +5,9 @@
   "tz": "America/Los_Angeles",
   "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
   "start_usd": 36.0,
-  "filled_at": "2026-10-27T08:11:42-07:00",
+  "filled_at": "2026-10-27T08:12:57-07:00",
   "note": "10/21 4:10 PM PT: LONG DACITY re-entry 1,172.30 tokens (0.1423 SOL) after EL GATO HARD_MINUS15 stop (-24.7%). Reserve 0.0230 SOL.",
-  "updated_at": "2026-10-27T08:12:56-07:00",
+  "updated_at": "2026-10-27T08:14:01-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -35,7 +35,8 @@
   "paper_mode_active": false,
   "synced_txs": [
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT",
-   "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4"
+   "2NriLLahK3UUKxA4yAByT92LD8uTwYg8zVieFkpi9874JMS1jviAxvypVrsWt7nDBKSncyB2eosGtMCdwpHWUou4",
+   "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD"
   ],
   "balance_checked_at": "2026-10-27T08:12:59-07:00"
  },
@@ -59,6 +60,25 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-10-27T08:11:42-07:00: 0.00 2qPoPQ for 0.2664 SOL (wallet delta incl. fees/rent). Tx 2NriLLahK3…"
+  },
+  {
+   "ticker": "2qPoPQ",
+   "name": "2qPoPQ",
+   "mint": "2qPoPQQCHGtDbgdSxXfrzW1iRS3cGbKmMWSMapZ4pump",
+   "pairAddress": null,
+   "tokens": 862.876363,
+   "fill_token_amount": 862.876363,
+   "fill_sol": 0.263700442,
+   "fill_price_sol": 0.0003056062876530551,
+   "fill_tx": "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
+   "tx": "2wLLtE32xh7hu79zRUvFQrq89frCcrbqLKCTpgGqsDG1WgNjSqSotzFX2gBffcf3ALjJy8fhDJ4Bnfcb6FiimeyD",
+   "filled_at": "2026-10-27T08:12:57-07:00",
+   "status": "OPEN",
+   "clips": 1,
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-10-27T08:12:57-07:00: 862.88 2qPoPQ for 0.2637 SOL (wallet delta incl. fees/rent). Tx 2wLLtE32xh…"
   }
  ],
  "closed": [
