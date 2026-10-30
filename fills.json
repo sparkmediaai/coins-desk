@@ -7,7 +7,7 @@
   "start_usd": 36.0,
   "filled_at": "2026-10-29T16:02:45-07:00",
   "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
-  "updated_at": "2026-10-29T16:30:21-07:00",
+  "updated_at": "2026-10-29T18:03:49-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_BUY_FILLED_AGENC",
+  "last_event": "AUTO_SYNC_GUARD_SELL_AGENC",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -41,37 +41,47 @@
    "3MxZa3STfu4j5CexZWKydJ1jGwaFqytwjgvVghfVUFSSFwUXZ4j1RVzw2mBtFqrta9S2bta39wnmB5eVVzrhWgtQ",
    "3BzScmkPUTDFzq7v5SvPznwVythywLavX9bujS8NothiAB4NB2f55u8AChvhMfoLkCTMNyqmfS6ZLNtjHWk6sA3P",
    "4dgDFZyzLNvwjYU9a2HmevnRfWjAf6swUdW1y7BYgC1uM38jAjxn5eXCFku4edc5332Njtzu1v2DoYkKE9imiwcu",
-   "5JVpjemEAam91fJoUrPCWxiwB3hzvAqcsvTdtZZQBD3sLVbvtzBdT2AGK1QzTRXarTDubFmvXzfVMWUcotKyfb4c"
+   "5JVpjemEAam91fJoUrPCWxiwB3hzvAqcsvTdtZZQBD3sLVbvtzBdT2AGK1QzTRXarTDubFmvXzfVMWUcotKyfb4c",
+   "Wr1oM6ncnXqyjdxiFNgJ8nxtfXpMcECfmvXC66RzGKywbY4Du7UQi3WRE87BUDQyQLnQQTUBgcQzrWsgh2Emrdp"
   ],
-  "balance_checked_at": "2026-10-29T16:03:34-07:00",
+  "balance_checked_at": "2026-10-29T18:03:50-07:00",
   "sync_heartbeat_at": "2026-10-29T15:15:45-07:00"
  },
- "leftover_sol": 0.047981,
- "positions": [
+ "leftover_sol": 0.857765,
+ "positions": [],
+ "closed": [
   {
    "ticker": "AGENC",
    "name": "AGENC",
    "mint": "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump",
    "pairAddress": "BUMh6YebpBvAh4by4oTGJUvzQ9CvH6dqPgrZvXFDMwC1",
-   "tokens": 43954.438425,
+   "tokens": 0,
    "fill_token_amount": 43954.438425,
    "fill_sol": 0.88113539,
    "fill_price_sol": 2.0046562339853168e-05,
    "fill_tx": "5JVpjemEAam91fJoUrPCWxiwB3hzvAqcsvTdtZZQBD3sLVbvtzBdT2AGK1QzTRXarTDubFmvXzfVMWUcotKyfb4c",
    "tx": "5JVpjemEAam91fJoUrPCWxiwB3hzvAqcsvTdtZZQBD3sLVbvtzBdT2AGK1QzTRXarTDubFmvXzfVMWUcotKyfb4c",
    "filled_at": "2026-10-29T16:02:45-07:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 84.94,
    "fill_price_usd": 0.0019324886095618457,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-10-29T16:02:45-07:00: 43,954.44 AGENC for 0.8811 SOL (wallet delta incl. fees/rent). Tx 5JVpjemEAa…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-10-29T16:02:45-07:00: 43,954.44 AGENC for 0.8811 SOL (wallet delta incl. fees/rent). Tx 5JVpjemEAa… | CLOSED 2026-10-29T18:03:37-07:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 43,954.44 AGENC for 0.808580 SOL net vs 0.881135 SOL basis -> -0.072555 SOL (-8.23%). Exit tx Wr1oM6ncnX…",
+   "sold_sol": 0.808580264,
+   "exit_fee_sol": 0.002005,
+   "pnl_sol": -0.072555126,
+   "vs_fill_pct": -8.23,
+   "exit_tx": "Wr1oM6ncnXqyjdxiFNgJ8nxtfXpMcECfmvXC66RzGKywbY4Du7UQi3WRE87BUDQyQLnQQTUBgcQzrWsgh2Emrdp",
+   "closed_at": "2026-10-29T18:03:37-07:00",
+   "close_reason": "v6 MOMENTUM_EXIT",
+   "sold_usd": 77.95,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "DOAS",
    "name": "DOAS",
