@@ -7,7 +7,7 @@
   "start_usd": 36.0,
   "filled_at": "2026-10-29T21:59:51-07:00",
   "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
-  "updated_at": "2026-10-29T22:01:35-07:00",
+  "updated_at": "2026-10-29T22:02:37-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_BUY_FILLED_CLAUDIA",
+  "last_event": "AUTO_SYNC_GUARD_SELL_CLAUDIA",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -46,37 +46,47 @@
    "6484WsEGaARk6RcsWSmeekjx8tTHTdA5Khhtd7Fm5x4tGUxJ2SoKLwikq23uWj794QRmxo6SUTwWbeK5NHXkAZUS",
    "2SDjbGv1h42kkmKKWg786Jdv4zTXF1zDpX8rNDphPzLG3kdQmxiMAbzYXcNGYP1nS4hSTUrirA7UgHWip2dDZq2B",
    "5ybde941LsLGNgvu4ZDg2TzFAmJZmpMn7ByRcANbyrhvBgWjQzya6uE7Zb1SZNSg6qfW719ZiVkJsmUh9cACkk6N",
-   "3HVrTFr1C2gk4o1raKq4BpyNa4nABvKQjKxiBx5fdJtXyR36h3myTGHjH6QkjnonNrPXMW7De5K8FjgJ5EZpwBEE"
+   "3HVrTFr1C2gk4o1raKq4BpyNa4nABvKQjKxiBx5fdJtXyR36h3myTGHjH6QkjnonNrPXMW7De5K8FjgJ5EZpwBEE",
+   "4vci33PeGrBNPdazXY4fov6Wg2HfrfCaHsnjsE2qJ7DeUVYmvGt1qfdgCKrW6u37WCdfjnrES3nEpk9Bfw4uJGWM"
   ],
-  "balance_checked_at": "2026-10-29T22:01:35-07:00",
+  "balance_checked_at": "2026-10-29T22:02:38-07:00",
   "sync_heartbeat_at": "2026-10-29T15:15:45-07:00"
  },
  "leftover_sol": 0.73095,
- "positions": [
+ "positions": [],
+ "closed": [
   {
    "ticker": "CLAUDIA",
    "name": "CLAUDIA",
    "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
    "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
-   "tokens": 14054.389797,
+   "tokens": 0,
    "fill_token_amount": 14054.389797,
    "fill_sol": 0.371799107,
    "fill_price_sol": 2.6454304482103018e-05,
    "fill_tx": "3HVrTFr1C2gk4o1raKq4BpyNa4nABvKQjKxiBx5fdJtXyR36h3myTGHjH6QkjnonNrPXMW7De5K8FjgJ5EZpwBEE",
    "tx": "3HVrTFr1C2gk4o1raKq4BpyNa4nABvKQjKxiBx5fdJtXyR36h3myTGHjH6QkjnonNrPXMW7De5K8FjgJ5EZpwBEE",
    "filled_at": "2026-10-29T21:59:51-07:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 36.1,
    "fill_price_usd": 0.002568236787731525,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 OVERNIGHT_FLAT_2200"
    ],
-   "note": "Auto-sync BUY 2026-10-29T21:59:51-07:00: 14,054.39 CLAUDIA for 0.3718 SOL (wallet delta incl. fees/rent). Tx 3HVrTFr1C2…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-10-29T21:59:51-07:00: 14,054.39 CLAUDIA for 0.3718 SOL (wallet delta incl. fees/rent). Tx 3HVrTFr1C2… | CLOSED 2026-10-29T22:00:08-07:00 (v6 OVERNIGHT_FLAT_2200, auto-sync on-chain): sold 14,054.39 CLAUDIA for 0.361883 SOL net vs 0.371799 SOL basis -> -0.009916 SOL (-2.67%). Exit tx 4vci33PeGr…",
+   "sold_sol": 0.361882929,
+   "exit_fee_sol": 0.002005,
+   "pnl_sol": -0.009916178,
+   "vs_fill_pct": -2.67,
+   "exit_tx": "4vci33PeGrBNPdazXY4fov6Wg2HfrfCaHsnjsE2qJ7DeUVYmvGt1qfdgCKrW6u37WCdfjnrES3nEpk9Bfw4uJGWM",
+   "closed_at": "2026-10-29T22:00:08-07:00",
+   "close_reason": "v6 OVERNIGHT_FLAT_2200",
+   "sold_usd": 35.14,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "AGENC",
    "name": "AGENC",
