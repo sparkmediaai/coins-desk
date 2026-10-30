@@ -5,9 +5,9 @@
   "tz": "America/Los_Angeles",
   "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
   "start_usd": 36.0,
-  "filled_at": "2026-10-29T22:05:24-07:00",
+  "filled_at": "2026-10-30T09:03:36-07:00",
   "note": "10/27 8:13 AM PT: LONG DOAS 862.88 tokens (0.2602 SOL, quarter size). Erroneous QENIS fill unwound (-0.0108 SOL).",
-  "updated_at": "2026-10-30T01:06:18-07:00",
+  "updated_at": "2026-10-30T09:05:33-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,7 +28,7 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_GUARD_SELL_CLAUDIA",
+  "last_event": "AUTO_SYNC_BUY_FILLED_AGENC",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
@@ -49,13 +49,37 @@
    "3HVrTFr1C2gk4o1raKq4BpyNa4nABvKQjKxiBx5fdJtXyR36h3myTGHjH6QkjnonNrPXMW7De5K8FjgJ5EZpwBEE",
    "4vci33PeGrBNPdazXY4fov6Wg2HfrfCaHsnjsE2qJ7DeUVYmvGt1qfdgCKrW6u37WCdfjnrES3nEpk9Bfw4uJGWM",
    "3wUCuV6aWMzXTdw4JFqVxLUH1bmM4pmTS4NiUn1pt2dQgz6fMADa9DxzPUSDRFjxtrLpTST3BasTUw9snAM6W7AN",
-   "BSagnjt4nkoHHtifxECqnnxbQWAyXo5k9QG7bi6kBYHaHsRWK51yViux5VAmfuQ85Yh3tKPr8RLDaYVXu3drCQa"
+   "BSagnjt4nkoHHtifxECqnnxbQWAyXo5k9QG7bi6kBYHaHsRWK51yViux5VAmfuQ85Yh3tKPr8RLDaYVXu3drCQa",
+   "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X"
   ],
   "balance_checked_at": "2026-10-30T09:04:30-07:00",
   "sync_heartbeat_at": "2026-10-29T15:15:45-07:00"
  },
  "leftover_sol": 0.432663,
- "positions": [],
+ "positions": [
+  {
+   "ticker": "AGENC",
+   "name": "AGENC",
+   "mint": "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump",
+   "pairAddress": null,
+   "tokens": 10998.193458,
+   "fill_token_amount": 10998.193458,
+   "fill_sol": 0.216862229,
+   "fill_price_sol": 1.9717986397325654e-05,
+   "fill_tx": "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
+   "tx": "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
+   "filled_at": "2026-10-30T09:03:36-07:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 20.51,
+   "fill_price_usd": 0.001864729973595087,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-10-30T09:03:36-07:00: 10,998.19 AGENC for 0.2169 SOL (wallet delta incl. fees/rent). Tx 62MqCKeDvF…"
+  }
+ ],
  "closed": [
   {
    "ticker": "CLAUDIA",
