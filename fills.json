@@ -70,17 +70,18 @@
    "UZ7jeS5nKa3VnbZ4MtK8oudPHVMRV3ySJ4m56PMU1FeTY94q25tEom6HGned8M683gp2JwDnyUEkmbgagTUbfms",
    "Wr1oM6ncnXqyjdxiFNgJ8nxtfXpMcECfmvXC66RzGKywbY4Du7UQi3WRE87BUDQyQLnQQTUBgcQzrWsgh2Emrdp",
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT",
-   "gpJ23gFrsa5wUgDot4MBZrqKSZkx2FMgd9DEsmxRior6xSJnARMpuQevpALyJ7BoufLbxPhnw99wkLxMuQKPYHR"
+   "gpJ23gFrsa5wUgDot4MBZrqKSZkx2FMgd9DEsmxRior6xSJnARMpuQevpALyJ7BoufLbxPhnw99wkLxMuQKPYHR",
+   "rkrgaYUnbQw9qWEnFe5AVGhXMgQPVqD6j6heeztXiXFH8fWKGkEZq4RoJf6fCS9ukeAR8rsxc5RJGVxGiZgFikf"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-10-31T07:24:44-07:00",
+  "updated_at": "2026-10-31T07:34:39-07:00",
   "balance_checked_at": "2026-10-31T07:24:44-07:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "CLEAN_SLATE_RESET",
+  "last_event": "AUTO_SYNC_BUY_FILLED_LEVERHEDGE",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -94,9 +95,10 @@
   "wins": 0,
   "losses": 0,
   "realized_pnl_sol": 0.0,
-  "realized_pnl_usd": 0.0
+  "realized_pnl_usd": 0.0,
+  "filled_at": "2026-10-31T07:33:51-07:00"
  },
- "leftover_sol": 0.755189817,
+ "leftover_sol": 0.553667,
  "positions": [
   {
    "ticker": "BIRB",
@@ -141,6 +143,28 @@
     "NO_GUARD"
    ],
    "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
+  },
+  {
+   "ticker": "LEVERHEDGE",
+   "name": "LEVERHEDGE",
+   "mint": "FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+   "pairAddress": "6d3uJEzDB2WDbvVryFycvgXSiH9fW6ML6hScia5QVHwp",
+   "tokens": 12675.855531,
+   "fill_token_amount": 12675.855531,
+   "fill_sol": 0.201522619,
+   "fill_price_sol": 1.5898147348489214e-05,
+   "fill_tx": "rkrgaYUnbQw9qWEnFe5AVGhXMgQPVqD6j6heeztXiXFH8fWKGkEZq4RoJf6fCS9ukeAR8rsxc5RJGVxGiZgFikf",
+   "tx": "rkrgaYUnbQw9qWEnFe5AVGhXMgQPVqD6j6heeztXiXFH8fWKGkEZq4RoJf6fCS9ukeAR8rsxc5RJGVxGiZgFikf",
+   "filled_at": "2026-10-31T07:33:51-07:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 19.26,
+   "fill_price_usd": 0.001519703905042084,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-10-31T07:33:51-07:00: 12,675.86 LEVERHEDGE for 0.2015 SOL (wallet delta incl. fees/rent). Tx rkrgaYUnbQ…"
   }
  ],
  "closed": [],
@@ -154,5 +178,5 @@
  },
  "tests": [],
  "transfers": [],
- "baseline_note": "Deposit 0.545482 SOL 7:22:53 AM PT tx 4uYGajsa\u2026 is included in the baseline cash, not counted as PnL."
+ "baseline_note": "Deposit 0.545482 SOL 7:22:53 AM PT tx 4uYGajsa… is included in the baseline cash, not counted as PnL."
 }
