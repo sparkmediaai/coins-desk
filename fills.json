@@ -7,7 +7,7 @@
   "start_usd": 36.0,
   "filled_at": "2026-10-30T09:03:36-07:00",
   "note": "2026-10-15 ~4:42 PM PT DOPE re-entry 0.284 SOL (~$29.99) @ ~$0.005194 / 4.918e-05 SOL, 5774.245076 tokens. Gates: deepest Meteora FpRc liq~$511k, h1 buys/sells 1162/338, m5 31/16, h1 -5.6% m5 +0.8%. Guard pid 17014. Leftover 0.2748 SOL.",
-  "updated_at": "2026-10-30T20:02:25-07:00",
+  "updated_at": "2026-10-31T06:54:47-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -40,7 +40,7 @@
    "3wUCuV6aWMzXTdw4JFqVxLUH1bmM4pmTS4NiUn1pt2dQgz6fMADa9DxzPUSDRFjxtrLpTST3BasTUw9snAM6W7AN",
    "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X"
   ],
-  "balance_checked_at": "2026-10-31T06:53:43-07:00"
+  "balance_checked_at": "2026-10-31T06:54:48-07:00"
  },
  "leftover_sol": 0.209708,
  "positions": [
@@ -201,6 +201,18 @@
    "recorded_by": "record_fill.py"
   },
   {
+   "ts_pt": "2026-10-31T06:53:34-07:00",
+   "action": "BUY",
+   "ticker": "BIRB",
+   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "tx": "3GpbQUzJKZY7jnT2wzkxpcMVyXzgQ464egHM9LuaDnQfkU92HUicJwjvjxFNYY2ycKocQJ96gpnzC2SvqZwwsHDZ",
+   "priority_fee_sol": 0.0005,
+   "network_fee_sol": 7.966e-06,
+   "sol_delta": -0.201496406,
+   "rule": "manual David pt435u 0.2 SOL steady riser",
+   "recorded_by": "record_fill.py"
+  },
+  {
    "ticker": "AGENC",
    "name": "AGENC",
    "mint": "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump",
@@ -214,8 +226,8 @@
    "filled_at": "2026-10-29T20:45:10-07:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 78.27,
-   "fill_price_usd": 0.002363253855099964,
+   "fill_usd": 77.54,
+   "fill_price_usd": 0.002341249629261045,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
     "AUTO_SYNC"
@@ -236,8 +248,8 @@
    "filled_at": "2026-10-29T21:59:51-07:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 35.94,
-   "fill_price_usd": 0.0025570730712400776,
+   "fill_usd": 35.6,
+   "fill_price_usd": 0.0025332641972061853,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
     "AUTO_SYNC"
@@ -258,8 +270,8 @@
    "filled_at": "2026-10-29T22:05:24-07:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 68.43,
-   "fill_price_usd": 0.0025212586768002176,
+   "fill_usd": 67.8,
+   "fill_price_usd": 0.0024977832701261003,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
     "AUTO_SYNC"
@@ -280,8 +292,8 @@
    "filled_at": "2026-10-30T09:03:36-07:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 20.96,
-   "fill_price_usd": 0.0019059405651654976,
+   "fill_usd": 20.77,
+   "fill_price_usd": 0.0018881943774079048,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
     "AUTO_SYNC"
