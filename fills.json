@@ -40,9 +40,9 @@
    "3wUCuV6aWMzXTdw4JFqVxLUH1bmM4pmTS4NiUn1pt2dQgz6fMADa9DxzPUSDRFjxtrLpTST3BasTUw9snAM6W7AN",
    "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X"
   ],
-  "balance_checked_at": "2026-10-31T06:54:48-07:00"
+  "balance_checked_at": "2026-10-31T07:23:20-07:00"
  },
- "leftover_sol": 0.209708,
+ "leftover_sol": 0.75519,
  "positions": [
   {
    "ticker": "Gato",
@@ -1555,5 +1555,15 @@
    "net_cost_sol": 0.002516
   }
  ],
- "transfers": []
+ "transfers": [
+  {
+   "type": "DEPOSIT",
+   "sol": 0.545482052,
+   "tx": "4uYGajsaASyKM2MkXNoYpzwGFnNwBXwZCfL4Yg8fSp7VD8N5TmVaW8zPS71j4FXoG5F1ScU3t446h8CzC3PjBQyk",
+   "counterparty": "4NyK1AdJBNbgaJ9EsKz3J4rfeHsuYdjkTPg3JaNdLeFw",
+   "at": "2026-10-31T07:22:53-07:00",
+   "sol_post": 0.755189817,
+   "source": "AUTO_SYNC"
+  }
+ ]
 }
