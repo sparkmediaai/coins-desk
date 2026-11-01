@@ -72,17 +72,18 @@
    "co2gtk4rKt9ufULuv3WXHNmacGi1tPfmXG8UtMx6U7zxB16anptw16Tt9LzahvHy4cXJXdhCSKjvF8YTskP7UxT",
    "gpJ23gFrsa5wUgDot4MBZrqKSZkx2FMgd9DEsmxRior6xSJnARMpuQevpALyJ7BoufLbxPhnw99wkLxMuQKPYHR",
    "rkrgaYUnbQw9qWEnFe5AVGhXMgQPVqD6j6heeztXiXFH8fWKGkEZq4RoJf6fCS9ukeAR8rsxc5RJGVxGiZgFikf",
-   "3vuRKieDJ8MqzwrrWNNGjFgVW4UayjkMJud9J7ngNuWjtVCePby5kGnWfW2Pw444Pv38rqWYfnSMdAZn2uvpyUkt"
+   "3vuRKieDJ8MqzwrrWNNGjFgVW4UayjkMJud9J7ngNuWjtVCePby5kGnWfW2Pw444Pv38rqWYfnSMdAZn2uvpyUkt",
+   "2DxmMxX11yAYNmh6x3C2RxczQY2ZP7mU8bKEK1BhKzANMisNP39EBpFRgKcxZSnrNwfKdfdoPvPcy5AHzB4Yw2tS"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-10-31T07:44:49-07:00",
-  "balance_checked_at": "2026-10-31T07:44:50-07:00",
+  "updated_at": "2026-10-31T17:59:24-07:00",
+  "balance_checked_at": "2026-10-31T17:59:24-07:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_LEVERHEDGE",
+  "last_event": "AUTO_SYNC_GUARD_SELL_BIRB",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -99,30 +100,8 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-10-31T07:33:51-07:00"
  },
- "leftover_sol": 0.756568,
+ "leftover_sol": 0.925087,
  "positions": [
-  {
-   "ticker": "BIRB",
-   "name": "BIRB",
-   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
-   "pairAddress": "GUWFT7bbLphGrcpAPnnEnBbe1uErv9e6LLC2qPx2wZy1",
-   "tokens": 234.076481,
-   "fill_token_amount": 234.076481,
-   "fill_sol": 0.2,
-   "fill_price_sol": 0.0008544215939404865,
-   "fill_tx": "3GpbQUzJKZY7jnT2wzkxpcMVyXzgQ464egHM9LuaDnQfkU92HUicJwjvjxFNYY2ycKocQJ96gpnzC2SvqZwwsHDZ",
-   "tx": "3GpbQUzJKZY7jnT2wzkxpcMVyXzgQ464egHM9LuaDnQfkU92HUicJwjvjxFNYY2ycKocQJ96gpnzC2SvqZwwsHDZ",
-   "filled_at": "2026-10-31T06:53:12-07:00",
-   "status": "OPEN",
-   "clips": 1,
-   "fill_usd": 19.12,
-   "fill_price_usd": 0.08168270438071051,
-   "fill_usd_note": "0.2 SOL entry x SOL/USD at reset",
-   "flags": [
-    "GUARD_V7_ARMED"
-   ],
-   "note": "Manual buy 6:53 AM PT 10/31 (David). Guard v7 armed; baseline value $19.07 at reset."
-  },
   {
    "ticker": "AGENC",
    "name": "AGENC",
@@ -147,6 +126,39 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "BIRB",
+   "name": "BIRB",
+   "mint": "G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG",
+   "pairAddress": "GUWFT7bbLphGrcpAPnnEnBbe1uErv9e6LLC2qPx2wZy1",
+   "tokens": 0,
+   "fill_token_amount": 234.076481,
+   "fill_sol": 0.2,
+   "fill_price_sol": 0.0008544215939404865,
+   "fill_tx": "3GpbQUzJKZY7jnT2wzkxpcMVyXzgQ464egHM9LuaDnQfkU92HUicJwjvjxFNYY2ycKocQJ96gpnzC2SvqZwwsHDZ",
+   "tx": "3GpbQUzJKZY7jnT2wzkxpcMVyXzgQ464egHM9LuaDnQfkU92HUicJwjvjxFNYY2ycKocQJ96gpnzC2SvqZwwsHDZ",
+   "filled_at": "2026-10-31T06:53:12-07:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 19.12,
+   "fill_price_usd": 0.08168270438071051,
+   "fill_usd_note": "0.2 SOL entry x SOL/USD at reset",
+   "flags": [
+    "GUARD_V7_ARMED",
+    "v6 MOMENTUM_EXIT",
+    "AUTO_SYNC"
+   ],
+   "note": "Manual buy 6:53 AM PT 10/31 (David). Guard v7 armed; baseline value $19.07 at reset. | CLOSED 2026-10-31T17:58:30-07:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 234.08 BIRB for 0.167035 SOL net vs 0.200000 SOL basis -> -0.032965 SOL (-16.48%). Exit tx 2DxmMxX11y…",
+   "sold_sol": 0.167035061,
+   "exit_fee_sol": 9.412e-06,
+   "pnl_sol": -0.032964939,
+   "vs_fill_pct": -16.48,
+   "exit_tx": "2DxmMxX11yAYNmh6x3C2RxczQY2ZP7mU8bKEK1BhKzANMisNP39EBpFRgKcxZSnrNwfKdfdoPvPcy5AHzB4Yw2tS",
+   "closed_at": "2026-10-31T17:58:30-07:00",
+   "close_reason": "v6 MOMENTUM_EXIT",
+   "sold_usd": 15.97,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "LEVERHEDGE",
    "name": "LEVERHEDGE",
