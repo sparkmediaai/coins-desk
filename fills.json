@@ -36,9 +36,9 @@
   "synced_txs": [
    "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X"
   ],
-  "balance_checked_at": "2026-10-31T19:00:31-07:00"
+  "balance_checked_at": "2026-10-31T19:12:48-07:00"
  },
- "leftover_sol": 0.67126,
+ "leftover_sol": 0.853333,
  "positions": [
   {
    "ticker": "Gato",
