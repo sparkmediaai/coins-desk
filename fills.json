@@ -7,7 +7,7 @@
   "start_usd": 36.0,
   "filled_at": "2026-10-30T09:03:36-07:00",
   "note": "2026-10-15 ~4:42 PM PT DOPE re-entry 0.284 SOL (~$29.99) @ ~$0.005194 / 4.918e-05 SOL, 5774.245076 tokens. Gates: deepest Meteora FpRc liq~$511k, h1 buys/sells 1162/338, m5 31/16, h1 -5.6% m5 +0.8%. Guard pid 17014. Leftover 0.2748 SOL.",
-  "updated_at": "2026-10-31T19:00:31-07:00",
+  "updated_at": "2026-10-31T19:13:51-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,17 +28,18 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_BUY_FILLED_AGENC",
+  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_BNB",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
   "paper_mode_active": false,
   "synced_txs": [
-   "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X"
+   "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
+   "2rXqCzBRdUqvxbBfkzKM13pHKRg2Bcs3FatxMSbVmcZryKcSRo45YYp9JB9Hgnhapn9SUGrvLPyFeE5MwLfo8dj1"
   ],
-  "balance_checked_at": "2026-10-31T19:12:48-07:00"
+  "balance_checked_at": "2026-10-31T19:13:52-07:00"
  },
- "leftover_sol": 0.853333,
+ "leftover_sol": 0.912794,
  "positions": [
   {
    "ticker": "Gato",
@@ -245,18 +246,6 @@
    "recorded_by": "record_fill.py"
   },
   {
-   "ts_pt": "2026-10-31T19:00:01-07:00",
-   "action": "BUY",
-   "ticker": "BNB",
-   "mint": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump",
-   "tx": "4qkcxjzwq5MFgJFGKqSSo4FRFZnxNcRWZsEdgygeQT5VcWQ4FTu6CbgiUEDhtu12Qt83Z1SCdLNoXZQT53WyAXhs",
-   "priority_fee_sol": 0.001,
-   "network_fee_sol": 7.181e-06,
-   "sol_delta": -0.225771021,
-   "rule": "manual David 'get it' 6:59pm 10/31",
-   "recorded_by": "record_fill.py"
-  },
-  {
    "ticker": "AGENC",
    "name": "AGENC",
    "mint": "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump",
@@ -280,6 +269,34 @@
   }
  ],
  "closed": [
+  {
+   "ts_pt": "2026-10-31T19:00:01-07:00",
+   "action": "BUY",
+   "ticker": "BNB",
+   "mint": "EYqygbhZjP7EbM4fSn8devctnksAvPAD1Bt57XBFpump",
+   "tx": "4qkcxjzwq5MFgJFGKqSSo4FRFZnxNcRWZsEdgygeQT5VcWQ4FTu6CbgiUEDhtu12Qt83Z1SCdLNoXZQT53WyAXhs",
+   "priority_fee_sol": 0.001,
+   "network_fee_sol": 7.181e-06,
+   "sol_delta": -0.225771021,
+   "rule": "manual David 'get it' 6:59pm 10/31",
+   "recorded_by": "record_fill.py",
+   "tokens": 0,
+   "fill_token_amount": null,
+   "fill_sol": 0.0,
+   "status": "CLOSED",
+   "sold_sol": 0.182073289,
+   "exit_fee_sol": 1.4021e-05,
+   "pnl_sol": 0.182073289,
+   "vs_fill_pct": null,
+   "exit_tx": "2rXqCzBRdUqvxbBfkzKM13pHKRg2Bcs3FatxMSbVmcZryKcSRo45YYp9JB9Hgnhapn9SUGrvLPyFeE5MwLfo8dj1",
+   "closed_at": "2026-10-31T19:12:47-07:00",
+   "close_reason": "v6 TP60_AT_+8",
+   "flags": [
+    "v6 TP60_AT_+8",
+    "AUTO_SYNC"
+   ],
+   "note": " | CLOSED 2026-10-31T19:12:47-07:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 22,887.91 BNB for 0.182073 SOL net vs 0.000000 SOL basis -> +0.182073 SOL (n/a). Exit tx 2rXqCzBRdU…"
+  },
   {
    "ticker": "DOPE",
    "symbol": "DOPE",
