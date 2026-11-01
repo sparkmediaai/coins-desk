@@ -5,9 +5,9 @@
   "tz": "America/Los_Angeles",
   "wallet": "HXbYWfD6cU9cDvjBE7HgPA2LMPUNcAtbv6EVc2P4s67d",
   "start_usd": 36.0,
-  "filled_at": "2026-10-30T09:03:36-07:00",
+  "filled_at": "2026-10-31T19:17:50-07:00",
   "note": "2026-10-15 ~4:42 PM PT DOPE re-entry 0.284 SOL (~$29.99) @ ~$0.005194 / 4.918e-05 SOL, 5774.245076 tokens. Gates: deepest Meteora FpRc liq~$511k, h1 buys/sells 1162/338, m5 31/16, h1 -5.6% m5 +0.8%. Guard pid 17014. Leftover 0.2748 SOL.",
-  "updated_at": "2026-10-31T19:13:51-07:00",
+  "updated_at": "2026-10-31T19:19:02-07:00",
   "start_reset_at": "2026-09-02T20:51:49.078731-07:00",
   "start_reset_note": "David clean slate 2026-09-02 ~8:51 PM PT. Prior start was $100.24; new start $36.00 ≈ then-current book. Learning chapter closed; PnL vs new start from here.",
   "prior_start_usd": 100.24,
@@ -28,14 +28,15 @@
   ],
   "rip_auto_clip_paused": true,
   "rip_auto_clip_pause_reason": "LOCKED: RIP_BENCH LOOK-only; no auto-clip. RIP_QUALIFIED first size ≤12% book.",
-  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_BNB",
+  "last_event": "AUTO_SYNC_BUY_FILLED_Leverhedge",
   "multi_rip_stack": true,
   "rip_qualified_probe_pct_book": 0.12,
   "desk_paused": false,
   "paper_mode_active": false,
   "synced_txs": [
    "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
-   "2rXqCzBRdUqvxbBfkzKM13pHKRg2Bcs3FatxMSbVmcZryKcSRo45YYp9JB9Hgnhapn9SUGrvLPyFeE5MwLfo8dj1"
+   "2rXqCzBRdUqvxbBfkzKM13pHKRg2Bcs3FatxMSbVmcZryKcSRo45YYp9JB9Hgnhapn9SUGrvLPyFeE5MwLfo8dj1",
+   "4pGcM25MwpdRoR7JwvR34yqZsz8ntsKLRV1sxeYXuGEyYkiPxpbodMRqmatheYxiFWQ1nQTWCbF5wj6oTnh1AK4q"
   ],
   "balance_checked_at": "2026-10-31T19:17:59-07:00"
  },
@@ -266,6 +267,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-10-30T09:03:36-07:00: 10,998.19 AGENC for 0.2169 SOL (wallet delta incl. fees/rent). Tx 62MqCKeDvF…"
+  },
+  {
+   "ticker": "Leverhedge",
+   "name": "Leverhedge",
+   "mint": "FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+   "pairAddress": "6d3uJEzDB2WDbvVryFycvgXSiH9fW6ML6hScia5QVHwp",
+   "tokens": 19295.125375,
+   "fill_token_amount": 19295.125375,
+   "fill_sol": 0.201520116,
+   "fill_price_sol": 1.0444094665541917e-05,
+   "fill_tx": "4pGcM25MwpdRoR7JwvR34yqZsz8ntsKLRV1sxeYXuGEyYkiPxpbodMRqmatheYxiFWQ1nQTWCbF5wj6oTnh1AK4q",
+   "tx": "4pGcM25MwpdRoR7JwvR34yqZsz8ntsKLRV1sxeYXuGEyYkiPxpbodMRqmatheYxiFWQ1nQTWCbF5wj6oTnh1AK4q",
+   "filled_at": "2026-10-31T19:17:50-07:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 19.25,
+   "fill_price_usd": 0.000997619922452564,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-10-31T19:17:50-07:00: 19,295.13 Leverhedge for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4pGcM25Mwp…"
   }
  ],
  "closed": [
