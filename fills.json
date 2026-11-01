@@ -88,7 +88,7 @@
   "balance_checked_at": "2026-10-31T20:12:43-07:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_BLUE",
+  "last_event": "MANUAL_CLOSE_BLUE_RUG_WRITE_OFF",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -150,31 +150,42 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-10-31T19:17:50-07:00: 19,295.13 Leverhedge for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4pGcM25Mwp…"
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "BLUE",
    "name": "BLUE",
    "mint": "135b1X9RoX7ZZCr5jzURx5Gb31tfHwmvx9dPNPBQV88i",
    "pairAddress": "C4iDkrcfi328TVHk5BNT9wLz1GP1uAHAJXFvkhLXWm9e",
-   "tokens": 17664666.329007,
+   "tokens": 0,
    "fill_token_amount": 17664666.329007,
    "fill_sol": 0.20149344,
    "fill_price_sol": 1.140658058562529e-08,
    "fill_tx": "3Pi6Z9KsPZC5TToR6YqpD7U7woMyMXU3sJEQ5VktanWZoWtZwchtMEFcTv8EThAnxEj92WdPE21k9RmDmJhqEPxq",
    "tx": "3Pi6Z9KsPZC5TToR6YqpD7U7woMyMXU3sJEQ5VktanWZoWtZwchtMEFcTv8EThAnxEj92WdPE21k9RmDmJhqEPxq",
    "filled_at": "2026-10-31T20:12:00-07:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 19.23,
    "fill_price_usd": 1.0884159194803652e-06,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "RUG_LP_PULLED",
+    "WRITE_OFF",
+    "MANUAL_RECORD"
    ],
-   "note": "Auto-sync BUY 2026-10-31T20:12:00-07:00: 17,664,666.33 BLUE for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3Pi6Z9KsPZ…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-10-31T20:12:00-07:00: 17,664,666.33 BLUE for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3Pi6Z9KsPZ… | CLOSED 2026-10-31T20:12:18-07:00 (LP pulled by one wallet ~6s after our buy; Jupiter NO_ROUTES_FOUND; tokens unsellable). Written off at -0.201493 SOL. No exit tx.",
+   "sold_sol": 0.0,
+   "exit_fee_sol": 0.0,
+   "pnl_sol": -0.20149344,
+   "vs_fill_pct": -100.0,
+   "exit_tx": null,
+   "closed_at": "2026-10-31T20:12:18-07:00",
+   "close_reason": "RUG_LP_PULLED_UNSELLABLE",
+   "sold_usd": 0.0
+  },
   {
    "ts_pt": "2026-10-31T19:00:01-07:00",
    "action": "BUY",
