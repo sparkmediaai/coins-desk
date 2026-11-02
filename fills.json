@@ -90,17 +90,18 @@
    "5UCpsZBDakDxPxTVy9YPJUeyEMV2ZGbVgzZie5ZT9PDq4adADKfGU4YUHHDLspaihZPUWvWtRgbhaXLKAwcP8bNZ",
    "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
    "ornWArN3RxwcPiB7R5stCHQikPnHi11Y8h5x2drFwfR7NXNh7X3HJRkqd8uiV4hV9ChPj57qSETMjAYgDvUt5vu",
-   "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ"
+   "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
+   "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T07:28:28-08:00",
+  "updated_at": "2026-11-02T08:42:55-08:00",
   "balance_checked_at": "2026-11-02T07:08:18-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_FLOAT",
+  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_FLOAT",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -117,7 +118,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-02T07:27:56-08:00"
  },
- "leftover_sol": 0.213971,
+ "leftover_sol": 0.343537,
  "positions": [
   {
    "ticker": "AGENC",
@@ -168,16 +169,16 @@
    "name": "FLOAT",
    "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
    "pairAddress": "FJk9sajdc2Q4heRPPu3yLzkmf2ZByZkpiHQLv9e2bn5A",
-   "tokens": 12666.710302,
-   "fill_token_amount": 12666.710302,
-   "fill_sol": 0.20149344,
+   "tokens": 5066.684121,
+   "fill_token_amount": 5066.684121,
+   "fill_sol": 0.080597376,
    "fill_price_sol": 1.590732204305528e-05,
    "fill_tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
    "tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
    "filled_at": "2026-11-02T07:27:56-08:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 18.99,
+   "fill_usd": 7.6,
    "fill_price_usd": 0.001498946956117099,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
@@ -187,6 +188,39 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "FLOAT",
+   "name": "FLOAT",
+   "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+   "pairAddress": "FJk9sajdc2Q4heRPPu3yLzkmf2ZByZkpiHQLv9e2bn5A",
+   "tokens": 0,
+   "fill_token_amount": 7600.026180999999,
+   "fill_sol": 0.120896064,
+   "fill_price_sol": 1.590732204305528e-05,
+   "fill_tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
+   "tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
+   "filled_at": "2026-11-02T07:27:56-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 11.39,
+   "fill_price_usd": 0.001498946956117099,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 TP60_AT_+8",
+    "HALF"
+   ],
+   "note": " | CLOSED 2026-11-02T08:42:35-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 7,600.03 FLOAT for 0.129566 SOL net vs 0.120896 SOL basis -> +0.008670 SOL (+7.17%). Exit tx 27reT52mBe…",
+   "sold_sol": 0.129566486,
+   "exit_fee_sol": 5.587e-06,
+   "pnl_sol": 0.008670422,
+   "vs_fill_pct": 7.17,
+   "exit_tx": "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM",
+   "closed_at": "2026-11-02T08:42:35-08:00",
+   "close_reason": "v6 TP60_AT_+8",
+   "sold_usd": 12.21,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "DESSA",
    "name": "DESSA",
