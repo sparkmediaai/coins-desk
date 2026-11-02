@@ -95,17 +95,18 @@
    "Z3SApN5QZWS8LaUbVLhJpvarwfJ6LJFXTZSjc9sWS3XYUGtMhUKf7h7bXhekkhvmRnn82149Lsp9LdVfsZsZFR7",
    "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
    "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf",
-   "55ejbYtiizigFSWyaasbWqiwQwwBj8KbgRBbfDNvxW63gLrQNyzFks82pxQKW21etPjSBDjGHrZpq3hV6Nr4LYzs"
+   "55ejbYtiizigFSWyaasbWqiwQwwBj8KbgRBbfDNvxW63gLrQNyzFks82pxQKW21etPjSBDjGHrZpq3hV6Nr4LYzs",
+   "2y1aaHh25xzBTqFzR4d4cS8uGqLw4ot4DZigkCLKid8FbmweFZKx9qUvYP5PEXmFkymXTpC8paSMhdxxqZE1Vwc8"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T09:32:47-08:00",
-  "balance_checked_at": "2026-11-02T08:54:40-08:00",
+  "updated_at": "2026-11-02T09:38:13-08:00",
+  "balance_checked_at": "2026-11-02T09:38:16-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_NIO",
+  "last_event": "AUTO_SYNC_GUARD_SELL_NIO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -122,7 +123,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-02T08:50:01-08:00"
  },
- "leftover_sol": 0.557864,
+ "leftover_sol": 0.654761,
  "positions": [
   {
    "ticker": "AGENC",
@@ -145,31 +146,41 @@
     "NO_GUARD"
    ],
    "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "NIO",
    "name": "NIO",
    "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
    "pairAddress": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
-   "tokens": 8490.522225,
+   "tokens": 0,
    "fill_token_amount": 8490.522225,
    "fill_sol": 0.080607536,
    "fill_price_sol": 9.493825452167492e-06,
    "fill_tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
    "tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
    "filled_at": "2026-11-02T08:50:01-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 7.52,
    "fill_price_usd": 0.0008861536677053138,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 TRAIL_+20.0468"
    ],
-   "note": "Auto-sync BUY 2026-11-02T08:50:01-08:00: 21,226.31 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3cz86eRgMV…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-11-02T08:50:01-08:00: 21,226.31 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3cz86eRgMV… | CLOSED 2026-11-02T09:37:33-08:00 (v6 TRAIL_+20.0468, auto-sync on-chain): sold 8,490.52 NIO for 0.095693 SOL net vs 0.080608 SOL basis -> +0.015086 SOL (+18.71%). Exit tx 2y1aaHh25x…",
+   "sold_sol": 0.095693048,
+   "exit_fee_sol": 6.604e-06,
+   "pnl_sol": 0.015085512,
+   "vs_fill_pct": 18.71,
+   "exit_tx": "2y1aaHh25xzBTqFzR4d4cS8uGqLw4ot4DZigkCLKid8FbmweFZKx9qUvYP5PEXmFkymXTpC8paSMhdxxqZE1Vwc8",
+   "closed_at": "2026-11-02T09:37:33-08:00",
+   "close_reason": "v6 TRAIL_+20.0468",
+   "sold_usd": 8.93,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "NIO",
    "name": "NIO",
