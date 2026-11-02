@@ -94,17 +94,18 @@
    "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM",
    "Z3SApN5QZWS8LaUbVLhJpvarwfJ6LJFXTZSjc9sWS3XYUGtMhUKf7h7bXhekkhvmRnn82149Lsp9LdVfsZsZFR7",
    "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
-   "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf"
+   "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf",
+   "55ejbYtiizigFSWyaasbWqiwQwwBj8KbgRBbfDNvxW63gLrQNyzFks82pxQKW21etPjSBDjGHrZpq3hV6Nr4LYzs"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T08:54:38-08:00",
+  "updated_at": "2026-11-02T09:32:47-08:00",
   "balance_checked_at": "2026-11-02T08:54:40-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_DACITYCOIN",
+  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_NIO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -121,7 +122,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-02T08:50:01-08:00"
  },
- "leftover_sol": 0.425907,
+ "leftover_sol": 0.557864,
  "positions": [
   {
    "ticker": "AGENC",
@@ -150,16 +151,16 @@
    "name": "NIO",
    "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
    "pairAddress": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
-   "tokens": 21226.305562,
-   "fill_token_amount": 21226.305562,
-   "fill_sol": 0.20151884,
+   "tokens": 8490.522225,
+   "fill_token_amount": 8490.522225,
+   "fill_sol": 0.080607536,
    "fill_price_sol": 9.493825452167492e-06,
    "fill_tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
    "tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
    "filled_at": "2026-11-02T08:50:01-08:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 18.81,
+   "fill_usd": 7.52,
    "fill_price_usd": 0.0008861536677053138,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
@@ -169,6 +170,39 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "NIO",
+   "name": "NIO",
+   "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
+   "pairAddress": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+   "tokens": 0,
+   "fill_token_amount": 12735.783337,
+   "fill_sol": 0.120911304,
+   "fill_price_sol": 9.493825452167492e-06,
+   "fill_tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
+   "tx": "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
+   "filled_at": "2026-11-02T08:50:01-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 11.29,
+   "fill_price_usd": 0.0008861536677053138,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 TP60_AT_+8",
+    "HALF"
+   ],
+   "note": " | CLOSED 2026-11-02T09:32:34-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 12,735.78 NIO for 0.131957 SOL net vs 0.120911 SOL basis -> +0.011046 SOL (+9.14%). Exit tx 55ejbYtiiz…",
+   "sold_sol": 0.131956901,
+   "exit_fee_sol": 6.471e-06,
+   "pnl_sol": 0.011045597,
+   "vs_fill_pct": 9.14,
+   "exit_tx": "55ejbYtiizigFSWyaasbWqiwQwwBj8KbgRBbfDNvxW63gLrQNyzFks82pxQKW21etPjSBDjGHrZpq3hV6Nr4LYzs",
+   "closed_at": "2026-11-02T09:32:34-08:00",
+   "close_reason": "v6 TP60_AT_+8",
+   "sold_usd": 12.32,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "DacityCoin",
    "name": "DacityCoin",
