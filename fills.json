@@ -81,17 +81,19 @@
    "3Pi6Z9KsPZC5TToR6YqpD7U7woMyMXU3sJEQ5VktanWZoWtZwchtMEFcTv8EThAnxEj92WdPE21k9RmDmJhqEPxq",
    "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
    "3fQJTGCYPLG4f35PtaaKJbHUu9ef546K3UJFW6iCunefhsQYbZm1pR9rJkGKgwBppPRLnuknmgsWvo7m4rVk5hye",
-   "FkESKzRBD2hAtGz6SW3ZUoQMAgBMJp2bEYq1TpC27mHJ7H8pg5azuvjr9KMSAETnsseznf18Baec1qTTSBZuZbs"
+   "FkESKzRBD2hAtGz6SW3ZUoQMAgBMJp2bEYq1TpC27mHJ7H8pg5azuvjr9KMSAETnsseznf18Baec1qTTSBZuZbs",
+   "4GAhoDZLxwSsNtDt8LnEASxBcnoaNZuUQDM5tzQFmDojNbnpDu7TZTF1gZr18Vk9eUvbpFdXuhSmcY3JE2q3pTPs",
+   "2FcmKHtWVeJCmReBFy8UNZVXhUWH389hBHPF6JPkwgMwXvVnuc91FPWinwDn2Y76aiSyFR1szPyXWhYciM1bL68k"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-01T16:46:35-08:00",
-  "balance_checked_at": "2026-11-01T16:46:35-08:00",
+  "updated_at": "2026-11-01T16:47:38-08:00",
+  "balance_checked_at": "2026-11-01T16:47:39-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_ANAKINCORE",
+  "last_event": "AUTO_SYNC_GUARD_SELL_ANAKINIUS",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -108,7 +110,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-01T16:44:17-08:00"
  },
- "leftover_sol": 0.496107,
+ "leftover_sol": 0.696039,
  "positions": [
   {
    "ticker": "AGENC",
@@ -153,31 +155,74 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-10-31T19:17:50-07:00: 19,295.13 Leverhedge for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4pGcM25Mwp…"
+  }
+ ],
+ "closed": [
+  {
+   "ticker": "ANAKINIUS",
+   "name": "ANAKINIUS",
+   "mint": "2pKpMwUQXNZeAf93LoomnZSworH3ezFzweCiuvrppump",
+   "pairAddress": "9FCA7K7oVCmFDdAjxtoDN4nNnuymskuodSV33LMELu5P",
+   "tokens": 0,
+   "fill_token_amount": 13301.880965999997,
+   "fill_sol": 0.043626741,
+   "fill_price_sol": 3.2797422306778345e-06,
+   "fill_tx": "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
+   "tx": "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
+   "filled_at": "2026-11-01T16:39:36-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 4.1,
+   "fill_price_usd": 0.0003080989851498757,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 TRAIL_+12.681"
+   ],
+   "note": "Auto-sync BUY 2026-11-01T16:39:36-08:00: 53,207.52 ANAKINIUS for 0.1745 SOL (wallet delta incl. fees/rent). Tx hcK8jeZsJ4… | CLOSED 2026-11-01T16:47:19-08:00 (v6 TRAIL_+12.681, auto-sync on-chain): sold 13,301.88 ANAKINIUS for 0.047015 SOL net vs 0.043627 SOL basis -> +0.003388 SOL (+7.77%). Exit tx 2FcmKHtWVe…",
+   "sold_sol": 0.04701483,
+   "exit_fee_sol": 9.485e-06,
+   "pnl_sol": 0.003388089,
+   "vs_fill_pct": 7.77,
+   "exit_tx": "2FcmKHtWVeJCmReBFy8UNZVXhUWH389hBHPF6JPkwgMwXvVnuc91FPWinwDn2Y76aiSyFR1szPyXWhYciM1bL68k",
+   "closed_at": "2026-11-01T16:47:19-08:00",
+   "close_reason": "v6 TRAIL_+12.681",
+   "sold_usd": 4.42,
+   "sold_usd_note": "approx at entry SOL/USD"
   },
   {
    "ticker": "ANAKINIUS",
    "name": "ANAKINIUS",
    "mint": "2pKpMwUQXNZeAf93LoomnZSworH3ezFzweCiuvrppump",
    "pairAddress": "9FCA7K7oVCmFDdAjxtoDN4nNnuymskuodSV33LMELu5P",
-   "tokens": 53207.523862,
-   "fill_token_amount": 53207.523862,
-   "fill_sol": 0.174506963,
+   "tokens": 0,
+   "fill_token_amount": 39905.642896000005,
+   "fill_sol": 0.130880222,
    "fill_price_sol": 3.2797422306778345e-06,
    "fill_tx": "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
    "tx": "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
    "filled_at": "2026-11-01T16:39:36-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
-   "fill_usd": 16.39,
+   "fill_usd": 12.29,
    "fill_price_usd": 0.0003080989851498757,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 TP60_AT_+8",
+    "HALF"
    ],
-   "note": "Auto-sync BUY 2026-11-01T16:39:36-08:00: 53,207.52 ANAKINIUS for 0.1745 SOL (wallet delta incl. fees/rent). Tx hcK8jeZsJ4…"
-  }
- ],
- "closed": [
+   "note": " | CLOSED 2026-11-01T16:47:09-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 39,905.64 ANAKINIUS for 0.151409 SOL net vs 0.130880 SOL basis -> +0.020529 SOL (+15.69%). Exit tx 4GAhoDZLxw…",
+   "sold_sol": 0.151409153,
+   "exit_fee_sol": 1.077e-05,
+   "pnl_sol": 0.020528931,
+   "vs_fill_pct": 15.69,
+   "exit_tx": "4GAhoDZLxwSsNtDt8LnEASxBcnoaNZuUQDM5tzQFmDojNbnpDu7TZTF1gZr18Vk9eUvbpFdXuhSmcY3JE2q3pTPs",
+   "closed_at": "2026-11-01T16:47:09-08:00",
+   "close_reason": "v6 TP60_AT_+8",
+   "sold_usd": 14.22,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "ANAKINCORE",
    "name": "ANAKINCORE",
