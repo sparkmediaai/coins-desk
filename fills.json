@@ -93,17 +93,18 @@
    "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
    "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM",
    "Z3SApN5QZWS8LaUbVLhJpvarwfJ6LJFXTZSjc9sWS3XYUGtMhUKf7h7bXhekkhvmRnn82149Lsp9LdVfsZsZFR7",
-   "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF"
+   "3cz86eRgMVdRvYd8QVS4F2vcFvGLGvFF1RopCJrSHB8Q5nLj6ooibiBxMYpXo8PVtL7JGmzeXGSyrAeXPxYfVMLF",
+   "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T08:50:23-08:00",
-  "balance_checked_at": "2026-11-02T08:45:07-08:00",
+  "updated_at": "2026-11-02T08:54:38-08:00",
+  "balance_checked_at": "2026-11-02T08:54:40-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_NIO",
+  "last_event": "AUTO_SYNC_GUARD_SELL_DACITYCOIN",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -120,7 +121,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-02T08:50:01-08:00"
  },
- "leftover_sol": 0.234089,
+ "leftover_sol": 0.425907,
  "positions": [
   {
    "ticker": "AGENC",
@@ -143,28 +144,6 @@
     "NO_GUARD"
    ],
    "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
-  },
-  {
-   "ticker": "DacityCoin",
-   "name": "DacityCoin",
-   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
-   "pairAddress": "7Te1wXcfeQjKLGHXFvxSCnGZTqunoZ9fxBn7KKjrkNEr",
-   "tokens": 13780.186964,
-   "fill_token_amount": 13780.186964,
-   "fill_sol": 0.2035784,
-   "fill_price_sol": 1.4773268354909672e-05,
-   "fill_tx": "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
-   "tx": "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
-   "filled_at": "2026-11-02T06:53:53-08:00",
-   "status": "OPEN",
-   "clips": 1,
-   "fill_usd": 19.2,
-   "fill_price_usd": 0.0013932669385515312,
-   "fill_usd_note": "SOL basis x SOL/USD at sync time",
-   "flags": [
-    "AUTO_SYNC"
-   ],
-   "note": "Auto-sync BUY 2026-11-02T06:53:53-08:00: 13,780.19 DacityCoin for 0.2036 SOL (wallet delta incl. fees/rent). Tx 547ZhEp4K4…"
   },
   {
    "ticker": "NIO",
@@ -190,6 +169,38 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "DacityCoin",
+   "name": "DacityCoin",
+   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
+   "pairAddress": "7Te1wXcfeQjKLGHXFvxSCnGZTqunoZ9fxBn7KKjrkNEr",
+   "tokens": 0,
+   "fill_token_amount": 13780.186964,
+   "fill_sol": 0.2035784,
+   "fill_price_sol": 1.4773268354909672e-05,
+   "fill_tx": "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
+   "tx": "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
+   "filled_at": "2026-11-02T06:53:53-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 19.2,
+   "fill_price_usd": 0.0013932669385515312,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 MOMENTUM_EXIT"
+   ],
+   "note": "Auto-sync BUY 2026-11-02T06:53:53-08:00: 13,780.19 DacityCoin for 0.2036 SOL (wallet delta incl. fees/rent). Tx 547ZhEp4K4… | CLOSED 2026-11-02T08:54:04-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 13,780.19 DACITYCOIN for 0.190309 SOL net vs 0.203578 SOL basis -> -0.013270 SOL (-6.52%). Exit tx 3cmehc6z4F…",
+   "sold_sol": 0.190308625,
+   "exit_fee_sol": 0.000328387,
+   "pnl_sol": -0.013269775,
+   "vs_fill_pct": -6.52,
+   "exit_tx": "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf",
+   "closed_at": "2026-11-02T08:54:04-08:00",
+   "close_reason": "v6 MOMENTUM_EXIT",
+   "sold_usd": 17.95,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "FLOAT",
    "name": "FLOAT",
