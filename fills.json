@@ -79,17 +79,18 @@
    "gpJ23gFrsa5wUgDot4MBZrqKSZkx2FMgd9DEsmxRior6xSJnARMpuQevpALyJ7BoufLbxPhnw99wkLxMuQKPYHR",
    "rkrgaYUnbQw9qWEnFe5AVGhXMgQPVqD6j6heeztXiXFH8fWKGkEZq4RoJf6fCS9ukeAR8rsxc5RJGVxGiZgFikf",
    "3Pi6Z9KsPZC5TToR6YqpD7U7woMyMXU3sJEQ5VktanWZoWtZwchtMEFcTv8EThAnxEj92WdPE21k9RmDmJhqEPxq",
-   "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3"
+   "hcK8jeZsJ4AuGHkiWf5DoobYvG3gBPMdcX4CcbzwxfWib7Ri7Dmby8ENxnoSc9NDTSnX3fhCecy6qBXH35HCJz3",
+   "3fQJTGCYPLG4f35PtaaKJbHUu9ef546K3UJFW6iCunefhsQYbZm1pR9rJkGKgwBppPRLnuknmgsWvo7m4rVk5hye"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-01T16:40:23-08:00",
+  "updated_at": "2026-11-01T16:45:32-08:00",
   "balance_checked_at": "2026-11-01T16:44:30-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_ANAKINIUS",
+  "last_event": "AUTO_SYNC_BUY_FILLED_ANAKINCORE",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -104,7 +105,7 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-01T16:39:36-08:00"
+  "filled_at": "2026-11-01T16:44:17-08:00"
  },
  "leftover_sol": 0.386553,
  "positions": [
@@ -173,6 +174,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-01T16:39:36-08:00: 53,207.52 ANAKINIUS for 0.1745 SOL (wallet delta incl. fees/rent). Tx hcK8jeZsJ4…"
+  },
+  {
+   "ticker": "ANAKINCORE",
+   "name": "ANAKINCORE",
+   "mint": "EZZ4WS7XXKgWP2btL2iTjHz4of9PT16tCDMd1LTCpump",
+   "pairAddress": "82vKvkcN3qgVZVfr6Au66uA4ZJqLQa4VLzDZJsHYMi21",
+   "tokens": 33475.107414,
+   "fill_token_amount": 33475.107414,
+   "fill_sol": 0.13088284,
+   "fill_price_sol": 3.909855714018173e-06,
+   "fill_tx": "3fQJTGCYPLG4f35PtaaKJbHUu9ef546K3UJFW6iCunefhsQYbZm1pR9rJkGKgwBppPRLnuknmgsWvo7m4rVk5hye",
+   "tx": "3fQJTGCYPLG4f35PtaaKJbHUu9ef546K3UJFW6iCunefhsQYbZm1pR9rJkGKgwBppPRLnuknmgsWvo7m4rVk5hye",
+   "filled_at": "2026-11-01T16:44:17-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 12.31,
+   "fill_price_usd": 0.0003676359130777008,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-01T16:44:17-08:00: 33,475.11 ANAKINCORE for 0.1309 SOL (wallet delta incl. fees/rent). Tx 3fQJTGCYPL…"
   }
  ],
  "closed": [
