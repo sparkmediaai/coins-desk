@@ -86,17 +86,18 @@
    "2FcmKHtWVeJCmReBFy8UNZVXhUWH389hBHPF6JPkwgMwXvVnuc91FPWinwDn2Y76aiSyFR1szPyXWhYciM1bL68k",
    "32KkFQ39yQsgkykNh7J9GWR4sHEhcakbaED1c7Y5MxUbxSgLUV7ZDNTF4L7irYqZ65pBPDNXP9Dvp3R32Z9mf9y6",
    "53mfowtvLzVQb9tKFomD7ohbFYbu3VdpnFbYm2ydGUhmts1oj2y5aswiZoQuMaD6DuuqceLfJo4i4AgT4bvZSvM9",
-   "4kbYN8W2HCqzTvPSmSH7Nsy1guTapdydX4ob8Zeci5Bsb6MKEetEpnKwa1qNBgYjtKgTGfarjZSVoN1bsKNFYYnY"
+   "4kbYN8W2HCqzTvPSmSH7Nsy1guTapdydX4ob8Zeci5Bsb6MKEetEpnKwa1qNBgYjtKgTGfarjZSVoN1bsKNFYYnY",
+   "5UCpsZBDakDxPxTVy9YPJUeyEMV2ZGbVgzZie5ZT9PDq4adADKfGU4YUHHDLspaihZPUWvWtRgbhaXLKAwcP8bNZ"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-01T17:13:38-08:00",
+  "updated_at": "2026-11-02T06:42:52-08:00",
   "balance_checked_at": "2026-11-01T17:13:45-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_Leverhedge",
+  "last_event": "AUTO_SYNC_BUY_FILLED_DESSA",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -111,9 +112,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-01T17:06:50-08:00"
+  "filled_at": "2026-11-02T06:42:04-08:00"
  },
- "leftover_sol": 0.661758,
+ "leftover_sol": 0.460238,
  "positions": [
   {
    "ticker": "AGENC",
@@ -136,6 +137,28 @@
     "NO_GUARD"
    ],
    "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
+  },
+  {
+   "ticker": "DESSA",
+   "name": "DESSA",
+   "mint": "npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump",
+   "pairAddress": "DEXTCER4k9dwbxTMU8zNVVwGevVmvHMB183pF2xxZwvH",
+   "tokens": 1239.326253,
+   "fill_token_amount": 1239.326253,
+   "fill_sol": 0.201519661,
+   "fill_price_sol": 0.00016260420572241358,
+   "fill_tx": "5UCpsZBDakDxPxTVy9YPJUeyEMV2ZGbVgzZie5ZT9PDq4adADKfGU4YUHHDLspaihZPUWvWtRgbhaXLKAwcP8bNZ",
+   "tx": "5UCpsZBDakDxPxTVy9YPJUeyEMV2ZGbVgzZie5ZT9PDq4adADKfGU4YUHHDLspaihZPUWvWtRgbhaXLKAwcP8bNZ",
+   "filled_at": "2026-11-02T06:42:04-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 19.01,
+   "fill_price_usd": 0.015341706809909723,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-02T06:42:04-08:00: 1,239.33 DESSA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5UCpsZBDak…"
   }
  ],
  "closed": [
