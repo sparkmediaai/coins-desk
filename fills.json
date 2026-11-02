@@ -91,17 +91,18 @@
    "547ZhEp4K4UEehR1xGx1tsy7Y7LPvCQS6mU5vGY91mAzMRjT5Eaf2tzrRy7cdN3SRWJrpdmiWfHkreXirBBrA9Kc",
    "ornWArN3RxwcPiB7R5stCHQikPnHi11Y8h5x2drFwfR7NXNh7X3HJRkqd8uiV4hV9ChPj57qSETMjAYgDvUt5vu",
    "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
-   "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM"
+   "27reT52mBePHv14FC4zTQJFPU6fh4iWK9NRNvvi4CDLFXzp8eHS8wbWsnR2Kzeuya2nBiCrXmPKRe6kcBmd4d3eM",
+   "Z3SApN5QZWS8LaUbVLhJpvarwfJ6LJFXTZSjc9sWS3XYUGtMhUKf7h7bXhekkhvmRnn82149Lsp9LdVfsZsZFR7"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T08:42:55-08:00",
-  "balance_checked_at": "2026-11-02T07:08:18-08:00",
+  "updated_at": "2026-11-02T08:45:04-08:00",
+  "balance_checked_at": "2026-11-02T08:45:07-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_FLOAT",
+  "last_event": "AUTO_SYNC_GUARD_SELL_FLOAT",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -118,7 +119,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-02T07:27:56-08:00"
  },
- "leftover_sol": 0.343537,
+ "leftover_sol": 0.435608,
  "positions": [
   {
    "ticker": "AGENC",
@@ -163,31 +164,41 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-02T06:53:53-08:00: 13,780.19 DacityCoin for 0.2036 SOL (wallet delta incl. fees/rent). Tx 547ZhEp4K4…"
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "FLOAT",
    "name": "FLOAT",
    "mint": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
    "pairAddress": "FJk9sajdc2Q4heRPPu3yLzkmf2ZByZkpiHQLv9e2bn5A",
-   "tokens": 5066.684121,
+   "tokens": 0,
    "fill_token_amount": 5066.684121,
    "fill_sol": 0.080597376,
    "fill_price_sol": 1.590732204305528e-05,
    "fill_tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
    "tx": "jT9rh2sPczCivCSXL2yHAPi79yHZyVC6pVQowBvD6VjqzxWoLGNcZrqP2MQV5HAgbXYrAJoPsYxpNJmZ5xWk8YZ",
    "filled_at": "2026-11-02T07:27:56-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 7.6,
    "fill_price_usd": 0.001498946956117099,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 TRAIL_+14.0233"
    ],
-   "note": "Auto-sync BUY 2026-11-02T07:27:56-08:00: 12,666.71 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx jT9rh2sPcz…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-11-02T07:27:56-08:00: 12,666.71 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx jT9rh2sPcz… | CLOSED 2026-11-02T08:44:27-08:00 (v6 TRAIL_+14.0233, auto-sync on-chain): sold 5,066.68 FLOAT for 0.091197 SOL net vs 0.080597 SOL basis -> +0.010600 SOL (+13.15%). Exit tx Z3SApN5QZW…",
+   "sold_sol": 0.091197476,
+   "exit_fee_sol": 8.138e-06,
+   "pnl_sol": 0.0106001,
+   "vs_fill_pct": 13.15,
+   "exit_tx": "Z3SApN5QZWS8LaUbVLhJpvarwfJ6LJFXTZSjc9sWS3XYUGtMhUKf7h7bXhekkhvmRnn82149Lsp9LdVfsZsZFR7",
+   "closed_at": "2026-11-02T08:44:27-08:00",
+   "close_reason": "v6 TRAIL_+14.0233",
+   "sold_usd": 8.6,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "FLOAT",
    "name": "FLOAT",
