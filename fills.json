@@ -164,7 +164,7 @@
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
   "updated_at": "2026-11-03T14:11:29-08:00",
-  "balance_checked_at": "2026-11-03T14:02:15-08:00",
+  "balance_checked_at": "2026-11-03T14:26:26-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
   "last_event": "AUTO_SYNC_BUY_FILLED_Percolator",
@@ -184,7 +184,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T14:11:15-08:00"
  },
- "leftover_sol": 0.483786,
+ "leftover_sol": 0.28226,
  "positions": [
   {
    "ticker": "AGENC",
