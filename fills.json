@@ -156,17 +156,18 @@
    "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
    "2zpXJKpkkfX9PJpsLcbC7g8HyW7AoYZtuY3AdTFm8XayuPjZeoGzsHRaYzbcQAUYAVZ1GvDSWYUhS2qdBY7ewEz7",
    "5QABh9KrjGKM1rbrUXM53kYNNaXhj4vEk38o74rTZ6AXfXp5s85AXjvsMnYBzwpSF2p18HEg2mp9FnXgoW31faqM",
-   "nEEEyu3azhPkjYhDeTUDvJy6N57g6mEi1k7C1WjMC48xFnwDhNQqJgFFkFFMpgUMCiC4xvukExB3HQmERq7zKfa"
+   "nEEEyu3azhPkjYhDeTUDvJy6N57g6mEi1k7C1WjMC48xFnwDhNQqJgFFkFFMpgUMCiC4xvukExB3HQmERq7zKfa",
+   "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T14:02:12-08:00",
+  "updated_at": "2026-11-03T14:11:29-08:00",
   "balance_checked_at": "2026-11-03T14:02:15-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_CHOO",
+  "last_event": "AUTO_SYNC_BUY_FILLED_Percolator",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -181,9 +182,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T13:27:20-08:00"
+  "filled_at": "2026-11-03T14:11:15-08:00"
  },
- "leftover_sol": 0.68528,
+ "leftover_sol": 0.483786,
  "positions": [
   {
    "ticker": "AGENC",
@@ -215,6 +216,28 @@
    "sold_usd": 16.71,
    "sold_usd_note": "SOL/USD 93.25 at sale",
    "rent_recovered_sol": 0.00151384
+  },
+  {
+   "ticker": "Percolator",
+   "name": "Percolator",
+   "mint": "8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump",
+   "pairAddress": "Ebs3mXAzqZfzHfsdinTNw7gPy4uNyEAywcCiJxzLRrBW",
+   "tokens": 5369.173157,
+   "fill_token_amount": 5369.173157,
+   "fill_sol": 0.201494095,
+   "fill_price_sol": 3.75279561876868e-05,
+   "fill_tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
+   "tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
+   "filled_at": "2026-11-03T14:11:15-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.83,
+   "fill_price_usd": 0.003506987505739331,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T14:11:15-08:00: 5,369.17 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4QKx7QXXZB…"
   }
  ],
  "closed": [
