@@ -148,17 +148,18 @@
    "3nuRKpCv85j7QKtrUTFoU95QLx8TXy6bDoMSrmqxdAhAjdheJ3kbuMi5FNpPqquouGHzSLxajFYCC9CfQ6trDLfo",
    "4uFyKrxsRj6RmZAggyzYH8799fgdcpzexocUQWgwgZbwBPn1QqadD2b9x1GGSNUUKXccp7fZ3aZa8NZVVTB8hUN8",
    "4cQW2VLozc86ykK5jgQJJatVCmjri5vumXCUGirfQFBq9MnPqvfk8KQQ3eS5NMajxhHCV1RBNpQyc55WsJUTsSuf",
-   "5bPvruHtwgcLPy8uzdLuuVFGyJGZW2TR2rb9n4qCULkpYQdFnK7wxNo35dbGmAHFMANNu1MY9viNdmoPoDR73GUb"
+   "5bPvruHtwgcLPy8uzdLuuVFGyJGZW2TR2rb9n4qCULkpYQdFnK7wxNo35dbGmAHFMANNu1MY9viNdmoPoDR73GUb",
+   "3JFvQcYNXkDeuF84JM8Pi8dr9Ws3Vo7Skihvf76YBQ9do93AoATTNPUjJHkXReUC62nSm75cU29DKdmeg5pEkq9B"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T12:28:25-08:00",
+  "updated_at": "2026-11-03T12:31:35-08:00",
   "balance_checked_at": "2026-11-03T12:28:41-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_CLAUDIA",
+  "last_event": "AUTO_SYNC_BUY_FILLED_Ahsoka",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -173,9 +174,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T10:52:58-08:00"
+  "filled_at": "2026-11-03T12:31:21-08:00"
  },
- "leftover_sol": 0.424515,
+ "leftover_sol": 0.222996,
  "positions": [
   {
    "ticker": "AGENC",
@@ -251,6 +252,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-03T10:52:58-08:00: 7,843.27 DacityCoin for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4cQW2VLozc…"
+  },
+  {
+   "ticker": "Ahsoka",
+   "name": "Ahsoka",
+   "mint": "4nuj5NLHMtQSezfmz6CwBpCRJisFie6F6MxNNz1dpump",
+   "pairAddress": "HpyMxw5BZvks2LPhUzLjXwemyrPU7uU3vFqQ3o5ABZdJ",
+   "tokens": 23540.433918,
+   "fill_token_amount": 23540.433918,
+   "fill_sol": 0.201519533,
+   "fill_price_sol": 8.560570026107707e-06,
+   "fill_tx": "3JFvQcYNXkDeuF84JM8Pi8dr9Ws3Vo7Skihvf76YBQ9do93AoATTNPUjJHkXReUC62nSm75cU29DKdmeg5pEkq9B",
+   "tx": "3JFvQcYNXkDeuF84JM8Pi8dr9Ws3Vo7Skihvf76YBQ9do93AoATTNPUjJHkXReUC62nSm75cU29DKdmeg5pEkq9B",
+   "filled_at": "2026-11-03T12:31:21-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.8,
+   "fill_price_usd": 0.0007987867891361102,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T12:31:21-08:00: 23,540.43 Ahsoka for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3JFvQcYNXk…"
   }
  ],
  "closed": [
