@@ -133,17 +133,18 @@
    "2aXwkFrYRk8YoR9wMXfSQPnCnohx8jp7A9HbCnvzJiNvaZC67Jut7exmV2C9hFAoxeEdt1GNDdpTgKvDiWGBWThF",
    "5UsixWqwtDpYqouCqepfyqajUrF96etMZXwRk3KKuQxgsBa4dP9Yv5KhbyHUDs5AEs6EpdSgEMMQnWzgHqKEeyKw",
    "4bvC4eeWXoz4hFrneK3mAXqXQpguzXfnbEGqxvG7mj96fBYTtbbVmUKM95Ch2RCttEX7oum5zAPGZRSFNNhUrsq2",
-   "4dG8xF8u54Tu5VaSTybXfVnshosEpnnDWKaDj1ppjoCZYEWbXY7sv4aHQDrAni54vSuuHbNP8x3wGy7D9BevPsez"
+   "4dG8xF8u54Tu5VaSTybXfVnshosEpnnDWKaDj1ppjoCZYEWbXY7sv4aHQDrAni54vSuuHbNP8x3wGy7D9BevPsez",
+   "21wCqHX8Zf9AaWGyzrwh2MA5VJPaFStV8r4ccBcdERr5oUctMqoGL3CqMAjuK4sqXojQMe96sVR8HWHaACEgzjZm"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T06:44:42-08:00",
-  "balance_checked_at": "2026-11-03T06:43:37-08:00",
+  "updated_at": "2026-11-03T07:35:15-08:00",
+  "balance_checked_at": "2026-11-03T07:35:26-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_CAPY",
+  "last_event": "AUTO_SYNC_GUARD_SELL_CAPY",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -160,7 +161,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T06:44:11-08:00"
  },
- "leftover_sol": 0.361976,
+ "leftover_sol": 0.57132,
  "positions": [
   {
    "ticker": "AGENC",
@@ -205,31 +206,41 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-03T06:43:29-08:00: 6,591.13 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4bvC4eeWXo…"
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "CAPY",
    "name": "CAPY",
    "mint": "DBPTU2oKLDHXQjAEJ3rZi8bUGmt2uxUbipgg6xmXoMqr",
    "pairAddress": "4WutFjFujupWJm5UUidXouMgUPauXG4sAEjVaYqjrMBW",
-   "tokens": 28235.870175,
+   "tokens": 0,
    "fill_token_amount": 28235.870175,
    "fill_sol": 0.20149378,
    "fill_price_sol": 7.136092450885481e-06,
    "fill_tx": "4dG8xF8u54Tu5VaSTybXfVnshosEpnnDWKaDj1ppjoCZYEWbXY7sv4aHQDrAni54vSuuHbNP8x3wGy7D9BevPsez",
    "tx": "4dG8xF8u54Tu5VaSTybXfVnshosEpnnDWKaDj1ppjoCZYEWbXY7sv4aHQDrAni54vSuuHbNP8x3wGy7D9BevPsez",
    "filled_at": "2026-11-03T06:44:11-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 18.79,
    "fill_price_usd": 0.0006655119819695801,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 V7_FRESH_50M"
    ],
-   "note": "Auto-sync BUY 2026-11-03T06:44:11-08:00: 28,235.87 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4dG8xF8u54…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-11-03T06:44:11-08:00: 28,235.87 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4dG8xF8u54… | CLOSED 2026-11-03T07:34:19-08:00 (v6 V7_FRESH_50M, auto-sync on-chain): sold 28,235.87 CAPY for 0.207861 SOL net vs 0.201494 SOL basis -> +0.006367 SOL (+3.16%). Exit tx 21wCqHX8Zf…",
+   "sold_sol": 0.207860742,
+   "exit_fee_sol": 2.0915e-05,
+   "pnl_sol": 0.006366962,
+   "vs_fill_pct": 3.16,
+   "exit_tx": "21wCqHX8Zf9AaWGyzrwh2MA5VJPaFStV8r4ccBcdERr5oUctMqoGL3CqMAjuK4sqXojQMe96sVR8HWHaACEgzjZm",
+   "closed_at": "2026-11-03T07:34:19-08:00",
+   "close_reason": "v6 V7_FRESH_50M",
+   "sold_usd": 19.38,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "CHOO",
    "name": "CHOO",
