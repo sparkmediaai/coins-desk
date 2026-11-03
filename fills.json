@@ -97,17 +97,18 @@
    "3cmehc6z4FhzGM9HNiQY9HDfzFsR9GD1Fe3Pt5GRUHPwaj1Tpbd6VM2EeSCnv7VGZKSoxLMNEWjqN3AF94io1wYf",
    "55ejbYtiizigFSWyaasbWqiwQwwBj8KbgRBbfDNvxW63gLrQNyzFks82pxQKW21etPjSBDjGHrZpq3hV6Nr4LYzs",
    "2y1aaHh25xzBTqFzR4d4cS8uGqLw4ot4DZigkCLKid8FbmweFZKx9qUvYP5PEXmFkymXTpC8paSMhdxxqZE1Vwc8",
-   "34rDVzZW7j2GoU5Whf8azb7QG4ij3PPvemhAtiPatsaVvodD9XuWg5csMejo9guLczZgPNWTRX7oLSv5Uqfj77nf"
+   "34rDVzZW7j2GoU5Whf8azb7QG4ij3PPvemhAtiPatsaVvodD9XuWg5csMejo9guLczZgPNWTRX7oLSv5Uqfj77nf",
+   "3UiEHmTT53pJGUcf2D2t7G13j2S5F2BfAtJ9217b1m5y58D39YTXqGhh3bvq6wKBYQAbP3LcuNGh5ZUNsXKf7Eva"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-02T20:06:46-08:00",
+  "updated_at": "2026-11-02T20:17:26-08:00",
   "balance_checked_at": "2026-11-02T20:16:22-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_Percolator",
+  "last_event": "AUTO_SYNC_BUY_FILLED_NIO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -122,7 +123,7 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-02T20:06:31-08:00"
+  "filled_at": "2026-11-02T20:16:21-08:00"
  },
  "leftover_sol": 0.251734,
  "positions": [
@@ -169,6 +170,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-02T20:06:31-08:00: 6,047.12 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 34rDVzZW7j…"
+  },
+  {
+   "ticker": "NIO",
+   "name": "NIO",
+   "mint": "7SL2VnfYsChvog5oQY9Nmtqu1wceaMiQzWoqoLQpump",
+   "pairAddress": "B4Wmjc6PvjCtU3qSVS3eTT9Mr4M5V5jBkRQctWANTc71",
+   "tokens": 13441.766796,
+   "fill_token_amount": 13441.766796,
+   "fill_sol": 0.201523905,
+   "fill_price_sol": 1.4992367302486565e-05,
+   "fill_tx": "3UiEHmTT53pJGUcf2D2t7G13j2S5F2BfAtJ9217b1m5y58D39YTXqGhh3bvq6wKBYQAbP3LcuNGh5ZUNsXKf7Eva",
+   "tx": "3UiEHmTT53pJGUcf2D2t7G13j2S5F2BfAtJ9217b1m5y58D39YTXqGhh3bvq6wKBYQAbP3LcuNGh5ZUNsXKf7Eva",
+   "filled_at": "2026-11-02T20:16:21-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.58,
+   "fill_price_usd": 0.0013819964179432119,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-02T20:16:21-08:00: 13,441.77 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3UiEHmTT53…"
   }
  ],
  "closed": [
