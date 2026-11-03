@@ -143,17 +143,18 @@
    "3JkJQCL3tS6a9GXGSWipHL5Sh4NQwCpZN3SgNrsbW4m1zbCfJy6SggiLAf34c28F3ZDHPRY6TxDYdRJifKWE3NZU",
    "3jpSKzoi1LDde7JNXN1JNv6bC9pYo8ojtzfsdcsfPLML49YCdq1NHc17KrqtQpn4VjtzkSrCrS4b6JvoezuZ3Wdy",
    "c7uDADS2tLH35BxgiUm4d4CMg3kNyop29KivtQ4F6x4mgEnq5WYwLV86Pe5NwvEzEPECQbbHxFmsRZwqvzSWXXL",
-   "srjnBmLaGHGuvkJfn4VWZBK31Qn6vxH2rB557qvMPFvs8zZn6ARD1jWV5HALfZwX6sKVxUst9Svu7VAdnbBsWTY"
+   "srjnBmLaGHGuvkJfn4VWZBK31Qn6vxH2rB557qvMPFvs8zZn6ARD1jWV5HALfZwX6sKVxUst9Svu7VAdnbBsWTY",
+   "S1tDhxvabnnUvEiJQDEXNL7nFxkz4MRArGiXXuThSq1E5hJYpmYrJqxD8FzHBmMZFZi3B4N6RHCmTRqUnpysfKq"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T10:25:22-08:00",
+  "updated_at": "2026-11-03T10:28:03-08:00",
   "balance_checked_at": "2026-11-03T10:24:00-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_███",
+  "last_event": "AUTO_SYNC_BUY_FILLED_CLAUDIA",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -168,9 +169,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T10:23:55-08:00"
+  "filled_at": "2026-11-03T10:27:40-08:00"
  },
- "leftover_sol": 0.435055,
+ "leftover_sol": 0.23353,
  "positions": [
   {
    "ticker": "AGENC",
@@ -246,6 +247,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-03T10:23:55-08:00: 19,091.15 ███ for 0.2015 SOL (wallet delta incl. fees/rent). Tx srjnBmLaGH…"
+  },
+  {
+   "ticker": "CLAUDIA",
+   "name": "CLAUDIA",
+   "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+   "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+   "tokens": 6255.199599,
+   "fill_token_amount": 6255.199599,
+   "fill_sol": 0.20152523,
+   "fill_price_sol": 3.221723412826303e-05,
+   "fill_tx": "S1tDhxvabnnUvEiJQDEXNL7nFxkz4MRArGiXXuThSq1E5hJYpmYrJqxD8FzHBmMZFZi3B4N6RHCmTRqUnpysfKq",
+   "tx": "S1tDhxvabnnUvEiJQDEXNL7nFxkz4MRArGiXXuThSq1E5hJYpmYrJqxD8FzHBmMZFZi3B4N6RHCmTRqUnpysfKq",
+   "filled_at": "2026-11-03T10:27:40-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.85,
+   "fill_price_usd": 0.0030129557356751583,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T10:27:40-08:00: 6,255.20 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx S1tDhxvabn…"
   }
  ],
  "closed": [
