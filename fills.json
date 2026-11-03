@@ -155,17 +155,18 @@
    "5rFdawSi9H1reqGecuk7gCU5FFHU9w4tKLqA7xAV3UhdcdqKVTs34QeQZ9vRPpgXBNhiPTxXFK4ddZ7CxeRS5UQQ",
    "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
    "2zpXJKpkkfX9PJpsLcbC7g8HyW7AoYZtuY3AdTFm8XayuPjZeoGzsHRaYzbcQAUYAVZ1GvDSWYUhS2qdBY7ewEz7",
-   "5QABh9KrjGKM1rbrUXM53kYNNaXhj4vEk38o74rTZ6AXfXp5s85AXjvsMnYBzwpSF2p18HEg2mp9FnXgoW31faqM"
+   "5QABh9KrjGKM1rbrUXM53kYNNaXhj4vEk38o74rTZ6AXfXp5s85AXjvsMnYBzwpSF2p18HEg2mp9FnXgoW31faqM",
+   "nEEEyu3azhPkjYhDeTUDvJy6N57g6mEi1k7C1WjMC48xFnwDhNQqJgFFkFFMpgUMCiC4xvukExB3HQmERq7zKfa"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T14:00:59-08:00",
-  "balance_checked_at": "2026-11-03T14:01:07-08:00",
+  "updated_at": "2026-11-03T14:02:12-08:00",
+  "balance_checked_at": "2026-11-03T14:02:15-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_AHSOKA",
+  "last_event": "AUTO_SYNC_GUARD_SELL_CHOO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -182,7 +183,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T13:27:20-08:00"
  },
- "leftover_sol": 0.52595,
+ "leftover_sol": 0.68528,
  "positions": [
   {
    "ticker": "AGENC",
@@ -214,31 +215,41 @@
    "sold_usd": 16.71,
    "sold_usd_note": "SOL/USD 93.25 at sale",
    "rent_recovered_sol": 0.00151384
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "CHOO",
    "name": "CHOO",
    "mint": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
    "pairAddress": "3unG5b7czBspnmjFRZzzNyQVpk8q3LERr6BAYnFohdfz",
-   "tokens": 4234.484118,
+   "tokens": 0,
    "fill_token_amount": 4234.484118,
    "fill_sol": 0.201537394,
    "fill_price_sol": 4.759432043759527e-05,
    "fill_tx": "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
    "tx": "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
    "filled_at": "2026-11-03T13:27:20-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 18.88,
    "fill_price_usd": 0.0044586359385939255,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 HARD_MINUS20"
    ],
-   "note": "Auto-sync BUY 2026-11-03T13:27:20-08:00: 4,234.48 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx bTkE2j2HjH…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-11-03T13:27:20-08:00: 4,234.48 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx bTkE2j2HjH… | CLOSED 2026-11-03T14:01:14-08:00 (v6 HARD_MINUS20, auto-sync on-chain): sold 4,234.48 CHOO for 0.157822 SOL net vs 0.201537 SOL basis -> -0.043716 SOL (-21.69%). Exit tx nEEEyu3azh…",
+   "sold_sol": 0.157821762,
+   "exit_fee_sol": 0.002005,
+   "pnl_sol": -0.043715632,
+   "vs_fill_pct": -21.69,
+   "exit_tx": "nEEEyu3azhPkjYhDeTUDvJy6N57g6mEi1k7C1WjMC48xFnwDhNQqJgFFkFFMpgUMCiC4xvukExB3HQmERq7zKfa",
+   "closed_at": "2026-11-03T14:01:14-08:00",
+   "close_reason": "v6 HARD_MINUS20",
+   "sold_usd": 14.78,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "Ahsoka",
    "name": "Ahsoka",
