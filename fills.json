@@ -113,17 +113,18 @@
    "3ZfwSDBn6nm8e8c6ecjZ21TEXuYFBGDtsNAjwMmf7PF13pV2XuTzyw6VJ3BEWiKdPvUt1Tsj7Bz1MacNqT6F7akq",
    "3enEoeqgqaZ3fk8Mnsxi7qatTtK84jxQJdmjmk3Xqdk1DSnVLUQoUaeFWyZk42VuE7WfjrqF5FUxTAN3BGmUbWSG",
    "3ViNY32Wok2DzW1m1gmjbr1ABKPowzJ2qSQjL6iBNgTydVrCrvsboh2JX3NdK5v9RrjQwjYG9N4w35B3QTf2YKXC",
-   "63g7DMbEHtmiqd1XuHcT25fhqsdUtmhUyR8TnWcFdy23kWogTkZdYnVQjEqFYPtq4Juq7wqhvk27uaYw1fX4UCXF"
+   "63g7DMbEHtmiqd1XuHcT25fhqsdUtmhUyR8TnWcFdy23kWogTkZdYnVQjEqFYPtq4Juq7wqhvk27uaYw1fX4UCXF",
+   "66S7Jg56rDABUsa5YHys77bhf5xniYWcLSEnT9r2fXSb4qFyoSswt18uyeEJenUWLpMUfLERkjCLckxwuyNUXb8c"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T04:15:40-08:00",
+  "updated_at": "2026-11-03T04:36:08-08:00",
   "balance_checked_at": "2026-11-03T04:16:52-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_WASTED",
+  "last_event": "AUTO_SYNC_BUY_FILLED_HAMSTER",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -138,9 +139,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T01:40:48-08:00"
+  "filled_at": "2026-11-03T04:35:50-08:00"
  },
- "leftover_sol": 0.59292,
+ "leftover_sol": 0.391427,
  "positions": [
   {
    "ticker": "AGENC",
@@ -185,6 +186,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-02T22:19:33-08:00: 10,916.43 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5d2V97xXNB…"
+  },
+  {
+   "ticker": "HAMSTER",
+   "name": "HAMSTER",
+   "mint": "7gCND4jhgJ8Mq1XxNhRdercinXh7fcCDPjA9uEQLk3f2",
+   "pairAddress": "EkHWcjpNiu8N368E9f4Hkzab3nVdAAg6BLWtVmZGL2t8",
+   "tokens": 88107.909475,
+   "fill_token_amount": 88107.909475,
+   "fill_sol": 0.20149344,
+   "fill_price_sol": 2.2868938918267305e-06,
+   "fill_tx": "66S7Jg56rDABUsa5YHys77bhf5xniYWcLSEnT9r2fXSb4qFyoSswt18uyeEJenUWLpMUfLERkjCLckxwuyNUXb8c",
+   "tx": "66S7Jg56rDABUsa5YHys77bhf5xniYWcLSEnT9r2fXSb4qFyoSswt18uyeEJenUWLpMUfLERkjCLckxwuyNUXb8c",
+   "filled_at": "2026-11-03T04:35:50-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.72,
+   "fill_price_usd": 0.00021249818042853977,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T04:35:50-08:00: 88,107.91 HAMSTER for 0.2015 SOL (wallet delta incl. fees/rent). Tx 66S7Jg56rD…"
   }
  ],
  "closed": [
