@@ -149,7 +149,7 @@
   "balance_checked_at": "2026-11-03T09:26:45-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_CHOO",
+  "last_event": "MANUAL_SELL_AGENC",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -166,29 +166,38 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T09:16:18-08:00"
  },
- "leftover_sol": 0.502932,
+ "leftover_sol": 0.50444108,
  "positions": [
   {
    "ticker": "AGENC",
    "name": "AGENC",
    "mint": "5yC9BM8KUsJTPbWPLfA2N8qH1s9V8DQ3Vcw1G6Jdpump",
    "pairAddress": "BUMh6YebpBvAh4by4oTGJUvzQ9CvH6dqPgrZvXFDMwC1",
-   "tokens": 10998.193458,
+   "tokens": 0,
    "fill_token_amount": 10998.193458,
    "fill_sol": 0.216862229,
    "fill_price_sol": 1.9717986397325654e-05,
    "fill_tx": "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
    "tx": "62MqCKeDvFV6c8f25jZjNo6BEcMN4CqDTRx3Q6DAf8fuZoc8RJ9CY5VFeDv2ivf8JMbiaWYWiV14W6snovDVUY9X",
    "filled_at": "2026-10-30T09:03:36-07:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 20.77,
    "fill_price_usd": 0.0018884919672777774,
    "flags": [
-    "PERMANENT_HOLD",
-    "NO_GUARD"
+    "NO_GUARD",
+    "PERMANENT_HOLD_ENDED_1103"
    ],
-   "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
+   "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset. | CLOSED 2026-11-03 9:26 AM PT by David order (pt523u): sold 10,998.19 AGENC for 0.179188518 SOL net ($16.71). Permanent hold ended; ATA closed, +0.00151384 SOL rent. Exit tx 2sXxWzT3Me\u2026",
+   "sold_sol": 0.179188518,
+   "pnl_sol": -0.037673711,
+   "vs_fill_pct": -17.37,
+   "exit_tx": "2sXxWzT3MeEAjWyNBM5TQsQhAtM86UAcbBD3VPTGig1TAvtJj7hDeK75rzyM74SwXxVnwhLaQ12ZjmUdgBqxK4BK",
+   "closed_at": "2026-11-03T09:26:40-08:00",
+   "close_reason": "DAVID_MANUAL_SELL (pt523u)",
+   "sold_usd": 16.71,
+   "sold_usd_note": "SOL/USD 93.25 at sale",
+   "rent_recovered_sol": 0.00151384
   },
   {
    "ticker": "Percolator",
@@ -210,7 +219,7 @@
    "flags": [
     "AUTO_SYNC"
    ],
-   "note": "Auto-sync BUY 2026-11-03T08:16:02-08:00: 5,122.04 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3nkrPiws6U…"
+   "note": "Auto-sync BUY 2026-11-03T08:16:02-08:00: 5,122.04 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3nkrPiws6U\u2026"
   },
   {
    "ticker": "CHOO",
@@ -232,7 +241,7 @@
    "flags": [
     "AUTO_SYNC"
    ],
-   "note": "Auto-sync BUY 2026-11-03T09:16:18-08:00: 3,232.19 CHOO for 0.2030 SOL (wallet delta incl. fees/rent). Tx xk3cnXbgdA…"
+   "note": "Auto-sync BUY 2026-11-03T09:16:18-08:00: 3,232.19 CHOO for 0.2030 SOL (wallet delta incl. fees/rent). Tx xk3cnXbgdA\u2026"
   }
  ],
  "closed": [
@@ -257,7 +266,7 @@
     "AUTO_SYNC",
     "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-11-03T06:43:29-08:00: 6,591.13 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4bvC4eeWXo… | CLOSED 2026-11-03T08:59:31-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 6,591.13 CLAUDIA for 0.197348 SOL net vs 0.201519 SOL basis -> -0.004171 SOL (-2.07%). Exit tx 3DFyZPNXdU…",
+   "note": "Auto-sync BUY 2026-11-03T06:43:29-08:00: 6,591.13 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4bvC4eeWXo\u2026 | CLOSED 2026-11-03T08:59:31-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 6,591.13 CLAUDIA for 0.197348 SOL net vs 0.201519 SOL basis -> -0.004171 SOL (-2.07%). Exit tx 3DFyZPNXdU\u2026",
    "sold_sol": 0.197348411,
    "exit_fee_sol": 5.387e-06,
    "pnl_sol": -0.004170578,
@@ -289,7 +298,7 @@
     "AUTO_SYNC",
     "v6 HARD_MINUS20"
    ],
-   "note": "Auto-sync BUY 2026-11-03T07:38:38-08:00: 26,410.93 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 23GoHLGoNi… | CLOSED 2026-11-03T08:11:45-08:00 (v6 HARD_MINUS20, auto-sync on-chain): sold 26,410.93 CAPY for 0.158404 SOL net vs 0.201500 SOL basis -> -0.043095 SOL (-21.39%). Exit tx 5xUKL4Q13v…",
+   "note": "Auto-sync BUY 2026-11-03T07:38:38-08:00: 26,410.93 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 23GoHLGoNi\u2026 | CLOSED 2026-11-03T08:11:45-08:00 (v6 HARD_MINUS20, auto-sync on-chain): sold 26,410.93 CAPY for 0.158404 SOL net vs 0.201500 SOL basis -> -0.043095 SOL (-21.39%). Exit tx 5xUKL4Q13v\u2026",
    "sold_sol": 0.158404434,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.043095101,
@@ -321,7 +330,7 @@
     "AUTO_SYNC",
     "v6 V7_FRESH_50M"
    ],
-   "note": "Auto-sync BUY 2026-11-03T06:44:11-08:00: 28,235.87 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4dG8xF8u54… | CLOSED 2026-11-03T07:34:19-08:00 (v6 V7_FRESH_50M, auto-sync on-chain): sold 28,235.87 CAPY for 0.207861 SOL net vs 0.201494 SOL basis -> +0.006367 SOL (+3.16%). Exit tx 21wCqHX8Zf…",
+   "note": "Auto-sync BUY 2026-11-03T06:44:11-08:00: 28,235.87 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4dG8xF8u54\u2026 | CLOSED 2026-11-03T07:34:19-08:00 (v6 V7_FRESH_50M, auto-sync on-chain): sold 28,235.87 CAPY for 0.207861 SOL net vs 0.201494 SOL basis -> +0.006367 SOL (+3.16%). Exit tx 21wCqHX8Zf\u2026",
    "sold_sol": 0.207860742,
    "exit_fee_sol": 2.0915e-05,
    "pnl_sol": 0.006366962,
@@ -353,7 +362,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+20.7021"
    ],
-   "note": "Auto-sync BUY 2026-11-03T06:07:49-08:00: 8,639.99 CHOO for 0.2016 SOL (wallet delta incl. fees/rent). Tx 4zyE6P2MFE… | CLOSED 2026-11-03T06:35:30-08:00 (v6 TRAIL_+20.7021, auto-sync on-chain): sold 3,456.00 CHOO for 0.096324 SOL net vs 0.080639 SOL basis -> +0.015685 SOL (+19.45%). Exit tx 5UsixWqwtD…",
+   "note": "Auto-sync BUY 2026-11-03T06:07:49-08:00: 8,639.99 CHOO for 0.2016 SOL (wallet delta incl. fees/rent). Tx 4zyE6P2MFE\u2026 | CLOSED 2026-11-03T06:35:30-08:00 (v6 TRAIL_+20.7021, auto-sync on-chain): sold 3,456.00 CHOO for 0.096324 SOL net vs 0.080639 SOL basis -> +0.015685 SOL (+19.45%). Exit tx 5UsixWqwtD\u2026",
    "sold_sol": 0.096324447,
    "exit_fee_sol": 2.4492e-05,
    "pnl_sol": 0.015685197,
@@ -386,7 +395,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T06:30:09-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 5,184.00 CHOO for 0.133426 SOL net vs 0.120959 SOL basis -> +0.012467 SOL (+10.31%). Exit tx 2aXwkFrYRk…",
+   "note": " | CLOSED 2026-11-03T06:30:09-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 5,184.00 CHOO for 0.133426 SOL net vs 0.120959 SOL basis -> +0.012467 SOL (+10.31%). Exit tx 2aXwkFrYRk\u2026",
    "sold_sol": 0.133425679,
    "exit_fee_sol": 9.04e-06,
    "pnl_sol": 0.012466805,
@@ -418,7 +427,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+3.01663"
    ],
-   "note": "Auto-sync BUY 2026-11-03T06:07:07-08:00: 4,775.41 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4875MqWQhY… | CLOSED 2026-11-03T06:27:34-08:00 (v6 TRAIL_+3.01663, auto-sync on-chain): sold 1,910.17 FLOAT for 0.080626 SOL net vs 0.080597 SOL basis -> +0.000028 SOL (+0.04%). Exit tx 4K7m39FcwU…",
+   "note": "Auto-sync BUY 2026-11-03T06:07:07-08:00: 4,775.41 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4875MqWQhY\u2026 | CLOSED 2026-11-03T06:27:34-08:00 (v6 TRAIL_+3.01663, auto-sync on-chain): sold 1,910.17 FLOAT for 0.080626 SOL net vs 0.080597 SOL basis -> +0.000028 SOL (+0.04%). Exit tx 4K7m39FcwU\u2026",
    "sold_sol": 0.080625806,
    "exit_fee_sol": 1.7149e-05,
    "pnl_sol": 2.843e-05,
@@ -451,7 +460,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T06:24:46-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 2,865.25 FLOAT for 0.128103 SOL net vs 0.120896 SOL basis -> +0.007207 SOL (+5.96%). Exit tx AMaXTb6fzz…",
+   "note": " | CLOSED 2026-11-03T06:24:46-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 2,865.25 FLOAT for 0.128103 SOL net vs 0.120896 SOL basis -> +0.007207 SOL (+5.96%). Exit tx AMaXTb6fzz\u2026",
    "sold_sol": 0.12810259,
    "exit_fee_sol": 4.9075e-05,
    "pnl_sol": 0.007206526,
@@ -483,7 +492,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+6.12535"
    ],
-   "note": "Auto-sync BUY 2026-11-03T05:46:57-08:00: 34,567.36 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4qeXsr6aNP… | CLOSED 2026-11-03T06:05:02-08:00 (v6 TRAIL_+6.12535, auto-sync on-chain): sold 8,641.84 CAPY for 0.053023 SOL net vs 0.050373 SOL basis -> +0.002650 SOL (+5.26%). Exit tx 4kahqmq4rv…",
+   "note": "Auto-sync BUY 2026-11-03T05:46:57-08:00: 34,567.36 CAPY for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4qeXsr6aNP\u2026 | CLOSED 2026-11-03T06:05:02-08:00 (v6 TRAIL_+6.12535, auto-sync on-chain): sold 8,641.84 CAPY for 0.053023 SOL net vs 0.050373 SOL basis -> +0.002650 SOL (+5.26%). Exit tx 4kahqmq4rv\u2026",
    "sold_sol": 0.053023156,
    "exit_fee_sol": 5.592e-06,
    "pnl_sol": 0.002649662,
@@ -515,7 +524,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+20.2323"
    ],
-   "note": "Auto-sync BUY 2026-11-03T05:42:09-08:00: 21,309.06 SPHERE for 0.2015 SOL (wallet delta incl. fees/rent). Tx YYVapn9RT1… | CLOSED 2026-11-03T06:01:38-08:00 (v6 TRAIL_+20.2323, auto-sync on-chain): sold 5,327.26 SPHERE for 0.059810 SOL net vs 0.050381 SOL basis -> +0.009429 SOL (+18.72%). Exit tx 2N74W1d2pk…",
+   "note": "Auto-sync BUY 2026-11-03T05:42:09-08:00: 21,309.06 SPHERE for 0.2015 SOL (wallet delta incl. fees/rent). Tx YYVapn9RT1\u2026 | CLOSED 2026-11-03T06:01:38-08:00 (v6 TRAIL_+20.2323, auto-sync on-chain): sold 5,327.26 SPHERE for 0.059810 SOL net vs 0.050381 SOL basis -> +0.009429 SOL (+18.72%). Exit tx 2N74W1d2pk\u2026",
    "sold_sol": 0.059809894,
    "exit_fee_sol": 8.869e-06,
    "pnl_sol": 0.009429343,
@@ -548,7 +557,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T05:59:55-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 25,925.52 CAPY for 0.163743 SOL net vs 0.151120 SOL basis -> +0.012622 SOL (+8.35%). Exit tx rFotEg1xpb…",
+   "note": " | CLOSED 2026-11-03T05:59:55-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 25,925.52 CAPY for 0.163743 SOL net vs 0.151120 SOL basis -> +0.012622 SOL (+8.35%). Exit tx rFotEg1xpb\u2026",
    "sold_sol": 0.163742701,
    "exit_fee_sol": 5.63e-06,
    "pnl_sol": 0.012622219,
@@ -581,7 +590,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T05:50:41-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 15,981.79 SPHERE for 0.163426 SOL net vs 0.151142 SOL basis -> +0.012284 SOL (+8.13%). Exit tx 5P7xamQ94u…",
+   "note": " | CLOSED 2026-11-03T05:50:41-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 15,981.79 SPHERE for 0.163426 SOL net vs 0.151142 SOL basis -> +0.012284 SOL (+8.13%). Exit tx 5P7xamQ94u\u2026",
    "sold_sol": 0.163425873,
    "exit_fee_sol": 1.2351e-05,
    "pnl_sol": 0.012284221,
@@ -613,7 +622,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+13.7661"
    ],
-   "note": "Auto-sync BUY 2026-11-02T22:19:33-08:00: 10,916.43 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5d2V97xXNB… | CLOSED 2026-11-03T05:34:36-08:00 (v6 TRAIL_+13.7661, auto-sync on-chain): sold 4,366.57 CHOO for 0.087827 SOL net vs 0.080608 SOL basis -> +0.007219 SOL (+8.96%). Exit tx 5Xue7iNgvv…",
+   "note": "Auto-sync BUY 2026-11-02T22:19:33-08:00: 10,916.43 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5d2V97xXNB\u2026 | CLOSED 2026-11-03T05:34:36-08:00 (v6 TRAIL_+13.7661, auto-sync on-chain): sold 4,366.57 CHOO for 0.087827 SOL net vs 0.080608 SOL basis -> +0.007219 SOL (+8.96%). Exit tx 5Xue7iNgvv\u2026",
    "sold_sol": 0.087826652,
    "exit_fee_sol": 1.9394e-05,
    "pnl_sol": 0.007218923,
@@ -645,7 +654,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+12.0356"
    ],
-   "note": "Auto-sync BUY 2026-11-03T05:00:55-08:00: 14,773.62 Anakin for 0.2025 SOL (wallet delta incl. fees/rent). Tx 2MZhUFzqFK… | CLOSED 2026-11-03T05:26:39-08:00 (v6 TRAIL_+12.0356, auto-sync on-chain): sold 3,693.41 ANAKIN for 0.055947 SOL net vs 0.050630 SOL basis -> +0.005317 SOL (+10.50%). Exit tx 3zzF6sEcKo…",
+   "note": "Auto-sync BUY 2026-11-03T05:00:55-08:00: 14,773.62 Anakin for 0.2025 SOL (wallet delta incl. fees/rent). Tx 2MZhUFzqFK\u2026 | CLOSED 2026-11-03T05:26:39-08:00 (v6 TRAIL_+12.0356, auto-sync on-chain): sold 3,693.41 ANAKIN for 0.055947 SOL net vs 0.050630 SOL basis -> +0.005317 SOL (+10.50%). Exit tx 3zzF6sEcKo\u2026",
    "sold_sol": 0.055946606,
    "exit_fee_sol": 7.629e-06,
    "pnl_sol": 0.005316896,
@@ -678,7 +687,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T05:25:54-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 11,080.22 ANAKIN for 0.162335 SOL net vs 0.151889 SOL basis -> +0.010446 SOL (+6.88%). Exit tx 3Gt8jquwZv…",
+   "note": " | CLOSED 2026-11-03T05:25:54-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 11,080.22 ANAKIN for 0.162335 SOL net vs 0.151889 SOL basis -> +0.010446 SOL (+6.88%). Exit tx 3Gt8jquwZv\u2026",
    "sold_sol": 0.162334706,
    "exit_fee_sol": 0.000144288,
    "pnl_sol": 0.010445576,
@@ -710,7 +719,7 @@
     "AUTO_SYNC",
     "v6 V7_VELOCITY_-8_IN_10S"
    ],
-   "note": "Auto-sync BUY 2026-11-03T04:35:50-08:00: 88,107.91 HAMSTER for 0.2015 SOL (wallet delta incl. fees/rent). Tx 66S7Jg56rD… | CLOSED 2026-11-03T04:58:24-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 88,107.91 HAMSTER for 0.188661 SOL net vs 0.201493 SOL basis -> -0.012832 SOL (-6.37%). Exit tx 1LMadSW8YZ…",
+   "note": "Auto-sync BUY 2026-11-03T04:35:50-08:00: 88,107.91 HAMSTER for 0.2015 SOL (wallet delta incl. fees/rent). Tx 66S7Jg56rD\u2026 | CLOSED 2026-11-03T04:58:24-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 88,107.91 HAMSTER for 0.188661 SOL net vs 0.201493 SOL basis -> -0.012832 SOL (-6.37%). Exit tx 1LMadSW8YZ\u2026",
    "sold_sol": 0.188661199,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.012832241,
@@ -742,7 +751,7 @@
     "AUTO_SYNC",
     "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-11-03T01:40:48-08:00: 12,161.23 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3enEoeqgqa… | CLOSED 2026-11-03T04:15:32-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 12,161.23 WASTED for 0.173031 SOL net vs 0.201521 SOL basis -> -0.028490 SOL (-14.14%). Exit tx 63g7DMbEHt…",
+   "note": "Auto-sync BUY 2026-11-03T01:40:48-08:00: 12,161.23 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3enEoeqgqa\u2026 | CLOSED 2026-11-03T04:15:32-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 12,161.23 WASTED for 0.173031 SOL net vs 0.201521 SOL basis -> -0.028490 SOL (-14.14%). Exit tx 63g7DMbEHt\u2026",
    "sold_sol": 0.173030748,
    "exit_fee_sol": 1.4619e-05,
    "pnl_sol": -0.028489954,
@@ -775,7 +784,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T03:23:37-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 6,549.86 CHOO for 0.125650 SOL net vs 0.120912 SOL basis -> +0.004739 SOL (+3.92%). Exit tx 3ViNY32Wok…",
+   "note": " | CLOSED 2026-11-03T03:23:37-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 6,549.86 CHOO for 0.125650 SOL net vs 0.120912 SOL basis -> +0.004739 SOL (+3.92%). Exit tx 3ViNY32Wok\u2026",
    "sold_sol": 0.125650109,
    "exit_fee_sol": 0.000114207,
    "pnl_sol": 0.004738515,
@@ -807,7 +816,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+7.63491"
    ],
-   "note": "Auto-sync BUY 2026-11-03T00:39:02-08:00: 13,214.91 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4tPYmewf7U… | CLOSED 2026-11-03T01:35:25-08:00 (v6 TRAIL_+7.63491, auto-sync on-chain): sold 3,303.73 WASTED for 0.053767 SOL net vs 0.050381 SOL basis -> +0.003386 SOL (+6.72%). Exit tx 3ZfwSDBn6n…",
+   "note": "Auto-sync BUY 2026-11-03T00:39:02-08:00: 13,214.91 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4tPYmewf7U\u2026 | CLOSED 2026-11-03T01:35:25-08:00 (v6 TRAIL_+7.63491, auto-sync on-chain): sold 3,303.73 WASTED for 0.053767 SOL net vs 0.050381 SOL basis -> +0.003386 SOL (+6.72%). Exit tx 3ZfwSDBn6n\u2026",
    "sold_sol": 0.05376712,
    "exit_fee_sol": 5.785e-06,
    "pnl_sol": 0.003385702,
@@ -840,7 +849,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-03T01:27:27-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 9,911.18 WASTED for 0.162560 SOL net vs 0.151144 SOL basis -> +0.011416 SOL (+7.55%). Exit tx yQUPCiKzQP…",
+   "note": " | CLOSED 2026-11-03T01:27:27-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 9,911.18 WASTED for 0.162560 SOL net vs 0.151144 SOL basis -> +0.011416 SOL (+7.55%). Exit tx yQUPCiKzQP\u2026",
    "sold_sol": 0.162559989,
    "exit_fee_sol": 5.064e-06,
    "pnl_sol": 0.011415737,
@@ -872,7 +881,7 @@
     "AUTO_SYNC",
     "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-11-02T22:14:54-08:00: 1,304.45 GATO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3LFCc8uoVp… | CLOSED 2026-11-03T00:15:02-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 1,304.45 GATO for 0.192050 SOL net vs 0.201544 SOL basis -> -0.009495 SOL (-4.71%). Exit tx 5JY2SbN79w…",
+   "note": "Auto-sync BUY 2026-11-02T22:14:54-08:00: 1,304.45 GATO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3LFCc8uoVp\u2026 | CLOSED 2026-11-03T00:15:02-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 1,304.45 GATO for 0.192050 SOL net vs 0.201544 SOL basis -> -0.009495 SOL (-4.71%). Exit tx 5JY2SbN79w\u2026",
    "sold_sol": 0.192049593,
    "exit_fee_sol": 9.376e-06,
    "pnl_sol": -0.009494823,
@@ -904,7 +913,7 @@
     "AUTO_SYNC",
     "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-11-02T20:16:21-08:00: 13,441.77 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3UiEHmTT53… | CLOSED 2026-11-02T22:16:29-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 13,441.77 NIO for 0.195170 SOL net vs 0.201524 SOL basis -> -0.006354 SOL (-3.15%). Exit tx 3zpFbpG4Vs…",
+   "note": "Auto-sync BUY 2026-11-02T20:16:21-08:00: 13,441.77 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3UiEHmTT53\u2026 | CLOSED 2026-11-02T22:16:29-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 13,441.77 NIO for 0.195170 SOL net vs 0.201524 SOL basis -> -0.006354 SOL (-3.15%). Exit tx 3zpFbpG4Vs\u2026",
    "sold_sol": 0.195169961,
    "exit_fee_sol": 2.5033e-05,
    "pnl_sol": -0.006353944,
@@ -936,7 +945,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+7.62127"
    ],
-   "note": "Auto-sync BUY 2026-11-02T21:09:00-08:00: 5,131.09 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx JhkDDSKxW8… | CLOSED 2026-11-02T22:13:07-08:00 (v6 TRAIL_+7.62127, auto-sync on-chain): sold 2,052.44 FLOAT for 0.086001 SOL net vs 0.080597 SOL basis -> +0.005404 SOL (+6.70%). Exit tx 2A8fjnD29a…",
+   "note": "Auto-sync BUY 2026-11-02T21:09:00-08:00: 5,131.09 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx JhkDDSKxW8\u2026 | CLOSED 2026-11-02T22:13:07-08:00 (v6 TRAIL_+7.62127, auto-sync on-chain): sold 2,052.44 FLOAT for 0.086001 SOL net vs 0.080597 SOL basis -> +0.005404 SOL (+6.70%). Exit tx 2A8fjnD29a\u2026",
    "sold_sol": 0.086001052,
    "exit_fee_sol": 5.504e-06,
    "pnl_sol": 0.005403676,
@@ -969,7 +978,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-02T21:51:30-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 3,078.65 FLOAT for 0.129877 SOL net vs 0.120896 SOL basis -> +0.008981 SOL (+7.43%). Exit tx 5REWxEFbP8…",
+   "note": " | CLOSED 2026-11-02T21:51:30-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 3,078.65 FLOAT for 0.129877 SOL net vs 0.120896 SOL basis -> +0.008981 SOL (+7.43%). Exit tx 5REWxEFbP8\u2026",
    "sold_sol": 0.129877127,
    "exit_fee_sol": 6.7004e-05,
    "pnl_sol": 0.008981063,
@@ -1001,7 +1010,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+15.1936"
    ],
-   "note": "Auto-sync BUY 2026-11-02T20:06:31-08:00: 6,047.12 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 34rDVzZW7j… | CLOSED 2026-11-02T20:57:55-08:00 (v6 TRAIL_+15.1936, auto-sync on-chain): sold 2,418.85 PERCOLATOR for 0.092123 SOL net vs 0.080601 SOL basis -> +0.011521 SOL (+14.29%). Exit tx 37R6Lkeo3m…",
+   "note": "Auto-sync BUY 2026-11-02T20:06:31-08:00: 6,047.12 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 34rDVzZW7j\u2026 | CLOSED 2026-11-02T20:57:55-08:00 (v6 TRAIL_+15.1936, auto-sync on-chain): sold 2,418.85 PERCOLATOR for 0.092123 SOL net vs 0.080601 SOL basis -> +0.011521 SOL (+14.29%). Exit tx 37R6Lkeo3m\u2026",
    "sold_sol": 0.092122502,
    "exit_fee_sol": 8.672e-06,
    "pnl_sol": 0.011521234,
@@ -1034,7 +1043,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-02T20:35:24-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 3,628.27 PERCOLATOR for 0.130475 SOL net vs 0.120902 SOL basis -> +0.009573 SOL (+7.92%). Exit tx dKUiygRPTb…",
+   "note": " | CLOSED 2026-11-02T20:35:24-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 3,628.27 PERCOLATOR for 0.130475 SOL net vs 0.120902 SOL basis -> +0.009573 SOL (+7.92%). Exit tx dKUiygRPTb\u2026",
    "sold_sol": 0.130474609,
    "exit_fee_sol": 6.699e-06,
    "pnl_sol": 0.009572708,
@@ -1066,7 +1075,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+20.0468"
    ],
-   "note": "Auto-sync BUY 2026-11-02T08:50:01-08:00: 21,226.31 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3cz86eRgMV… | CLOSED 2026-11-02T09:37:33-08:00 (v6 TRAIL_+20.0468, auto-sync on-chain): sold 8,490.52 NIO for 0.095693 SOL net vs 0.080608 SOL basis -> +0.015086 SOL (+18.71%). Exit tx 2y1aaHh25x…",
+   "note": "Auto-sync BUY 2026-11-02T08:50:01-08:00: 21,226.31 NIO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3cz86eRgMV\u2026 | CLOSED 2026-11-02T09:37:33-08:00 (v6 TRAIL_+20.0468, auto-sync on-chain): sold 8,490.52 NIO for 0.095693 SOL net vs 0.080608 SOL basis -> +0.015086 SOL (+18.71%). Exit tx 2y1aaHh25x\u2026",
    "sold_sol": 0.095693048,
    "exit_fee_sol": 6.604e-06,
    "pnl_sol": 0.015085512,
@@ -1099,7 +1108,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-02T09:32:34-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 12,735.78 NIO for 0.131957 SOL net vs 0.120911 SOL basis -> +0.011046 SOL (+9.14%). Exit tx 55ejbYtiiz…",
+   "note": " | CLOSED 2026-11-02T09:32:34-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 12,735.78 NIO for 0.131957 SOL net vs 0.120911 SOL basis -> +0.011046 SOL (+9.14%). Exit tx 55ejbYtiiz\u2026",
    "sold_sol": 0.131956901,
    "exit_fee_sol": 6.471e-06,
    "pnl_sol": 0.011045597,
@@ -1131,7 +1140,7 @@
     "AUTO_SYNC",
     "v6 MOMENTUM_EXIT"
    ],
-   "note": "Auto-sync BUY 2026-11-02T06:53:53-08:00: 13,780.19 DacityCoin for 0.2036 SOL (wallet delta incl. fees/rent). Tx 547ZhEp4K4… | CLOSED 2026-11-02T08:54:04-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 13,780.19 DACITYCOIN for 0.190309 SOL net vs 0.203578 SOL basis -> -0.013270 SOL (-6.52%). Exit tx 3cmehc6z4F…",
+   "note": "Auto-sync BUY 2026-11-02T06:53:53-08:00: 13,780.19 DacityCoin for 0.2036 SOL (wallet delta incl. fees/rent). Tx 547ZhEp4K4\u2026 | CLOSED 2026-11-02T08:54:04-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 13,780.19 DACITYCOIN for 0.190309 SOL net vs 0.203578 SOL basis -> -0.013270 SOL (-6.52%). Exit tx 3cmehc6z4F\u2026",
    "sold_sol": 0.190308625,
    "exit_fee_sol": 0.000328387,
    "pnl_sol": -0.013269775,
@@ -1163,7 +1172,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+14.0233"
    ],
-   "note": "Auto-sync BUY 2026-11-02T07:27:56-08:00: 12,666.71 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx jT9rh2sPcz… | CLOSED 2026-11-02T08:44:27-08:00 (v6 TRAIL_+14.0233, auto-sync on-chain): sold 5,066.68 FLOAT for 0.091197 SOL net vs 0.080597 SOL basis -> +0.010600 SOL (+13.15%). Exit tx Z3SApN5QZW…",
+   "note": "Auto-sync BUY 2026-11-02T07:27:56-08:00: 12,666.71 FLOAT for 0.2015 SOL (wallet delta incl. fees/rent). Tx jT9rh2sPcz\u2026 | CLOSED 2026-11-02T08:44:27-08:00 (v6 TRAIL_+14.0233, auto-sync on-chain): sold 5,066.68 FLOAT for 0.091197 SOL net vs 0.080597 SOL basis -> +0.010600 SOL (+13.15%). Exit tx Z3SApN5QZW\u2026",
    "sold_sol": 0.091197476,
    "exit_fee_sol": 8.138e-06,
    "pnl_sol": 0.0106001,
@@ -1196,7 +1205,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-02T08:42:35-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 7,600.03 FLOAT for 0.129566 SOL net vs 0.120896 SOL basis -> +0.008670 SOL (+7.17%). Exit tx 27reT52mBe…",
+   "note": " | CLOSED 2026-11-02T08:42:35-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 7,600.03 FLOAT for 0.129566 SOL net vs 0.120896 SOL basis -> +0.008670 SOL (+7.17%). Exit tx 27reT52mBe\u2026",
    "sold_sol": 0.129566486,
    "exit_fee_sol": 5.587e-06,
    "pnl_sol": 0.008670422,
@@ -1228,7 +1237,7 @@
     "AUTO_SYNC",
     "v6 HARD_MINUS20"
    ],
-   "note": "Auto-sync BUY 2026-11-02T06:42:04-08:00: 1,239.33 DESSA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5UCpsZBDak… | CLOSED 2026-11-02T07:07:30-08:00 (v6 HARD_MINUS20, auto-sync on-chain): sold 1,239.33 DESSA for 0.157601 SOL net vs 0.201520 SOL basis -> -0.043919 SOL (-21.79%). Exit tx ornWArN3Rx…",
+   "note": "Auto-sync BUY 2026-11-02T06:42:04-08:00: 1,239.33 DESSA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5UCpsZBDak\u2026 | CLOSED 2026-11-02T07:07:30-08:00 (v6 HARD_MINUS20, auto-sync on-chain): sold 1,239.33 DESSA for 0.157601 SOL net vs 0.201520 SOL basis -> -0.043919 SOL (-21.79%). Exit tx ornWArN3Rx\u2026",
    "sold_sol": 0.157600926,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.043918735,
@@ -1260,7 +1269,7 @@
     "AUTO_SYNC",
     "MANUAL_SELL_ALL_pt482u"
    ],
-   "note": "Auto-sync BUY 2026-10-31T19:17:50-07:00: 19,295.13 Leverhedge for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4pGcM25Mwp… | CLOSED 2026-10-31T21:13:38-07:00 (MANUAL_SELL_ALL_pt482u, auto-sync on-chain): sold 19,295.13 Leverhedge for 0.184472 SOL net vs 0.201520 SOL basis -> -0.017048 SOL (-8.46%). Exit tx 4kbYN8W2HC…",
+   "note": "Auto-sync BUY 2026-10-31T19:17:50-07:00: 19,295.13 Leverhedge for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4pGcM25Mwp\u2026 | CLOSED 2026-10-31T21:13:38-07:00 (MANUAL_SELL_ALL_pt482u, auto-sync on-chain): sold 19,295.13 Leverhedge for 0.184472 SOL net vs 0.201520 SOL basis -> -0.017048 SOL (-8.46%). Exit tx 4kbYN8W2HC\u2026",
    "sold_sol": 0.184471787,
    "exit_fee_sol": 9.122e-06,
    "pnl_sol": -0.017048329,
@@ -1292,7 +1301,7 @@
     "AUTO_SYNC",
     "v6 V7_VELOCITY_-8_IN_10S"
    ],
-   "note": "Auto-sync BUY 2026-11-01T17:06:50-08:00: 94,304.96 ANAKINCORE for 0.3496 SOL (wallet delta incl. fees/rent). Tx 32KkFQ39yQ… | CLOSED 2026-11-01T17:11:17-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 94,304.96 ANAKINCORE for 0.313762 SOL net vs 0.349552 SOL basis -> -0.035791 SOL (-10.24%). Exit tx 53mfowtvLz…",
+   "note": "Auto-sync BUY 2026-11-01T17:06:50-08:00: 94,304.96 ANAKINCORE for 0.3496 SOL (wallet delta incl. fees/rent). Tx 32KkFQ39yQ\u2026 | CLOSED 2026-11-01T17:11:17-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 94,304.96 ANAKINCORE for 0.313762 SOL net vs 0.349552 SOL basis -> -0.035791 SOL (-10.24%). Exit tx 53mfowtvLz\u2026",
    "sold_sol": 0.313761637,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.035790598,
@@ -1324,7 +1333,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+12.681"
    ],
-   "note": "Auto-sync BUY 2026-11-01T16:39:36-08:00: 53,207.52 ANAKINIUS for 0.1745 SOL (wallet delta incl. fees/rent). Tx hcK8jeZsJ4… | CLOSED 2026-11-01T16:47:19-08:00 (v6 TRAIL_+12.681, auto-sync on-chain): sold 13,301.88 ANAKINIUS for 0.047015 SOL net vs 0.043627 SOL basis -> +0.003388 SOL (+7.77%). Exit tx 2FcmKHtWVe…",
+   "note": "Auto-sync BUY 2026-11-01T16:39:36-08:00: 53,207.52 ANAKINIUS for 0.1745 SOL (wallet delta incl. fees/rent). Tx hcK8jeZsJ4\u2026 | CLOSED 2026-11-01T16:47:19-08:00 (v6 TRAIL_+12.681, auto-sync on-chain): sold 13,301.88 ANAKINIUS for 0.047015 SOL net vs 0.043627 SOL basis -> +0.003388 SOL (+7.77%). Exit tx 2FcmKHtWVe\u2026",
    "sold_sol": 0.04701483,
    "exit_fee_sol": 9.485e-06,
    "pnl_sol": 0.003388089,
@@ -1357,7 +1366,7 @@
     "v6 TP60_AT_+8",
     "HALF"
    ],
-   "note": " | CLOSED 2026-11-01T16:47:09-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 39,905.64 ANAKINIUS for 0.151409 SOL net vs 0.130880 SOL basis -> +0.020529 SOL (+15.69%). Exit tx 4GAhoDZLxw…",
+   "note": " | CLOSED 2026-11-01T16:47:09-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 39,905.64 ANAKINIUS for 0.151409 SOL net vs 0.130880 SOL basis -> +0.020529 SOL (+15.69%). Exit tx 4GAhoDZLxw\u2026",
    "sold_sol": 0.151409153,
    "exit_fee_sol": 1.077e-05,
    "pnl_sol": 0.020528931,
@@ -1389,7 +1398,7 @@
     "AUTO_SYNC",
     "v6 V7_VELOCITY_-8_IN_10S"
    ],
-   "note": "Auto-sync BUY 2026-11-01T16:44:17-08:00: 33,475.11 ANAKINCORE for 0.1309 SOL (wallet delta incl. fees/rent). Tx 3fQJTGCYPL… | CLOSED 2026-11-01T16:46:07-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 33,475.11 ANAKINCORE for 0.108350 SOL net vs 0.130883 SOL basis -> -0.022533 SOL (-17.22%). Exit tx FkESKzRBD2…",
+   "note": "Auto-sync BUY 2026-11-01T16:44:17-08:00: 33,475.11 ANAKINCORE for 0.1309 SOL (wallet delta incl. fees/rent). Tx 3fQJTGCYPL\u2026 | CLOSED 2026-11-01T16:46:07-08:00 (v6 V7_VELOCITY_-8_IN_10S, auto-sync on-chain): sold 33,475.11 ANAKINCORE for 0.108350 SOL net vs 0.130883 SOL basis -> -0.022533 SOL (-17.22%). Exit tx FkESKzRBD2\u2026",
    "sold_sol": 0.108349895,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.022532945,
@@ -1423,7 +1432,7 @@
     "WRITE_OFF",
     "MANUAL_RECORD"
    ],
-   "note": "Auto-sync BUY 2026-10-31T20:12:00-07:00: 17,664,666.33 BLUE for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3Pi6Z9KsPZ… | CLOSED 2026-10-31T20:12:18-07:00 (LP pulled by one wallet ~6s after our buy; Jupiter NO_ROUTES_FOUND; tokens unsellable). Written off at -0.201493 SOL. No exit tx.",
+   "note": "Auto-sync BUY 2026-10-31T20:12:00-07:00: 17,664,666.33 BLUE for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3Pi6Z9KsPZ\u2026 | CLOSED 2026-10-31T20:12:18-07:00 (LP pulled by one wallet ~6s after our buy; Jupiter NO_ROUTES_FOUND; tokens unsellable). Written off at -0.201493 SOL. No exit tx.",
    "sold_sol": 0.0,
    "exit_fee_sol": 0.0,
    "pnl_sol": -0.20149344,
@@ -1485,7 +1494,7 @@
     "AUTO_SYNC",
     "v6 V7_LIQ_-15_IN_10S"
    ],
-   "note": "Auto-sync BUY 2026-10-31T18:06:34-07:00: 756.99 DESSA for 0.2000 SOL (wallet delta incl. fees/rent). Tx 5hfiHZdm6V… | CLOSED 2026-10-31T18:57:18-07:00 (v6 V7_LIQ_-15_IN_10S, auto-sync on-chain): sold 756.99 DESSA for 0.170746 SOL net vs 0.200005 SOL basis -> -0.029259 SOL (-14.63%). Exit tx 49ZZcFpXxM…",
+   "note": "Auto-sync BUY 2026-10-31T18:06:34-07:00: 756.99 DESSA for 0.2000 SOL (wallet delta incl. fees/rent). Tx 5hfiHZdm6V\u2026 | CLOSED 2026-10-31T18:57:18-07:00 (v6 V7_LIQ_-15_IN_10S, auto-sync on-chain): sold 756.99 DESSA for 0.170746 SOL net vs 0.200005 SOL basis -> -0.029259 SOL (-14.63%). Exit tx 49ZZcFpXxM\u2026",
    "sold_sol": 0.170745655,
    "exit_fee_sol": 0.002005,
    "pnl_sol": -0.029259354,
@@ -1518,7 +1527,7 @@
     "v6 MOMENTUM_EXIT",
     "AUTO_SYNC"
    ],
-   "note": "Manual buy 6:53 AM PT 10/31 (David). Guard v7 armed; baseline value $19.07 at reset. | CLOSED 2026-10-31T17:58:30-07:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 234.08 BIRB for 0.167035 SOL net vs 0.200000 SOL basis -> -0.032965 SOL (-16.48%). Exit tx 2DxmMxX11y…",
+   "note": "Manual buy 6:53 AM PT 10/31 (David). Guard v7 armed; baseline value $19.07 at reset. | CLOSED 2026-10-31T17:58:30-07:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 234.08 BIRB for 0.167035 SOL net vs 0.200000 SOL basis -> -0.032965 SOL (-16.48%). Exit tx 2DxmMxX11y\u2026",
    "sold_sol": 0.167035061,
    "exit_fee_sol": 9.412e-06,
    "pnl_sol": -0.032964939,
@@ -1550,7 +1559,7 @@
     "AUTO_SYNC",
     "v6 TRAIL_+4.16437"
    ],
-   "note": "Auto-sync BUY 2026-10-31T07:33:51-07:00: 12,675.86 LEVERHEDGE for 0.2015 SOL (wallet delta incl. fees/rent). Tx rkrgaYUnbQ… | CLOSED 2026-10-31T07:44:04-07:00 (v6 TRAIL_+4.16437, auto-sync on-chain): sold 12,675.86 LEVERHEDGE for 0.201697 SOL net vs 0.201523 SOL basis -> +0.000175 SOL (+0.09%). Exit tx 3vuRKieDJ8…",
+   "note": "Auto-sync BUY 2026-10-31T07:33:51-07:00: 12,675.86 LEVERHEDGE for 0.2015 SOL (wallet delta incl. fees/rent). Tx rkrgaYUnbQ\u2026 | CLOSED 2026-10-31T07:44:04-07:00 (v6 TRAIL_+4.16437, auto-sync on-chain): sold 12,675.86 LEVERHEDGE for 0.201697 SOL net vs 0.201523 SOL basis -> +0.000175 SOL (+0.09%). Exit tx 3vuRKieDJ8\u2026",
    "sold_sol": 0.201697168,
    "exit_fee_sol": 0.006005,
    "pnl_sol": 0.000174549,
@@ -1572,5 +1581,5 @@
  },
  "tests": [],
  "transfers": [],
- "baseline_note": "Deposit 0.545482 SOL 7:22:53 AM PT tx 4uYGajsa… is included in the baseline cash, not counted as PnL."
+ "baseline_note": "Deposit 0.545482 SOL 7:22:53 AM PT tx 4uYGajsa\u2026 is included in the baseline cash, not counted as PnL."
 }
