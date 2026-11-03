@@ -137,17 +137,18 @@
    "21wCqHX8Zf9AaWGyzrwh2MA5VJPaFStV8r4ccBcdERr5oUctMqoGL3CqMAjuK4sqXojQMe96sVR8HWHaACEgzjZm",
    "23GoHLGoNi7dATBQwxeYWCcw8FUuVTtr79g57uMkt5AT9NcRuh8yrTYZpFoeAAMsUP2xxK4ZDdUQxL3RCoA4H849",
    "5xUKL4Q13vHjMtCvcsVPDLZp88mEAimVSpYUuucX5H52SWcbDUrjiJS4UgK3qgdfTZeb4Fq8mq4SU3fZfPXEvvFE",
-   "3nkrPiws6UB8We7Hu7QEGqfyyvcWdTffFAyLtuYL2mRP1CdFrQ1RYKsV8J5Bva1EMFs3pzAsKuCqMSf5uTG8p4XZ"
+   "3nkrPiws6UB8We7Hu7QEGqfyyvcWdTffFAyLtuYL2mRP1CdFrQ1RYKsV8J5Bva1EMFs3pzAsKuCqMSf5uTG8p4XZ",
+   "3DFyZPNXdUjDXDiuaaqAt3QgW7HsRcnahnjc4UK3LKdd23Kj4KUMLxqh1r56t9Pb5PMuEWtYAzV23uReqBsrNsT5"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T08:17:17-08:00",
-  "balance_checked_at": "2026-11-03T08:16:12-08:00",
+  "updated_at": "2026-11-03T08:59:41-08:00",
+  "balance_checked_at": "2026-11-03T09:00:02-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_Percolator",
+  "last_event": "AUTO_SYNC_GUARD_SELL_CLAUDIA",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -164,7 +165,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T08:16:02-08:00"
  },
- "leftover_sol": 0.32791,
+ "leftover_sol": 0.526767,
  "positions": [
   {
    "ticker": "AGENC",
@@ -187,28 +188,6 @@
     "NO_GUARD"
    ],
    "note": "Permanent hold (David 10/30): no guard, no sell. Baseline value $20.02 at reset."
-  },
-  {
-   "ticker": "CLAUDIA",
-   "name": "CLAUDIA",
-   "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
-   "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
-   "tokens": 6591.129245,
-   "fill_token_amount": 6591.129245,
-   "fill_sol": 0.201518989,
-   "fill_price_sol": 3.057427361978547e-05,
-   "fill_tx": "4bvC4eeWXoz4hFrneK3mAXqXQpguzXfnbEGqxvG7mj96fBYTtbbVmUKM95Ch2RCttEX7oum5zAPGZRSFNNhUrsq2",
-   "tx": "4bvC4eeWXoz4hFrneK3mAXqXQpguzXfnbEGqxvG7mj96fBYTtbbVmUKM95Ch2RCttEX7oum5zAPGZRSFNNhUrsq2",
-   "filled_at": "2026-11-03T06:43:29-08:00",
-   "status": "OPEN",
-   "clips": 1,
-   "fill_usd": 18.79,
-   "fill_price_usd": 0.002851356757781193,
-   "fill_usd_note": "SOL basis x SOL/USD at sync time",
-   "flags": [
-    "AUTO_SYNC"
-   ],
-   "note": "Auto-sync BUY 2026-11-03T06:43:29-08:00: 6,591.13 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4bvC4eeWXo…"
   },
   {
    "ticker": "Percolator",
@@ -234,6 +213,38 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "CLAUDIA",
+   "name": "CLAUDIA",
+   "mint": "2j5SaS7xy776qCBpyPQbZjyQSAtKiFgrwjfErthnW2ZM",
+   "pairAddress": "Fe7bpDYCs74GqiCUF14HwgUMToPKV1d9mDYVX5BTohFr",
+   "tokens": 0,
+   "fill_token_amount": 6591.129245,
+   "fill_sol": 0.201518989,
+   "fill_price_sol": 3.057427361978547e-05,
+   "fill_tx": "4bvC4eeWXoz4hFrneK3mAXqXQpguzXfnbEGqxvG7mj96fBYTtbbVmUKM95Ch2RCttEX7oum5zAPGZRSFNNhUrsq2",
+   "tx": "4bvC4eeWXoz4hFrneK3mAXqXQpguzXfnbEGqxvG7mj96fBYTtbbVmUKM95Ch2RCttEX7oum5zAPGZRSFNNhUrsq2",
+   "filled_at": "2026-11-03T06:43:29-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 18.79,
+   "fill_price_usd": 0.002851356757781193,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 MOMENTUM_EXIT"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T06:43:29-08:00: 6,591.13 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4bvC4eeWXo… | CLOSED 2026-11-03T08:59:31-08:00 (v6 MOMENTUM_EXIT, auto-sync on-chain): sold 6,591.13 CLAUDIA for 0.197348 SOL net vs 0.201519 SOL basis -> -0.004171 SOL (-2.07%). Exit tx 3DFyZPNXdU…",
+   "sold_sol": 0.197348411,
+   "exit_fee_sol": 5.387e-06,
+   "pnl_sol": -0.004170578,
+   "vs_fill_pct": -2.07,
+   "exit_tx": "3DFyZPNXdUjDXDiuaaqAt3QgW7HsRcnahnjc4UK3LKdd23Kj4KUMLxqh1r56t9Pb5PMuEWtYAzV23uReqBsrNsT5",
+   "closed_at": "2026-11-03T08:59:31-08:00",
+   "close_reason": "v6 MOMENTUM_EXIT",
+   "sold_usd": 18.4,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "CAPY",
    "name": "CAPY",
