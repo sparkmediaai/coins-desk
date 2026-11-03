@@ -140,17 +140,18 @@
    "3nkrPiws6UB8We7Hu7QEGqfyyvcWdTffFAyLtuYL2mRP1CdFrQ1RYKsV8J5Bva1EMFs3pzAsKuCqMSf5uTG8p4XZ",
    "3DFyZPNXdUjDXDiuaaqAt3QgW7HsRcnahnjc4UK3LKdd23Kj4KUMLxqh1r56t9Pb5PMuEWtYAzV23uReqBsrNsT5",
    "xk3cnXbgdAzNYJjQKuQbmTNqTyUNBiKuhmTspD5tGMeDTXcbQUCp4qvxpPtanTujow2aBGJcRUgp6FXJjbg787C",
-   "3JkJQCL3tS6a9GXGSWipHL5Sh4NQwCpZN3SgNrsbW4m1zbCfJy6SggiLAf34c28F3ZDHPRY6TxDYdRJifKWE3NZU"
+   "3JkJQCL3tS6a9GXGSWipHL5Sh4NQwCpZN3SgNrsbW4m1zbCfJy6SggiLAf34c28F3ZDHPRY6TxDYdRJifKWE3NZU",
+   "3jpSKzoi1LDde7JNXN1JNv6bC9pYo8ojtzfsdcsfPLML49YCdq1NHc17KrqtQpn4VjtzkSrCrS4b6JvoezuZ3Wdy"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T09:47:50-08:00",
-  "balance_checked_at": "2026-11-03T09:26:45-08:00",
+  "updated_at": "2026-11-03T10:16:43-08:00",
+  "balance_checked_at": "2026-11-03T10:16:46-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_Anakin",
+  "last_event": "AUTO_SYNC_GUARD_SELL_CHOO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -167,7 +168,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T09:47:02-08:00"
  },
- "leftover_sol": 0.302921,
+ "leftover_sol": 0.481752,
  "positions": [
   {
    "ticker": "AGENC",
@@ -223,28 +224,6 @@
    "note": "Auto-sync BUY 2026-11-03T08:16:02-08:00: 5,122.04 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3nkrPiws6U…"
   },
   {
-   "ticker": "CHOO",
-   "name": "CHOO",
-   "mint": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
-   "pairAddress": "3unG5b7czBspnmjFRZzzNyQVpk8q3LERr6BAYnFohdfz",
-   "tokens": 3232.193677,
-   "fill_token_amount": 3232.193677,
-   "fill_sol": 0.203023386,
-   "fill_price_sol": 6.281287765788794e-05,
-   "fill_tx": "xk3cnXbgdAzNYJjQKuQbmTNqTyUNBiKuhmTspD5tGMeDTXcbQUCp4qvxpPtanTujow2aBGJcRUgp6FXJjbg787C",
-   "tx": "xk3cnXbgdAzNYJjQKuQbmTNqTyUNBiKuhmTspD5tGMeDTXcbQUCp4qvxpPtanTujow2aBGJcRUgp6FXJjbg787C",
-   "filled_at": "2026-11-03T09:16:18-08:00",
-   "status": "OPEN",
-   "clips": 1,
-   "fill_usd": 18.95,
-   "fill_price_usd": 0.005862954000587261,
-   "fill_usd_note": "SOL basis x SOL/USD at sync time",
-   "flags": [
-    "AUTO_SYNC"
-   ],
-   "note": "Auto-sync BUY 2026-11-03T09:16:18-08:00: 3,232.19 CHOO for 0.2030 SOL (wallet delta incl. fees/rent). Tx xk3cnXbgdA…"
-  },
-  {
    "ticker": "Anakin",
    "name": "Anakin",
    "mint": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
@@ -268,6 +247,38 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "CHOO",
+   "name": "CHOO",
+   "mint": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "pairAddress": "3unG5b7czBspnmjFRZzzNyQVpk8q3LERr6BAYnFohdfz",
+   "tokens": 0,
+   "fill_token_amount": 3232.193677,
+   "fill_sol": 0.203023386,
+   "fill_price_sol": 6.281287765788794e-05,
+   "fill_tx": "xk3cnXbgdAzNYJjQKuQbmTNqTyUNBiKuhmTspD5tGMeDTXcbQUCp4qvxpPtanTujow2aBGJcRUgp6FXJjbg787C",
+   "tx": "xk3cnXbgdAzNYJjQKuQbmTNqTyUNBiKuhmTspD5tGMeDTXcbQUCp4qvxpPtanTujow2aBGJcRUgp6FXJjbg787C",
+   "filled_at": "2026-11-03T09:16:18-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 18.95,
+   "fill_price_usd": 0.005862954000587261,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 V7_HOTVOL_60M"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T09:16:18-08:00: 3,232.19 CHOO for 0.2030 SOL (wallet delta incl. fees/rent). Tx xk3cnXbgdA… | CLOSED 2026-11-03T10:16:26-08:00 (v6 V7_HOTVOL_60M, auto-sync on-chain): sold 3,232.19 CHOO for 0.177322 SOL net vs 0.203023 SOL basis -> -0.025701 SOL (-12.66%). Exit tx 3jpSKzoi1L…",
+   "sold_sol": 0.177321954,
+   "exit_fee_sol": 7.5871e-05,
+   "pnl_sol": -0.025701432,
+   "vs_fill_pct": -12.66,
+   "exit_tx": "3jpSKzoi1LDde7JNXN1JNv6bC9pYo8ojtzfsdcsfPLML49YCdq1NHc17KrqtQpn4VjtzkSrCrS4b6JvoezuZ3Wdy",
+   "closed_at": "2026-11-03T10:16:26-08:00",
+   "close_reason": "v6 V7_HOTVOL_60M",
+   "sold_usd": 16.55,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "CLAUDIA",
    "name": "CLAUDIA",
