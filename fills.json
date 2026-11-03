@@ -152,17 +152,18 @@
    "3JFvQcYNXkDeuF84JM8Pi8dr9Ws3Vo7Skihvf76YBQ9do93AoATTNPUjJHkXReUC62nSm75cU29DKdmeg5pEkq9B",
    "597BZaYM6EeMpFtacEh7Si3TCRMAa7N238qPv5paTixsWa93F21FhEyUC1baPTWQeNrm1BVKyD5sbB44uaYbAGpT",
    "5R64w3Knk8Zs4KeGvmWD37k8VDoB942Q5enuxTyHyHEgNgNaJBFWiKWCRUcgrtoTmNo5VbTKkNaiXavp2yLBSfN1",
-   "5rFdawSi9H1reqGecuk7gCU5FFHU9w4tKLqA7xAV3UhdcdqKVTs34QeQZ9vRPpgXBNhiPTxXFK4ddZ7CxeRS5UQQ"
+   "5rFdawSi9H1reqGecuk7gCU5FFHU9w4tKLqA7xAV3UhdcdqKVTs34QeQZ9vRPpgXBNhiPTxXFK4ddZ7CxeRS5UQQ",
+   "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T13:23:56-08:00",
+  "updated_at": "2026-11-03T13:27:53-08:00",
   "balance_checked_at": "2026-11-03T13:23:57-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_ANONVOYAGE",
+  "last_event": "AUTO_SYNC_BUY_FILLED_CHOO",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -177,9 +178,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T13:16:12-08:00"
+  "filled_at": "2026-11-03T13:27:20-08:00"
  },
- "leftover_sol": 0.374543,
+ "leftover_sol": 0.173006,
  "positions": [
   {
    "ticker": "AGENC",
@@ -255,6 +256,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-03T12:31:21-08:00: 23,540.43 Ahsoka for 0.2015 SOL (wallet delta incl. fees/rent). Tx 3JFvQcYNXk…"
+  },
+  {
+   "ticker": "CHOO",
+   "name": "CHOO",
+   "mint": "EJAxERvKU4kEVXn3NarjvRtgaMaJyP9ZuMeKA7JJpump",
+   "pairAddress": "3unG5b7czBspnmjFRZzzNyQVpk8q3LERr6BAYnFohdfz",
+   "tokens": 4234.484118,
+   "fill_token_amount": 4234.484118,
+   "fill_sol": 0.201537394,
+   "fill_price_sol": 4.759432043759527e-05,
+   "fill_tx": "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
+   "tx": "bTkE2j2HjH9eejYJN9YNsgcFvhmPoqSzTuuzjV4ywaSerV8iHDCTtRKVCRSfPJtGtePowPrGiDXnBicrWBt2qgT",
+   "filled_at": "2026-11-03T13:27:20-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.88,
+   "fill_price_usd": 0.0044586359385939255,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T13:27:20-08:00: 4,234.48 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx bTkE2j2HjH…"
   }
  ],
  "closed": [
