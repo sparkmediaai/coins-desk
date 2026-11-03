@@ -109,17 +109,18 @@
    "5d2V97xXNBwfgAJzU4RYN9BjB3Y2K8ccdVB7LcNUEyfaKBFMr5xq122pnHyWYTttXh1MpjdQV783SsrYbDqcYAb9",
    "5JY2SbN79w3aMZ2HpizH3zDshaTxKV3VPUtp7556AhkEJxz584qxwEX15KRgrg1tfrcKYSfCtUiD9w4Mqt3oG4VK",
    "4tPYmewf7UYquds2DGhRbFJn1oSUcDd5jfocqYVXeJpkier7C9a7xDkhAg7epzhyqDKdS3CrXMJFQutSwc22gVt2",
-   "yQUPCiKzQP1DZ2SbruFur1kBVuvMrL9iYsmTCQ2rce3sUvVAqF9BPGVQ224ZoxLTdGLdzX1GfmpZTxwc3DN7RJM"
+   "yQUPCiKzQP1DZ2SbruFur1kBVuvMrL9iYsmTCQ2rce3sUvVAqF9BPGVQ224ZoxLTdGLdzX1GfmpZTxwc3DN7RJM",
+   "3ZfwSDBn6nm8e8c6ecjZ21TEXuYFBGDtsNAjwMmf7PF13pV2XuTzyw6VJ3BEWiKdPvUt1Tsj7Bz1MacNqT6F7akq"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T01:28:11-08:00",
-  "balance_checked_at": "2026-11-03T00:39:16-08:00",
+  "updated_at": "2026-11-03T01:35:35-08:00",
+  "balance_checked_at": "2026-11-03T01:35:36-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_WASTED",
+  "last_event": "AUTO_SYNC_GUARD_SELL_WASTED",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -136,7 +137,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T00:39:02-08:00"
  },
- "leftover_sol": 0.43928,
+ "leftover_sol": 0.494251,
  "positions": [
   {
    "ticker": "AGENC",
@@ -181,31 +182,41 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-02T22:19:33-08:00: 10,916.43 CHOO for 0.2015 SOL (wallet delta incl. fees/rent). Tx 5d2V97xXNB…"
-  },
+  }
+ ],
+ "closed": [
   {
    "ticker": "WASTED",
    "name": "WASTED",
    "mint": "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
    "pairAddress": "TT7DKs9YjJZj1fwMGoPmKBmDreZzyMAMrHoDCGdfwqN",
-   "tokens": 3303.7268669999994,
+   "tokens": 0,
    "fill_token_amount": 3303.7268669999994,
    "fill_sol": 0.050381418,
    "fill_price_sol": 1.5249873715252685e-05,
    "fill_tx": "4tPYmewf7UYquds2DGhRbFJn1oSUcDd5jfocqYVXeJpkier7C9a7xDkhAg7epzhyqDKdS3CrXMJFQutSwc22gVt2",
    "tx": "4tPYmewf7UYquds2DGhRbFJn1oSUcDd5jfocqYVXeJpkier7C9a7xDkhAg7epzhyqDKdS3CrXMJFQutSwc22gVt2",
    "filled_at": "2026-11-03T00:39:02-08:00",
-   "status": "OPEN",
+   "status": "CLOSED",
    "clips": 1,
    "fill_usd": 4.61,
    "fill_price_usd": 0.0013953634449456207,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
-    "AUTO_SYNC"
+    "AUTO_SYNC",
+    "v6 TRAIL_+7.63491"
    ],
-   "note": "Auto-sync BUY 2026-11-03T00:39:02-08:00: 13,214.91 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4tPYmewf7U…"
-  }
- ],
- "closed": [
+   "note": "Auto-sync BUY 2026-11-03T00:39:02-08:00: 13,214.91 WASTED for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4tPYmewf7U… | CLOSED 2026-11-03T01:35:25-08:00 (v6 TRAIL_+7.63491, auto-sync on-chain): sold 3,303.73 WASTED for 0.053767 SOL net vs 0.050381 SOL basis -> +0.003386 SOL (+6.72%). Exit tx 3ZfwSDBn6n…",
+   "sold_sol": 0.05376712,
+   "exit_fee_sol": 5.785e-06,
+   "pnl_sol": 0.003385702,
+   "vs_fill_pct": 6.72,
+   "exit_tx": "3ZfwSDBn6nm8e8c6ecjZ21TEXuYFBGDtsNAjwMmf7PF13pV2XuTzyw6VJ3BEWiKdPvUt1Tsj7Bz1MacNqT6F7akq",
+   "closed_at": "2026-11-03T01:35:25-08:00",
+   "close_reason": "v6 TRAIL_+7.63491",
+   "sold_usd": 4.92,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "WASTED",
    "name": "WASTED",
