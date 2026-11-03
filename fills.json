@@ -146,17 +146,18 @@
    "srjnBmLaGHGuvkJfn4VWZBK31Qn6vxH2rB557qvMPFvs8zZn6ARD1jWV5HALfZwX6sKVxUst9Svu7VAdnbBsWTY",
    "S1tDhxvabnnUvEiJQDEXNL7nFxkz4MRArGiXXuThSq1E5hJYpmYrJqxD8FzHBmMZFZi3B4N6RHCmTRqUnpysfKq",
    "3nuRKpCv85j7QKtrUTFoU95QLx8TXy6bDoMSrmqxdAhAjdheJ3kbuMi5FNpPqquouGHzSLxajFYCC9CfQ6trDLfo",
-   "4uFyKrxsRj6RmZAggyzYH8799fgdcpzexocUQWgwgZbwBPn1QqadD2b9x1GGSNUUKXccp7fZ3aZa8NZVVTB8hUN8"
+   "4uFyKrxsRj6RmZAggyzYH8799fgdcpzexocUQWgwgZbwBPn1QqadD2b9x1GGSNUUKXccp7fZ3aZa8NZVVTB8hUN8",
+   "4cQW2VLozc86ykK5jgQJJatVCmjri5vumXCUGirfQFBq9MnPqvfk8KQQ3eS5NMajxhHCV1RBNpQyc55WsJUTsSuf"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T10:45:18-08:00",
+  "updated_at": "2026-11-03T10:53:41-08:00",
   "balance_checked_at": "2026-11-03T10:45:21-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_GUARD_SELL_███",
+  "last_event": "AUTO_SYNC_BUY_FILLED_DacityCoin",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -171,9 +172,9 @@
   "losses": 0,
   "realized_pnl_sol": 0.0,
   "realized_pnl_usd": 0.0,
-  "filled_at": "2026-11-03T10:27:40-08:00"
+  "filled_at": "2026-11-03T10:52:58-08:00"
  },
- "leftover_sol": 0.451537,
+ "leftover_sol": 0.249998,
  "positions": [
   {
    "ticker": "AGENC",
@@ -249,6 +250,28 @@
     "AUTO_SYNC"
    ],
    "note": "Auto-sync BUY 2026-11-03T10:27:40-08:00: 6,255.20 CLAUDIA for 0.2015 SOL (wallet delta incl. fees/rent). Tx S1tDhxvabn…"
+  },
+  {
+   "ticker": "DacityCoin",
+   "name": "DacityCoin",
+   "mint": "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump",
+   "pairAddress": "7Te1wXcfeQjKLGHXFvxSCnGZTqunoZ9fxBn7KKjrkNEr",
+   "tokens": 7843.274994,
+   "fill_token_amount": 7843.274994,
+   "fill_sol": 0.201539001,
+   "fill_price_sol": 2.5695771365172664e-05,
+   "fill_tx": "4cQW2VLozc86ykK5jgQJJatVCmjri5vumXCUGirfQFBq9MnPqvfk8KQQ3eS5NMajxhHCV1RBNpQyc55WsJUTsSuf",
+   "tx": "4cQW2VLozc86ykK5jgQJJatVCmjri5vumXCUGirfQFBq9MnPqvfk8KQQ3eS5NMajxhHCV1RBNpQyc55WsJUTsSuf",
+   "filled_at": "2026-11-03T10:52:58-08:00",
+   "status": "OPEN",
+   "clips": 1,
+   "fill_usd": 18.81,
+   "fill_price_usd": 0.002397672426084261,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T10:52:58-08:00: 7,843.27 DacityCoin for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4cQW2VLozc…"
   }
  ],
  "closed": [
