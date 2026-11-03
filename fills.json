@@ -116,17 +116,18 @@
    "63g7DMbEHtmiqd1XuHcT25fhqsdUtmhUyR8TnWcFdy23kWogTkZdYnVQjEqFYPtq4Juq7wqhvk27uaYw1fX4UCXF",
    "66S7Jg56rDABUsa5YHys77bhf5xniYWcLSEnT9r2fXSb4qFyoSswt18uyeEJenUWLpMUfLERkjCLckxwuyNUXb8c",
    "1LMadSW8YZFEhGwGb1uT6cKcFMBJGLHHeeAqbQPFnJLNuJ2upSG8u4YafbtSD73Xgn3d16UXU6iQRMJ8ebvWzYX",
-   "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ"
+   "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ",
+   "3Gt8jquwZviGLFeT8AVhdoZ4K8LyeERyXjA5Qv1hiSsofJaMNVrvrtjYxx5LXBmpPqwdDqV8nk1AKqXRbsNrxNkN"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T05:01:44-08:00",
+  "updated_at": "2026-11-03T05:26:14-08:00",
   "balance_checked_at": "2026-11-03T04:59:34-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_Anakin",
+  "last_event": "AUTO_SYNC_GUARD_SELL_HALF_ANAKIN",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -143,7 +144,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T05:00:55-08:00"
  },
- "leftover_sol": 0.378726,
+ "leftover_sol": 0.541061,
  "positions": [
   {
    "ticker": "AGENC",
@@ -194,16 +195,16 @@
    "name": "Anakin",
    "mint": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
    "pairAddress": "HJa61kEfSAwRt3DW9p15mLh6U5MaQgZGbE51ngg7bYtT",
-   "tokens": 14773.624595,
-   "fill_token_amount": 14773.624595,
-   "fill_sol": 0.20251884,
+   "tokens": 3693.4061490000004,
+   "fill_token_amount": 3693.4061490000004,
+   "fill_sol": 0.05062971,
    "fill_price_sol": 1.3708134973765388e-05,
    "fill_tx": "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ",
    "tx": "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ",
    "filled_at": "2026-11-03T05:00:55-08:00",
    "status": "OPEN",
    "clips": 1,
-   "fill_usd": 18.8,
+   "fill_usd": 4.7,
    "fill_price_usd": 0.0012728003323141163,
    "fill_usd_note": "SOL basis x SOL/USD at sync time",
    "flags": [
@@ -213,6 +214,39 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "Anakin",
+   "name": "Anakin",
+   "mint": "ExxzYBTt3jwU5MUxuw2F4toYbTLdFwThSjyaCn6Xpump",
+   "pairAddress": "HJa61kEfSAwRt3DW9p15mLh6U5MaQgZGbE51ngg7bYtT",
+   "tokens": 0,
+   "fill_token_amount": 11080.218445999999,
+   "fill_sol": 0.15188913,
+   "fill_price_sol": 1.3708134973765388e-05,
+   "fill_tx": "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ",
+   "tx": "2MZhUFzqFKU5D3Xydkdi3TVARVnm31RpM9o4TgAoNWKWyAPL3JVtRGLKk6iZXFEdqJ9bb9GKCvFodkmqeo8Q9ebJ",
+   "filled_at": "2026-11-03T05:00:55-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 14.1,
+   "fill_price_usd": 0.0012728003323141163,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 TP60_AT_+8",
+    "HALF"
+   ],
+   "note": " | CLOSED 2026-11-03T05:25:54-08:00 (v6 TP60_AT_+8, auto-sync on-chain): sold 11,080.22 ANAKIN for 0.162335 SOL net vs 0.151889 SOL basis -> +0.010446 SOL (+6.88%). Exit tx 3Gt8jquwZv…",
+   "sold_sol": 0.162334706,
+   "exit_fee_sol": 0.000144288,
+   "pnl_sol": 0.010445576,
+   "vs_fill_pct": 6.88,
+   "exit_tx": "3Gt8jquwZviGLFeT8AVhdoZ4K8LyeERyXjA5Qv1hiSsofJaMNVrvrtjYxx5LXBmpPqwdDqV8nk1AKqXRbsNrxNkN",
+   "closed_at": "2026-11-03T05:25:54-08:00",
+   "close_reason": "v6 TP60_AT_+8",
+   "sold_usd": 15.07,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "HAMSTER",
    "name": "HAMSTER",
