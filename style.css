@@ -192,3 +192,7 @@ table.blotter tbody tr.muted-row td{color:var(--muted);text-align:center;padding
   .panel:has(#tape) thead th:nth-child(4),.panel:has(#tape) thead th:nth-child(5),.panel:has(#tape) thead th:nth-child(6){display:none}
   .mast h1{font-size:30px}
 }
+
+/* 11/04 PAPER play wallet: dashed border so it is never mistaken for the real book */
+.panel-paper{border:2px dashed #F59E0B}
+.panel-paper .panel-head h2 .badge{background:#F59E0B;color:#111;margin-left:8px}
