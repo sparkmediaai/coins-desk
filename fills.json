@@ -161,17 +161,18 @@
    "3CymzBYCZiexDfHugJRaEpTLc6PKQt8hHBEX3u9PwjV8DUimGCyYFSQqQzEoDB439aTY3HWotpC8YZ4dubp1WjfP",
    "yxokpwS8mK625FWqVy2itLpT6zodRzvsLqXebC8mLv6KwhhN1tY3kbX5rK5t9ix5tNfni6rh5T9bR7yDPsXVuHV",
    "58Ppb7WEA8cLJAj9hmC9Adsn7VCAWiXNi3qPEZFYDzT1NiKqKSryL5Z6CnC4X9G9pQAcmxJXuTN79Kqbz6dJi2Af",
-   "3AgbiMk4PxkiE8yWugrXVSNWkD6VSnDcbkqYFmzaCcSTvYR1Mfs5NjE456fDhRpf3QDtJmEWizuoqCVFNxpkpB9Z"
+   "3AgbiMk4PxkiE8yWugrXVSNWkD6VSnDcbkqYFmzaCcSTvYR1Mfs5NjE456fDhRpf3QDtJmEWizuoqCVFNxpkpB9Z",
+   "KdM6wPjwQGQTjYwGs4WRkqEgcvgb2bzeE1iFAuh76pNoCgUi3cvoDyCZ57V1Pj3GhU6HPBzM6DxogKRmTkkiESE"
   ],
   "start_usd": 111.29,
   "start_sol": 1.164098,
   "sol_usd_at_reset": 95.6,
   "start_reset_at": "2026-10-31T07:24:44-07:00",
-  "updated_at": "2026-11-03T18:37:25-08:00",
-  "balance_checked_at": "2026-11-03T16:05:40-08:00",
+  "updated_at": "2026-11-03T19:04:03-08:00",
+  "balance_checked_at": "2026-11-03T19:04:06-08:00",
   "start_reset_note": "David clean slate 2026-10-31 7:23 AM PT (pt442u): 'this is what we're starting with'. Baseline = on-chain cash after +0.5455 SOL deposit + BIRB (open, guard v7 armed) + AGENC (permanent hold). PnL, W/L and trade log restart from zero. Prior history archived: live-desk/archive/dashboard_reset_20261031_0724/",
   "prior_start_usd": 36.0,
-  "last_event": "AUTO_SYNC_BUY_FILLED_███",
+  "last_event": "AUTO_SYNC_GUARD_SELL_PERCOLATOR",
   "desk_paused": false,
   "paper_mode_active": false,
   "baseline": {
@@ -188,7 +189,7 @@
   "realized_pnl_usd": 0.0,
   "filled_at": "2026-11-03T18:36:26-08:00"
  },
- "leftover_sol": 0.360434,
+ "leftover_sol": 0.446676,
  "positions": [
   {
    "ticker": "AGENC",
@@ -222,28 +223,6 @@
    "rent_recovered_sol": 0.00151384
   },
   {
-   "ticker": "Percolator",
-   "name": "Percolator",
-   "mint": "8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump",
-   "pairAddress": "Ebs3mXAzqZfzHfsdinTNw7gPy4uNyEAywcCiJxzLRrBW",
-   "tokens": 2147.669263,
-   "fill_token_amount": 2147.669263,
-   "fill_sol": 0.080597638,
-   "fill_price_sol": 3.75279561876868e-05,
-   "fill_tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
-   "tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
-   "filled_at": "2026-11-03T14:11:15-08:00",
-   "status": "OPEN",
-   "clips": 1,
-   "fill_usd": 7.53,
-   "fill_price_usd": 0.003506987505739331,
-   "fill_usd_note": "SOL basis x SOL/USD at sync time",
-   "flags": [
-    "AUTO_SYNC"
-   ],
-   "note": "Auto-sync BUY 2026-11-03T14:11:15-08:00: 5,369.17 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4QKx7QXXZB…"
-  },
-  {
    "ticker": "███",
    "name": "███",
    "mint": "EwX2T1p2PmgTsSq2Bi6XtQYxPC5krR4P2fxPfN4Qpump",
@@ -267,6 +246,38 @@
   }
  ],
  "closed": [
+  {
+   "ticker": "Percolator",
+   "name": "Percolator",
+   "mint": "8PzFWyLpCVEmbZmVJcaRTU5r69XKJx1rd7YGpWvnpump",
+   "pairAddress": "Ebs3mXAzqZfzHfsdinTNw7gPy4uNyEAywcCiJxzLRrBW",
+   "tokens": 0,
+   "fill_token_amount": 2147.669263,
+   "fill_sol": 0.080597638,
+   "fill_price_sol": 3.75279561876868e-05,
+   "fill_tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
+   "tx": "4QKx7QXXZB4QXzkXxHxGdtJCKgeWPP9KVWK6KnSUR9HgHiLFQcK7uS97TF2MCdSb3WuwE9Ku8NdV3xNGuRuRtzTd",
+   "filled_at": "2026-11-03T14:11:15-08:00",
+   "status": "CLOSED",
+   "clips": 1,
+   "fill_usd": 7.53,
+   "fill_price_usd": 0.003506987505739331,
+   "fill_usd_note": "SOL basis x SOL/USD at sync time",
+   "flags": [
+    "AUTO_SYNC",
+    "v6 TRAIL_+6.94057"
+   ],
+   "note": "Auto-sync BUY 2026-11-03T14:11:15-08:00: 5,369.17 Percolator for 0.2015 SOL (wallet delta incl. fees/rent). Tx 4QKx7QXXZB… | CLOSED 2026-11-03T19:03:43-08:00 (v6 TRAIL_+6.94057, auto-sync on-chain): sold 2,147.67 PERCOLATOR for 0.085064 SOL net vs 0.080598 SOL basis -> +0.004466 SOL (+5.54%). Exit tx KdM6wPjwQG…",
+   "sold_sol": 0.085063579,
+   "exit_fee_sol": 1.9613e-05,
+   "pnl_sol": 0.004465941,
+   "vs_fill_pct": 5.54,
+   "exit_tx": "KdM6wPjwQGQTjYwGs4WRkqEgcvgb2bzeE1iFAuh76pNoCgUi3cvoDyCZ57V1Pj3GhU6HPBzM6DxogKRmTkkiESE",
+   "closed_at": "2026-11-03T19:03:43-08:00",
+   "close_reason": "v6 TRAIL_+6.94057",
+   "sold_usd": 7.95,
+   "sold_usd_note": "approx at entry SOL/USD"
+  },
   {
    "ticker": "Percolator",
    "name": "Percolator",
