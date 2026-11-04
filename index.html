@@ -136,6 +136,23 @@
     <button type="button" class="toggle" id="closed-toggle" aria-expanded="false" aria-controls="closed-more" hidden>Show all closed</button>
   </section>
 
+  <section class="panel panel-paper" id="paper-panel" aria-label="PAPER play wallet">
+    <div class="panel-head">
+      <h2>PAPER play wallet <span class="badge">SIMULATED</span></h2>
+      <p class="panel-note" id="paper-note">loading paper ledger…</p>
+    </div>
+    <div class="row-metrics" style="padding:14px 22px">
+      <div class="m"><span class="m-k">start</span><span class="m-v" id="paper-start">—</span></div>
+      <div class="m"><span class="m-k">value now</span><span class="m-v" id="paper-value">—</span></div>
+      <div class="m"><span class="m-k">vs start</span><span class="m-v" id="paper-pnl">—</span></div>
+      <div class="m"><span class="m-k">realized</span><span class="m-v" id="paper-real">—</span></div>
+      <div class="m"><span class="m-k">unrealized</span><span class="m-v" id="paper-unreal">—</span></div>
+      <div class="m"><span class="m-k">cash</span><span class="m-v" id="paper-cash">—</span></div>
+    </div>
+    <table class="blotter"><thead><tr><th>Open</th><th>Opened</th><th class="num">Basis</th><th class="num">Value</th><th class="num">Unrealized</th></tr></thead><tbody id="paper-open"></tbody></table>
+    <table class="blotter"><thead><tr><th>Time</th><th>Action</th><th>Coin</th><th class="num">Amount</th><th>Rule / P&amp;L</th></tr></thead><tbody id="paper-fills"></tbody></table>
+  </section>
+
   <section class="panel" id="hunt-panel" aria-label="Hunt bench">
     <div class="panel-head">
       <h2>Hunt bench</h2>
@@ -180,6 +197,7 @@
   <script src="./app-pack1.js?v=lb3"></script>
   <script src="./app-clean.js?v=lb5"></script>
   <script src="./app-lean.js?v=lb3"></script>
+  <script src="./app-paper.js?v=pp1"></script>
   <script src="./app-motion.js?v=lb3"></script>
 </body>
 </html>
