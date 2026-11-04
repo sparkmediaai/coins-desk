@@ -1,0 +1,18 @@
+{
+ "mode": "PAPER_PLAY",
+ "label": "PAPER play wallet (simulated, no real funds)",
+ "updated_at": "2026-11-03T23:54:17-08:00",
+ "sol_usd": 92.91862096066565,
+ "start_usd": 1000.0,
+ "start_sol": 10.765060869,
+ "started_at": "2026-11-03T23:53:23-08:00",
+ "cash_sol": 10.765060869,
+ "value_sol": 10.765060869,
+ "value_usd": 1000.2746105051049,
+ "realized_sol": 0,
+ "realized_usd": 0.0,
+ "unrealized_sol": 0.0,
+ "unrealized_usd": 0.0,
+ "open": [],
+ "fills": []
+}
